@@ -1,0 +1,2266 @@
+{
+    "fylker":  [
+                   {
+                       "nr":  "03",
+                       "navn":  "Oslo - Oslove",
+                       "slug":  "oslo",
+                       "kommuner":  [
+                                        {
+                                            "nr":  "0301",
+                                            "navn":  "Oslo - Oslove",
+                                            "slug":  "oslo",
+                                            "visningsnavn":  "Oslo"
+                                        }
+                                    ],
+                       "visningsnavn":  "Oslo"
+                   },
+                   {
+                       "nr":  "11",
+                       "navn":  "Rogaland",
+                       "slug":  "rogaland",
+                       "kommuner":  [
+                                        {
+                                            "nr":  "1101",
+                                            "navn":  "Eigersund",
+                                            "slug":  "eigersund",
+                                            "visningsnavn":  "Eigersund"
+                                        },
+                                        {
+                                            "nr":  "1103",
+                                            "navn":  "Stavanger",
+                                            "slug":  "stavanger",
+                                            "visningsnavn":  "Stavanger"
+                                        },
+                                        {
+                                            "nr":  "1106",
+                                            "navn":  "Haugesund",
+                                            "slug":  "haugesund",
+                                            "visningsnavn":  "Haugesund"
+                                        },
+                                        {
+                                            "nr":  "1108",
+                                            "navn":  "Sandnes",
+                                            "slug":  "sandnes",
+                                            "visningsnavn":  "Sandnes"
+                                        },
+                                        {
+                                            "nr":  "1111",
+                                            "navn":  "Sokndal",
+                                            "slug":  "sokndal",
+                                            "visningsnavn":  "Sokndal"
+                                        },
+                                        {
+                                            "nr":  "1112",
+                                            "navn":  "Lund",
+                                            "slug":  "lund",
+                                            "visningsnavn":  "Lund"
+                                        },
+                                        {
+                                            "nr":  "1114",
+                                            "navn":  "Bjerkreim",
+                                            "slug":  "bjerkreim",
+                                            "visningsnavn":  "Bjerkreim"
+                                        },
+                                        {
+                                            "nr":  "1119",
+                                            "navn":  "Hå",
+                                            "slug":  "ha",
+                                            "visningsnavn":  "Hå"
+                                        },
+                                        {
+                                            "nr":  "1120",
+                                            "navn":  "Klepp",
+                                            "slug":  "klepp",
+                                            "visningsnavn":  "Klepp"
+                                        },
+                                        {
+                                            "nr":  "1121",
+                                            "navn":  "Time",
+                                            "slug":  "time",
+                                            "visningsnavn":  "Time"
+                                        },
+                                        {
+                                            "nr":  "1122",
+                                            "navn":  "Gjesdal",
+                                            "slug":  "gjesdal",
+                                            "visningsnavn":  "Gjesdal"
+                                        },
+                                        {
+                                            "nr":  "1124",
+                                            "navn":  "Sola",
+                                            "slug":  "sola",
+                                            "visningsnavn":  "Sola"
+                                        },
+                                        {
+                                            "nr":  "1127",
+                                            "navn":  "Randaberg",
+                                            "slug":  "randaberg",
+                                            "visningsnavn":  "Randaberg"
+                                        },
+                                        {
+                                            "nr":  "1130",
+                                            "navn":  "Strand",
+                                            "slug":  "strand",
+                                            "visningsnavn":  "Strand"
+                                        },
+                                        {
+                                            "nr":  "1133",
+                                            "navn":  "Hjelmeland",
+                                            "slug":  "hjelmeland",
+                                            "visningsnavn":  "Hjelmeland"
+                                        },
+                                        {
+                                            "nr":  "1134",
+                                            "navn":  "Suldal",
+                                            "slug":  "suldal",
+                                            "visningsnavn":  "Suldal"
+                                        },
+                                        {
+                                            "nr":  "1135",
+                                            "navn":  "Sauda",
+                                            "slug":  "sauda",
+                                            "visningsnavn":  "Sauda"
+                                        },
+                                        {
+                                            "nr":  "1144",
+                                            "navn":  "Kvitsøy",
+                                            "slug":  "kvitsoy",
+                                            "visningsnavn":  "Kvitsøy"
+                                        },
+                                        {
+                                            "nr":  "1145",
+                                            "navn":  "Bokn",
+                                            "slug":  "bokn",
+                                            "visningsnavn":  "Bokn"
+                                        },
+                                        {
+                                            "nr":  "1146",
+                                            "navn":  "Tysvær",
+                                            "slug":  "tysvaer",
+                                            "visningsnavn":  "Tysvær"
+                                        },
+                                        {
+                                            "nr":  "1149",
+                                            "navn":  "Karmøy",
+                                            "slug":  "karmoy",
+                                            "visningsnavn":  "Karmøy"
+                                        },
+                                        {
+                                            "nr":  "1151",
+                                            "navn":  "Utsira",
+                                            "slug":  "utsira",
+                                            "visningsnavn":  "Utsira"
+                                        },
+                                        {
+                                            "nr":  "1160",
+                                            "navn":  "Vindafjord",
+                                            "slug":  "vindafjord",
+                                            "visningsnavn":  "Vindafjord"
+                                        }
+                                    ],
+                       "visningsnavn":  "Rogaland"
+                   },
+                   {
+                       "nr":  "15",
+                       "navn":  "Møre og Romsdal",
+                       "slug":  "more-og-romsdal",
+                       "kommuner":  [
+                                        {
+                                            "nr":  "1505",
+                                            "navn":  "Kristiansund",
+                                            "slug":  "kristiansund",
+                                            "visningsnavn":  "Kristiansund"
+                                        },
+                                        {
+                                            "nr":  "1506",
+                                            "navn":  "Molde",
+                                            "slug":  "molde",
+                                            "visningsnavn":  "Molde"
+                                        },
+                                        {
+                                            "nr":  "1508",
+                                            "navn":  "Ålesund",
+                                            "slug":  "alesund",
+                                            "visningsnavn":  "Ålesund"
+                                        },
+                                        {
+                                            "nr":  "1511",
+                                            "navn":  "Vanylven",
+                                            "slug":  "vanylven",
+                                            "visningsnavn":  "Vanylven"
+                                        },
+                                        {
+                                            "nr":  "1514",
+                                            "navn":  "Sande",
+                                            "slug":  "sande",
+                                            "visningsnavn":  "Sande"
+                                        },
+                                        {
+                                            "nr":  "1515",
+                                            "navn":  "Herøy (Møre og Romsdal)",
+                                            "slug":  "heroy",
+                                            "visningsnavn":  "Herøy"
+                                        },
+                                        {
+                                            "nr":  "1516",
+                                            "navn":  "Ulstein",
+                                            "slug":  "ulstein",
+                                            "visningsnavn":  "Ulstein"
+                                        },
+                                        {
+                                            "nr":  "1517",
+                                            "navn":  "Hareid",
+                                            "slug":  "hareid",
+                                            "visningsnavn":  "Hareid"
+                                        },
+                                        {
+                                            "nr":  "1520",
+                                            "navn":  "Ørsta",
+                                            "slug":  "orsta",
+                                            "visningsnavn":  "Ørsta"
+                                        },
+                                        {
+                                            "nr":  "1525",
+                                            "navn":  "Stranda",
+                                            "slug":  "stranda",
+                                            "visningsnavn":  "Stranda"
+                                        },
+                                        {
+                                            "nr":  "1528",
+                                            "navn":  "Sykkylven",
+                                            "slug":  "sykkylven",
+                                            "visningsnavn":  "Sykkylven"
+                                        },
+                                        {
+                                            "nr":  "1531",
+                                            "navn":  "Sula",
+                                            "slug":  "sula",
+                                            "visningsnavn":  "Sula"
+                                        },
+                                        {
+                                            "nr":  "1532",
+                                            "navn":  "Giske",
+                                            "slug":  "giske",
+                                            "visningsnavn":  "Giske"
+                                        },
+                                        {
+                                            "nr":  "1535",
+                                            "navn":  "Vestnes",
+                                            "slug":  "vestnes",
+                                            "visningsnavn":  "Vestnes"
+                                        },
+                                        {
+                                            "nr":  "1539",
+                                            "navn":  "Rauma",
+                                            "slug":  "rauma",
+                                            "visningsnavn":  "Rauma"
+                                        },
+                                        {
+                                            "nr":  "1547",
+                                            "navn":  "Aukra",
+                                            "slug":  "aukra",
+                                            "visningsnavn":  "Aukra"
+                                        },
+                                        {
+                                            "nr":  "1554",
+                                            "navn":  "Averøy",
+                                            "slug":  "averoy",
+                                            "visningsnavn":  "Averøy"
+                                        },
+                                        {
+                                            "nr":  "1557",
+                                            "navn":  "Gjemnes",
+                                            "slug":  "gjemnes",
+                                            "visningsnavn":  "Gjemnes"
+                                        },
+                                        {
+                                            "nr":  "1560",
+                                            "navn":  "Tingvoll",
+                                            "slug":  "tingvoll",
+                                            "visningsnavn":  "Tingvoll"
+                                        },
+                                        {
+                                            "nr":  "1563",
+                                            "navn":  "Sunndal",
+                                            "slug":  "sunndal",
+                                            "visningsnavn":  "Sunndal"
+                                        },
+                                        {
+                                            "nr":  "1566",
+                                            "navn":  "Surnadal",
+                                            "slug":  "surnadal",
+                                            "visningsnavn":  "Surnadal"
+                                        },
+                                        {
+                                            "nr":  "1573",
+                                            "navn":  "Smøla",
+                                            "slug":  "smola",
+                                            "visningsnavn":  "Smøla"
+                                        },
+                                        {
+                                            "nr":  "1576",
+                                            "navn":  "Aure",
+                                            "slug":  "aure",
+                                            "visningsnavn":  "Aure"
+                                        },
+                                        {
+                                            "nr":  "1577",
+                                            "navn":  "Volda",
+                                            "slug":  "volda",
+                                            "visningsnavn":  "Volda"
+                                        },
+                                        {
+                                            "nr":  "1578",
+                                            "navn":  "Fjord",
+                                            "slug":  "fjord",
+                                            "visningsnavn":  "Fjord"
+                                        },
+                                        {
+                                            "nr":  "1579",
+                                            "navn":  "Hustadvika",
+                                            "slug":  "hustadvika",
+                                            "visningsnavn":  "Hustadvika"
+                                        },
+                                        {
+                                            "nr":  "1580",
+                                            "navn":  "Haram",
+                                            "slug":  "haram",
+                                            "visningsnavn":  "Haram"
+                                        }
+                                    ],
+                       "visningsnavn":  "Møre og Romsdal"
+                   },
+                   {
+                       "nr":  "18",
+                       "navn":  "Nordland - Nordlánnda",
+                       "slug":  "nordland",
+                       "kommuner":  [
+                                        {
+                                            "nr":  "1804",
+                                            "navn":  "Bodø",
+                                            "slug":  "bodo",
+                                            "visningsnavn":  "Bodø"
+                                        },
+                                        {
+                                            "nr":  "1806",
+                                            "navn":  "Narvik",
+                                            "slug":  "narvik",
+                                            "visningsnavn":  "Narvik"
+                                        },
+                                        {
+                                            "nr":  "1811",
+                                            "navn":  "Bindal",
+                                            "slug":  "bindal",
+                                            "visningsnavn":  "Bindal"
+                                        },
+                                        {
+                                            "nr":  "1812",
+                                            "navn":  "Sømna",
+                                            "slug":  "somna",
+                                            "visningsnavn":  "Sømna"
+                                        },
+                                        {
+                                            "nr":  "1813",
+                                            "navn":  "Brønnøy",
+                                            "slug":  "bronnoy",
+                                            "visningsnavn":  "Brønnøy"
+                                        },
+                                        {
+                                            "nr":  "1815",
+                                            "navn":  "Vega",
+                                            "slug":  "vega",
+                                            "visningsnavn":  "Vega"
+                                        },
+                                        {
+                                            "nr":  "1816",
+                                            "navn":  "Vevelstad",
+                                            "slug":  "vevelstad",
+                                            "visningsnavn":  "Vevelstad"
+                                        },
+                                        {
+                                            "nr":  "1818",
+                                            "navn":  "Herøy (Nordland)",
+                                            "slug":  "heroy",
+                                            "visningsnavn":  "Herøy"
+                                        },
+                                        {
+                                            "nr":  "1820",
+                                            "navn":  "Alstahaug",
+                                            "slug":  "alstahaug",
+                                            "visningsnavn":  "Alstahaug"
+                                        },
+                                        {
+                                            "nr":  "1822",
+                                            "navn":  "Leirfjord",
+                                            "slug":  "leirfjord",
+                                            "visningsnavn":  "Leirfjord"
+                                        },
+                                        {
+                                            "nr":  "1824",
+                                            "navn":  "Vefsn",
+                                            "slug":  "vefsn",
+                                            "visningsnavn":  "Vefsn"
+                                        },
+                                        {
+                                            "nr":  "1825",
+                                            "navn":  "Grane",
+                                            "slug":  "grane",
+                                            "visningsnavn":  "Grane"
+                                        },
+                                        {
+                                            "nr":  "1826",
+                                            "navn":  "Aarborte - Hattfjelldal",
+                                            "slug":  "hattfjelldal",
+                                            "visningsnavn":  "Hattfjelldal"
+                                        },
+                                        {
+                                            "nr":  "1827",
+                                            "navn":  "Dønna",
+                                            "slug":  "donna",
+                                            "visningsnavn":  "Dønna"
+                                        },
+                                        {
+                                            "nr":  "1828",
+                                            "navn":  "Nesna",
+                                            "slug":  "nesna",
+                                            "visningsnavn":  "Nesna"
+                                        },
+                                        {
+                                            "nr":  "1832",
+                                            "navn":  "Hemnes",
+                                            "slug":  "hemnes",
+                                            "visningsnavn":  "Hemnes"
+                                        },
+                                        {
+                                            "nr":  "1833",
+                                            "navn":  "Rana - Raane",
+                                            "slug":  "rana",
+                                            "visningsnavn":  "Rana"
+                                        },
+                                        {
+                                            "nr":  "1834",
+                                            "navn":  "Lurøy",
+                                            "slug":  "luroy",
+                                            "visningsnavn":  "Lurøy"
+                                        },
+                                        {
+                                            "nr":  "1835",
+                                            "navn":  "Træna",
+                                            "slug":  "traena",
+                                            "visningsnavn":  "Træna"
+                                        },
+                                        {
+                                            "nr":  "1836",
+                                            "navn":  "Rødøy",
+                                            "slug":  "rodoy",
+                                            "visningsnavn":  "Rødøy"
+                                        },
+                                        {
+                                            "nr":  "1837",
+                                            "navn":  "Meløy",
+                                            "slug":  "meloy",
+                                            "visningsnavn":  "Meløy"
+                                        },
+                                        {
+                                            "nr":  "1838",
+                                            "navn":  "Gildeskål",
+                                            "slug":  "gildeskal",
+                                            "visningsnavn":  "Gildeskål"
+                                        },
+                                        {
+                                            "nr":  "1839",
+                                            "navn":  "Beiarn",
+                                            "slug":  "beiarn",
+                                            "visningsnavn":  "Beiarn"
+                                        },
+                                        {
+                                            "nr":  "1840",
+                                            "navn":  "Saltdal",
+                                            "slug":  "saltdal",
+                                            "visningsnavn":  "Saltdal"
+                                        },
+                                        {
+                                            "nr":  "1841",
+                                            "navn":  "Fauske - Fuossko",
+                                            "slug":  "fauske",
+                                            "visningsnavn":  "Fauske"
+                                        },
+                                        {
+                                            "nr":  "1845",
+                                            "navn":  "Sørfold - Fuolldá",
+                                            "slug":  "sorfold",
+                                            "visningsnavn":  "Sørfold"
+                                        },
+                                        {
+                                            "nr":  "1848",
+                                            "navn":  "Steigen",
+                                            "slug":  "steigen",
+                                            "visningsnavn":  "Steigen"
+                                        },
+                                        {
+                                            "nr":  "1851",
+                                            "navn":  "Lødingen",
+                                            "slug":  "lodingen",
+                                            "visningsnavn":  "Lødingen"
+                                        },
+                                        {
+                                            "nr":  "1853",
+                                            "navn":  "Evenes - Evenášši",
+                                            "slug":  "evenes",
+                                            "visningsnavn":  "Evenes"
+                                        },
+                                        {
+                                            "nr":  "1856",
+                                            "navn":  "Røst",
+                                            "slug":  "rost",
+                                            "visningsnavn":  "Røst"
+                                        },
+                                        {
+                                            "nr":  "1857",
+                                            "navn":  "Værøy",
+                                            "slug":  "vaeroy",
+                                            "visningsnavn":  "Værøy"
+                                        },
+                                        {
+                                            "nr":  "1859",
+                                            "navn":  "Flakstad",
+                                            "slug":  "flakstad",
+                                            "visningsnavn":  "Flakstad"
+                                        },
+                                        {
+                                            "nr":  "1860",
+                                            "navn":  "Vestvågøy",
+                                            "slug":  "vestvagoy",
+                                            "visningsnavn":  "Vestvågøy"
+                                        },
+                                        {
+                                            "nr":  "1865",
+                                            "navn":  "Vågan",
+                                            "slug":  "vagan",
+                                            "visningsnavn":  "Vågan"
+                                        },
+                                        {
+                                            "nr":  "1866",
+                                            "navn":  "Hadsel",
+                                            "slug":  "hadsel",
+                                            "visningsnavn":  "Hadsel"
+                                        },
+                                        {
+                                            "nr":  "1867",
+                                            "navn":  "Bø",
+                                            "slug":  "bo",
+                                            "visningsnavn":  "Bø"
+                                        },
+                                        {
+                                            "nr":  "1868",
+                                            "navn":  "Øksnes",
+                                            "slug":  "oksnes",
+                                            "visningsnavn":  "Øksnes"
+                                        },
+                                        {
+                                            "nr":  "1870",
+                                            "navn":  "Sortland - Suortá",
+                                            "slug":  "sortland",
+                                            "visningsnavn":  "Sortland"
+                                        },
+                                        {
+                                            "nr":  "1871",
+                                            "navn":  "Andøy",
+                                            "slug":  "andoy",
+                                            "visningsnavn":  "Andøy"
+                                        },
+                                        {
+                                            "nr":  "1874",
+                                            "navn":  "Moskenes",
+                                            "slug":  "moskenes",
+                                            "visningsnavn":  "Moskenes"
+                                        },
+                                        {
+                                            "nr":  "1875",
+                                            "navn":  "Hábmer - Hamarøy",
+                                            "slug":  "hamaroy",
+                                            "visningsnavn":  "Hamarøy"
+                                        }
+                                    ],
+                       "visningsnavn":  "Nordland"
+                   },
+                   {
+                       "nr":  "31",
+                       "navn":  "Østfold",
+                       "slug":  "ostfold",
+                       "kommuner":  [
+                                        {
+                                            "nr":  "3101",
+                                            "navn":  "Halden",
+                                            "slug":  "halden",
+                                            "visningsnavn":  "Halden"
+                                        },
+                                        {
+                                            "nr":  "3103",
+                                            "navn":  "Moss",
+                                            "slug":  "moss",
+                                            "visningsnavn":  "Moss"
+                                        },
+                                        {
+                                            "nr":  "3105",
+                                            "navn":  "Sarpsborg",
+                                            "slug":  "sarpsborg",
+                                            "visningsnavn":  "Sarpsborg"
+                                        },
+                                        {
+                                            "nr":  "3107",
+                                            "navn":  "Fredrikstad",
+                                            "slug":  "fredrikstad",
+                                            "visningsnavn":  "Fredrikstad"
+                                        },
+                                        {
+                                            "nr":  "3110",
+                                            "navn":  "Hvaler",
+                                            "slug":  "hvaler",
+                                            "visningsnavn":  "Hvaler"
+                                        },
+                                        {
+                                            "nr":  "3112",
+                                            "navn":  "Råde",
+                                            "slug":  "rade",
+                                            "visningsnavn":  "Råde"
+                                        },
+                                        {
+                                            "nr":  "3114",
+                                            "navn":  "Våler (Østfold)",
+                                            "slug":  "valer",
+                                            "visningsnavn":  "Våler"
+                                        },
+                                        {
+                                            "nr":  "3116",
+                                            "navn":  "Skiptvet",
+                                            "slug":  "skiptvet",
+                                            "visningsnavn":  "Skiptvet"
+                                        },
+                                        {
+                                            "nr":  "3118",
+                                            "navn":  "Indre Østfold",
+                                            "slug":  "indre-ostfold",
+                                            "visningsnavn":  "Indre Østfold"
+                                        },
+                                        {
+                                            "nr":  "3120",
+                                            "navn":  "Rakkestad",
+                                            "slug":  "rakkestad",
+                                            "visningsnavn":  "Rakkestad"
+                                        },
+                                        {
+                                            "nr":  "3122",
+                                            "navn":  "Marker",
+                                            "slug":  "marker",
+                                            "visningsnavn":  "Marker"
+                                        },
+                                        {
+                                            "nr":  "3124",
+                                            "navn":  "Aremark",
+                                            "slug":  "aremark",
+                                            "visningsnavn":  "Aremark"
+                                        }
+                                    ],
+                       "visningsnavn":  "Østfold"
+                   },
+                   {
+                       "nr":  "32",
+                       "navn":  "Akershus",
+                       "slug":  "akershus",
+                       "kommuner":  [
+                                        {
+                                            "nr":  "3201",
+                                            "navn":  "Bærum",
+                                            "slug":  "baerum",
+                                            "visningsnavn":  "Bærum"
+                                        },
+                                        {
+                                            "nr":  "3203",
+                                            "navn":  "Asker",
+                                            "slug":  "asker",
+                                            "visningsnavn":  "Asker"
+                                        },
+                                        {
+                                            "nr":  "3205",
+                                            "navn":  "Lillestrøm",
+                                            "slug":  "lillestrom",
+                                            "visningsnavn":  "Lillestrøm"
+                                        },
+                                        {
+                                            "nr":  "3207",
+                                            "navn":  "Nordre Follo",
+                                            "slug":  "nordre-follo",
+                                            "visningsnavn":  "Nordre Follo"
+                                        },
+                                        {
+                                            "nr":  "3209",
+                                            "navn":  "Ullensaker",
+                                            "slug":  "ullensaker",
+                                            "visningsnavn":  "Ullensaker"
+                                        },
+                                        {
+                                            "nr":  "3212",
+                                            "navn":  "Nesodden",
+                                            "slug":  "nesodden",
+                                            "visningsnavn":  "Nesodden"
+                                        },
+                                        {
+                                            "nr":  "3214",
+                                            "navn":  "Frogn",
+                                            "slug":  "frogn",
+                                            "visningsnavn":  "Frogn"
+                                        },
+                                        {
+                                            "nr":  "3216",
+                                            "navn":  "Vestby",
+                                            "slug":  "vestby",
+                                            "visningsnavn":  "Vestby"
+                                        },
+                                        {
+                                            "nr":  "3218",
+                                            "navn":  "Ås",
+                                            "slug":  "as",
+                                            "visningsnavn":  "Ås"
+                                        },
+                                        {
+                                            "nr":  "3220",
+                                            "navn":  "Enebakk",
+                                            "slug":  "enebakk",
+                                            "visningsnavn":  "Enebakk"
+                                        },
+                                        {
+                                            "nr":  "3222",
+                                            "navn":  "Lørenskog",
+                                            "slug":  "lorenskog",
+                                            "visningsnavn":  "Lørenskog"
+                                        },
+                                        {
+                                            "nr":  "3224",
+                                            "navn":  "Rælingen",
+                                            "slug":  "raelingen",
+                                            "visningsnavn":  "Rælingen"
+                                        },
+                                        {
+                                            "nr":  "3226",
+                                            "navn":  "Aurskog-Høland",
+                                            "slug":  "aurskog-holand",
+                                            "visningsnavn":  "Aurskog-Høland"
+                                        },
+                                        {
+                                            "nr":  "3228",
+                                            "navn":  "Nes",
+                                            "slug":  "nes",
+                                            "visningsnavn":  "Nes"
+                                        },
+                                        {
+                                            "nr":  "3230",
+                                            "navn":  "Gjerdrum",
+                                            "slug":  "gjerdrum",
+                                            "visningsnavn":  "Gjerdrum"
+                                        },
+                                        {
+                                            "nr":  "3232",
+                                            "navn":  "Nittedal",
+                                            "slug":  "nittedal",
+                                            "visningsnavn":  "Nittedal"
+                                        },
+                                        {
+                                            "nr":  "3234",
+                                            "navn":  "Lunner",
+                                            "slug":  "lunner",
+                                            "visningsnavn":  "Lunner"
+                                        },
+                                        {
+                                            "nr":  "3236",
+                                            "navn":  "Jevnaker",
+                                            "slug":  "jevnaker",
+                                            "visningsnavn":  "Jevnaker"
+                                        },
+                                        {
+                                            "nr":  "3238",
+                                            "navn":  "Nannestad",
+                                            "slug":  "nannestad",
+                                            "visningsnavn":  "Nannestad"
+                                        },
+                                        {
+                                            "nr":  "3240",
+                                            "navn":  "Eidsvoll",
+                                            "slug":  "eidsvoll",
+                                            "visningsnavn":  "Eidsvoll"
+                                        },
+                                        {
+                                            "nr":  "3242",
+                                            "navn":  "Hurdal",
+                                            "slug":  "hurdal",
+                                            "visningsnavn":  "Hurdal"
+                                        }
+                                    ],
+                       "visningsnavn":  "Akershus"
+                   },
+                   {
+                       "nr":  "33",
+                       "navn":  "Buskerud",
+                       "slug":  "buskerud",
+                       "kommuner":  [
+                                        {
+                                            "nr":  "3301",
+                                            "navn":  "Drammen",
+                                            "slug":  "drammen",
+                                            "visningsnavn":  "Drammen"
+                                        },
+                                        {
+                                            "nr":  "3303",
+                                            "navn":  "Kongsberg",
+                                            "slug":  "kongsberg",
+                                            "visningsnavn":  "Kongsberg"
+                                        },
+                                        {
+                                            "nr":  "3305",
+                                            "navn":  "Ringerike",
+                                            "slug":  "ringerike",
+                                            "visningsnavn":  "Ringerike"
+                                        },
+                                        {
+                                            "nr":  "3310",
+                                            "navn":  "Hole",
+                                            "slug":  "hole",
+                                            "visningsnavn":  "Hole"
+                                        },
+                                        {
+                                            "nr":  "3312",
+                                            "navn":  "Lier",
+                                            "slug":  "lier",
+                                            "visningsnavn":  "Lier"
+                                        },
+                                        {
+                                            "nr":  "3314",
+                                            "navn":  "Øvre Eiker",
+                                            "slug":  "ovre-eiker",
+                                            "visningsnavn":  "Øvre Eiker"
+                                        },
+                                        {
+                                            "nr":  "3316",
+                                            "navn":  "Modum",
+                                            "slug":  "modum",
+                                            "visningsnavn":  "Modum"
+                                        },
+                                        {
+                                            "nr":  "3318",
+                                            "navn":  "Krødsherad",
+                                            "slug":  "krodsherad",
+                                            "visningsnavn":  "Krødsherad"
+                                        },
+                                        {
+                                            "nr":  "3320",
+                                            "navn":  "Flå",
+                                            "slug":  "fla",
+                                            "visningsnavn":  "Flå"
+                                        },
+                                        {
+                                            "nr":  "3322",
+                                            "navn":  "Nesbyen",
+                                            "slug":  "nesbyen",
+                                            "visningsnavn":  "Nesbyen"
+                                        },
+                                        {
+                                            "nr":  "3324",
+                                            "navn":  "Gol",
+                                            "slug":  "gol",
+                                            "visningsnavn":  "Gol"
+                                        },
+                                        {
+                                            "nr":  "3326",
+                                            "navn":  "Hemsedal",
+                                            "slug":  "hemsedal",
+                                            "visningsnavn":  "Hemsedal"
+                                        },
+                                        {
+                                            "nr":  "3328",
+                                            "navn":  "Ål",
+                                            "slug":  "al",
+                                            "visningsnavn":  "Ål"
+                                        },
+                                        {
+                                            "nr":  "3330",
+                                            "navn":  "Hol",
+                                            "slug":  "hol",
+                                            "visningsnavn":  "Hol"
+                                        },
+                                        {
+                                            "nr":  "3332",
+                                            "navn":  "Sigdal",
+                                            "slug":  "sigdal",
+                                            "visningsnavn":  "Sigdal"
+                                        },
+                                        {
+                                            "nr":  "3334",
+                                            "navn":  "Flesberg",
+                                            "slug":  "flesberg",
+                                            "visningsnavn":  "Flesberg"
+                                        },
+                                        {
+                                            "nr":  "3336",
+                                            "navn":  "Rollag",
+                                            "slug":  "rollag",
+                                            "visningsnavn":  "Rollag"
+                                        },
+                                        {
+                                            "nr":  "3338",
+                                            "navn":  "Nore og Uvdal",
+                                            "slug":  "nore-og-uvdal",
+                                            "visningsnavn":  "Nore og Uvdal"
+                                        }
+                                    ],
+                       "visningsnavn":  "Buskerud"
+                   },
+                   {
+                       "nr":  "34",
+                       "navn":  "Innlandet",
+                       "slug":  "innlandet",
+                       "kommuner":  [
+                                        {
+                                            "nr":  "3401",
+                                            "navn":  "Kongsvinger",
+                                            "slug":  "kongsvinger",
+                                            "visningsnavn":  "Kongsvinger"
+                                        },
+                                        {
+                                            "nr":  "3403",
+                                            "navn":  "Hamar",
+                                            "slug":  "hamar",
+                                            "visningsnavn":  "Hamar"
+                                        },
+                                        {
+                                            "nr":  "3405",
+                                            "navn":  "Lillehammer",
+                                            "slug":  "lillehammer",
+                                            "visningsnavn":  "Lillehammer"
+                                        },
+                                        {
+                                            "nr":  "3407",
+                                            "navn":  "Gjøvik",
+                                            "slug":  "gjovik",
+                                            "visningsnavn":  "Gjøvik"
+                                        },
+                                        {
+                                            "nr":  "3411",
+                                            "navn":  "Ringsaker",
+                                            "slug":  "ringsaker",
+                                            "visningsnavn":  "Ringsaker"
+                                        },
+                                        {
+                                            "nr":  "3412",
+                                            "navn":  "Løten",
+                                            "slug":  "loten",
+                                            "visningsnavn":  "Løten"
+                                        },
+                                        {
+                                            "nr":  "3413",
+                                            "navn":  "Stange",
+                                            "slug":  "stange",
+                                            "visningsnavn":  "Stange"
+                                        },
+                                        {
+                                            "nr":  "3414",
+                                            "navn":  "Nord-Odal",
+                                            "slug":  "nord-odal",
+                                            "visningsnavn":  "Nord-Odal"
+                                        },
+                                        {
+                                            "nr":  "3415",
+                                            "navn":  "Sør-Odal",
+                                            "slug":  "sor-odal",
+                                            "visningsnavn":  "Sør-Odal"
+                                        },
+                                        {
+                                            "nr":  "3416",
+                                            "navn":  "Eidskog",
+                                            "slug":  "eidskog",
+                                            "visningsnavn":  "Eidskog"
+                                        },
+                                        {
+                                            "nr":  "3417",
+                                            "navn":  "Grue",
+                                            "slug":  "grue",
+                                            "visningsnavn":  "Grue"
+                                        },
+                                        {
+                                            "nr":  "3418",
+                                            "navn":  "Åsnes",
+                                            "slug":  "asnes",
+                                            "visningsnavn":  "Åsnes"
+                                        },
+                                        {
+                                            "nr":  "3419",
+                                            "navn":  "Våler (Innlandet)",
+                                            "slug":  "valer",
+                                            "visningsnavn":  "Våler"
+                                        },
+                                        {
+                                            "nr":  "3420",
+                                            "navn":  "Elverum",
+                                            "slug":  "elverum",
+                                            "visningsnavn":  "Elverum"
+                                        },
+                                        {
+                                            "nr":  "3421",
+                                            "navn":  "Trysil",
+                                            "slug":  "trysil",
+                                            "visningsnavn":  "Trysil"
+                                        },
+                                        {
+                                            "nr":  "3422",
+                                            "navn":  "Åmot",
+                                            "slug":  "amot",
+                                            "visningsnavn":  "Åmot"
+                                        },
+                                        {
+                                            "nr":  "3423",
+                                            "navn":  "Stor-Elvdal",
+                                            "slug":  "stor-elvdal",
+                                            "visningsnavn":  "Stor-Elvdal"
+                                        },
+                                        {
+                                            "nr":  "3424",
+                                            "navn":  "Rendalen",
+                                            "slug":  "rendalen",
+                                            "visningsnavn":  "Rendalen"
+                                        },
+                                        {
+                                            "nr":  "3425",
+                                            "navn":  "Engerdal",
+                                            "slug":  "engerdal",
+                                            "visningsnavn":  "Engerdal"
+                                        },
+                                        {
+                                            "nr":  "3426",
+                                            "navn":  "Tolga",
+                                            "slug":  "tolga",
+                                            "visningsnavn":  "Tolga"
+                                        },
+                                        {
+                                            "nr":  "3427",
+                                            "navn":  "Tynset",
+                                            "slug":  "tynset",
+                                            "visningsnavn":  "Tynset"
+                                        },
+                                        {
+                                            "nr":  "3428",
+                                            "navn":  "Alvdal",
+                                            "slug":  "alvdal",
+                                            "visningsnavn":  "Alvdal"
+                                        },
+                                        {
+                                            "nr":  "3429",
+                                            "navn":  "Folldal",
+                                            "slug":  "folldal",
+                                            "visningsnavn":  "Folldal"
+                                        },
+                                        {
+                                            "nr":  "3430",
+                                            "navn":  "Os",
+                                            "slug":  "os",
+                                            "visningsnavn":  "Os"
+                                        },
+                                        {
+                                            "nr":  "3431",
+                                            "navn":  "Dovre",
+                                            "slug":  "dovre",
+                                            "visningsnavn":  "Dovre"
+                                        },
+                                        {
+                                            "nr":  "3432",
+                                            "navn":  "Lesja",
+                                            "slug":  "lesja",
+                                            "visningsnavn":  "Lesja"
+                                        },
+                                        {
+                                            "nr":  "3433",
+                                            "navn":  "Skjåk",
+                                            "slug":  "skjak",
+                                            "visningsnavn":  "Skjåk"
+                                        },
+                                        {
+                                            "nr":  "3434",
+                                            "navn":  "Lom",
+                                            "slug":  "lom",
+                                            "visningsnavn":  "Lom"
+                                        },
+                                        {
+                                            "nr":  "3435",
+                                            "navn":  "Vågå",
+                                            "slug":  "vaga",
+                                            "visningsnavn":  "Vågå"
+                                        },
+                                        {
+                                            "nr":  "3436",
+                                            "navn":  "Nord-Fron",
+                                            "slug":  "nord-fron",
+                                            "visningsnavn":  "Nord-Fron"
+                                        },
+                                        {
+                                            "nr":  "3437",
+                                            "navn":  "Sel",
+                                            "slug":  "sel",
+                                            "visningsnavn":  "Sel"
+                                        },
+                                        {
+                                            "nr":  "3438",
+                                            "navn":  "Sør-Fron",
+                                            "slug":  "sor-fron",
+                                            "visningsnavn":  "Sør-Fron"
+                                        },
+                                        {
+                                            "nr":  "3439",
+                                            "navn":  "Ringebu",
+                                            "slug":  "ringebu",
+                                            "visningsnavn":  "Ringebu"
+                                        },
+                                        {
+                                            "nr":  "3440",
+                                            "navn":  "Øyer",
+                                            "slug":  "oyer",
+                                            "visningsnavn":  "Øyer"
+                                        },
+                                        {
+                                            "nr":  "3441",
+                                            "navn":  "Gausdal",
+                                            "slug":  "gausdal",
+                                            "visningsnavn":  "Gausdal"
+                                        },
+                                        {
+                                            "nr":  "3442",
+                                            "navn":  "Østre Toten",
+                                            "slug":  "ostre-toten",
+                                            "visningsnavn":  "Østre Toten"
+                                        },
+                                        {
+                                            "nr":  "3443",
+                                            "navn":  "Vestre Toten",
+                                            "slug":  "vestre-toten",
+                                            "visningsnavn":  "Vestre Toten"
+                                        },
+                                        {
+                                            "nr":  "3446",
+                                            "navn":  "Gran",
+                                            "slug":  "gran",
+                                            "visningsnavn":  "Gran"
+                                        },
+                                        {
+                                            "nr":  "3447",
+                                            "navn":  "Søndre Land",
+                                            "slug":  "sondre-land",
+                                            "visningsnavn":  "Søndre Land"
+                                        },
+                                        {
+                                            "nr":  "3448",
+                                            "navn":  "Nordre Land",
+                                            "slug":  "nordre-land",
+                                            "visningsnavn":  "Nordre Land"
+                                        },
+                                        {
+                                            "nr":  "3449",
+                                            "navn":  "Sør-Aurdal",
+                                            "slug":  "sor-aurdal",
+                                            "visningsnavn":  "Sør-Aurdal"
+                                        },
+                                        {
+                                            "nr":  "3450",
+                                            "navn":  "Etnedal",
+                                            "slug":  "etnedal",
+                                            "visningsnavn":  "Etnedal"
+                                        },
+                                        {
+                                            "nr":  "3451",
+                                            "navn":  "Nord-Aurdal",
+                                            "slug":  "nord-aurdal",
+                                            "visningsnavn":  "Nord-Aurdal"
+                                        },
+                                        {
+                                            "nr":  "3452",
+                                            "navn":  "Vestre Slidre",
+                                            "slug":  "vestre-slidre",
+                                            "visningsnavn":  "Vestre Slidre"
+                                        },
+                                        {
+                                            "nr":  "3453",
+                                            "navn":  "Øystre Slidre",
+                                            "slug":  "oystre-slidre",
+                                            "visningsnavn":  "Øystre Slidre"
+                                        },
+                                        {
+                                            "nr":  "3454",
+                                            "navn":  "Vang",
+                                            "slug":  "vang",
+                                            "visningsnavn":  "Vang"
+                                        }
+                                    ],
+                       "visningsnavn":  "Innlandet"
+                   },
+                   {
+                       "nr":  "39",
+                       "navn":  "Vestfold",
+                       "slug":  "vestfold",
+                       "kommuner":  [
+                                        {
+                                            "nr":  "3901",
+                                            "navn":  "Horten",
+                                            "slug":  "horten",
+                                            "visningsnavn":  "Horten"
+                                        },
+                                        {
+                                            "nr":  "3903",
+                                            "navn":  "Holmestrand",
+                                            "slug":  "holmestrand",
+                                            "visningsnavn":  "Holmestrand"
+                                        },
+                                        {
+                                            "nr":  "3905",
+                                            "navn":  "Tønsberg",
+                                            "slug":  "tonsberg",
+                                            "visningsnavn":  "Tønsberg"
+                                        },
+                                        {
+                                            "nr":  "3907",
+                                            "navn":  "Sandefjord",
+                                            "slug":  "sandefjord",
+                                            "visningsnavn":  "Sandefjord"
+                                        },
+                                        {
+                                            "nr":  "3909",
+                                            "navn":  "Larvik",
+                                            "slug":  "larvik",
+                                            "visningsnavn":  "Larvik"
+                                        },
+                                        {
+                                            "nr":  "3911",
+                                            "navn":  "Færder",
+                                            "slug":  "faerder",
+                                            "visningsnavn":  "Færder"
+                                        }
+                                    ],
+                       "visningsnavn":  "Vestfold"
+                   },
+                   {
+                       "nr":  "40",
+                       "navn":  "Telemark",
+                       "slug":  "telemark",
+                       "kommuner":  [
+                                        {
+                                            "nr":  "4001",
+                                            "navn":  "Porsgrunn",
+                                            "slug":  "porsgrunn",
+                                            "visningsnavn":  "Porsgrunn"
+                                        },
+                                        {
+                                            "nr":  "4003",
+                                            "navn":  "Skien",
+                                            "slug":  "skien",
+                                            "visningsnavn":  "Skien"
+                                        },
+                                        {
+                                            "nr":  "4005",
+                                            "navn":  "Notodden",
+                                            "slug":  "notodden",
+                                            "visningsnavn":  "Notodden"
+                                        },
+                                        {
+                                            "nr":  "4010",
+                                            "navn":  "Siljan",
+                                            "slug":  "siljan",
+                                            "visningsnavn":  "Siljan"
+                                        },
+                                        {
+                                            "nr":  "4012",
+                                            "navn":  "Bamble",
+                                            "slug":  "bamble",
+                                            "visningsnavn":  "Bamble"
+                                        },
+                                        {
+                                            "nr":  "4014",
+                                            "navn":  "Kragerø",
+                                            "slug":  "kragero",
+                                            "visningsnavn":  "Kragerø"
+                                        },
+                                        {
+                                            "nr":  "4016",
+                                            "navn":  "Drangedal",
+                                            "slug":  "drangedal",
+                                            "visningsnavn":  "Drangedal"
+                                        },
+                                        {
+                                            "nr":  "4018",
+                                            "navn":  "Nome",
+                                            "slug":  "nome",
+                                            "visningsnavn":  "Nome"
+                                        },
+                                        {
+                                            "nr":  "4020",
+                                            "navn":  "Midt-Telemark",
+                                            "slug":  "midt-telemark",
+                                            "visningsnavn":  "Midt-Telemark"
+                                        },
+                                        {
+                                            "nr":  "4022",
+                                            "navn":  "Seljord",
+                                            "slug":  "seljord",
+                                            "visningsnavn":  "Seljord"
+                                        },
+                                        {
+                                            "nr":  "4024",
+                                            "navn":  "Hjartdal",
+                                            "slug":  "hjartdal",
+                                            "visningsnavn":  "Hjartdal"
+                                        },
+                                        {
+                                            "nr":  "4026",
+                                            "navn":  "Tinn",
+                                            "slug":  "tinn",
+                                            "visningsnavn":  "Tinn"
+                                        },
+                                        {
+                                            "nr":  "4028",
+                                            "navn":  "Kviteseid",
+                                            "slug":  "kviteseid",
+                                            "visningsnavn":  "Kviteseid"
+                                        },
+                                        {
+                                            "nr":  "4030",
+                                            "navn":  "Nissedal",
+                                            "slug":  "nissedal",
+                                            "visningsnavn":  "Nissedal"
+                                        },
+                                        {
+                                            "nr":  "4032",
+                                            "navn":  "Fyresdal",
+                                            "slug":  "fyresdal",
+                                            "visningsnavn":  "Fyresdal"
+                                        },
+                                        {
+                                            "nr":  "4034",
+                                            "navn":  "Tokke",
+                                            "slug":  "tokke",
+                                            "visningsnavn":  "Tokke"
+                                        },
+                                        {
+                                            "nr":  "4036",
+                                            "navn":  "Vinje",
+                                            "slug":  "vinje",
+                                            "visningsnavn":  "Vinje"
+                                        }
+                                    ],
+                       "visningsnavn":  "Telemark"
+                   },
+                   {
+                       "nr":  "42",
+                       "navn":  "Agder",
+                       "slug":  "agder",
+                       "kommuner":  [
+                                        {
+                                            "nr":  "4201",
+                                            "navn":  "Risør",
+                                            "slug":  "risor",
+                                            "visningsnavn":  "Risør"
+                                        },
+                                        {
+                                            "nr":  "4202",
+                                            "navn":  "Grimstad",
+                                            "slug":  "grimstad",
+                                            "visningsnavn":  "Grimstad"
+                                        },
+                                        {
+                                            "nr":  "4203",
+                                            "navn":  "Arendal",
+                                            "slug":  "arendal",
+                                            "visningsnavn":  "Arendal"
+                                        },
+                                        {
+                                            "nr":  "4204",
+                                            "navn":  "Kristiansand",
+                                            "slug":  "kristiansand",
+                                            "visningsnavn":  "Kristiansand"
+                                        },
+                                        {
+                                            "nr":  "4205",
+                                            "navn":  "Lindesnes",
+                                            "slug":  "lindesnes",
+                                            "visningsnavn":  "Lindesnes"
+                                        },
+                                        {
+                                            "nr":  "4206",
+                                            "navn":  "Farsund",
+                                            "slug":  "farsund",
+                                            "visningsnavn":  "Farsund"
+                                        },
+                                        {
+                                            "nr":  "4207",
+                                            "navn":  "Flekkefjord",
+                                            "slug":  "flekkefjord",
+                                            "visningsnavn":  "Flekkefjord"
+                                        },
+                                        {
+                                            "nr":  "4211",
+                                            "navn":  "Gjerstad",
+                                            "slug":  "gjerstad",
+                                            "visningsnavn":  "Gjerstad"
+                                        },
+                                        {
+                                            "nr":  "4212",
+                                            "navn":  "Vegårshei",
+                                            "slug":  "vegarshei",
+                                            "visningsnavn":  "Vegårshei"
+                                        },
+                                        {
+                                            "nr":  "4213",
+                                            "navn":  "Tvedestrand",
+                                            "slug":  "tvedestrand",
+                                            "visningsnavn":  "Tvedestrand"
+                                        },
+                                        {
+                                            "nr":  "4214",
+                                            "navn":  "Froland",
+                                            "slug":  "froland",
+                                            "visningsnavn":  "Froland"
+                                        },
+                                        {
+                                            "nr":  "4215",
+                                            "navn":  "Lillesand",
+                                            "slug":  "lillesand",
+                                            "visningsnavn":  "Lillesand"
+                                        },
+                                        {
+                                            "nr":  "4216",
+                                            "navn":  "Birkenes",
+                                            "slug":  "birkenes",
+                                            "visningsnavn":  "Birkenes"
+                                        },
+                                        {
+                                            "nr":  "4217",
+                                            "navn":  "Åmli",
+                                            "slug":  "amli",
+                                            "visningsnavn":  "Åmli"
+                                        },
+                                        {
+                                            "nr":  "4218",
+                                            "navn":  "Iveland",
+                                            "slug":  "iveland",
+                                            "visningsnavn":  "Iveland"
+                                        },
+                                        {
+                                            "nr":  "4219",
+                                            "navn":  "Evje og Hornnes",
+                                            "slug":  "evje-og-hornnes",
+                                            "visningsnavn":  "Evje og Hornnes"
+                                        },
+                                        {
+                                            "nr":  "4220",
+                                            "navn":  "Bygland",
+                                            "slug":  "bygland",
+                                            "visningsnavn":  "Bygland"
+                                        },
+                                        {
+                                            "nr":  "4221",
+                                            "navn":  "Valle",
+                                            "slug":  "valle",
+                                            "visningsnavn":  "Valle"
+                                        },
+                                        {
+                                            "nr":  "4222",
+                                            "navn":  "Bykle",
+                                            "slug":  "bykle",
+                                            "visningsnavn":  "Bykle"
+                                        },
+                                        {
+                                            "nr":  "4223",
+                                            "navn":  "Vennesla",
+                                            "slug":  "vennesla",
+                                            "visningsnavn":  "Vennesla"
+                                        },
+                                        {
+                                            "nr":  "4224",
+                                            "navn":  "Åseral",
+                                            "slug":  "aseral",
+                                            "visningsnavn":  "Åseral"
+                                        },
+                                        {
+                                            "nr":  "4225",
+                                            "navn":  "Lyngdal",
+                                            "slug":  "lyngdal",
+                                            "visningsnavn":  "Lyngdal"
+                                        },
+                                        {
+                                            "nr":  "4226",
+                                            "navn":  "Hægebostad",
+                                            "slug":  "haegebostad",
+                                            "visningsnavn":  "Hægebostad"
+                                        },
+                                        {
+                                            "nr":  "4227",
+                                            "navn":  "Kvinesdal",
+                                            "slug":  "kvinesdal",
+                                            "visningsnavn":  "Kvinesdal"
+                                        },
+                                        {
+                                            "nr":  "4228",
+                                            "navn":  "Sirdal",
+                                            "slug":  "sirdal",
+                                            "visningsnavn":  "Sirdal"
+                                        }
+                                    ],
+                       "visningsnavn":  "Agder"
+                   },
+                   {
+                       "nr":  "46",
+                       "navn":  "Vestland",
+                       "slug":  "vestland",
+                       "kommuner":  [
+                                        {
+                                            "nr":  "4601",
+                                            "navn":  "Bergen",
+                                            "slug":  "bergen",
+                                            "visningsnavn":  "Bergen"
+                                        },
+                                        {
+                                            "nr":  "4602",
+                                            "navn":  "Kinn",
+                                            "slug":  "kinn",
+                                            "visningsnavn":  "Kinn"
+                                        },
+                                        {
+                                            "nr":  "4611",
+                                            "navn":  "Etne",
+                                            "slug":  "etne",
+                                            "visningsnavn":  "Etne"
+                                        },
+                                        {
+                                            "nr":  "4612",
+                                            "navn":  "Sveio",
+                                            "slug":  "sveio",
+                                            "visningsnavn":  "Sveio"
+                                        },
+                                        {
+                                            "nr":  "4613",
+                                            "navn":  "Bømlo",
+                                            "slug":  "bomlo",
+                                            "visningsnavn":  "Bømlo"
+                                        },
+                                        {
+                                            "nr":  "4614",
+                                            "navn":  "Stord",
+                                            "slug":  "stord",
+                                            "visningsnavn":  "Stord"
+                                        },
+                                        {
+                                            "nr":  "4615",
+                                            "navn":  "Fitjar",
+                                            "slug":  "fitjar",
+                                            "visningsnavn":  "Fitjar"
+                                        },
+                                        {
+                                            "nr":  "4616",
+                                            "navn":  "Tysnes",
+                                            "slug":  "tysnes",
+                                            "visningsnavn":  "Tysnes"
+                                        },
+                                        {
+                                            "nr":  "4617",
+                                            "navn":  "Kvinnherad",
+                                            "slug":  "kvinnherad",
+                                            "visningsnavn":  "Kvinnherad"
+                                        },
+                                        {
+                                            "nr":  "4618",
+                                            "navn":  "Ullensvang",
+                                            "slug":  "ullensvang",
+                                            "visningsnavn":  "Ullensvang"
+                                        },
+                                        {
+                                            "nr":  "4619",
+                                            "navn":  "Eidfjord",
+                                            "slug":  "eidfjord",
+                                            "visningsnavn":  "Eidfjord"
+                                        },
+                                        {
+                                            "nr":  "4620",
+                                            "navn":  "Ulvik",
+                                            "slug":  "ulvik",
+                                            "visningsnavn":  "Ulvik"
+                                        },
+                                        {
+                                            "nr":  "4621",
+                                            "navn":  "Voss",
+                                            "slug":  "voss",
+                                            "visningsnavn":  "Voss"
+                                        },
+                                        {
+                                            "nr":  "4622",
+                                            "navn":  "Kvam",
+                                            "slug":  "kvam",
+                                            "visningsnavn":  "Kvam"
+                                        },
+                                        {
+                                            "nr":  "4623",
+                                            "navn":  "Samnanger",
+                                            "slug":  "samnanger",
+                                            "visningsnavn":  "Samnanger"
+                                        },
+                                        {
+                                            "nr":  "4624",
+                                            "navn":  "Bjørnafjorden",
+                                            "slug":  "bjornafjorden",
+                                            "visningsnavn":  "Bjørnafjorden"
+                                        },
+                                        {
+                                            "nr":  "4625",
+                                            "navn":  "Austevoll",
+                                            "slug":  "austevoll",
+                                            "visningsnavn":  "Austevoll"
+                                        },
+                                        {
+                                            "nr":  "4626",
+                                            "navn":  "Øygarden",
+                                            "slug":  "oygarden",
+                                            "visningsnavn":  "Øygarden"
+                                        },
+                                        {
+                                            "nr":  "4627",
+                                            "navn":  "Askøy",
+                                            "slug":  "askoy",
+                                            "visningsnavn":  "Askøy"
+                                        },
+                                        {
+                                            "nr":  "4628",
+                                            "navn":  "Vaksdal",
+                                            "slug":  "vaksdal",
+                                            "visningsnavn":  "Vaksdal"
+                                        },
+                                        {
+                                            "nr":  "4629",
+                                            "navn":  "Modalen",
+                                            "slug":  "modalen",
+                                            "visningsnavn":  "Modalen"
+                                        },
+                                        {
+                                            "nr":  "4630",
+                                            "navn":  "Osterøy",
+                                            "slug":  "osteroy",
+                                            "visningsnavn":  "Osterøy"
+                                        },
+                                        {
+                                            "nr":  "4631",
+                                            "navn":  "Alver",
+                                            "slug":  "alver",
+                                            "visningsnavn":  "Alver"
+                                        },
+                                        {
+                                            "nr":  "4632",
+                                            "navn":  "Austrheim",
+                                            "slug":  "austrheim",
+                                            "visningsnavn":  "Austrheim"
+                                        },
+                                        {
+                                            "nr":  "4633",
+                                            "navn":  "Fedje",
+                                            "slug":  "fedje",
+                                            "visningsnavn":  "Fedje"
+                                        },
+                                        {
+                                            "nr":  "4634",
+                                            "navn":  "Masfjorden",
+                                            "slug":  "masfjorden",
+                                            "visningsnavn":  "Masfjorden"
+                                        },
+                                        {
+                                            "nr":  "4635",
+                                            "navn":  "Gulen",
+                                            "slug":  "gulen",
+                                            "visningsnavn":  "Gulen"
+                                        },
+                                        {
+                                            "nr":  "4636",
+                                            "navn":  "Solund",
+                                            "slug":  "solund",
+                                            "visningsnavn":  "Solund"
+                                        },
+                                        {
+                                            "nr":  "4637",
+                                            "navn":  "Hyllestad",
+                                            "slug":  "hyllestad",
+                                            "visningsnavn":  "Hyllestad"
+                                        },
+                                        {
+                                            "nr":  "4638",
+                                            "navn":  "Høyanger",
+                                            "slug":  "hoyanger",
+                                            "visningsnavn":  "Høyanger"
+                                        },
+                                        {
+                                            "nr":  "4639",
+                                            "navn":  "Vik",
+                                            "slug":  "vik",
+                                            "visningsnavn":  "Vik"
+                                        },
+                                        {
+                                            "nr":  "4640",
+                                            "navn":  "Sogndal",
+                                            "slug":  "sogndal",
+                                            "visningsnavn":  "Sogndal"
+                                        },
+                                        {
+                                            "nr":  "4641",
+                                            "navn":  "Aurland",
+                                            "slug":  "aurland",
+                                            "visningsnavn":  "Aurland"
+                                        },
+                                        {
+                                            "nr":  "4642",
+                                            "navn":  "Lærdal",
+                                            "slug":  "laerdal",
+                                            "visningsnavn":  "Lærdal"
+                                        },
+                                        {
+                                            "nr":  "4643",
+                                            "navn":  "Årdal",
+                                            "slug":  "ardal",
+                                            "visningsnavn":  "Årdal"
+                                        },
+                                        {
+                                            "nr":  "4644",
+                                            "navn":  "Luster",
+                                            "slug":  "luster",
+                                            "visningsnavn":  "Luster"
+                                        },
+                                        {
+                                            "nr":  "4645",
+                                            "navn":  "Askvoll",
+                                            "slug":  "askvoll",
+                                            "visningsnavn":  "Askvoll"
+                                        },
+                                        {
+                                            "nr":  "4646",
+                                            "navn":  "Fjaler",
+                                            "slug":  "fjaler",
+                                            "visningsnavn":  "Fjaler"
+                                        },
+                                        {
+                                            "nr":  "4647",
+                                            "navn":  "Sunnfjord",
+                                            "slug":  "sunnfjord",
+                                            "visningsnavn":  "Sunnfjord"
+                                        },
+                                        {
+                                            "nr":  "4648",
+                                            "navn":  "Bremanger",
+                                            "slug":  "bremanger",
+                                            "visningsnavn":  "Bremanger"
+                                        },
+                                        {
+                                            "nr":  "4649",
+                                            "navn":  "Stad",
+                                            "slug":  "stad",
+                                            "visningsnavn":  "Stad"
+                                        },
+                                        {
+                                            "nr":  "4650",
+                                            "navn":  "Gloppen",
+                                            "slug":  "gloppen",
+                                            "visningsnavn":  "Gloppen"
+                                        },
+                                        {
+                                            "nr":  "4651",
+                                            "navn":  "Stryn",
+                                            "slug":  "stryn",
+                                            "visningsnavn":  "Stryn"
+                                        }
+                                    ],
+                       "visningsnavn":  "Vestland"
+                   },
+                   {
+                       "nr":  "50",
+                       "navn":  "Trøndelag - Trööndelage",
+                       "slug":  "trondelag",
+                       "kommuner":  [
+                                        {
+                                            "nr":  "5001",
+                                            "navn":  "Trondheim - Tråante",
+                                            "slug":  "trondheim",
+                                            "visningsnavn":  "Trondheim"
+                                        },
+                                        {
+                                            "nr":  "5006",
+                                            "navn":  "Steinkjer - Stïentje",
+                                            "slug":  "steinkjer",
+                                            "visningsnavn":  "Steinkjer"
+                                        },
+                                        {
+                                            "nr":  "5007",
+                                            "navn":  "Namsos - Nåavmesjenjaelmie",
+                                            "slug":  "namsos",
+                                            "visningsnavn":  "Namsos"
+                                        },
+                                        {
+                                            "nr":  "5014",
+                                            "navn":  "Frøya",
+                                            "slug":  "froya",
+                                            "visningsnavn":  "Frøya"
+                                        },
+                                        {
+                                            "nr":  "5020",
+                                            "navn":  "Osen",
+                                            "slug":  "osen",
+                                            "visningsnavn":  "Osen"
+                                        },
+                                        {
+                                            "nr":  "5021",
+                                            "navn":  "Oppdal",
+                                            "slug":  "oppdal",
+                                            "visningsnavn":  "Oppdal"
+                                        },
+                                        {
+                                            "nr":  "5022",
+                                            "navn":  "Rennebu",
+                                            "slug":  "rennebu",
+                                            "visningsnavn":  "Rennebu"
+                                        },
+                                        {
+                                            "nr":  "5025",
+                                            "navn":  "Røros - Rosse",
+                                            "slug":  "roros",
+                                            "visningsnavn":  "Røros"
+                                        },
+                                        {
+                                            "nr":  "5026",
+                                            "navn":  "Holtålen",
+                                            "slug":  "holtalen",
+                                            "visningsnavn":  "Holtålen"
+                                        },
+                                        {
+                                            "nr":  "5027",
+                                            "navn":  "Midtre Gauldal",
+                                            "slug":  "midtre-gauldal",
+                                            "visningsnavn":  "Midtre Gauldal"
+                                        },
+                                        {
+                                            "nr":  "5028",
+                                            "navn":  "Melhus",
+                                            "slug":  "melhus",
+                                            "visningsnavn":  "Melhus"
+                                        },
+                                        {
+                                            "nr":  "5029",
+                                            "navn":  "Skaun",
+                                            "slug":  "skaun",
+                                            "visningsnavn":  "Skaun"
+                                        },
+                                        {
+                                            "nr":  "5031",
+                                            "navn":  "Malvik",
+                                            "slug":  "malvik",
+                                            "visningsnavn":  "Malvik"
+                                        },
+                                        {
+                                            "nr":  "5032",
+                                            "navn":  "Selbu",
+                                            "slug":  "selbu",
+                                            "visningsnavn":  "Selbu"
+                                        },
+                                        {
+                                            "nr":  "5033",
+                                            "navn":  "Tydal",
+                                            "slug":  "tydal",
+                                            "visningsnavn":  "Tydal"
+                                        },
+                                        {
+                                            "nr":  "5034",
+                                            "navn":  "Meråker",
+                                            "slug":  "meraker",
+                                            "visningsnavn":  "Meråker"
+                                        },
+                                        {
+                                            "nr":  "5035",
+                                            "navn":  "Stjørdal",
+                                            "slug":  "stjordal",
+                                            "visningsnavn":  "Stjørdal"
+                                        },
+                                        {
+                                            "nr":  "5036",
+                                            "navn":  "Frosta",
+                                            "slug":  "frosta",
+                                            "visningsnavn":  "Frosta"
+                                        },
+                                        {
+                                            "nr":  "5037",
+                                            "navn":  "Levanger - Levangke",
+                                            "slug":  "levanger",
+                                            "visningsnavn":  "Levanger"
+                                        },
+                                        {
+                                            "nr":  "5038",
+                                            "navn":  "Verdal",
+                                            "slug":  "verdal",
+                                            "visningsnavn":  "Verdal"
+                                        },
+                                        {
+                                            "nr":  "5041",
+                                            "navn":  "Snåase - Snåsa",
+                                            "slug":  "snasa",
+                                            "visningsnavn":  "Snåsa"
+                                        },
+                                        {
+                                            "nr":  "5042",
+                                            "navn":  "Lierne",
+                                            "slug":  "lierne",
+                                            "visningsnavn":  "Lierne"
+                                        },
+                                        {
+                                            "nr":  "5043",
+                                            "navn":  "Raarvihke - Røyrvik",
+                                            "slug":  "royrvik",
+                                            "visningsnavn":  "Røyrvik"
+                                        },
+                                        {
+                                            "nr":  "5044",
+                                            "navn":  "Namsskogan",
+                                            "slug":  "namsskogan",
+                                            "visningsnavn":  "Namsskogan"
+                                        },
+                                        {
+                                            "nr":  "5045",
+                                            "navn":  "Grong",
+                                            "slug":  "grong",
+                                            "visningsnavn":  "Grong"
+                                        },
+                                        {
+                                            "nr":  "5046",
+                                            "navn":  "Høylandet",
+                                            "slug":  "hoylandet",
+                                            "visningsnavn":  "Høylandet"
+                                        },
+                                        {
+                                            "nr":  "5047",
+                                            "navn":  "Overhalla",
+                                            "slug":  "overhalla",
+                                            "visningsnavn":  "Overhalla"
+                                        },
+                                        {
+                                            "nr":  "5049",
+                                            "navn":  "Flatanger",
+                                            "slug":  "flatanger",
+                                            "visningsnavn":  "Flatanger"
+                                        },
+                                        {
+                                            "nr":  "5052",
+                                            "navn":  "Leka",
+                                            "slug":  "leka",
+                                            "visningsnavn":  "Leka"
+                                        },
+                                        {
+                                            "nr":  "5053",
+                                            "navn":  "Inderøy",
+                                            "slug":  "inderoy",
+                                            "visningsnavn":  "Inderøy"
+                                        },
+                                        {
+                                            "nr":  "5054",
+                                            "navn":  "Indre Fosen",
+                                            "slug":  "indre-fosen",
+                                            "visningsnavn":  "Indre Fosen"
+                                        },
+                                        {
+                                            "nr":  "5055",
+                                            "navn":  "Heim",
+                                            "slug":  "heim",
+                                            "visningsnavn":  "Heim"
+                                        },
+                                        {
+                                            "nr":  "5056",
+                                            "navn":  "Hitra",
+                                            "slug":  "hitra",
+                                            "visningsnavn":  "Hitra"
+                                        },
+                                        {
+                                            "nr":  "5057",
+                                            "navn":  "Ørland",
+                                            "slug":  "orland",
+                                            "visningsnavn":  "Ørland"
+                                        },
+                                        {
+                                            "nr":  "5058",
+                                            "navn":  "Åfjord",
+                                            "slug":  "afjord",
+                                            "visningsnavn":  "Åfjord"
+                                        },
+                                        {
+                                            "nr":  "5059",
+                                            "navn":  "Orkland",
+                                            "slug":  "orkland",
+                                            "visningsnavn":  "Orkland"
+                                        },
+                                        {
+                                            "nr":  "5060",
+                                            "navn":  "Nærøysund",
+                                            "slug":  "naeroysund",
+                                            "visningsnavn":  "Nærøysund"
+                                        },
+                                        {
+                                            "nr":  "5061",
+                                            "navn":  "Rindal",
+                                            "slug":  "rindal",
+                                            "visningsnavn":  "Rindal"
+                                        }
+                                    ],
+                       "visningsnavn":  "Trøndelag"
+                   },
+                   {
+                       "nr":  "55",
+                       "navn":  "Troms - Romsa - Tromssa",
+                       "slug":  "troms",
+                       "kommuner":  [
+                                        {
+                                            "nr":  "5501",
+                                            "navn":  "Tromsø",
+                                            "slug":  "tromso",
+                                            "visningsnavn":  "Tromsø"
+                                        },
+                                        {
+                                            "nr":  "5503",
+                                            "navn":  "Harstad - Hárstták",
+                                            "slug":  "harstad",
+                                            "visningsnavn":  "Harstad"
+                                        },
+                                        {
+                                            "nr":  "5510",
+                                            "navn":  "Kvæfjord",
+                                            "slug":  "kvaefjord",
+                                            "visningsnavn":  "Kvæfjord"
+                                        },
+                                        {
+                                            "nr":  "5512",
+                                            "navn":  "Dielddanuorri - Tjeldsund",
+                                            "slug":  "tjeldsund",
+                                            "visningsnavn":  "Tjeldsund"
+                                        },
+                                        {
+                                            "nr":  "5514",
+                                            "navn":  "Ibestad",
+                                            "slug":  "ibestad",
+                                            "visningsnavn":  "Ibestad"
+                                        },
+                                        {
+                                            "nr":  "5516",
+                                            "navn":  "Gratangen - Rivtták",
+                                            "slug":  "gratangen",
+                                            "visningsnavn":  "Gratangen"
+                                        },
+                                        {
+                                            "nr":  "5518",
+                                            "navn":  "Loabák - Lavangen",
+                                            "slug":  "lavangen",
+                                            "visningsnavn":  "Lavangen"
+                                        },
+                                        {
+                                            "nr":  "5520",
+                                            "navn":  "Bardu",
+                                            "slug":  "bardu",
+                                            "visningsnavn":  "Bardu"
+                                        },
+                                        {
+                                            "nr":  "5522",
+                                            "navn":  "Salangen",
+                                            "slug":  "salangen",
+                                            "visningsnavn":  "Salangen"
+                                        },
+                                        {
+                                            "nr":  "5524",
+                                            "navn":  "Målselv",
+                                            "slug":  "malselv",
+                                            "visningsnavn":  "Målselv"
+                                        },
+                                        {
+                                            "nr":  "5526",
+                                            "navn":  "Sørreisa",
+                                            "slug":  "sorreisa",
+                                            "visningsnavn":  "Sørreisa"
+                                        },
+                                        {
+                                            "nr":  "5528",
+                                            "navn":  "Dyrøy",
+                                            "slug":  "dyroy",
+                                            "visningsnavn":  "Dyrøy"
+                                        },
+                                        {
+                                            "nr":  "5530",
+                                            "navn":  "Senja",
+                                            "slug":  "senja",
+                                            "visningsnavn":  "Senja"
+                                        },
+                                        {
+                                            "nr":  "5532",
+                                            "navn":  "Balsfjord",
+                                            "slug":  "balsfjord",
+                                            "visningsnavn":  "Balsfjord"
+                                        },
+                                        {
+                                            "nr":  "5534",
+                                            "navn":  "Karlsøy",
+                                            "slug":  "karlsoy",
+                                            "visningsnavn":  "Karlsøy"
+                                        },
+                                        {
+                                            "nr":  "5536",
+                                            "navn":  "Lyngen - Ivgu - Yykeä",
+                                            "slug":  "lyngen",
+                                            "visningsnavn":  "Lyngen"
+                                        },
+                                        {
+                                            "nr":  "5538",
+                                            "navn":  "Storfjord - Omasvuotna - Omasvuono",
+                                            "slug":  "storfjord",
+                                            "visningsnavn":  "Storfjord"
+                                        },
+                                        {
+                                            "nr":  "5540",
+                                            "navn":  "Gáivuotna - Kåfjord - Kaivuono",
+                                            "slug":  "kafjord",
+                                            "visningsnavn":  "Kåfjord"
+                                        },
+                                        {
+                                            "nr":  "5542",
+                                            "navn":  "Skjervøy",
+                                            "slug":  "skjervoy",
+                                            "visningsnavn":  "Skjervøy"
+                                        },
+                                        {
+                                            "nr":  "5544",
+                                            "navn":  "Nordreisa - Ráisa - Raisi",
+                                            "slug":  "nordreisa",
+                                            "visningsnavn":  "Nordreisa"
+                                        },
+                                        {
+                                            "nr":  "5546",
+                                            "navn":  "Kvænangen",
+                                            "slug":  "kvaenangen",
+                                            "visningsnavn":  "Kvænangen"
+                                        }
+                                    ],
+                       "visningsnavn":  "Troms"
+                   },
+                   {
+                       "nr":  "56",
+                       "navn":  "Finnmark - Finnmárku - Finmarkku",
+                       "slug":  "finnmark",
+                       "kommuner":  [
+                                        {
+                                            "nr":  "5601",
+                                            "navn":  "Alta",
+                                            "slug":  "alta",
+                                            "visningsnavn":  "Alta"
+                                        },
+                                        {
+                                            "nr":  "5603",
+                                            "navn":  "Hammerfest - Hámmerfeasta",
+                                            "slug":  "hammerfest",
+                                            "visningsnavn":  "Hammerfest"
+                                        },
+                                        {
+                                            "nr":  "5605",
+                                            "navn":  "Sør-Varanger",
+                                            "slug":  "sor-varanger",
+                                            "visningsnavn":  "Sør-Varanger"
+                                        },
+                                        {
+                                            "nr":  "5607",
+                                            "navn":  "Vadsø",
+                                            "slug":  "vadso",
+                                            "visningsnavn":  "Vadsø"
+                                        },
+                                        {
+                                            "nr":  "5610",
+                                            "navn":  "Kárášjohka - Karasjok",
+                                            "slug":  "karasjok",
+                                            "visningsnavn":  "Karasjok"
+                                        },
+                                        {
+                                            "nr":  "5612",
+                                            "navn":  "Guovdageaidnu - Kautokeino",
+                                            "slug":  "kautokeino",
+                                            "visningsnavn":  "Kautokeino"
+                                        },
+                                        {
+                                            "nr":  "5614",
+                                            "navn":  "Loppa",
+                                            "slug":  "loppa",
+                                            "visningsnavn":  "Loppa"
+                                        },
+                                        {
+                                            "nr":  "5616",
+                                            "navn":  "Hasvik",
+                                            "slug":  "hasvik",
+                                            "visningsnavn":  "Hasvik"
+                                        },
+                                        {
+                                            "nr":  "5618",
+                                            "navn":  "Måsøy",
+                                            "slug":  "masoy",
+                                            "visningsnavn":  "Måsøy"
+                                        },
+                                        {
+                                            "nr":  "5620",
+                                            "navn":  "Nordkapp",
+                                            "slug":  "nordkapp",
+                                            "visningsnavn":  "Nordkapp"
+                                        },
+                                        {
+                                            "nr":  "5622",
+                                            "navn":  "Porsanger - Porsángu - Porsanki",
+                                            "slug":  "porsanger",
+                                            "visningsnavn":  "Porsanger"
+                                        },
+                                        {
+                                            "nr":  "5624",
+                                            "navn":  "Lebesby",
+                                            "slug":  "lebesby",
+                                            "visningsnavn":  "Lebesby"
+                                        },
+                                        {
+                                            "nr":  "5626",
+                                            "navn":  "Gamvik",
+                                            "slug":  "gamvik",
+                                            "visningsnavn":  "Gamvik"
+                                        },
+                                        {
+                                            "nr":  "5628",
+                                            "navn":  "Deatnu - Tana",
+                                            "slug":  "tana",
+                                            "visningsnavn":  "Tana"
+                                        },
+                                        {
+                                            "nr":  "5630",
+                                            "navn":  "Berlevåg",
+                                            "slug":  "berlevag",
+                                            "visningsnavn":  "Berlevåg"
+                                        },
+                                        {
+                                            "nr":  "5632",
+                                            "navn":  "Båtsfjord",
+                                            "slug":  "batsfjord",
+                                            "visningsnavn":  "Båtsfjord"
+                                        },
+                                        {
+                                            "nr":  "5634",
+                                            "navn":  "Vardø",
+                                            "slug":  "vardo",
+                                            "visningsnavn":  "Vardø"
+                                        },
+                                        {
+                                            "nr":  "5636",
+                                            "navn":  "Unjárga - Nesseby",
+                                            "slug":  "nesseby",
+                                            "visningsnavn":  "Nesseby"
+                                        }
+                                    ],
+                       "visningsnavn":  "Finnmark"
+                   }
+               ]
+}

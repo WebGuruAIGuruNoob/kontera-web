@@ -1,0 +1,10 @@
+# Secrets — never commit
+.env
+.env.local
+.env*.local
+
+# Dependencies / build (Next.js scaffold will extend this)
+node_modules/
+.next/
+out/
+.vercel
