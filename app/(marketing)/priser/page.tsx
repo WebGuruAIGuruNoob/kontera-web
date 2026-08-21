@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
+import { leadEnabled } from "@/lib/lead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { Hero } from "@/components/sections/Hero";
+import { HeroSplit } from "@/components/sections/HeroSplit";
+import { LeadCard } from "@/components/LeadCard";
+import { ProofStrip } from "@/components/sections/ProofStrip";
+import { ComparisonTable } from "@/components/sections/ComparisonTable";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
-import { CheckIcon } from "@/components/sections/Hero";
+import { CheckIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Priser – slik settes prisen på regnskapsføring",
@@ -14,8 +18,7 @@ export const metadata: Metadata = {
 
 /**
  * MERK (MASTERPLAN §14.7): Konkrete kronebeløp publiseres først når Henrik har
- * godkjent reelle priser. Denne siden forklarer prismodellen ærlig uten å
- * dikte opp tall — og konverterer via tilbud/prat.
+ * godkjent reelle priser. Siden forklarer prismodellen ærlig uten oppdiktede tall.
  */
 
 const prisDrivere = [
@@ -70,21 +73,33 @@ const prisFaq = [
 ];
 
 export default function PriserPage() {
+  const enabled = leadEnabled();
   return (
     <>
       <Breadcrumbs items={[{ name: "Priser", href: "/priser" }]} />
-      <Hero
+      <HeroSplit
         compact
         eyebrow="Priser"
-        title="Ærlig pris. Ingen overraskelser."
+        title={
+          <>
+            Ærlig pris. <span className="hl-serif-italic">Ingen</span> overraskelser.
+          </>
+        }
         subtitle="Vi ligger på et middels prisnivå med høy kvalitet — og gir deg et konkret tilbud tilpasset bedriften din etter en kort, uforpliktende prat."
-        secondaryLabel="Få ditt tilbud"
+        aside={
+          <LeadCard
+            enabled={enabled}
+            heading="Få prisen for din bedrift"
+            subheading="En kort prat om bilagsmengde og behov — som regel har du tilbudet samme dag."
+          />
+        }
       />
+      <ProofStrip />
 
       <section className="mx-auto max-w-6xl px-4 py-14">
         <div className="max-w-2xl">
           <p className="section-eyebrow">Prismodellen</p>
-          <h2 className="mt-2 font-display text-3xl font-extrabold text-ink [text-wrap:balance]">
+          <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
             Dette avgjør hva regnskapet ditt koster
           </h2>
           <p className="mt-4 leading-relaxed text-slate">
@@ -92,11 +107,14 @@ export default function PriserPage() {
             avgjør det meste:
           </p>
         </div>
-        <div className="mt-8 grid gap-5 sm:grid-cols-2">
-          {prisDrivere.map((driver) => (
-            <div key={driver.tittel} className="rounded-lg border border-line bg-white p-6 shadow-card">
-              <h3 className="font-display text-base font-bold text-navy">{driver.tittel}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate">{driver.tekst}</p>
+        <div data-reveal-group className="mt-8 grid gap-x-10 gap-y-0 sm:grid-cols-2">
+          {prisDrivere.map((driver, i) => (
+            <div key={driver.tittel} className="border-t border-navy/10 py-6">
+              <p className="font-display text-2xl font-bold tabular-nums text-azure">
+                {String(i + 1).padStart(2, "0")}
+              </p>
+              <h3 className="mt-1.5 font-sans text-base font-bold text-navy">{driver.tittel}</h3>
+              <p className="mt-2 max-w-[52ch] text-sm leading-relaxed text-slate">{driver.tekst}</p>
             </div>
           ))}
         </div>
@@ -104,12 +122,12 @@ export default function PriserPage() {
 
       <section className="bg-mist py-14">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="font-display text-3xl font-extrabold text-ink [text-wrap:balance]">
+          <h2 className="font-display text-h2 font-bold text-ink [text-wrap:balance]">
             Alltid inkludert — uansett pakke
           </h2>
-          <ul className="mt-8 grid gap-3 md:grid-cols-2">
+          <ul data-reveal-group className="mt-8 grid gap-3 md:grid-cols-2">
             {inkludert.map((punkt) => (
-              <li key={punkt} className="flex items-start gap-3 rounded-lg border border-line bg-white p-4">
+              <li key={punkt} className="card-line flex items-start gap-3 p-4">
                 <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal/20 text-navy">
                   <CheckIcon className="h-3.5 w-3.5" />
                 </span>
@@ -120,6 +138,7 @@ export default function PriserPage() {
         </div>
       </section>
 
+      <ComparisonTable />
       <Faq items={prisFaq} title="Spørsmål og svar om pris" />
       <FinalCta
         title="Få et konkret tilbud — som regel samme dag"

@@ -53,6 +53,14 @@ export type KommuneInnhold = {
   statCards: { label: string; value: string }[];
   topNæringer: { label: string; antall: number }[];
   stats: KommuneStats;
+  /** H1 — inneholder ALLTID «Regnskapsfører i {navn}» (DESIGNPLAN §7b.2) */
+  h1: string;
+  /** Variert meta description med lokale datapunkter (§7b.11) */
+  metaDescription: string;
+  /** Lokalisert setning per tjeneste-slug (data-parameterisert, sideunik) */
+  tjenesteSetninger: Record<string, string>;
+  /** Bransjebetinget tjenesterekkefølge til bentoen */
+  tjenesteRekkefolge: string[];
 };
 
 export function buildKommuneInnhold(
@@ -184,6 +192,7 @@ export function buildKommuneInnhold(
   const faq: FaqItem[] = [
     {
       q: `Har Kontera kontor i ${navn}?`,
+      unique: true,
       a:
         kommune.slug === "baerum"
           ? "Ja! Kontoret vårt på Jar ligger i Bærum kommune (Bjerkelundsveien 5, 1358 Jar). Du er velkommen innom — eller vi tar møtene digitalt."
@@ -193,6 +202,7 @@ export function buildKommuneInnhold(
     },
     {
       q: `Hva koster regnskapsfører i ${navn}?`,
+      unique: true,
       a: `Prisen avhenger av bilagsmengde, antall ansatte og hvor mye du gjør selv — ikke av hvor i landet du holder til. Vi ligger på et middels prisnivå med høy kvalitet, og korte spørsmål koster aldri noe ekstra. Ring oss, så får du et konkret estimat for din bedrift i ${navn}.`,
     },
     {
@@ -205,8 +215,18 @@ export function buildKommuneInnhold(
     },
     {
       q: `Hvor mange bedrifter finnes det i ${navn}?`,
+      unique: true,
       a: `Per ${new Date().getFullYear()} er det ${tall(stats.total)} virksomheter registrert i ${navn} i Enhetsregisteret, fordelt på ${tall(stats.as)} aksjeselskaper, ${tall(stats.enk)} enkeltpersonforetak og andre organisasjonsformer. ${tall(stats.nyreg)} nye virksomheter er registrert de siste tolv månedene. (Kilde: Brønnøysundregistrene.)`,
     },
+    ...(topp3.length >= 3
+      ? [
+          {
+            q: `Hvilke bransjer dominerer næringslivet i ${navn}?`,
+            unique: true,
+            a: `Målt i antall registrerte virksomheter er de største næringene i ${navn} ${topp3[0].label} (${tall(topp3[0].antall)}), ${topp3[1].label} (${tall(topp3[1].antall)}) og ${topp3[2].label} (${tall(topp3[2].antall)}). Vi har erfaring fra alle tre — og fra de fleste andre bransjer som drives i kommunen. (Kilde: Enhetsregisteret.)`,
+          },
+        ]
+      : []),
     {
       q: "Passer dere for små bedrifter og enkeltpersonforetak?",
       a: `Absolutt — de fleste samarbeidspartnerne våre er små og mellomstore bedrifter. Du betaler for det du faktisk trenger: noen vil bare ha årsoppgjøret, andre vil slippe alt. Vi setter opp arbeidsdelingen som passer deg.`,
@@ -256,7 +276,66 @@ export function buildKommuneInnhold(
     a: "Ja — komplett lønnskjøring med lønnsslipper, a-melding hver måned, feriepenger, sykepengerefusjon og innberetning ved årsslutt. Samme faste regnskapsfører tar både regnskapet og lønnen, så alt henger sammen.",
   });
 
-  return { intro, blokker, faq, statCards, topNæringer: topp3, stats };
+  /* --- H1: alltid «Regnskapsfører i {navn}» + varierende løfte (§7b.2) --- */
+  const h1Varianter = [
+    `Regnskapsfører i ${navn} — fast kontaktperson, uten taksameter`,
+    `Regnskapsfører i ${navn} uten faktura for korte spørsmål`,
+    `Regnskapsfører i ${navn} — alle frister, null stress`,
+    `Regnskapsfører i ${navn} med en fast fører som kjenner deg`,
+  ];
+  if (blokkIds.has("bil")) h1Varianter.push(`Regnskapsfører i ${navn} som kan bilbransjen`);
+  if (blokkIds.has("bygg")) h1Varianter.push(`Regnskapsfører i ${navn} som kan byggebransjen`);
+  if (blokkIds.has("fiskeri")) h1Varianter.push(`Regnskapsfører i ${navn} som kan sjømatnæringen`);
+  const h1 = pick(seed + "h1", h1Varianter);
+
+  const metaDescription = `Regnskap, lønn og årsoppgjør for bedrifter i ${navn} — ${tall(stats.total)} virksomheter, flest innen ${topp3[0]?.label ?? "tjenester"}. Fast regnskapsfører uten taksameter. Ring 960 00 400.`;
+
+  /* --- Lokaliserte tjenestesetninger (data-parameterisert, sideunik) --- */
+  const asTung = enkRatioLokal < enkRatioNasjonal;
+  const nyregHøy = nyregAndelLokal >= nyregAndelNasjonal;
+  const tjenesteSetninger: Record<string, string> = {
+    regnskapsforing: pick(seed + "t1", [
+      `${tall(stats.total)} virksomheter er registrert i ${navn} — fra ENK til konsern. Vi tilpasser føringen til din.`,
+      `Bedriftene i ${navn} spenner over ${tall(stats.total)} virksomheter — vi fører regnskap for alle selskapsformer.`,
+    ]),
+    lonn: asTung
+      ? `Med ${tall(stats.as)} aksjeselskaper i ${navn} er trygg lønn og a-melding hverdagskost — vi tar det komplett.`
+      : `Også små arbeidsgivere i ${navn} skal levere a-melding hver måned — vi tar lønnen fra A til Å.`,
+    arsoppgjor: `${tall(stats.as)} aksjeselskaper i ${navn} skal levere årsregnskap og skattemelding — vi tar hele pakken, i tide.`,
+    mva: blokkIds.has("reiseliv")
+      ? `Reiseliv og servering i ${navn} lever med delte mva-satser — et regelverk vi kan i dybden.`
+      : `Terminer, satser og fradrag for bedrifter i ${navn} — mva-meldingen levert til hver eneste frist.`,
+    radgivning: nyregHøy
+      ? `${tall(stats.nyreg)} nye virksomheter i ${navn} på tolv måneder — gode råd tidlig er de billigste du får.`
+      : `Etablerte bedrifter i ${navn} bruker oss som sparringspartner på tall, drift og veivalg.`,
+    "starte-selskap": `${tall(stats.nyreg)} nye virksomheter ble registrert i ${navn} siste år — skal din bli neste, hjelper vi deg i gang riktig.`,
+  };
+
+  /* --- Bransjebetinget tjenesterekkefølge (regnskapsforing er alltid featurecellen) --- */
+  const rekkefolge = ["regnskapsforing", "lonn", "arsoppgjor", "mva", "radgivning", "starte-selskap"];
+  const løft = (slug: string, pos: number) => {
+    const i = rekkefolge.indexOf(slug);
+    if (i > pos) {
+      rekkefolge.splice(i, 1);
+      rekkefolge.splice(pos, 0, slug);
+    }
+  };
+  if (blokkIds.has("reiseliv") || blokkIds.has("bil")) løft("mva", 1);
+  if (nyregHøy) løft("starte-selskap", 2);
+  if (asTung) løft("lonn", 1);
+
+  return {
+    intro,
+    blokker,
+    faq,
+    statCards,
+    topNæringer: topp3,
+    stats,
+    h1,
+    metaDescription,
+    tjenesteSetninger,
+    tjenesteRekkefolge: rekkefolge,
+  };
 }
 
 /* ---------- Fylkesnivå ---------- */

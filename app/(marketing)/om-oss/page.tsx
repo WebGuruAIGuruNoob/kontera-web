@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { site } from "@/data/site";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { Hero } from "@/components/sections/Hero";
-import { TrustBar } from "@/components/sections/TrustBar";
-import { PromiseGrid } from "@/components/sections/PromiseGrid";
+import { HeroSplit } from "@/components/sections/HeroSplit";
+import { ProofStrip } from "@/components/sections/ProofStrip";
+import { PromiseSplit } from "@/components/sections/PromiseSplit";
 import { FinalCta } from "@/components/sections/FinalCta";
 
 export const metadata: Metadata = {
@@ -17,14 +17,18 @@ export default function OmOssPage() {
   return (
     <>
       <Breadcrumbs items={[{ name: "Om oss", href: "/om-oss" }]} />
-      <Hero
+      <HeroSplit
         compact
         eyebrow="Om oss"
-        title="Store nok til å kunne alt. Små nok til å kjenne deg."
-        subtitle="Kontera Regnskap er seks mennesker som mener regnskap handler om samarbeid — ikke om et kunde­nummer i et køsystem."
-        image="/images/pexels/kontor-2.jpg"
+        title={
+          <>
+            Store nok til å kunne alt.{" "}
+            <span className="hl-serif-italic">Små nok til å kjenne deg.</span>
+          </>
+        }
+        subtitle="Kontera Regnskap er seks mennesker som mener regnskap handler om samarbeid — ikke om et kundenummer i et køsystem."
       />
-      <TrustBar />
+      <ProofStrip />
 
       <section className="mx-auto max-w-6xl px-4 py-14">
         <div className="mx-auto max-w-3xl space-y-10">
@@ -107,7 +111,7 @@ export default function OmOssPage() {
         </div>
       </section>
 
-      <PromiseGrid
+      <PromiseSplit
         eyebrow="Det vi lover"
         title="Fire løfter vi faktisk holder"
         intro="Dette er ikke verdiord fra en strategisamling — det er slik vi jobber, hver dag."

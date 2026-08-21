@@ -3,15 +3,19 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { fylker, getFylke } from "@/lib/geo";
 import { buildFylkeInnhold } from "@/lib/geo-content";
-import { fylkeBilde } from "@/lib/geo-bilder";
 import { generatedAt, tall } from "@/lib/geo-stats";
 import { site } from "@/data/site";
-import { Hero } from "@/components/sections/Hero";
-import { TrustBar } from "@/components/sections/TrustBar";
-import { ServiceCards } from "@/components/sections/ServiceCards";
-import { PromiseGrid } from "@/components/sections/PromiseGrid";
-import { ProcessSteps } from "@/components/sections/ProcessSteps";
-import { PricingTeaser } from "@/components/sections/PricingTeaser";
+import { leadEnabled } from "@/lib/lead";
+import { HeroSplit } from "@/components/sections/HeroSplit";
+import { LeadCard } from "@/components/LeadCard";
+import { ProofStrip } from "@/components/sections/ProofStrip";
+import { StatBand } from "@/components/sections/StatBand";
+import { ServicesBento } from "@/components/sections/ServicesBento";
+import { CtaBanner } from "@/components/sections/CtaBanner";
+import { PricingSection } from "@/components/sections/PricingSection";
+import { NumberedJourney } from "@/components/sections/NumberedJourney";
+import { ComparisonTable } from "@/components/sections/ComparisonTable";
+import { PromiseSplit } from "@/components/sections/PromiseSplit";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -37,7 +41,7 @@ export async function generateMetadata({
     title: {
       absolute: `Regnskapsfører i ${fylke.visningsnavn} | Kontera Regnskap`,
     },
-    description: `Regnskap, lønn og årsoppgjør for bedrifter i ${fylke.visningsnavn} — ${tall(innhold.aggregert.total)} virksomheter i ${fylke.kommuner.length} kommuner. Fast regnskapsfører, digitalt i hele fylket. Ring 960 00 400.`,
+    description: `Regnskap, lønn og årsoppgjør for bedrifter i ${fylke.visningsnavn} — ${tall(innhold.aggregert.total)} virksomheter i ${fylke.kommuner.length} kommuner. Fast regnskapsfører uten taksameter. Ring 960 00 400.`,
     alternates: { canonical: `/regnskapsforer/${fylke.slug}` },
   };
 }
@@ -52,6 +56,8 @@ export default async function FylkePage({
   if (!fylke) notFound();
 
   const innhold = buildFylkeInnhold(fylke);
+  const enabled = leadEnabled();
+  const navn = fylke.visningsnavn;
   const kommunerSortert = [...fylke.kommuner].sort((a, b) =>
     a.visningsnavn.localeCompare(b.visningsnavn, "nb")
   );
@@ -60,69 +66,74 @@ export default async function FylkePage({
     <>
       <JsonLd
         data={serviceSchema({
-          name: `Regnskapsfører i ${fylke.visningsnavn}`,
-          description: `Regnskapstjenester for bedrifter i ${fylke.visningsnavn}`,
+          name: `Regnskapsfører i ${navn}`,
+          description: `Regnskapstjenester for bedrifter i ${navn}`,
           url: `${site.url}/regnskapsforer/${fylke.slug}`,
-          areaServed: `${fylke.visningsnavn} fylke`,
+          areaServed: `${navn} fylke`,
         })}
       />
       <Breadcrumbs
         items={[
           { name: "Regnskapsfører", href: "/regnskapsforer" },
-          { name: fylke.visningsnavn, href: `/regnskapsforer/${fylke.slug}` },
+          { name: navn, href: `/regnskapsforer/${fylke.slug}` },
         ]}
       />
-      <Hero
+
+      <HeroSplit
         compact
-        eyebrow={`Regnskapsfører i ${fylke.visningsnavn}`}
-        title={`Regnskapsfører i ${fylke.visningsnavn} — uten taksameter`}
-        subtitle={`Fast regnskapsfører som kjenner bedriften din, alle frister overholdt og ingen faktura for korte spørsmål — digitalt i hele ${fylke.visningsnavn}.`}
-        image={fylkeBilde(fylke.slug)}
-        proof={[
+        eyebrow={`Regnskapsfører i ${navn}`}
+        title={`Regnskapsfører i ${navn} — uten taksameter`}
+        subtitle={`Fast regnskapsfører som kjenner bedriften din, alle frister overholdt og ingen faktura for korte spørsmål — digitalt i hele ${navn}.`}
+        chips={[
           `${tall(innhold.aggregert.total)} virksomheter i fylket`,
           "Statsautoriserte regnskapsførere",
           "Fast kontaktperson + backup",
         ]}
+        aside={
+          <LeadCard
+            enabled={enabled}
+            heading={`Få pristilbud for din bedrift i ${navn}`}
+            subheading="En kort prat om behovet ditt — så får du et ærlig, konkret tilbud."
+          />
+        }
       />
-      <TrustBar />
+      <ProofStrip />
 
       <section className="mx-auto max-w-6xl px-4 py-14">
-        <div className="mx-auto max-w-3xl">
-          <p className="section-eyebrow">Næringslivet i {fylke.visningsnavn}</p>
-          <h2 className="mt-2 font-display text-3xl font-extrabold text-ink [text-wrap:balance]">
+        <div className="max-w-3xl" data-unique>
+          <p className="section-eyebrow">Næringslivet i {navn}</p>
+          <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
             Et fylke i tall — og hva det betyr for regnskapet ditt
           </h2>
           {innhold.intro.map((avsnitt, i) => (
-            <p key={i} className="mt-4 leading-relaxed text-slate">
+            <p key={i} className="mt-4 max-w-[70ch] leading-relaxed text-slate">
               {avsnitt}
             </p>
           ))}
         </div>
-        <div className="mt-10 grid gap-4 sm:grid-cols-3 lg:grid-cols-6">
-          {innhold.statCards.map((card) => (
-            <div key={card.label} className="rounded-lg border border-line bg-mist p-4 text-center">
-              <p className="font-display text-2xl font-extrabold tabular-nums text-blue">
-                {card.value}
-              </p>
-              <p className="mt-1 text-xs font-semibold text-slate">{card.label}</p>
-            </div>
-          ))}
-        </div>
-        <p className="mt-3 text-xs text-slate">
-          Kilder: Brønnøysundregistrene (Enhetsregisteret) og SSB. Sist
-          oppdatert {generatedAt}.
-        </p>
       </section>
+
+      <StatBand
+        items={innhold.statCards.map((card, i) => ({
+          label: card.label,
+          value: card.value,
+          numeric:
+            i < 5 && /^[\d\s]+$/.test(card.value)
+              ? Number(card.value.replace(/\s/g, ""))
+              : undefined,
+        }))}
+        source={`Kilder: Brønnøysundregistrene (Enhetsregisteret) og SSB. Sist oppdatert ${generatedAt}.`}
+      />
 
       {/* Kommunevelger — hub-funksjonen: beskrivende ankertekster til alle spokes */}
       <section className="bg-mist py-14">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="font-display text-2xl font-extrabold text-ink">
-            Velg din kommune i {fylke.visningsnavn}
+          <h2 className="font-display text-h2 font-bold text-ink [text-wrap:balance]">
+            Velg din kommune i {navn}
           </h2>
           <p className="mt-3 max-w-2xl text-slate">
-            Hver kommuneside gir deg lokale næringstall, bransjeinnsikten som
-            er mest relevant der — og svar på det bedrifter i kommunen lurer på.
+            Hver kommuneside gir deg lokale næringstall, bransjeinnsikten som er
+            mest relevant der — og svar på det bedrifter i kommunen lurer på.
           </p>
           <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-2.5 sm:grid-cols-3 lg:grid-cols-4">
             {kommunerSortert.map((kommune) => (
@@ -144,11 +155,11 @@ export default async function FylkePage({
           <div className="mx-auto max-w-3xl space-y-10">
             {innhold.blokker.map((blokk) => (
               <div key={blokk.id}>
-                <h2 className="font-display text-2xl font-extrabold text-ink [text-wrap:balance]">
+                <h2 className="font-display text-2xl font-bold tracking-[-0.01em] text-ink [text-wrap:balance]">
                   {blokk.tittel}
                 </h2>
                 {blokk.avsnitt.map((avsnitt, i) => (
-                  <p key={i} className="mt-4 leading-relaxed text-slate">
+                  <p key={i} className="mt-4 max-w-[70ch] leading-relaxed text-slate">
                     {avsnitt}
                   </p>
                 ))}
@@ -158,19 +169,25 @@ export default async function FylkePage({
         </section>
       )}
 
-      <ServiceCards
-        title={`Tjenestene våre i ${fylke.visningsnavn}`}
+      <ServicesBento
+        title={`Tjenestene våre i ${navn}`}
         intro="Samme faste regnskapsfører tar helheten — du velger hvor mye du vil gjøre selv."
+        geoSuffix={`i ${navn}`}
       />
-      <PromiseGrid />
-      <PricingTeaser />
-      <ProcessSteps />
+      <CtaBanner
+        leadEnabled={enabled}
+        text={`Driver du bedrift i ${navn}? Ta en uforpliktende prat om hva du faktisk trenger.`}
+      />
+      <PricingSection leadEnabled={enabled} stedsnavn={navn} />
+      <NumberedJourney leadEnabled={enabled} />
+      <ComparisonTable />
+      <PromiseSplit />
       <Faq
         items={innhold.faq}
-        title={`Spørsmål og svar — regnskapsfører i ${fylke.visningsnavn}`}
+        title={`Spørsmål og svar — regnskapsfører i ${navn}`}
       />
       <FinalCta
-        title={`Klar for en regnskapsfører som kjenner deg — i ${fylke.visningsnavn}?`}
+        title={`Klar for en regnskapsfører som kjenner deg — i ${navn}?`}
       />
     </>
   );

@@ -5,7 +5,12 @@
  * og /bransjer/[slug] rendrer disse feltene i fast CRO-rekkefølge.
  */
 
-export type FaqItem = { q: string; a: string };
+export type FaqItem = {
+  q: string;
+  a: string;
+  /** Markerer svar med side-unikt (datadrevet) innhold — telles av kvalitetsporten */
+  unique?: boolean;
+};
 
 export type TjenesteContent = {
   slug: string;

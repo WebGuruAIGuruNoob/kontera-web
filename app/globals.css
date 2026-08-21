@@ -1,24 +1,39 @@
 @import "tailwindcss";
 
 @theme {
-  /* Kontera merkevarefarger (fra eksisterende profil, raffinert) */
+  /* ==== KONTERA DESIGNSYSTEM 2.0 (DESIGNPLAN.md §2) ==== */
+
+  /* Grunn og tekst */
+  --color-paper: #fafaf8;
+  --color-surface: #ffffff;
+  --color-mist: #eef4f8;
+  --color-ink: #182530;
+  --color-slate: #4e6373;
+
+  /* Brand — beholdt, rolledisiplinert */
   --color-navy: #084666;
-  --color-navy-deep: #062F45;
-  --color-blue: #0c71c3;
+  --color-navy-deep: #062f45;
+  --color-blue: #0c71c3;   /* ENESTE knappfarge */
   --color-blue-dark: #0a5d9f;
-  --color-azure: #07a0e4;
-  --color-teal: #7ebec5;
-  --color-ink: #26313a;
-  --color-slate: #526572;
-  --color-mist: #f4f8fb;
-  --color-sand: #fbfcfd;
-  --color-line: #dce6ed;
+  --color-azure: #07a0e4;  /* kun utheving */
+  --color-teal: #7ebec5;   /* kun duse tinter */
 
-  --font-display: var(--font-montserrat), "Montserrat", ui-sans-serif, sans-serif;
-  --font-sans: var(--font-opensans), "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  /* Hairline (borders erstatter skygger) */
+  --color-line: #dce4ea;
 
-  --shadow-card: 0 1px 2px rgb(8 70 102 / 0.06), 0 8px 24px rgb(8 70 102 / 0.08);
-  --shadow-lift: 0 2px 4px rgb(8 70 102 / 0.08), 0 16px 40px rgb(8 70 102 / 0.14);
+  /* Typografi: Source Serif 4 (display) + Schibsted Grotesk (sans) */
+  --font-display: var(--font-serif-display), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-grotesk), system-ui, -apple-system, sans-serif;
+
+  --text-display: clamp(2.75rem, 1.5rem + 4.5vw, 5.25rem);
+  --text-display--line-height: 1.04;
+  --text-display--letter-spacing: -0.025em;
+  --text-h2: clamp(1.9rem, 1.2rem + 2.2vw, 3rem);
+  --text-h2--line-height: 1.12;
+  --text-h2--letter-spacing: -0.015em;
+
+  --radius-card: 0.75rem;
+  --radius-feature: 1.25rem;
 }
 
 html {
@@ -30,23 +45,47 @@ html {
 }
 
 body {
-  @apply bg-white text-ink font-sans antialiased;
+  @apply bg-paper text-ink font-sans antialiased;
+  font-size: 1.0625rem; /* 17px */
+  line-height: 1.65;
 }
 
-/* Overskrifter settes i Montserrat via utility-klasser i komponentene */
-
-/* Hero-signatur: navy→asur-gradient (fra dagens profil, modernisert) */
-.hero-gradient {
-  background-image: linear-gradient(
-    165deg,
-    rgb(6 47 69 / 0.94) 0%,
-    rgb(8 70 102 / 0.9) 45%,
-    rgb(12 113 195 / 0.82) 100%
-  );
-}
-
+/* Kicker/eyebrow — venstrestilt, aldri sentrert overalt (§2.2) */
 .section-eyebrow {
-  @apply font-display text-xs font-bold uppercase tracking-[0.18em] text-blue;
+  @apply font-sans text-[0.72rem] font-bold uppercase tracking-[0.14em] text-blue;
+}
+
+/* Hairline-kort: border i stedet for skygge (§2.3) */
+.card-line {
+  @apply rounded-xl border border-navy/10 bg-surface transition-colors;
+}
+.card-line-hover {
+  @apply hover:border-navy/25 hover:bg-mist/40;
+}
+
+/* Azur-uthevet nøkkelord i display-overskrifter */
+.hl {
+  @apply text-azure;
+}
+.hl-serif-italic {
+  font-style: italic;
+  @apply text-azure;
+}
+
+/* Scroll-reveal: basistilstand ALLTID synlig (SEO/crawler-trygt).
+   MotionInit legger .will-reveal (skjult) kun når JS + motion ok, deretter .is-revealed. */
+[data-reveal] { opacity: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .will-reveal {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  .is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+    transition-delay: var(--reveal-delay, 0ms);
+  }
 }
 
 /* Artikkel-typografi (MDX-innhold) */
@@ -54,10 +93,10 @@ body {
   @apply leading-relaxed text-slate;
 }
 .article-prose h2 {
-  @apply mt-10 mb-3 font-display text-2xl font-extrabold text-ink;
+  @apply mt-10 mb-3 font-display text-2xl font-bold tracking-[-0.01em] text-ink;
 }
 .article-prose h3 {
-  @apply mt-7 mb-2 font-display text-lg font-bold text-navy;
+  @apply mt-7 mb-2 font-sans text-lg font-bold text-navy;
 }
 .article-prose p {
   @apply mt-4 max-w-[70ch];
@@ -79,10 +118,10 @@ body {
   @apply mt-5 w-full border-collapse text-sm;
 }
 .article-prose th {
-  @apply border border-line bg-mist px-3 py-2 text-left font-display font-bold text-navy;
+  @apply border border-line bg-mist px-3 py-2 text-left font-sans font-bold text-navy;
 }
 .article-prose td {
-  @apply border border-line px-3 py-2;
+  @apply border border-line px-3 py-2 tabular-nums;
 }
 .article-prose blockquote {
   @apply mt-4 border-l-4 border-azure/50 pl-4 italic;

@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { fylker } from "@/lib/geo";
 import { getStats, tall } from "@/lib/geo-stats";
-import { Hero } from "@/components/sections/Hero";
-import { TrustBar } from "@/components/sections/TrustBar";
-import { PromiseGrid } from "@/components/sections/PromiseGrid";
+import { leadEnabled } from "@/lib/lead";
+import { HeroSplit } from "@/components/sections/HeroSplit";
+import { LeadCard } from "@/components/LeadCard";
+import { ProofStrip } from "@/components/sections/ProofStrip";
+import { PromiseSplit } from "@/components/sections/PromiseSplit";
+import { NumberedJourney } from "@/components/sections/NumberedJourney";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
@@ -16,31 +19,42 @@ export const metadata: Metadata = {
 };
 
 export default function GeoHubPage() {
+  const enabled = leadEnabled();
   return (
     <>
       <Breadcrumbs items={[{ name: "Regnskapsfører", href: "/regnskapsforer" }]} />
-      <Hero
+      <HeroSplit
         compact
         eyebrow="Der du er"
-        title="Regnskapsfører der du driver bedrift"
+        title={
+          <>
+            Regnskapsfører der <span className="hl-serif-italic">du</span> driver bedrift
+          </>
+        }
         subtitle="Vi jobber digitalt med samarbeidspartnere i hele Norge – med kontorer på Jar i Bærum og Ask i Gjerdrum. Velg fylket ditt for lokale tall, bransjeinnsikt og svar."
-        image="/images/pexels/norge-fjord-1.jpg"
+        aside={
+          <LeadCard
+            enabled={enabled}
+            heading="Få pristilbud for din bedrift"
+            subheading="Uansett hvor i Norge du driver — en kort prat, så får du et ærlig tilbud."
+          />
+        }
       />
-      <TrustBar />
+      <ProofStrip />
 
       <section className="mx-auto max-w-6xl px-4 py-14">
         <div className="max-w-2xl">
           <p className="section-eyebrow">Velg område</p>
-          <h2 className="mt-2 font-display text-3xl font-extrabold text-ink [text-wrap:balance]">
+          <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
             Alle fylker — alle kommuner
           </h2>
           <p className="mt-4 leading-relaxed text-slate">
             Hver side gir deg ferske tall om næringslivet i området (fra
-            Brønnøysundregistrene og SSB), bransjeinnsikten som er mest
-            relevant lokalt — og svar på det bedrifter der faktisk lurer på.
+            Brønnøysundregistrene og SSB), bransjeinnsikten som er mest relevant
+            lokalt — og svar på det bedrifter der faktisk lurer på.
           </p>
         </div>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div data-reveal-group className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {fylker.map((fylke) => {
             const total = fylke.kommuner.reduce(
               (sum, k) => sum + (getStats(k.nr)?.total ?? 0),
@@ -50,12 +64,12 @@ export default function GeoHubPage() {
               <Link
                 key={fylke.nr}
                 href={`/regnskapsforer/${fylke.slug}`}
-                className="group rounded-lg border border-line bg-white p-5 shadow-card transition-all hover:-translate-y-0.5 hover:shadow-lift"
+                className="group card-line card-line-hover p-5"
               >
                 <h3 className="font-display text-lg font-bold text-navy group-hover:text-blue">
                   {fylke.visningsnavn}
                 </h3>
-                <p className="mt-1 text-sm text-slate">
+                <p className="mt-1 text-sm tabular-nums text-slate">
                   {fylke.kommuner.length === 1
                     ? "1 kommune"
                     : `${fylke.kommuner.length} kommuner`}{" "}
@@ -70,7 +84,8 @@ export default function GeoHubPage() {
         </div>
       </section>
 
-      <PromiseGrid />
+      <PromiseSplit />
+      <NumberedJourney leadEnabled={enabled} />
       <FinalCta />
     </>
   );

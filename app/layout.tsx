@@ -1,24 +1,25 @@
 import type { Metadata } from "next";
-import { Montserrat, Open_Sans } from "next/font/google";
+import { Source_Serif_4, Schibsted_Grotesk } from "next/font/google";
 import "./globals.css";
 import { site } from "@/data/site";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { StickyCallBar } from "@/components/layout/StickyCallBar";
 import { JsonLd } from "@/components/JsonLd";
+import { MotionInit } from "@/components/motion/MotionInit";
 import { organizationSchema } from "@/lib/schema";
+import { leadEnabled } from "@/lib/lead";
 
-const montserrat = Montserrat({
+const serifDisplay = Source_Serif_4({
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
-  variable: "--font-montserrat",
+  weight: ["600", "700"],
+  variable: "--font-serif-display",
   display: "swap",
 });
 
-const openSans = Open_Sans({
+const grotesk = Schibsted_Grotesk({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-opensans",
+  variable: "--font-grotesk",
   display: "swap",
 });
 
@@ -42,7 +43,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="nb" className={`${montserrat.variable} ${openSans.variable}`}>
+    <html lang="nb" className={`${serifDisplay.variable} ${grotesk.variable}`}>
       <body>
         <a
           href="#innhold"
@@ -54,7 +55,8 @@ export default function RootLayout({
         <Header />
         <main id="innhold">{children}</main>
         <Footer />
-        <StickyCallBar />
+        <StickyCallBar leadEnabled={leadEnabled()} />
+        <MotionInit />
       </body>
     </html>
   );

@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { ServiceCards } from "@/components/sections/ServiceCards";
-import { Hero } from "@/components/sections/Hero";
-import { TrustBar } from "@/components/sections/TrustBar";
-import { ProcessSteps } from "@/components/sections/ProcessSteps";
+import { leadEnabled } from "@/lib/lead";
+import { HeroSplit } from "@/components/sections/HeroSplit";
+import { LeadCard } from "@/components/LeadCard";
+import { ProofStrip } from "@/components/sections/ProofStrip";
+import { ServicesBento } from "@/components/sections/ServicesBento";
+import { NumberedJourney } from "@/components/sections/NumberedJourney";
+import { ComparisonTable } from "@/components/sections/ComparisonTable";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
@@ -14,22 +17,34 @@ export const metadata: Metadata = {
 };
 
 export default function TjenesterPage() {
+  const enabled = leadEnabled();
   return (
     <>
       <Breadcrumbs items={[{ name: "Tjenester", href: "/tjenester" }]} />
-      <Hero
+      <HeroSplit
         compact
         eyebrow="Tjenester"
-        title="Alt du trenger. Én fast regnskapsfører."
+        title={
+          <>
+            Alt du trenger. <span className="hl-serif-italic">Én</span> fast regnskapsfører.
+          </>
+        }
         subtitle="Fra løpende bokføring til årsoppgjør og rådgivning – vi setter sammen akkurat den pakken bedriften din trenger, og justerer den når behovet endrer seg."
-        image="/images/pexels/samarbeid-1.jpg"
+        aside={
+          <LeadCard
+            enabled={enabled}
+            heading="Få pristilbud for din bedrift"
+            subheading="Fortell oss kort hva du trenger — så får du et ærlig, konkret tilbud."
+          />
+        }
       />
-      <TrustBar />
-      <ServiceCards
+      <ProofStrip />
+      <ServicesBento
         title="Velg tjenesten du vil vite mer om"
         intro="Alle tjenester leveres av samme faste regnskapsfører – du slipper å bli sendt rundt mellom avdelinger."
       />
-      <ProcessSteps />
+      <NumberedJourney leadEnabled={enabled} />
+      <ComparisonTable />
       <FinalCta />
     </>
   );

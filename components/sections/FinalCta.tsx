@@ -1,27 +1,28 @@
 import { site } from "@/data/site";
 import { ContactForm } from "@/components/ContactForm";
-import { PhoneIcon } from "@/components/layout/Header";
+import { PhoneIcon } from "@/components/icons";
+import { leadEnabled } from "@/lib/lead";
 
 /**
- * Final CTA-seksjon (MASTERPLAN §6/§9): begge veier inn —
- * stort telefonnummer + skjema + responstidsløfte.
+ * Final CTA-seksjon: begge veier inn — stort telefonnummer + skjema.
+ * Ankermål (#kontakt) for alle inline-CTA-er på siden.
  */
 export function FinalCta({
   title = "Klar for en regnskapsfører som faktisk kjenner deg?",
-  text = "Ta en uforpliktende prat, så finner vi ut om vi er en god match. Eller send oss noen linjer om hva du ser etter — vi svarer innen én arbeidsdag.",
+  text = "Ta en uforpliktende prat, så finner vi ut om vi er en god match. Eller send oss noen linjer om hva du ser etter.",
 }: {
   title?: string;
   text?: string;
 }) {
-  const formEnabled = !!process.env.RESEND_API_KEY;
+  const enabled = leadEnabled();
   return (
     <section id="kontakt" className="bg-navy-deep py-16 text-white lg:py-20">
-      <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-2">
-        <div>
-          <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-azure">
+      <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-12 lg:gap-14">
+        <div className="lg:col-span-6">
+          <p className="font-sans text-[0.72rem] font-bold uppercase tracking-[0.14em] text-azure">
             Ta kontakt
           </p>
-          <h2 className="mt-3 font-display text-3xl font-extrabold leading-tight [text-wrap:balance] lg:text-4xl">
+          <h2 className="mt-3 font-display text-h2 font-bold leading-tight [text-wrap:balance]">
             {title}
           </h2>
           <p className="mt-4 max-w-lg leading-relaxed text-white/80">{text}</p>
@@ -29,7 +30,7 @@ export function FinalCta({
           <a
             href={site.phoneHref}
             data-cta="final-ring"
-            className="mt-8 inline-flex items-center gap-3 rounded-md bg-white px-6 py-4 font-display text-xl font-extrabold text-navy shadow-lift transition-transform hover:-translate-y-0.5"
+            className="mt-8 inline-flex items-center gap-3 rounded-xl bg-white px-6 py-4 font-display text-xl font-bold text-navy transition-colors hover:bg-mist"
           >
             <PhoneIcon className="h-6 w-6 text-blue" />
             {site.phoneDisplay}
@@ -54,8 +55,8 @@ export function FinalCta({
           </ul>
         </div>
 
-        <div className="text-ink">
-          <ContactForm enabled={formEnabled} />
+        <div className="text-ink lg:col-span-6">
+          <ContactForm enabled={enabled} />
         </div>
       </div>
     </section>

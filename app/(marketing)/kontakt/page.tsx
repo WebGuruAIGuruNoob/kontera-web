@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { site } from "@/data/site";
 import { ContactForm } from "@/components/ContactForm";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { PhoneIcon } from "@/components/layout/Header";
+import { PhoneIcon } from "@/components/icons";
 import { Faq } from "@/components/sections/Faq";
 
 export const metadata: Metadata = {

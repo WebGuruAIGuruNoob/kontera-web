@@ -4,13 +4,17 @@ import { fylker } from "@/lib/geo";
 import { tjenester } from "@/content/tjenester";
 import { bransjer } from "@/content/bransjer";
 
+/**
+ * Mega-footer (DESIGNPLAN §2.6): navigasjon, trygghet, compliance, kontakt —
+ * avsluttet med dekorativt lavopasitets-wordmark (konkurrerer ikke med logoen).
+ */
 export function Footer() {
   return (
-    <footer className="border-t border-line bg-navy-deep text-white">
-      <div className="mx-auto max-w-6xl px-4 py-14 pb-24 lg:pb-14">
+    <footer className="relative overflow-hidden border-t border-navy/10 bg-navy-deep text-white">
+      <div className="mx-auto max-w-6xl px-4 py-14 pb-8">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="font-display text-lg font-extrabold tracking-wide">
+            <p className="font-sans text-lg font-bold tracking-wide">
               KONTERA<span className="text-azure"> REGNSKAP</span>
             </p>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-white/70">
@@ -45,7 +49,9 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="section-eyebrow !text-azure">Tjenester</p>
+            <p className="font-sans text-[0.72rem] font-bold uppercase tracking-[0.14em] text-azure">
+              Tjenester
+            </p>
             <ul className="mt-3 space-y-2 text-sm">
               {tjenester.map((t) => (
                 <li key={t.slug}>
@@ -63,7 +69,9 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="section-eyebrow !text-azure">Bransjer</p>
+            <p className="font-sans text-[0.72rem] font-bold uppercase tracking-[0.14em] text-azure">
+              Bransjer
+            </p>
             <ul className="mt-3 space-y-2 text-sm">
               {bransjer.map((b) => (
                 <li key={b.slug}>
@@ -86,7 +94,9 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="section-eyebrow !text-azure">Regnskapsfører der du er</p>
+            <p className="font-sans text-[0.72rem] font-bold uppercase tracking-[0.14em] text-azure">
+              Regnskapsfører der du er
+            </p>
             <ul className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2 text-sm">
               {fylker.map((f) => (
                 <li key={f.nr}>
@@ -101,7 +111,7 @@ export function Footer() {
             </ul>
             <Link
               href="/regnskapsforer"
-              className="mt-3 inline-block text-sm font-semibold text-azure hover:underline"
+              className="mt-3 inline-block text-sm font-bold text-azure hover:underline"
             >
               Alle områder →
             </Link>
@@ -128,6 +138,14 @@ export function Footer() {
           </p>
         </div>
       </div>
+
+      {/* 2026-signaturen: dekorativt fullbredde-wordmark i lav opasitet */}
+      <p
+        aria-hidden="true"
+        className="pointer-events-none select-none whitespace-nowrap text-center font-sans text-[clamp(4rem,14vw,11rem)] font-bold leading-[0.8] tracking-tight text-white/[0.06]"
+      >
+        KONTERA
+      </p>
     </footer>
   );
 }

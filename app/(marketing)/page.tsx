@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Hero } from "@/components/sections/Hero";
-import { TrustBar } from "@/components/sections/TrustBar";
+import { leadEnabled } from "@/lib/lead";
+import { HeroSplit } from "@/components/sections/HeroSplit";
+import { LeadCard } from "@/components/LeadCard";
+import { ProofStrip } from "@/components/sections/ProofStrip";
 import { ProblemSolution } from "@/components/sections/ProblemSolution";
-import { ServiceCards } from "@/components/sections/ServiceCards";
-import { PromiseGrid } from "@/components/sections/PromiseGrid";
+import { ServicesBento } from "@/components/sections/ServicesBento";
+import { StatBand } from "@/components/sections/StatBand";
+import { PromiseSplit } from "@/components/sections/PromiseSplit";
 import { IndustryCards } from "@/components/sections/IndustryCards";
-import { ProcessSteps } from "@/components/sections/ProcessSteps";
-import { PricingTeaser } from "@/components/sections/PricingTeaser";
+import { NumberedJourney } from "@/components/sections/NumberedJourney";
+import { PricingSection } from "@/components/sections/PricingSection";
+import { ComparisonTable } from "@/components/sections/ComparisonTable";
+import { CtaBanner } from "@/components/sections/CtaBanner";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { site } from "@/data/site";
@@ -55,34 +60,59 @@ const homeFaq = [
 ];
 
 export default function HomePage() {
+  const enabled = leadEnabled();
   return (
     <>
-      <Hero
+      <HeroSplit
         eyebrow="Regnskapsbyrå med statsautoriserte regnskapsførere"
-        title="Regnskapet i orden. Alltid."
+        title={
+          <>
+            Regnskapet i orden. <span className="hl-serif-italic">Alltid.</span>
+          </>
+        }
         subtitle="Du får en fast regnskapsfører som kjenner bedriften din, tar alle fristene og svarer når du ringer – uten å fakturere for korte spørsmål."
-        image="/images/pexels/kontor-1.jpg"
-        proof={[
+        chips={[
           `${site.employees} dedikerte ansatte`,
           `${site.statsautoriserte} statsautoriserte`,
-          "Fast kontaktperson + backup",
           "Kunder i hele Norge",
         ]}
+        aside={
+          <LeadCard
+            enabled={enabled}
+            heading="Få pristilbud for din bedrift"
+            subheading="En kort prat om behovet ditt — så får du et ærlig, konkret tilbud."
+          />
+        }
       />
-      <TrustBar />
+      <ProofStrip />
       <ProblemSolution />
-      <ServiceCards intro="Vi leverer alt en liten og mellomstor bedrift trenger: løpende regnskap, lønn, mva, årsoppgjør, rådgivning og hjelp til å starte selskap." />
-      <PromiseGrid />
+      <ServicesBento
+        title="Alt du trenger — fra bilag til årsoppgjør"
+        intro="Vi leverer alt en liten og mellomstor bedrift trenger: løpende regnskap, lønn, mva, årsoppgjør, rådgivning og hjelp til å starte selskap."
+      />
+      <StatBand
+        title="Et lite byrå — med full kontroll"
+        items={[
+          { label: "Dedikerte ansatte", value: `${site.employees}`, numeric: site.employees },
+          { label: "Statsautoriserte regnskapsførere", value: `${site.statsautoriserte}`, numeric: site.statsautoriserte },
+          { label: "År i bransjen", value: "11", numeric: new Date().getFullYear() - site.founded },
+          { label: "Kommuner vi dekker digitalt", value: "357", numeric: 357 },
+          { label: "Kroner for korte spørsmål", value: "0", numeric: 0 },
+          { label: "Faste kontaktpersoner per kunde", value: "1 + backup" },
+        ]}
+      />
+      <PromiseSplit />
       <IndustryCards />
-      <ProcessSteps />
-      <PricingTeaser />
+      <NumberedJourney leadEnabled={enabled} />
+      <PricingSection leadEnabled={enabled} />
+      <ComparisonTable />
 
       {/* Team-teaser: sanne tall, ingen stock-ansikter (ekthetsregel §9.3) */}
       <section className="mx-auto max-w-6xl px-4 py-16 lg:py-20">
-        <div className="grid items-center gap-10 lg:grid-cols-2">
-          <div>
+        <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
+          <div className="lg:col-span-5">
             <p className="section-eyebrow">Menneskene bak</p>
-            <h2 className="mt-2 font-display text-3xl font-extrabold text-ink [text-wrap:balance]">
+            <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
               Seks personer. Null sentralbord.
             </h2>
             <p className="mt-4 max-w-lg leading-relaxed text-slate">
@@ -93,20 +123,20 @@ export default function HomePage() {
             </p>
             <Link
               href="/om-oss"
-              className="mt-6 inline-block rounded-md border border-line px-5 py-3 font-display font-bold text-navy transition-colors hover:border-blue hover:text-blue"
+              className="mt-6 inline-block rounded-lg border border-navy/25 px-5 py-3 font-sans font-bold text-navy transition-colors hover:border-navy/50 hover:text-blue"
             >
               Bli kjent med oss →
             </Link>
           </div>
-          <ul className="grid gap-4 sm:grid-cols-2">
+          <ul data-reveal-group className="grid gap-x-8 gap-y-0 sm:grid-cols-2 lg:col-span-7">
             {[
               ["Siden " + site.founded, "Solid erfaring fra bil, bygg, eiendom og en lang rekke andre bransjer."],
               ["To kontorer", "Jar i Bærum og Ask i Gjerdrum – og digitale kunder i hele landet."],
               ["Kort vei til svar", "Du ringer direkte til personen som fører regnskapet ditt."],
               ["Regulert kvalitet", "Autorisert regnskapsselskap under tilsyn av Finanstilsynet."],
             ].map(([title, text]) => (
-              <li key={title} className="rounded-lg border border-line bg-mist p-5">
-                <p className="font-display font-bold text-navy">{title}</p>
+              <li key={title} className="border-t border-navy/10 py-5">
+                <p className="font-display text-lg font-bold text-navy">{title}</p>
                 <p className="mt-1.5 text-sm leading-relaxed text-slate">{text}</p>
               </li>
             ))}
@@ -114,6 +144,10 @@ export default function HomePage() {
         </div>
       </section>
 
+      <CtaBanner
+        leadEnabled={enabled}
+        text="Lurer du på om vi passer for din bedrift? Det finner vi ut av på fem minutter."
+      />
       <Faq items={homeFaq} />
       <FinalCta />
     </>

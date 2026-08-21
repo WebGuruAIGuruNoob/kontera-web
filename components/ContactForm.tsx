@@ -1,39 +1,41 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 import { site } from "@/data/site";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
 /**
- * Kontaktskjema (MASTERPLAN §9): 3 obligatoriske felt + 1 valgfritt.
- * LEAD-SIKKERHETSREGEL: `enabled` settes server-side ut fra om e-postlevering
- * er konfigurert. Uten verifisert levering rendres ring-oss-fallback i stedet
- * for et skjema som later som det virker.
+ * Fullt kontaktskjema (bunnseksjon/kontaktside): briefens felter — firmanavn,
+ * e-post, telefon + valgfri melding. LEAD-SIKKERHETSREGEL: uten verifisert
+ * e-postlevering rendres ring-oss-fallback, aldri falsk suksess.
  */
 export function ContactForm({ enabled }: { enabled: boolean }) {
+  const uid = useId();
   const [status, setStatus] = useState<Status>("idle");
 
   if (!enabled) {
     return (
-      <div className="rounded-lg border border-line bg-white p-6 text-center shadow-card">
+      <div className="rounded-2xl border border-navy/10 bg-surface p-6 text-center">
         <p className="font-display text-lg font-bold text-navy">
           Ring oss — det er raskeste vei til svar
         </p>
         <p className="mx-auto mt-2 max-w-md text-sm text-slate">
           Kontaktskjemaet er midlertidig utilgjengelig. Ta en uforpliktende prat
-          på telefon, eller send oss en e-post — vi svarer innen én arbeidsdag.
+          på telefon, eller send oss en e-post.
         </p>
         <div className="mt-5 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
             href={site.phoneHref}
-            className="rounded-md bg-blue px-6 py-3 font-display font-bold text-white hover:bg-blue-dark"
+            data-cta="skjema-ring-fallback"
+            className="rounded-lg bg-blue px-6 py-3 font-sans font-bold text-white hover:bg-blue-dark"
           >
             Ring {site.phoneDisplay}
           </a>
           <a
             href={site.emailHref}
-            className="rounded-md border border-line px-6 py-3 font-display font-bold text-navy hover:border-blue"
+            data-cta="skjema-epost-fallback"
+            className="rounded-lg border border-navy/25 px-6 py-3 font-sans font-bold text-navy hover:border-navy/50"
           >
             {site.email}
           </a>
@@ -45,7 +47,7 @@ export function ContactForm({ enabled }: { enabled: boolean }) {
   if (status === "sent") {
     return (
       <div
-        className="rounded-lg border border-teal/60 bg-mist p-8 text-center"
+        className="rounded-2xl border border-teal/60 bg-mist p-8 text-center"
         role="status"
       >
         <p className="font-display text-xl font-bold text-navy">Takk for henvendelsen!</p>
@@ -64,8 +66,7 @@ export function ContactForm({ enabled }: { enabled: boolean }) {
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("sending");
-    const form = e.currentTarget;
-    const data = Object.fromEntries(new FormData(form).entries());
+    const data = Object.fromEntries(new FormData(e.currentTarget).entries());
     try {
       const res = await fetch("/api/kontakt", {
         method: "POST",
@@ -79,69 +80,43 @@ export function ContactForm({ enabled }: { enabled: boolean }) {
     }
   }
 
+  const inputClass =
+    "w-full rounded-lg border border-navy/30 bg-white px-3.5 py-2.5 text-ink outline-none transition-colors focus:border-blue focus:ring-2 focus:ring-azure/30";
+
   return (
-    <form onSubmit={onSubmit} className="rounded-lg border border-line bg-white p-6 shadow-card sm:p-8">
+    <form onSubmit={onSubmit} className="rounded-2xl border border-navy/10 bg-surface p-6 sm:p-8">
       <div className="grid gap-4">
         <div>
-          <label htmlFor="firma" className="mb-1.5 block text-sm font-bold text-ink">
+          <label htmlFor={`${uid}-firma`} className="mb-1.5 block text-sm font-bold text-ink">
             Firmanavn / borettslag
           </label>
-          <input
-            id="firma"
-            name="firma"
-            type="text"
-            required
-            autoComplete="organization"
-            className="w-full rounded-md border border-line px-3.5 py-2.5 text-ink outline-none transition-colors focus:border-blue focus:ring-2 focus:ring-azure/30"
-          />
+          <input id={`${uid}-firma`} name="firma" type="text" required autoComplete="organization" className={inputClass} />
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
           <div>
-            <label htmlFor="epost" className="mb-1.5 block text-sm font-bold text-ink">
+            <label htmlFor={`${uid}-epost`} className="mb-1.5 block text-sm font-bold text-ink">
               E-post
             </label>
-            <input
-              id="epost"
-              name="epost"
-              type="email"
-              required
-              autoComplete="email"
-              inputMode="email"
-              className="w-full rounded-md border border-line px-3.5 py-2.5 text-ink outline-none transition-colors focus:border-blue focus:ring-2 focus:ring-azure/30"
-            />
+            <input id={`${uid}-epost`} name="epost" type="email" required autoComplete="email" inputMode="email" className={inputClass} />
           </div>
           <div>
-            <label htmlFor="telefon" className="mb-1.5 block text-sm font-bold text-ink">
+            <label htmlFor={`${uid}-telefon`} className="mb-1.5 block text-sm font-bold text-ink">
               Telefon
             </label>
-            <input
-              id="telefon"
-              name="telefon"
-              type="tel"
-              required
-              autoComplete="tel"
-              inputMode="tel"
-              className="w-full rounded-md border border-line px-3.5 py-2.5 text-ink outline-none transition-colors focus:border-blue focus:ring-2 focus:ring-azure/30"
-            />
+            <input id={`${uid}-telefon`} name="telefon" type="tel" required autoComplete="tel" inputMode="tel" className={inputClass} />
           </div>
         </div>
         <div>
-          <label htmlFor="melding" className="mb-1.5 block text-sm font-bold text-ink">
+          <label htmlFor={`${uid}-melding`} className="mb-1.5 block text-sm font-bold text-ink">
             Hva ser du etter?{" "}
             <span className="font-normal text-slate">(valgfritt)</span>
           </label>
-          <textarea
-            id="melding"
-            name="melding"
-            rows={3}
-            className="w-full rounded-md border border-line px-3.5 py-2.5 text-ink outline-none transition-colors focus:border-blue focus:ring-2 focus:ring-azure/30"
-          />
+          <textarea id={`${uid}-melding`} name="melding" rows={3} className={inputClass} />
         </div>
 
-        {/* Honeypot — skjult for mennesker */}
         <div className="absolute -left-[9999px]" aria-hidden="true">
-          <label htmlFor="nettside">Nettside</label>
-          <input id="nettside" name="nettside" type="text" tabIndex={-1} autoComplete="off" />
+          <label htmlFor={`${uid}-nettside`}>Nettside</label>
+          <input id={`${uid}-nettside`} name="nettside" type="text" tabIndex={-1} autoComplete="off" />
         </div>
 
         {status === "error" && (
@@ -158,9 +133,9 @@ export function ContactForm({ enabled }: { enabled: boolean }) {
           type="submit"
           disabled={status === "sending"}
           data-cta="skjema-send"
-          className="rounded-md bg-blue px-6 py-3.5 font-display text-base font-bold text-white transition-colors hover:bg-blue-dark disabled:opacity-60"
+          className="rounded-lg bg-blue px-6 py-3.5 font-sans text-base font-bold text-white transition-colors hover:bg-blue-dark disabled:opacity-60"
         >
-          {status === "sending" ? "Sender …" : "Få en uforpliktende prat"}
+          {status === "sending" ? "Sender …" : "Få et uforpliktende tilbud"}
         </button>
         <p className="text-xs text-slate">
           Uforpliktende. Vi bruker opplysningene kun til å svare deg, og deler dem

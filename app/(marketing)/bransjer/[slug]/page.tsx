@@ -1,17 +1,23 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { bransjer, getBransje } from "@/content/bransjer";
 import { getTjeneste } from "@/content/tjenester";
 import { site } from "@/data/site";
-import { Hero } from "@/components/sections/Hero";
-import { TrustBar } from "@/components/sections/TrustBar";
+import { leadEnabled } from "@/lib/lead";
+import { HeroSplit } from "@/components/sections/HeroSplit";
+import { LeadCard } from "@/components/LeadCard";
+import { ProofStrip } from "@/components/sections/ProofStrip";
+import { CtaBanner } from "@/components/sections/CtaBanner";
+import { NumberedJourney } from "@/components/sections/NumberedJourney";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { serviceSchema } from "@/lib/schema";
 import { Icon } from "@/components/Icon";
+import { Arrow } from "@/components/icons";
 
 export const dynamicParams = false;
 
@@ -19,7 +25,8 @@ export function generateStaticParams() {
   return bransjer.map((b) => ({ slug: b.slug }));
 }
 
-const heroBilder: Record<string, string> = {
+/** Rammede, tintede bransjefoto (DESIGNPLAN §2.4 — aldri fullbredde med overlay) */
+const bransjeFoto: Record<string, string> = {
   bilforhandlere: "/images/pexels/bilforhandler-1.jpg",
   handverkere: "/images/pexels/handverker-1.jpg",
   eiendom: "/images/pexels/eiendom-1.jpg",
@@ -52,6 +59,7 @@ export default async function BransjePage({
   const b = getBransje(slug);
   if (!b) notFound();
 
+  const enabled = leadEnabled();
   const tjenesteLenker = b.relaterteTjenester
     .map((s) => getTjeneste(s))
     .filter((x): x is NonNullable<typeof x> => !!x);
@@ -71,34 +79,60 @@ export default async function BransjePage({
           { name: b.navn, href: `/bransjer/${b.slug}` },
         ]}
       />
-      <Hero
+      <HeroSplit
         compact
         eyebrow={`Regnskap for ${b.navn.toLowerCase()}`}
         title={b.tittel}
         subtitle={b.heroUndertekst}
-        image={heroBilder[b.slug]}
+        aside={
+          <LeadCard
+            enabled={enabled}
+            heading={`Få pristilbud for din ${b.navn.toLowerCase().replace(/e$/, "")}bedrift`}
+            subheading="En kort prat om driften din — så får du et ærlig, konkret tilbud."
+          />
+        }
       />
-      <TrustBar />
+      <ProofStrip />
 
+      {/* Bransjesmerter — redaksjonelle serif-sitater + rammet, tintet foto */}
       <section className="mx-auto max-w-6xl px-4 py-14">
-        <h2 className="font-display text-2xl font-extrabold text-ink">
-          Kjenner du deg igjen?
-        </h2>
-        <ul className="mt-6 grid gap-4 md:grid-cols-2">
-          {b.smerter.map((smerte) => (
-            <li
-              key={smerte}
-              className="rounded-lg border border-line bg-white p-5 italic leading-relaxed text-slate shadow-card"
-            >
-              «{smerte.replace(/^«|»$/g, "")}»
-            </li>
-          ))}
-        </ul>
-        <p className="mt-6 max-w-2xl leading-relaxed text-slate">
-          Dette er hverdagen vi hjelper {b.navn.toLowerCase()} med — og grunnen
-          til at bransjekunnskap er forskjellen på et regnskap som bare er
-          «ført», og et regnskap som er ført <em>riktig</em>.
-        </p>
+        <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
+          <div className="lg:col-span-7">
+            <h2 className="font-display text-h2 font-bold text-ink [text-wrap:balance]">
+              Kjenner du deg igjen?
+            </h2>
+            <ul data-reveal-group className="mt-6">
+              {b.smerter.map((smerte) => (
+                <li
+                  key={smerte}
+                  className="border-t border-navy/10 py-4 font-display text-lg italic leading-snug text-navy"
+                >
+                  «{smerte.replace(/^«|»$/g, "")}»
+                </li>
+              ))}
+            </ul>
+            <p className="mt-5 max-w-2xl leading-relaxed text-slate">
+              Dette er hverdagen vi hjelper {b.navn.toLowerCase()} med — og
+              grunnen til at bransjekunnskap er forskjellen på et regnskap som
+              bare er «ført», og et regnskap som er ført <em>riktig</em>.
+            </p>
+          </div>
+          {bransjeFoto[b.slug] && (
+            <div className="relative overflow-hidden rounded-3xl border border-navy/10 lg:col-span-5">
+              <Image
+                src={bransjeFoto[b.slug]}
+                alt={`Regnskap for ${b.navn.toLowerCase()}`}
+                width={720}
+                height={480}
+                className="h-full w-full object-cover"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 bg-navy/20 mix-blend-multiply"
+              />
+            </div>
+          )}
+        </div>
       </section>
 
       <section className="bg-mist py-14">
@@ -106,11 +140,11 @@ export default async function BransjePage({
           <div className="mx-auto max-w-3xl space-y-10">
             {b.seksjoner.map((seksjon) => (
               <div key={seksjon.tittel}>
-                <h2 className="font-display text-2xl font-extrabold text-ink [text-wrap:balance]">
+                <h2 className="font-display text-2xl font-bold tracking-[-0.01em] text-ink [text-wrap:balance]">
                   {seksjon.tittel}
                 </h2>
                 {seksjon.avsnitt.map((avsnitt, i) => (
-                  <p key={i} className="mt-4 leading-relaxed text-slate">
+                  <p key={i} className="mt-4 max-w-[70ch] leading-relaxed text-slate">
                     {avsnitt}
                   </p>
                 ))}
@@ -120,19 +154,26 @@ export default async function BransjePage({
         </div>
       </section>
 
+      <CtaBanner
+        leadEnabled={enabled}
+        text={`Driver du innen ${b.navn.toLowerCase()}? Ta en uforpliktende prat med noen som kan bransjen.`}
+      />
+
       <section className="mx-auto max-w-6xl px-4 py-14">
-        <h2 className="font-display text-2xl font-extrabold text-ink">
+        <h2 className="font-display text-h2 font-bold text-ink">
           Slik hjelper vi {b.navn.toLowerCase()}
         </h2>
-        <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {b.slikHjelperVi.map((item) => (
+        <div data-reveal-group className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-12">
+          {b.slikHjelperVi.map((item, i) => (
             <div
               key={item.tittel}
-              className="rounded-lg border border-line bg-white p-6 shadow-card"
+              className={`card-line p-6 ${
+                i === 0
+                  ? "sm:col-span-12 lg:col-span-6"
+                  : "sm:col-span-6 lg:col-span-3"
+              }`}
             >
-              <h3 className="font-display text-base font-bold text-navy">
-                {item.tittel}
-              </h3>
+              <h3 className="font-sans text-base font-bold text-navy">{item.tittel}</h3>
               <p className="mt-2 text-sm leading-relaxed text-slate">{item.tekst}</p>
             </div>
           ))}
@@ -140,7 +181,7 @@ export default async function BransjePage({
 
         {tjenesteLenker.length > 0 && (
           <div className="mt-10">
-            <h3 className="font-display text-lg font-bold text-ink">
+            <h3 className="font-sans text-lg font-bold text-ink">
               Mest relevante tjenester for {b.navn.toLowerCase()}
             </h3>
             <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -148,13 +189,13 @@ export default async function BransjePage({
                 <Link
                   key={t.slug}
                   href={`/tjenester/${t.slug}`}
-                  className="group flex items-center gap-4 rounded-lg border border-line bg-white p-4 transition-all hover:-translate-y-0.5 hover:shadow-card"
+                  className="group card-line card-line-hover flex items-center gap-4 p-4"
                 >
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue/10 text-blue">
                     <Icon name={t.ikon} className="h-5 w-5" />
                   </span>
-                  <span className="font-display font-bold text-navy group-hover:text-blue">
-                    {t.navn}
+                  <span className="font-sans font-bold text-navy group-hover:text-blue">
+                    {t.navn} <Arrow />
                   </span>
                 </Link>
               ))}
@@ -163,10 +204,9 @@ export default async function BransjePage({
         )}
       </section>
 
+      <NumberedJourney leadEnabled={enabled} />
       <Faq items={b.faq} title={`Spørsmål og svar — regnskap for ${b.navn.toLowerCase()}`} />
-      <FinalCta
-        title={`Klar for en regnskapsfører som kan ${b.navn.toLowerCase()}?`}
-      />
+      <FinalCta title={`Klar for en regnskapsfører som kan ${b.navn.toLowerCase()}?`} />
     </>
   );
 }

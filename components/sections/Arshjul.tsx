@@ -37,7 +37,7 @@ export function Arshjul({ stedsnavn }: { stedsnavn?: string }) {
     <section className="mx-auto max-w-6xl px-4 py-16">
       <div className="max-w-2xl">
         <p className="section-eyebrow">Regnskapsåret</p>
-        <h2 className="mt-2 font-display text-3xl font-extrabold text-ink [text-wrap:balance]">
+        <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
           Fristene vi tar ansvar for{stedsnavn ? ` — for bedrifter i ${stedsnavn}` : ""}
         </h2>
         <p className="mt-4 leading-relaxed text-slate">
@@ -46,14 +46,14 @@ export function Arshjul({ stedsnavn }: { stedsnavn?: string }) {
           av dem.
         </p>
       </div>
-      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div data-reveal-group className="mt-10 grid gap-x-10 gap-y-0 sm:grid-cols-2 lg:grid-cols-3">
         {milepæler.map((m) => (
-          <div key={m.tittel} className="rounded-lg border border-line bg-white p-5 shadow-card">
-            <p className="font-display text-xs font-bold uppercase tracking-wider text-blue">
+          <div key={m.tittel} className="border-t border-navy/10 py-6">
+            <p className="inline-block rounded-full bg-azure/12 px-2.5 py-0.5 font-sans text-[0.68rem] font-bold uppercase tracking-wider text-blue">
               {m.tid}
             </p>
-            <h3 className="mt-1.5 font-display text-base font-bold text-navy">{m.tittel}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-slate">{m.tekst}</p>
+            <h3 className="mt-2.5 font-sans text-base font-bold text-navy">{m.tittel}</h3>
+            <p className="mt-1.5 text-sm leading-relaxed text-slate">{m.tekst}</p>
           </div>
         ))}
       </div>

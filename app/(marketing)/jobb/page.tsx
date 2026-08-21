@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/data/site";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { Hero } from "@/components/sections/Hero";
+import { HeroSplit } from "@/components/sections/HeroSplit";
 
 export const metadata: Metadata = {
   title: "Jobb i Kontera – bli en av oss",
@@ -33,13 +33,16 @@ export default function JobbPage() {
   return (
     <>
       <Breadcrumbs items={[{ name: "Jobb i Kontera", href: "/jobb" }]} />
-      <Hero
+      <HeroSplit
         compact
         eyebrow="Jobb i Kontera"
-        title="Bli regnskapsføreren kundene faktisk kjenner"
-        subtitle="Vi er seks i dag — og ser alltid etter dyktige folk som deler troen på at regnskap er et samarbeidsfag."
-        secondaryHref="mailto:post@kontera.no?subject=%C3%85pen%20s%C3%B8knad"
-        secondaryLabel="Send åpen søknad"
+        title={
+          <>
+            Bli regnskapsføreren kundene{" "}
+            <span className="hl-serif-italic">faktisk kjenner</span>
+          </>
+        }
+        subtitle="Vi er seks i dag — og ser alltid etter dyktige folk som deler troen på at regnskap er et samarbeidsfag. Send en åpen søknad til post@kontera.no."
       />
 
       <section className="mx-auto max-w-6xl px-4 py-14">

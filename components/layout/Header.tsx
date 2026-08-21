@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/data/site";
+import { PhoneIcon } from "@/components/icons";
 import { MobileNav } from "./MobileNav";
 
 const nav = [
@@ -12,10 +13,11 @@ const nav = [
   { href: "/om-oss", label: "Om oss" },
 ];
 
+/** Slank glass-header (DESIGNPLAN §2.6) — eneste sted med backdrop-blur. */
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-white/95 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 lg:h-[4.5rem]">
+    <header className="sticky top-0 z-50 border-b border-navy/10 bg-paper/85 backdrop-blur-md">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4">
         <Link href="/" className="flex shrink-0 items-center" aria-label="Kontera Regnskap – til forsiden">
           <Image
             src="/images/brand/konteralogo-e1607685331288.png"
@@ -23,7 +25,7 @@ export function Header() {
             width={150}
             height={75}
             priority
-            className="h-10 w-auto lg:h-11"
+            className="h-9 w-auto lg:h-10"
           />
         </Link>
 
@@ -45,37 +47,22 @@ export function Header() {
         <div className="flex items-center gap-3">
           <a
             href={site.phoneHref}
-            className="hidden items-center gap-2 font-display text-sm font-bold text-navy sm:flex"
+            data-cta="header-ring"
+            className="hidden items-center gap-2 font-sans text-sm font-bold text-navy transition-colors hover:text-blue sm:flex"
           >
             <PhoneIcon className="h-4 w-4 text-blue" />
             {site.phoneDisplay}
           </a>
           <Link
             href="/kontakt"
-            className="hidden rounded-md bg-blue px-4 py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-blue-dark sm:block"
+            data-cta="header-tilbud"
+            className="hidden rounded-lg bg-blue px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-blue-dark sm:block"
           >
-            Få et tilbud
+            Få tilbud
           </Link>
           <MobileNav items={nav} />
         </div>
       </div>
     </header>
-  );
-}
-
-export function PhoneIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-    </svg>
   );
 }

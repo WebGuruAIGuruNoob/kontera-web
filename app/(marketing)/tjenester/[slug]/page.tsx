@@ -3,29 +3,26 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { tjenester, getTjeneste } from "@/content/tjenester";
 import { site } from "@/data/site";
-import { Hero, CheckIcon } from "@/components/sections/Hero";
-import { TrustBar } from "@/components/sections/TrustBar";
+import { leadEnabled } from "@/lib/lead";
+import { HeroSplit } from "@/components/sections/HeroSplit";
+import { LeadCard } from "@/components/LeadCard";
+import { ProofStrip } from "@/components/sections/ProofStrip";
+import { CtaBanner } from "@/components/sections/CtaBanner";
+import { ComparisonTable } from "@/components/sections/ComparisonTable";
+import { NumberedJourney } from "@/components/sections/NumberedJourney";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { serviceSchema } from "@/lib/schema";
 import { Icon } from "@/components/Icon";
+import { CheckIcon, Arrow } from "@/components/icons";
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
   return tjenester.map((t) => ({ slug: t.slug }));
 }
-
-const heroBilder: Record<string, string> = {
-  regnskapsforing: "/images/pexels/tall-1.jpg",
-  lonn: "/images/pexels/samarbeid-2.jpg",
-  arsoppgjor: "/images/pexels/tall-2.jpg",
-  mva: "/images/pexels/tall-3.jpg",
-  radgivning: "/images/pexels/radgivning-1.jpg",
-  "starte-selskap": "/images/pexels/konsulent-2.jpg",
-};
 
 export async function generateMetadata({
   params,
@@ -51,9 +48,21 @@ export default async function TjenestePage({
   const t = getTjeneste(slug);
   if (!t) notFound();
 
+  const enabled = leadEnabled();
   const relaterte = t.relaterte
     .map((s) => getTjeneste(s))
     .filter((x): x is NonNullable<typeof x> => !!x);
+
+  // Bento-spans for «hva inngår» — varierte celler, aldri uniform grid
+  const spans = [
+    "sm:col-span-6 lg:col-span-6",
+    "sm:col-span-6 lg:col-span-3",
+    "sm:col-span-6 lg:col-span-3",
+    "sm:col-span-6 lg:col-span-3",
+    "sm:col-span-6 lg:col-span-3",
+    "sm:col-span-12 lg:col-span-6",
+    "sm:col-span-6 lg:col-span-6",
+  ];
 
   return (
     <>
@@ -70,25 +79,28 @@ export default async function TjenestePage({
           { name: t.navn, href: `/tjenester/${t.slug}` },
         ]}
       />
-      <Hero
+      <HeroSplit
         compact
         eyebrow={t.navn}
         title={t.tittel}
         subtitle={t.heroUndertekst}
-        image={heroBilder[t.slug]}
+        aside={
+          <LeadCard
+            enabled={enabled}
+            heading={`Få pristilbud på ${t.navn.toLowerCase()}`}
+            subheading="En kort prat om behovet ditt — så får du et ærlig, konkret tilbud."
+          />
+        }
       />
-      <TrustBar />
+      <ProofStrip />
 
       <section className="mx-auto max-w-6xl px-4 py-14">
-        <h2 className="font-display text-2xl font-extrabold text-ink">
+        <h2 className="font-display text-h2 font-bold text-ink">
           Passer for deg som …
         </h2>
-        <ul className="mt-6 grid gap-3 md:grid-cols-2">
+        <ul data-reveal-group className="mt-6 grid gap-x-10 gap-y-0 md:grid-cols-2">
           {t.passerFor.map((punkt) => (
-            <li
-              key={punkt}
-              className="flex items-start gap-3 rounded-lg border border-line bg-white p-4"
-            >
+            <li key={punkt} className="flex items-start gap-3 border-t border-navy/10 py-4">
               <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal/20 text-navy">
                 <CheckIcon className="h-3.5 w-3.5" />
               </span>
@@ -100,18 +112,14 @@ export default async function TjenestePage({
 
       <section className="bg-mist py-14">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="font-display text-2xl font-extrabold text-ink">
-            Dette inngår
-          </h2>
-          <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {t.hvaInngar.map((item) => (
+          <h2 className="font-display text-h2 font-bold text-ink">Dette inngår</h2>
+          <div data-reveal-group className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-12">
+            {t.hvaInngar.map((item, i) => (
               <div
                 key={item.tittel}
-                className="rounded-lg border border-line bg-white p-6 shadow-card"
+                className={`card-line p-6 ${spans[i % spans.length]}`}
               >
-                <h3 className="font-display text-base font-bold text-navy">
-                  {item.tittel}
-                </h3>
+                <h3 className="font-sans text-base font-bold text-navy">{item.tittel}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate">{item.tekst}</p>
               </div>
             ))}
@@ -119,48 +127,43 @@ export default async function TjenestePage({
         </div>
       </section>
 
+      <CtaBanner
+        leadEnabled={enabled}
+        text={`Lurer du på noe om ${t.navn.toLowerCase()}? Korte spørsmål koster aldri noe.`}
+      />
+
       <section className="mx-auto max-w-6xl px-4 py-14">
         <div className="mx-auto max-w-3xl space-y-10">
           {t.seksjoner.map((seksjon) => (
             <div key={seksjon.tittel}>
-              <h2 className="font-display text-2xl font-extrabold text-ink [text-wrap:balance]">
+              <h2 className="font-display text-2xl font-bold tracking-[-0.01em] text-ink [text-wrap:balance]">
                 {seksjon.tittel}
               </h2>
               {seksjon.avsnitt.map((avsnitt, i) => (
-                <p key={i} className="mt-4 leading-relaxed text-slate">
+                <p key={i} className="mt-4 max-w-[70ch] leading-relaxed text-slate">
                   {avsnitt}
                 </p>
               ))}
             </div>
           ))}
-          <p className="rounded-lg border border-azure/40 bg-mist p-5 text-sm leading-relaxed text-navy">
-            <strong>Lurer du på noe om {t.navn.toLowerCase()}?</strong> Ring oss
-            på{" "}
-            <a href={site.phoneHref} className="font-bold text-blue">
-              {site.phoneDisplay}
-            </a>{" "}
-            for en uforpliktende prat — korte spørsmål koster aldri noe.
-          </p>
         </div>
       </section>
 
       {relaterte.length > 0 && (
         <section className="mx-auto max-w-6xl px-4 pb-14">
-          <h2 className="font-display text-xl font-extrabold text-ink">
-            Relaterte tjenester
-          </h2>
+          <h2 className="font-sans text-xl font-bold text-ink">Relaterte tjenester</h2>
           <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {relaterte.map((rel) => (
               <Link
                 key={rel.slug}
                 href={`/tjenester/${rel.slug}`}
-                className="group flex items-center gap-4 rounded-lg border border-line bg-white p-4 transition-all hover:-translate-y-0.5 hover:shadow-card"
+                className="group card-line card-line-hover flex items-center gap-4 p-4"
               >
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue/10 text-blue">
                   <Icon name={rel.ikon} className="h-5 w-5" />
                 </span>
-                <span className="font-display font-bold text-navy group-hover:text-blue">
-                  {rel.navn}
+                <span className="font-sans font-bold text-navy group-hover:text-blue">
+                  {rel.navn} <Arrow />
                 </span>
               </Link>
             ))}
@@ -168,6 +171,8 @@ export default async function TjenestePage({
         </section>
       )}
 
+      <NumberedJourney leadEnabled={enabled} />
+      <ComparisonTable />
       <Faq items={t.faq} title={`Spørsmål og svar om ${t.navn.toLowerCase()}`} />
       <FinalCta />
     </>
