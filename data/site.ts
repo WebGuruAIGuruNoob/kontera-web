@@ -17,7 +17,7 @@ export const site = {
   emailHref: "mailto:post@kontera.no",
 
   /** Settes til https://kontera.no i Vercel-env ved DNS-cutover */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://kontera-web.vercel.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://kontera-web-marketin.vercel.app",
 
   employees: 6,
   statsautoriserte: 2,
