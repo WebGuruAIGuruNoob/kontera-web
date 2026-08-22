@@ -152,4 +152,9 @@ pexelsUrl, stedsbevis. `data/image-credits.json` genereres fra manifestet.
 
 **Risiko:** Pexels-bilder kan avpubliseres → manifestet + lokale filer i git er arkivet.
 Fylkesbilder må aldri antyde kontor («Vi kjenner {fylke}» — ja; «vårt kontor i Bergen» — aldri).
-Om-oss-detaljene er midlertidige til ekte teamfoto (MASTERPLAN §14.6) — da byttes de ut.
+
+**Endring 2026-08-22 (Henriks beslutning):** Ingen ekte teamfoto skal brukes. I stedet:
+kuraterte Pexels-bilder med ANONYME mennesker (ovenfra/bakfra/over skulderen — ansikter
+aldri lesbare) gir menneskelig varme på forside og om-oss: `team:samarbeid-1` (4345106)
+og `team:samarbeid-2` (7731371). Grensen står fast: stockmennesker presenteres aldri
+med navn eller som «teamet vårt» — de illustrerer arbeidsformen.

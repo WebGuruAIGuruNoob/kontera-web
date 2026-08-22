@@ -7,6 +7,7 @@ Nettsiden til Kontera Regnskap AS. Next.js (App Router, SSG) + Tailwind v4 + MDX
 
 **«Push og commit» = commit → push til GitHub `main` → Vercel auto-deployer.**
 Kjør alltid `npm run build` (og `npm run qa:geo` hvis geo-innhold er endret) før push.
+Redirects fra gamle WordPress-stier ligger klare i `next.config.ts`.
 DNS for kontera.no settes av Henrik helt til slutt; til da er Vercel-domenet staging/prod,
 og `next.config.ts` + `app/robots.ts` holder *.vercel.app ute av Googles indeks automatisk
 (styrt av `NEXT_PUBLIC_SITE_URL` — settes til `https://kontera.no` i Vercel ved cutover).
@@ -35,8 +36,13 @@ og `next.config.ts` + `app/robots.ts` holder *.vercel.app ute av Googles indeks 
   Alt delt geo-innhold SKAL ligge i blokk-katalogen; alt annet skal være datadrevet unikt.
 - **Oppdatere geodata:** `npm run geo:stats` (Brreg + SSB → `data/kommune-stats.json`).
   NB: Enhetsregisteret bruker SN2025-næringskoder (bil = 46.7x/47.8x/95.31, regnskap = 69.202).
-- **Bilder:** `npm run images:fetch` (Pexels; nøkkel i `.env.local`, aldri i git).
-  Kreditering skrives til `data/image-credits.json`. Relevanskrav: se MASTERPLAN §10.
+- **Bilder:** Kuratert bank styrt av `data/bilde-manifest.json` (sannhetskilden) —
+  bygget av `node scripts/fetch-curated.mjs` (henter per Pexels-ID). Oppslag i kode
+  via `lib/bilder.ts`; ALT foto rendres gjennom `components/FramedImage.tsx`
+  (ramme + navy-tint). Regler: BILDEPLAN.md — bilder må si noe, aldri fullbredde,
+  kommunesidene er BEVISST fotofrie, og stockmennesker presenteres ALDRI som
+  ansatte/kunder (Henriks beslutning 2026-08-22: ingen ekte teamfoto — anonym
+  Pexels-varme brukes i stedet). `scripts/fetch-pexels.mjs` er kun for rå-søk.
 - **Kvalitetsport:** `npm run qa:geo` etter build — feiler hvis en kommuneside har
   <1500 ord eller mangler statkort/FAQ/kildehenvisning.
 

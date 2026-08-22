@@ -6,7 +6,7 @@ import { ProofStrip } from "@/components/sections/ProofStrip";
 import { PromiseSplit } from "@/components/sections/PromiseSplit";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { FramedImage } from "@/components/FramedImage";
-import { omossBilder } from "@/lib/bilder";
+import { bilde } from "@/lib/bilder";
 
 export const metadata: Metadata = {
   title: "Om oss – et lite byrå med store fordeler",
@@ -55,8 +55,8 @@ export default function OmOssPage() {
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
-            {omossBilder()
-              .slice(0, 2)
+            {[bilde("team:samarbeid-2"), bilde("omoss:kaffe-og-notater")]
+              .filter((foto): foto is NonNullable<typeof foto> => !!foto)
               .map((foto) => (
                 <FramedImage
                   key={foto.src}

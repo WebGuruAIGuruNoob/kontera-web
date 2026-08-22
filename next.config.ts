@@ -6,6 +6,15 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
+  // Fase 7-forberedelse (MASTERPLAN §11): redirects fra gamle WordPress-stier.
+  // Ligger klare nå, så DNS-cutover ikke krever kodeendringer.
+  async redirects() {
+    return [
+      { source: "/moderne-regnskap", destination: "/tjenester", permanent: true },
+      { source: "/jobbe-i-kontera", destination: "/jobb", permanent: true },
+      { source: "/onsker-kontakt", destination: "/kontakt", permanent: true },
+    ];
+  },
   async headers() {
     // Staging-vern: alt på *.vercel.app skal ikke indekseres.
     // Ved DNS-cutover settes NEXT_PUBLIC_SITE_URL=https://kontera.no i Vercel,

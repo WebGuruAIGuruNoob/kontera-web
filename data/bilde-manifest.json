@@ -101,6 +101,28 @@
    "stedsbevis": null
   },
   {
+   "fil": "images/pexels/team-1.jpg",
+   "pexelsId": 4345106,
+   "plassering": "team:samarbeid-1",
+   "alt": "To kolleger samarbeider om en laptop, sett rett ovenfra",
+   "caption": null,
+   "fotograf": "Edmond Dantès",
+   "fotografUrl": "https://www.pexels.com/@edmond-dantes",
+   "pexelsUrl": "https://www.pexels.com/photo/man-and-woman-sitting-on-black-leather-sofa-4345106/",
+   "stedsbevis": null
+  },
+  {
+   "fil": "images/pexels/team-2.jpg",
+   "pexelsId": 7731371,
+   "plassering": "team:samarbeid-2",
+   "alt": "Rådgivning over skulderen: to personer går gjennom tall på en skjerm",
+   "caption": null,
+   "fotograf": "Mikhail Nilov",
+   "fotografUrl": "https://www.pexels.com/@mikhail-nilov",
+   "pexelsUrl": "https://www.pexels.com/photo/person-pointing-finger-on-laptop-screen-7731371/",
+   "stedsbevis": null
+  },
+  {
    "fil": "images/pexels/blogg-hva-koster-regnskapsforer.jpg",
    "pexelsId": 33175673,
    "plassering": "blogg:hva-koster-regnskapsforer",

@@ -63,7 +63,7 @@ const homeFaq = [
 
 export default function HomePage() {
   const enabled = leadEnabled();
-  const kontorFoto = bilde("omoss:kontorlokale");
+  const kontorFoto = bilde("team:samarbeid-1");
   return (
     <>
       <HeroSplit

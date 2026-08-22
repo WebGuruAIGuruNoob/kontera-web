@@ -374,7 +374,7 @@ Hver fase avsluttes med commit + push til GitHub → Vercel, så Henrik kan se f
 3. **Resend** (el.l.) API-nøkkel for skjema-e-post — inntil da bygges skjemaet ferdig med logging
 4. **Telefonnummer:** bekreft at 960 00 400 er riktig hovednummer (og om dere vil vise direktenumre)
 5. **Besøksadresser:** bekreft besøksadresse for BEGGE kontorer — dagens side har tre ulike Jar-varianter; Brreg sier Bjerkelundsveien 5 (forretningsadresse), men forretningsadresse ≠ alltid besøksadresse, og NAP-konsistens er kritisk for lokal SEO
-6. **Team:** navn, titler, bilder av de 6 ansatte (spesielt de 2 statsautoriserte — E-E-A-T-forfattere)
+6. **Team:** navn og titler på de ansatte (spesielt de 2 statsautoriserte — E-E-A-T-forfattere i tekst). *Henriks beslutning 2026-08-22: INGEN ekte teamfoto — anonym Pexels-varme brukes i stedet (BILDEPLAN), og ingen stockansikter presenteres noensinne som ansatte*
 7. **Priser:** reelle fra-priser/pakker for /priser — **må godkjennes av Henrik før publisering**; inntil da vises tydelig merket plassholder, aldri oppdiktede tall (forslag utarbeides basert på «middels prisnivå»)
 8. **Kundeord:** 3–6 sitater fra fornøyde kunder (navn + firma, med samtykke) + ev. Google-anmeldelser — inntil de finnes, utelates sitat-seksjonene (ekthetsregelen §9.3)
 9. **Logo som vektor:** original AI/EPS/SVG-fil hvis den finnes (ellers brukes optimalisert PNG/WebP)

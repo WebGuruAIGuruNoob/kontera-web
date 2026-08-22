@@ -52,6 +52,10 @@ const SLOTS = [
   { slot: "omoss:kaffe-og-notater", id: 5951549, fil: "omoss-1.jpg" },
   { slot: "omoss:hender-i-arbeid", id: 7255295, fil: "omoss-2.jpg" },
   { slot: "omoss:kontorlokale", id: 8436906, fil: "omoss-3.jpg" },
+  // Team-varme med anonyme mennesker (Henriks beslutning 2026-08-22: Pexels i
+  // stedet for ekte teamfoto). Ansikter aldri synlige — kan ikke leses som «teamet».
+  { slot: "team:samarbeid-1", id: 4345106, fil: "team-1.jpg", alt: "To kolleger samarbeider om en laptop, sett rett ovenfra" },
+  { slot: "team:samarbeid-2", id: 7731371, fil: "team-2.jpg", alt: "Rådgivning over skulderen: to personer går gjennom tall på en skjerm" },
   { slot: "blogg:hva-koster-regnskapsforer", id: 33175673, fil: "blogg-hva-koster-regnskapsforer.jpg" },
   { slot: "blogg:bytte-regnskapsforer", id: 8371705, fil: "blogg-bytte-regnskapsforer.jpg" },
   { slot: "blogg:regnskapsforer-enkeltpersonforetak", id: 13005858, fil: "blogg-regnskapsforer-enkeltpersonforetak.jpg" },
@@ -103,7 +107,7 @@ for (const slot of SLOTS) {
     fil: `images/pexels/${slot.fil}`,
     pexelsId: slot.id,
     plassering: slot.slot,
-    alt: pick?.altForslag ?? photo.alt ?? "",
+    alt: slot.alt ?? pick?.altForslag ?? photo.alt ?? "",
     caption: slot.caption ?? null,
     fotograf: photo.photographer,
     fotografUrl: photo.photographer_url,

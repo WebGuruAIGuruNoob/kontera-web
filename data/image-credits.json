@@ -252,6 +252,24 @@
     "query": "kuratert:omoss:kontorlokale"
   },
   {
+    "file": "images/pexels/team-1.jpg",
+    "pexelsId": 4345106,
+    "photographer": "Edmond Dantès",
+    "photographerUrl": "https://www.pexels.com/@edmond-dantes",
+    "pexelsUrl": "https://www.pexels.com/photo/man-and-woman-sitting-on-black-leather-sofa-4345106/",
+    "alt": "To kolleger samarbeider om en laptop, sett rett ovenfra",
+    "query": "kuratert:team:samarbeid-1"
+  },
+  {
+    "file": "images/pexels/team-2.jpg",
+    "pexelsId": 7731371,
+    "photographer": "Mikhail Nilov",
+    "photographerUrl": "https://www.pexels.com/@mikhail-nilov",
+    "pexelsUrl": "https://www.pexels.com/photo/person-pointing-finger-on-laptop-screen-7731371/",
+    "alt": "Rådgivning over skulderen: to personer går gjennom tall på en skjerm",
+    "query": "kuratert:team:samarbeid-2"
+  },
+  {
     "file": "images/pexels/blogg-hva-koster-regnskapsforer.jpg",
     "pexelsId": 33175673,
     "photographer": "Bia Limova",
