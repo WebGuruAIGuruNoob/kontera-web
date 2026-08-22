@@ -32,9 +32,10 @@ const rows: { tema: string; kontera: string; andre: string }[] = [
   },
 ];
 
-export function ComparisonTable({ title = "Hva skiller oss fra mange andre byråer?" }: { title?: string }) {
+export function ComparisonTable({ title = "Sjekk oss mot byrået du har i dag" }: { title?: string }) {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-16">
+    <section className="border-y border-navy/10 bg-mist py-16">
+      <div className="mx-auto max-w-5xl px-4">
       <div className="max-w-2xl">
         <p className="section-eyebrow">Sammenlign</p>
         <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
@@ -71,6 +72,7 @@ export function ComparisonTable({ title = "Hva skiller oss fra mange andre byrå
             ))}
           </tbody>
         </table>
+      </div>
       </div>
     </section>
   );

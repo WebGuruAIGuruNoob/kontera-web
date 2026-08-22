@@ -6,7 +6,7 @@ import { site } from "@/data/site";
  */
 export function PromiseSplit({
   eyebrow = "Samarbeidsmodellen",
-  title = "Ikke kunde. Samarbeidspartner.",
+  title = "Ikke et kundenummer. En fast fører — med backup.",
   intro = "Vi tilpasser oss hver enkelt bedrift og jobber tett med deg — fordi et regnskap som skal skape verdi, krever at vi faktisk kjenner virksomheten din.",
 }: {
   eyebrow?: string;

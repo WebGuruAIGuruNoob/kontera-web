@@ -3,7 +3,7 @@ import type { TjenesteContent } from "@/lib/content-types";
 export const arsoppgjor: TjenesteContent = {
   slug: "arsoppgjor",
   navn: "Årsoppgjør og skattemelding",
-  tittel: "Årsoppgjør levert riktig – i god tid før fristen",
+  tittel: "Årsoppgjør uten skippertak — levert i god tid",
   metaTitle: "Årsoppgjør og skattemelding for AS og ENK | Kontera Regnskap",
   metaDescription:
     "Vi tar hele årsoppgjøret: årsregnskap, noter, skattemelding og aksjonærregisteroppgave – levert riktig og innen fristen. Ring 960 00 400 for et tilbud.",

@@ -280,8 +280,13 @@ export function buildKommuneInnhold(
   const h1Varianter = [
     `Regnskapsfører i ${navn} — fast kontaktperson, uten taksameter`,
     `Regnskapsfører i ${navn} uten faktura for korte spørsmål`,
-    `Regnskapsfører i ${navn} — alle frister, null stress`,
-    `Regnskapsfører i ${navn} med en fast fører som kjenner deg`,
+    `Regnskapsfører i ${navn} — fristene er vårt ansvar`,
+    `Regnskapsfører i ${navn} — én fast fører, alltid backup`,
+    `Regnskapsfører i ${navn} du kan ringe uten å nøle`,
+    `Regnskapsfører i ${navn} — statsautorisert kvalitet, heldigital hverdag`,
+    `Regnskapsfører i ${navn} som tar alle fristene for deg`,
+    `Regnskapsfører i ${navn} — like nær som et lokalkontor`,
+    `Regnskapsfører i ${navn}: korte spørsmål koster aldri ekstra`,
   ];
   if (blokkIds.has("bil")) h1Varianter.push(`Regnskapsfører i ${navn} som kan bilbransjen`);
   if (blokkIds.has("bygg")) h1Varianter.push(`Regnskapsfører i ${navn} som kan byggebransjen`);

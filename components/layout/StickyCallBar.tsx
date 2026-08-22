@@ -15,11 +15,27 @@ export function StickyCallBar({ leadEnabled }: { leadEnabled: boolean }) {
   const [formHref, setFormHref] = useState("/kontakt");
 
   useEffect(() => {
-    setFormHref(document.getElementById("kontakt") ? "#kontakt" : "/kontakt");
-    const onScroll = () => setVisible(window.scrollY > 520);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    const target = document.getElementById("kontakt");
+    setFormHref(target ? "#kontakt" : "/kontakt");
+
+    // LØFTEPLAN funn 5: skjul baren når ankermålet (#kontakt) er synlig,
+    // så den aldri ligger over selve skjemaknappen den peker til.
+    let targetVisible = false;
+    const update = () => setVisible(window.scrollY > 520 && !targetVisible);
+    let io: IntersectionObserver | undefined;
+    if (target) {
+      io = new IntersectionObserver(([entry]) => {
+        targetVisible = entry.isIntersecting;
+        update();
+      });
+      io.observe(target);
+    }
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", update);
+      io?.disconnect();
+    };
   }, []);
 
   if (!visible) return null;

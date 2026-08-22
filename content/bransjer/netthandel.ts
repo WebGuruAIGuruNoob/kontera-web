@@ -3,7 +3,7 @@ import type { BransjeContent } from "@/lib/content-types";
 export const netthandel: BransjeContent = {
   slug: "netthandel",
   navn: "Netthandel",
-  tittel: "Netthandelsregnskap som stemmer – helt ned til siste gebyr",
+  tittel: "Regnskap for netthandel — avstemt ned til siste gebyr",
   metaTitle: "Regnskap for nettbutikk og netthandel | Kontera Regnskap",
   metaDescription:
     "Nettbutikk? Vi avstemmer Klarna, Stripe og Vipps, kobler Shopify mot regnskapet og tar mva ved salg til utlandet. Ring 960 00 400 for en uforpliktende prat.",

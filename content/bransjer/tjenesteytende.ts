@@ -3,7 +3,7 @@ import type { BransjeContent } from "@/lib/content-types";
 export const tjenesteytende: BransjeContent = {
   slug: "tjenesteytende",
   navn: "Konsulenter og tjenestebedrifter",
-  tittel: "Regnskap for konsulenter – mer tid til fakturerbare timer",
+  tittel: "Regnskap for konsulenter — enkel pris, flere fakturerbare timer",
   metaTitle: "Regnskap for konsulenter og tjenestebedrifter | Kontera",
   metaDescription:
     "Regnskapsfører for konsulenter, frilansere og byråer. Få bilag gir lav pris – og råd om lønn, utbytte og skatt på kjøpet. Ring 960 00 400 for en prat.",

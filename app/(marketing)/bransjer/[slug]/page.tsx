@@ -18,6 +18,8 @@ import { serviceSchema } from "@/lib/schema";
 import { Icon } from "@/components/Icon";
 import { Arrow } from "@/components/icons";
 import { FramedImage } from "@/components/FramedImage";
+import { EditorialSections } from "@/components/sections/EditorialSections";
+import { GarantiBand } from "@/components/sections/GarantiBand";
 
 export const dynamicParams = false;
 
@@ -129,22 +131,11 @@ export default async function BransjePage({
 
       <section className="bg-mist py-14">
         <div className="mx-auto max-w-6xl px-4">
-          <div className="mx-auto max-w-3xl space-y-10">
-            {b.seksjoner.map((seksjon) => (
-              <div key={seksjon.tittel}>
-                <h2 className="font-display text-2xl font-bold tracking-[-0.01em] text-ink [text-wrap:balance]">
-                  {seksjon.tittel}
-                </h2>
-                {seksjon.avsnitt.map((avsnitt, i) => (
-                  <p key={i} className="mt-4 max-w-[70ch] leading-relaxed text-slate">
-                    {avsnitt}
-                  </p>
-                ))}
-              </div>
-            ))}
-          </div>
+          <EditorialSections blokker={b.seksjoner} />
         </div>
       </section>
+
+      <GarantiBand seed={b.slug} />
 
       <CtaBanner
         leadEnabled={enabled}

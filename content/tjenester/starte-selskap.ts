@@ -3,7 +3,7 @@ import type { TjenesteContent } from "@/lib/content-types";
 export const starteSelskap: TjenesteContent = {
   slug: "starte-selskap",
   navn: "Starte selskap",
-  tittel: "Start selskapet riktig fra dag én",
+  tittel: "Starte selskap? Vi rigger alt riktig fra dag én",
   metaTitle: "Starte AS eller ENK? Hjelp til å starte selskap | Kontera",
   metaDescription:
     "Skal du starte AS eller ENK? Vi hjelper deg med valg av selskapsform, stiftelse i Altinn, mva-registrering og alt som må på plass første året. Ring 960 00 400.",

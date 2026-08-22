@@ -16,7 +16,7 @@ export function FinalCta({
 }) {
   const enabled = leadEnabled();
   return (
-    <section id="kontakt" className="bg-navy-deep py-16 text-white lg:py-20">
+    <section id="kontakt" className="bg-navy py-16 text-white lg:py-20">
       <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-12 lg:gap-14">
         <div className="lg:col-span-6">
           <p className="font-sans text-[0.72rem] font-bold uppercase tracking-[0.14em] text-azure">

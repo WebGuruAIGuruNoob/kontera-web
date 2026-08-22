@@ -3,7 +3,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { alleKommuner, getKommune, naboKommuner } from "@/lib/geo";
 import { buildKommuneInnhold } from "@/lib/geo-content";
-import { generatedAt, tall } from "@/lib/geo-stats";
+import { generatedAt, getStats, tall } from "@/lib/geo-stats";
+import { fagblokkBilde, fylkeBilde } from "@/lib/bilder";
+import { FramedImage } from "@/components/FramedImage";
+import { EditorialSections } from "@/components/sections/EditorialSections";
+import { GarantiBand } from "@/components/sections/GarantiBand";
 import { site } from "@/data/site";
 import { leadEnabled } from "@/lib/lead";
 import { HeroSplit } from "@/components/sections/HeroSplit";
@@ -69,7 +73,8 @@ export default async function KommunePage({
 
   const enabled = leadEnabled();
   const navn = kommune.visningsnavn;
-  const naboer = naboKommuner(fylke, kommune, 5);
+  const naboer = naboKommuner(fylke, kommune, 6);
+  const regionFoto = fylkeBilde(fylke.slug);
 
   return (
     <>
@@ -115,7 +120,7 @@ export default async function KommunePage({
         <div className="max-w-3xl" data-unique>
           <p className="section-eyebrow">Næringslivet i {navn}</p>
           <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
-            Bedriftene i {navn} — og hva de trenger fra en regnskapsfører
+            Vi kjenner tallene til næringslivet i {navn}
           </h2>
           {innhold.intro.map((avsnitt, i) => (
             <p key={i} className="mt-4 max-w-[70ch] leading-relaxed text-slate">
@@ -140,7 +145,7 @@ export default async function KommunePage({
 
       {/* 5. Tjenestebento — bransjesortert med lokaliserte setninger */}
       <ServicesBento
-        title={`Regnskapstjenester for bedrifter i ${navn}`}
+        title={`Regnskapstjenester i ${navn} — alt fra én fast fører`}
         intro={`Alt fra løpende bokføring til årsoppgjør — levert digitalt til ${navn}, med én fast regnskapsfører som tar helheten.`}
         order={innhold.tjenesteRekkefolge}
         localSentences={innhold.tjenesteSetninger}
@@ -156,26 +161,17 @@ export default async function KommunePage({
 
       <CtaBanner
         leadEnabled={enabled}
-        text={`Usikker på hva din bedrift i ${navn} trenger? Ta en uforpliktende prat, så finner vi ut av det sammen.`}
+        variant="surface"
+        text={`Usikker på hva din bedrift i ${navn} trenger? Fem minutter på telefonen — så vet du det.`}
       />
 
-      {/* 6. Betingede fagblokker — valgt av kommunens næringsprofil */}
+      {/* 6. Betingede fagblokker — redaksjonell 4/8 med datavalgte fagbilder */}
       <section className="bg-mist py-14">
         <div className="mx-auto max-w-6xl px-4">
-          <div className="mx-auto max-w-3xl space-y-10">
-            {innhold.blokker.map((blokk) => (
-              <div key={blokk.id}>
-                <h2 className="font-display text-2xl font-bold tracking-[-0.01em] text-ink [text-wrap:balance]">
-                  {blokk.tittel}
-                </h2>
-                {blokk.avsnitt.map((avsnitt, i) => (
-                  <p key={i} className="mt-4 max-w-[70ch] leading-relaxed text-slate">
-                    {avsnitt}
-                  </p>
-                ))}
-              </div>
-            ))}
-          </div>
+          <EditorialSections
+            blokker={innhold.blokker}
+            bilder={(blokk, i) => (i < 2 && blokk.id ? fagblokkBilde(blokk.id) : null)}
+          />
         </div>
       </section>
 
@@ -183,46 +179,77 @@ export default async function KommunePage({
       <PricingSection leadEnabled={enabled} stedsnavn={navn} />
 
       {/* 8–9. Prosess + sammenligning */}
-      <NumberedJourney leadEnabled={enabled} title={`Slik kommer du i gang fra ${navn}`} />
+      <NumberedJourney
+        leadEnabled={enabled}
+        title={`Slik kommer du i gang fra ${navn} — det meste gjør vi`}
+      />
       <ComparisonTable />
 
-      {/* 10–11. Samarbeidsmodellen + årshjulet (ordgulv + differensiatorer) */}
+      {/* 10. Garantiband — typografisk brudd med egne løfter */}
+      <GarantiBand seed={kommune.nr} />
+
+      {/* 11–12. Samarbeidsmodellen + årshjulet (ordgulv + differensiatorer) */}
       <PromiseSplit />
       <Arshjul stedsnavn={navn} />
+
+      {/* 13. Dekning + intern lenking: fylkeslandemerke + nabokort med tall */}
+      <section className="border-y border-navy/10 bg-mist py-14">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 lg:grid-cols-12 lg:gap-14">
+          <div className="lg:col-span-5">
+            <p className="section-eyebrow">Dekning</p>
+            <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
+              Vi hjelper bedrifter i hele {fylke.visningsnavn}
+            </h2>
+            <p className="mt-3 max-w-[48ch] text-sm leading-relaxed text-slate">
+              Heldigitalt samarbeid gir like tett oppfølging enten du driver i{" "}
+              {navn} eller i nabokommunen.
+            </p>
+            {regionFoto && (
+              <FramedImage
+                src={regionFoto.src}
+                alt={regionFoto.alt}
+                caption={regionFoto.caption}
+                className="mt-6"
+                sizes="(min-width: 1024px) 26rem, 100vw"
+              />
+            )}
+            <Link
+              href={`/regnskapsforer/${fylke.slug}`}
+              className="mt-5 inline-block text-sm font-bold text-blue hover:underline"
+            >
+              Alle kommuner i {fylke.visningsnavn} →
+            </Link>
+          </div>
+          <div className="lg:col-span-7">
+            <div className="grid gap-3 sm:grid-cols-2">
+              {naboer.map((nabo) => {
+                const naboStats = getStats(nabo.nr);
+                return (
+                  <Link
+                    key={nabo.nr}
+                    href={`/regnskapsforer/${fylke.slug}/${nabo.slug}`}
+                    className="group card-line card-line-hover flex items-baseline justify-between gap-3 px-4 py-3.5"
+                  >
+                    <span className="font-sans text-sm font-bold text-navy group-hover:text-blue">
+                      Regnskapsfører i {nabo.visningsnavn}
+                    </span>
+                    {naboStats && (
+                      <span className="shrink-0 text-xs tabular-nums text-slate">
+                        {tall(naboStats.total)} virks.
+                      </span>
+                    )}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Faq
         items={innhold.faq}
         title={`Spørsmål og svar — regnskapsfører i ${navn}`}
       />
-
-      {/* Dekning + intern lenking (ærlighet, aldri falsk kart-pin) */}
-      <section className="mx-auto max-w-6xl px-4 pb-14">
-        <div className="rounded-2xl border border-navy/10 bg-surface p-6">
-          <h2 className="font-sans text-lg font-bold text-ink">
-            Vi hjelper bedrifter i hele {fylke.visningsnavn}
-          </h2>
-          <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
-            {naboer.map((nabo) => (
-              <li key={nabo.nr}>
-                <Link
-                  href={`/regnskapsforer/${fylke.slug}/${nabo.slug}`}
-                  className="text-sm font-semibold text-navy hover:text-blue hover:underline"
-                >
-                  Regnskapsfører i {nabo.visningsnavn}
-                </Link>
-              </li>
-            ))}
-            <li>
-              <Link
-                href={`/regnskapsforer/${fylke.slug}`}
-                className="text-sm font-bold text-blue hover:underline"
-              >
-                Alle kommuner i {fylke.visningsnavn} →
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </section>
 
       <FinalCta
         title={`Klar for en regnskapsfører som kjenner deg — i ${navn}?`}

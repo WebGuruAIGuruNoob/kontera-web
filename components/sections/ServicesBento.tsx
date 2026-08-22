@@ -53,7 +53,7 @@ export function ServicesBento({
         {intro && <p className="mt-4 leading-relaxed text-slate">{intro}</p>}
       </div>
 
-      <div data-reveal-group className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-12">
+      <div data-reveal-group className="mt-10 grid grid-cols-1 gap-4 max-sm:gap-0 sm:grid-cols-12">
         {/* Featurecelle */}
         <Link
           href={`/tjenester/${feature.slug}`}
@@ -86,30 +86,24 @@ export function ServicesBento({
           <Link
             key={t.slug}
             href={`/tjenester/${t.slug}`}
-            className={`group ${spans[i]} card-line card-line-hover p-6`}
+            className={`group ${spans[i]} card-line card-line-hover p-6 max-sm:rounded-none max-sm:border-x-0 max-sm:border-b-0 max-sm:border-t max-sm:bg-transparent max-sm:px-0 max-sm:py-4`}
           >
-            <div className="flex items-start gap-4">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue/10 text-blue transition-colors group-hover:bg-blue group-hover:text-white">
-                <Icon name={t.ikon} className="h-5 w-5" />
+            <h3 className="flex items-baseline justify-between gap-3 font-sans text-base font-bold text-navy">
+              <span>
+                <Icon name={t.ikon} className="mr-2 inline h-5 w-5 align-[-0.2em] text-azure" />
+                {t.navn}
+                {geoSuffix ? ` ${geoSuffix}` : ""}
               </span>
-              <div>
-                <h3 className="font-sans text-base font-bold text-navy">
-                  {t.navn}
-                  {geoSuffix ? ` ${geoSuffix}` : ""}
-                </h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-slate">
-                  {t.kortBeskrivelse}
-                </p>
-                {localSentences?.[t.slug] && (
-                  <p data-local-service data-unique className="mt-2 text-sm font-semibold text-navy">
-                    {localSentences[t.slug]}
-                  </p>
-                )}
-                <span className="mt-2 inline-block text-sm font-bold text-blue group-hover:underline">
-                  Les mer <Arrow />
-                </span>
-              </div>
-            </div>
+              <Arrow className="text-blue transition-transform group-hover:translate-x-0.5" />
+            </h3>
+            <p className="mt-1.5 text-sm leading-relaxed text-slate">
+              {t.kortBeskrivelse}
+            </p>
+            {localSentences?.[t.slug] && (
+              <p data-local-service data-unique className="mt-2 text-sm font-semibold text-navy">
+                {localSentences[t.slug]}
+              </p>
+            )}
           </Link>
         ))}
       </div>

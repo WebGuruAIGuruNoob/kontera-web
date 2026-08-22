@@ -3,7 +3,7 @@ import type { TjenesteContent } from "@/lib/content-types";
 export const regnskapsforing: TjenesteContent = {
   slug: "regnskapsforing",
   navn: "Regnskapsføring",
-  tittel: "Regnskapet i orden – uten at du løfter en finger",
+  tittel: "Regnskapsføring med fast fører som kjenner bedriften din",
   metaTitle: "Regnskapsføring med fast regnskapsfører | Kontera Regnskap",
   metaDescription:
     "Løpende regnskapsføring med fast regnskapsfører som kjenner bedriften din. Alltid oppdaterte tall, alle frister overholdt – og ingen faktura for korte spørsmål. Ring 960 00 400.",

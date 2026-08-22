@@ -30,7 +30,7 @@ export function ProblemSolution() {
       <div className="max-w-2xl">
         <p className="section-eyebrow">Kjenner du deg igjen?</p>
         <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
-          Regnskapsfører skal ikke være et <span className="hl-serif-italic">taksameter</span>
+          <span className="hl-serif-italic">Tør du</span> ringe regnskapsføreren din?
         </h2>
       </div>
       <div data-reveal-group className="mt-10 grid gap-x-12 gap-y-0 lg:grid-cols-2">

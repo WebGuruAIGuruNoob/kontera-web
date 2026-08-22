@@ -3,7 +3,7 @@ import type { BransjeContent } from "@/lib/content-types";
 export const bilforhandlere: BransjeContent = {
   slug: "bilforhandlere",
   navn: "Bilforhandlere",
-  tittel: "Regnskap for bilforhandlere – riktig moms på hver bil",
+  tittel: "Regnskap for bilforhandlere — avansemoms som tåler bokettersyn",
   metaTitle: "Regnskap for bilforhandlere | Kontera Regnskap",
   metaDescription:
     "Regnskapsbyrå med spisskompetanse på bruktbilforhandlere: avansemoms, innbytte, lagerbiler og dagsoppgjør. Statsautorisert. Ring 960 00 400 i dag.",

@@ -5,7 +5,7 @@ import { site } from "@/data/site";
  * Gjør «ikke kontor her» om til produktet og adresserer byttebarrieren.
  */
 export function NumberedJourney({
-  title = "Slik kommer du i gang",
+  title = "Slik kommer du i gang — det meste gjør vi",
   leadEnabled,
 }: {
   title?: string;

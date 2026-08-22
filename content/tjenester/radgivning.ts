@@ -3,7 +3,7 @@ import type { TjenesteContent } from "@/lib/content-types";
 export const radgivning: TjenesteContent = {
   slug: "radgivning",
   navn: "Økonomisk rådgivning",
-  tittel: "Rådgivning som gjør tallene dine til bedre beslutninger",
+  tittel: "Rådgivning på vanlig norsk — inkludert i samarbeidet",
   metaTitle: "Økonomisk rådgivning for bedrifter | Kontera Regnskap",
   metaDescription:
     "Økonomisk rådgivning fra statsautorisert regnskapsfører: likviditet, budsjett, utbytte eller lønn og holding – forklart på vanlig norsk. Ring 960 00 400.",

@@ -16,7 +16,8 @@ import { CtaBanner } from "@/components/sections/CtaBanner";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { FramedImage } from "@/components/FramedImage";
-import { bilde } from "@/lib/bilder";
+import { GarantiBand } from "@/components/sections/GarantiBand";
+import { bilde, collageBilder } from "@/lib/bilder";
 import { site } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -64,21 +65,42 @@ const homeFaq = [
 export default function HomePage() {
   const enabled = leadEnabled();
   const kontorFoto = bilde("team:samarbeid-1");
+  const collage = collageBilder();
   return (
     <>
       <HeroSplit
-        eyebrow="Regnskapsbyrå med statsautoriserte regnskapsførere"
+        eyebrow="Autorisert regnskapsbyrå — to statsautoriserte regnskapsførere"
         title={
           <>
-            Regnskapet i orden. <span className="hl-serif-italic">Alltid.</span>
+            Regnskapet i orden.{" "}
+            <span className="hl-serif-italic">Spørsmål koster aldri ekstra.</span>
           </>
         }
         subtitle="Du får en fast regnskapsfører som kjenner bedriften din, tar alle fristene og svarer når du ringer – uten å fakturere for korte spørsmål."
         chips={[
-          `${site.employees} dedikerte ansatte`,
+          `${site.employees} ansatte — du kjenner alle`,
           `${site.statsautoriserte} statsautoriserte`,
-          "Kunder i hele Norge",
+          "Korte spørsmål: 0 kr",
         ]}
+        extra={
+          collage.length === 3 && (
+            <div className="mt-10 grid max-w-xl grid-cols-3 items-start gap-3">
+              <FramedImage
+                src={collage[0].src}
+                alt={collage[0].alt}
+                className="translate-y-2"
+                sizes="180px"
+              />
+              <FramedImage src={collage[1].src} alt={collage[1].alt} sizes="180px" />
+              <FramedImage
+                src={collage[2].src}
+                alt={collage[2].alt}
+                className="translate-y-4"
+                sizes="180px"
+              />
+            </div>
+          )
+        }
         aside={
           <LeadCard
             enabled={enabled}
@@ -90,11 +112,11 @@ export default function HomePage() {
       <ProofStrip />
       <ProblemSolution />
       <ServicesBento
-        title="Alt du trenger — fra bilag til årsoppgjør"
+        title="Fra bilag til årsoppgjør — samlet hos én fast fører"
         intro="Vi leverer alt en liten og mellomstor bedrift trenger: løpende regnskap, lønn, mva, årsoppgjør, rådgivning og hjelp til å starte selskap."
       />
       <StatBand
-        title="Et lite byrå — med full kontroll"
+        title="Lite nok til å kjenne deg. Stort nok til alt."
         items={[
           { label: "Dedikerte ansatte", value: `${site.employees}`, numeric: site.employees },
           { label: "Statsautoriserte regnskapsførere", value: `${site.statsautoriserte}`, numeric: site.statsautoriserte },
@@ -105,7 +127,7 @@ export default function HomePage() {
         ]}
       />
       <PromiseSplit />
-      <IndustryCards />
+      <IndustryCards title="Spisskompetanse på bil, bygg, eiendom og netthandel" />
       <NumberedJourney leadEnabled={enabled} />
       <PricingSection leadEnabled={enabled} />
       <ComparisonTable />
@@ -157,9 +179,10 @@ export default function HomePage() {
         </div>
       </section>
 
+      <GarantiBand seed="forside" />
       <CtaBanner
         leadEnabled={enabled}
-        text="Lurer du på om vi passer for din bedrift? Det finner vi ut av på fem minutter."
+        text="Fem minutter på telefonen — så vet du om vi passer."
       />
       <Faq items={homeFaq} />
       <FinalCta />

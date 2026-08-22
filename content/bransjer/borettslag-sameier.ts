@@ -3,7 +3,7 @@ import type { BransjeContent } from "@/lib/content-types";
 export const borettslagSameier: BransjeContent = {
   slug: "borettslag-sameier",
   navn: "Borettslag og sameier",
-  tittel: "Regnskap styret i borettslag og sameier kan stole på",
+  tittel: "Regnskap for borettslag og sameier — trygghet for styret",
   metaTitle: "Regnskap for borettslag og sameier | Kontera Regnskap",
   metaDescription:
     "Regnskap, årsoppgjør og årsmøtepapirer for borettslag og sameier – med fast regnskapsfører som svarer styret uten ekstra faktura. Ring 960 00 400.",

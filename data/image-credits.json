@@ -270,6 +270,150 @@
     "query": "kuratert:team:samarbeid-2"
   },
   {
+    "file": "images/pexels/fagblokk-landbruk.jpg",
+    "pexelsId": 12736538,
+    "photographer": "Efrem  Efre",
+    "photographerUrl": "https://www.pexels.com/@efrem-efre-2786187",
+    "pexelsUrl": "https://www.pexels.com/photo/red-and-white-barn-on-green-grass-field-under-white-clouds-and-blue-sky-12736538/",
+    "alt": "Rød låve med patinert tak omgitt av grønne åkre under skiftende skyer",
+    "query": "kuratert:fagblokk:landbruk"
+  },
+  {
+    "file": "images/pexels/fagblokk-reiseliv.jpg",
+    "pexelsId": 4349946,
+    "photographer": "Ketut Subiyanto",
+    "photographerUrl": "https://www.pexels.com/@ketut-subiyanto",
+    "pexelsUrl": "https://www.pexels.com/photo/crop-faceless-barista-pouring-milk-from-steel-pot-into-cup-4349946/",
+    "alt": "Anonym barista i grønt forkle heller melk i en hvit kopp bak kafédisken",
+    "query": "kuratert:fagblokk:reiseliv"
+  },
+  {
+    "file": "images/pexels/fagblokk-transport.jpg",
+    "pexelsId": 37764794,
+    "photographer": "Efrem  Efre",
+    "photographerUrl": "https://www.pexels.com/@efrem-efre-2786187",
+    "pexelsUrl": "https://www.pexels.com/photo/truck-driving-through-scenic-swedish-countryside-37764794/",
+    "alt": "Hvit lastebil på landevei gjennom grønne jorder og gul rapsåker",
+    "query": "kuratert:fagblokk:transport"
+  },
+  {
+    "file": "images/pexels/fagblokk-handel.jpg",
+    "pexelsId": 8475161,
+    "photographer": "Kampus Production",
+    "photographerUrl": "https://www.pexels.com/@kampus",
+    "pexelsUrl": "https://www.pexels.com/photo/paying-in-a-counter-using-a-bank-card-8475161/",
+    "alt": "Kunde betaler med kort på betalingsterminal i butikkassen",
+    "query": "kuratert:fagblokk:handel"
+  },
+  {
+    "file": "images/pexels/fagblokk-oppstart.jpg",
+    "pexelsId": 7203849,
+    "photographer": "SHVETS production",
+    "photographerUrl": "https://www.pexels.com/@shvets-production",
+    "pexelsUrl": "https://www.pexels.com/photo/crop-faceless-woman-packing-belongings-into-cardboard-box-before-relocation-7203849/",
+    "alt": "Anonym person pakker ut pappesker i nye, tomme lokaler",
+    "query": "kuratert:fagblokk:oppstart"
+  },
+  {
+    "file": "images/pexels/fagblokk-etablert.jpg",
+    "pexelsId": 5691541,
+    "photographer": "Ksenia Chernaya",
+    "photographerUrl": "https://www.pexels.com/@kseniachernaya",
+    "pexelsUrl": "https://www.pexels.com/photo/crop-carpenter-working-with-window-frame-using-plane-5691541/",
+    "alt": "Hender høvler en hvitmalt vinduskarm med gammel høvel i verksted",
+    "query": "kuratert:fagblokk:etablert"
+  },
+  {
+    "file": "images/pexels/fagblokk-enk.jpg",
+    "pexelsId": 5410130,
+    "photographer": "Amina Filkins",
+    "photographerUrl": "https://www.pexels.com/@amina-filkins",
+    "pexelsUrl": "https://www.pexels.com/photo/crop-woman-creating-bouquet-on-table-5410130/",
+    "alt": "Blomsterbinder pakker bukett i kraftpapir på arbeidsbord, sett ovenfra",
+    "query": "kuratert:fagblokk:enk"
+  },
+  {
+    "file": "images/pexels/collage-1.jpg",
+    "pexelsId": 7858825,
+    "photographer": "Greta Hoffman",
+    "photographerUrl": "https://www.pexels.com/@greta-hoffman",
+    "pexelsUrl": "https://www.pexels.com/photo/person-using-a-laptop-7858825/",
+    "alt": "Nærbilde av hender i marineblå genser som skriver på laptop",
+    "query": "kuratert:collage:naert"
+  },
+  {
+    "file": "images/pexels/collage-2.jpg",
+    "pexelsId": 6077600,
+    "photographer": "KATRIN  BOLOVTSOVA",
+    "photographerUrl": "https://www.pexels.com/@ekaterina-bolovtsova",
+    "pexelsUrl": "https://www.pexels.com/photo/close-up-shot-of-a-person-holding-a-paperwork-beside-a-pen-6077600/",
+    "alt": "Bunke med dokumenter og binders blas gjennom på et glassbord",
+    "query": "kuratert:collage:halvnaert"
+  },
+  {
+    "file": "images/pexels/collage-3.jpg",
+    "pexelsId": 7594198,
+    "photographer": "Mikhail Nilov",
+    "photographerUrl": "https://www.pexels.com/@mikhail-nilov",
+    "pexelsUrl": "https://www.pexels.com/photo/back-view-of-a-man-in-white-long-sleeve-7594198/",
+    "alt": "Person sett bakfra ved arbeidsbord foran store, lyse vinduer",
+    "query": "kuratert:collage:miljo"
+  },
+  {
+    "file": "images/pexels/tjeneste2-regnskapsforing.jpg",
+    "pexelsId": 8297058,
+    "photographer": "Mikhail Nilov",
+    "photographerUrl": "https://www.pexels.com/@mikhail-nilov",
+    "pexelsUrl": "https://www.pexels.com/photo/woman-looking-at-the-screen-of-her-laptop-8297058/",
+    "alt": "Regnskapsfører ved skjerm med regneark, med permer og kalkulator på pulten",
+    "query": "kuratert:tjeneste2:regnskapsforing"
+  },
+  {
+    "file": "images/pexels/tjeneste2-lonn.jpg",
+    "pexelsId": 5926243,
+    "photographer": "Sora Shimazaki",
+    "photographerUrl": "https://www.pexels.com/@sora-shimazaki",
+    "pexelsUrl": "https://www.pexels.com/photo/credit-card-in-wallet-and-laptop-on-desk-5926243/",
+    "alt": "Hånd tar bankkort ut av lommebok ved laptop på hvitt skrivebord",
+    "query": "kuratert:tjeneste2:lonn"
+  },
+  {
+    "file": "images/pexels/tjeneste2-arsoppgjor.jpg",
+    "pexelsId": 955392,
+    "photographer": "Cytonn Photography",
+    "photographerUrl": "https://www.pexels.com/@cytonn",
+    "pexelsUrl": "https://www.pexels.com/photo/close-up-photography-of-person-writing-on-white-paper-955392/",
+    "alt": "Nærbilde av hender som signerer et dokument med fyllepenn",
+    "query": "kuratert:tjeneste2:arsoppgjor"
+  },
+  {
+    "file": "images/pexels/tjeneste2-mva.jpg",
+    "pexelsId": 3570235,
+    "photographer": "Hook Tell",
+    "photographerUrl": "https://www.pexels.com/@hook-tell-1947041",
+    "pexelsUrl": "https://www.pexels.com/photo/person-printing-a-receipt-3570235/",
+    "alt": "Hender holder betalingsterminal som skriver ut en kvittering",
+    "query": "kuratert:tjeneste2:mva"
+  },
+  {
+    "file": "images/pexels/tjeneste2-radgivning.jpg",
+    "pexelsId": 6803528,
+    "photographer": "cottonbro studio",
+    "photographerUrl": "https://www.pexels.com/@cottonbro",
+    "pexelsUrl": "https://www.pexels.com/photo/a-person-writing-on-a-whiteboard-6803528/",
+    "alt": "Hånd tegner stigende kurve med blå tusj på whiteboard",
+    "query": "kuratert:tjeneste2:radgivning"
+  },
+  {
+    "file": "images/pexels/tjeneste2-starte-selskap.jpg",
+    "pexelsId": 6693557,
+    "photographer": "cottonbro studio",
+    "photographerUrl": "https://www.pexels.com/@cottonbro",
+    "pexelsUrl": "https://www.pexels.com/photo/a-top-view-of-a-person-doing-pottery-6693557/",
+    "alt": "Hender former leire på arbeidsbord i lyst keramikkverksted, sett ovenfra",
+    "query": "kuratert:tjeneste2:starte-selskap"
+  },
+  {
     "file": "images/pexels/blogg-hva-koster-regnskapsforer.jpg",
     "pexelsId": 33175673,
     "photographer": "Bia Limova",

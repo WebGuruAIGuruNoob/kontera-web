@@ -8,13 +8,22 @@ import { PhoneIcon, Arrow } from "@/components/icons";
 export function CtaBanner({
   text,
   leadEnabled,
+  variant = "mist",
 }: {
   text: string;
   leadEnabled: boolean;
+  /** «surface» når naboseksjonen er mist (unngår mist-på-mist, LØFTEPLAN funn 8) */
+  variant?: "mist" | "surface";
 }) {
   return (
-    <div className="mx-auto max-w-6xl px-4 pb-4">
-      <div className="flex flex-col items-start justify-between gap-4 rounded-2xl border border-navy/10 bg-mist px-6 py-5 sm:flex-row sm:items-center">
+    <div className="mx-auto max-w-6xl px-4 py-8">
+      <div
+        className={`flex flex-col items-start justify-between gap-4 rounded-2xl border px-6 py-5 sm:flex-row sm:items-center ${
+          variant === "surface"
+            ? "border-navy/15 bg-surface"
+            : "border-navy/10 bg-mist"
+        }`}
+      >
         <p className="font-sans text-base font-bold text-navy [text-wrap:balance]">
           {text}
         </p>

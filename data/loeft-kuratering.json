@@ -1,0 +1,578 @@
+{
+ "generert": "2026-08-22",
+ "kilde": "Løfteplan-research (wf_f2274b70-461)",
+ "bilder": {
+  "picks": [
+   {
+    "category": "A-landbruk",
+    "pexelsId": 12736538,
+    "pexelsUrl": "https://www.pexels.com/photo/red-and-white-barn-on-green-grass-field-under-white-clouds-and-blue-sky-12736538/",
+    "photographer": "Efrem Efre",
+    "why": "Klassisk skandinavisk rødlåve med patinert bliktak i grønt kornfelt under dramatiske skyer (Jönköping, Sverige). Umiskjennelig nordisk, naturlig lys, ingen tekst, kjølig himmel som tåler navy-tint godt.",
+    "altForslag": "Rød låve med patinert tak omgitt av grønne åkre under skiftende skyer"
+   },
+   {
+    "category": "A-landbruk",
+    "pexelsId": 32651698,
+    "pexelsUrl": "https://www.pexels.com/photo/tranquil-landscape-with-red-tractor-in-open-field-32651698/",
+    "photographer": "Jiri Ikonomidis",
+    "why": "Ensom rød traktor i stort grønt kulturlandskap under lav, tung himmel — leses som norsk/islandsk vestlandslandbruk. Rolig og ærlig, null AI-preg. Traktoren er liten i bildet, så beskjær mot midten ved små kort.",
+    "altForslag": "Traktor arbeider alene på et stort grønt jorde under lav nordisk himmel"
+   },
+   {
+    "category": "A-reiseliv",
+    "pexelsId": 4349946,
+    "pexelsUrl": "https://www.pexels.com/photo/crop-faceless-barista-pouring-milk-from-steel-pot-into-cup-4349946/",
+    "photographer": "Ketut Subiyanto",
+    "why": "Anonym servering: barista i støvgrønt forkle heller melk i hvit kopp, lyst og luftig med dempet palett. Hender/torso uten ansikt — trygt mot 'Konteras team'-feilen. Ingen tekst i motivet.",
+    "altForslag": "Anonym barista i grønt forkle heller melk i en hvit kopp bak kafédisken"
+   },
+   {
+    "category": "A-reiseliv",
+    "pexelsId": 15634678,
+    "pexelsUrl": "https://www.pexels.com/photo/metal-kettle-standing-on-a-table-15634678/",
+    "photographer": "Efrem Efre",
+    "why": "Kobberkjele på hvitmalt trebord i lavt kveldslys — svensk pensjonat-/tradisjonshotellstemning med ekte patina. Distinkt alternativ til frokostbuffet-klisjeen; mørk teal vegg spiller fint med navy.",
+    "altForslag": "Kobberkjele på gammelt hvitt bord i kveldslys på tradisjonsrikt gjestgiveri"
+   },
+   {
+    "category": "A-transport",
+    "pexelsId": 37764794,
+    "pexelsUrl": "https://www.pexels.com/photo/truck-driving-through-scenic-swedish-countryside-37764794/",
+    "photographer": "Efrem Efre",
+    "why": "Hvit lastebil på landevei gjennom grønne jorder og rapsåker i Jönköping — dokumentert nordisk vei, ingen lesbar merking, helårs-/sommerbruk. Amerikanske truck-kandidater ble forkastet (feil kontinent i front-designet).",
+    "altForslag": "Hvit lastebil på landevei gjennom grønne jorder og gul rapsåker"
+   },
+   {
+    "category": "A-transport",
+    "pexelsId": 37577435,
+    "pexelsUrl": "https://www.pexels.com/photo/truck-navigating-snowy-mountain-road-37577435/",
+    "photographer": "Stani Slavus",
+    "why": "Europeisk hyttebygd lastebil med lysene på i snøvær på svingete fjellvei — ærlig norsk transporthverdag, mye stemning, kjølige toner som tåler navy-tint perfekt. Sesongpreget (vinter), bruk som variant til 37764794.",
+    "altForslag": "Lastebil med lysene på i snøvær på svingete fjellvei"
+   },
+   {
+    "category": "A-handel",
+    "pexelsId": 5424945,
+    "pexelsUrl": "https://www.pexels.com/photo/white-and-black-clothes-hanging-on-black-steel-rack-5424945/",
+    "photographer": "Arina Krasnikova",
+    "why": "Butikkinteriør: klesstativ i dempede jordtoner mot tregulv og tredører — liten uavhengig butikk, ingen skilting eller lesbar tekst, ingen mennesker. Rolig og ryddig.",
+    "altForslag": "Klesstativ med plagg i rolige farger i liten butikk med tregulv"
+   },
+   {
+    "category": "A-handel",
+    "pexelsId": 8475161,
+    "pexelsUrl": "https://www.pexels.com/photo/paying-in-a-counter-using-a-bank-card-8475161/",
+    "photographer": "Kampus Production",
+    "why": "Kasse-detalj: kun hender ved betalingsterminal i ekte butikkmiljø — anonym, varm og troverdig, ingen lesbar tekst. Godt motstykke til interiørbildet.",
+    "altForslag": "Kunde betaler med kort på betalingsterminal i butikkassen"
+   },
+   {
+    "category": "A-oppstart",
+    "pexelsId": 7203849,
+    "pexelsUrl": "https://www.pexels.com/photo/crop-faceless-woman-packing-belongings-into-cardboard-box-before-relocation-7203849/",
+    "photographer": "SHVETS production",
+    "why": "Innflytting i nye lokaler: anonym person (uten ansikt) pakker esker på betonggulv — 'vi har akkurat startet'-energi uten OPEN-skilt og uten tekst. Nøytral palett som tåler tint. God variasjon fra eksisterende nøkkel+OPEN-motiv.",
+    "altForslag": "Anonym person pakker ut pappesker i nye, tomme lokaler"
+   },
+   {
+    "category": "A-oppstart",
+    "pexelsId": 5410130,
+    "pexelsUrl": "https://www.pexels.com/photo/crop-woman-creating-bouquet-on-table-5410130/",
+    "photographer": "Amina Filkins",
+    "why": "Fersk småbedrift i drift: anonyme hender pakker bukett i kraftpapir på arbeidsbord sett ovenfra — håndverk og oppstartsglede uten klisjé, ingen ansikter, ingen tekst. NB: samme fotograf/serie har OPEN-varianter vi bevisst unngikk pga engelsk tekst.",
+    "altForslag": "Blomsterbinder pakker bukett i kraftpapir på arbeidsbord, sett ovenfra"
+   },
+   {
+    "category": "A-etablert",
+    "pexelsId": 5691541,
+    "pexelsUrl": "https://www.pexels.com/photo/crop-carpenter-working-with-window-frame-using-plane-5691541/",
+    "photographer": "Ksenia Chernaya",
+    "why": "Generasjonshåndverk i aktivt arbeid: anonyme, værbitte hender høvler hvitmalt vinduskarm med gammel høvel — tradisjon møter drift, lyst naturlig lys, ovenfra-utsnitt uten ansikt.",
+    "altForslag": "Hender høvler en hvitmalt vinduskarm med gammel høvel i verksted"
+   },
+   {
+    "category": "A-etablert",
+    "pexelsId": 4318810,
+    "pexelsUrl": "https://www.pexels.com/photo/brown-metal-tool-on-the-table-4318810/",
+    "photographer": "Lars H Knudsen",
+    "why": "Verksteddetalj med ekte patina: gammel skrustikke på slitt arbeidsbenk, dyp brunlig tone og kort dybdeskarphet — 'etablert i generasjoner' uten mennesker og uten tekst. Mørkt bilde; test mot navy-tint før bruk på mørk bakgrunn.",
+    "altForslag": "Gammel skrustikke med patina på slitt arbeidsbenk i verksted"
+   },
+   {
+    "category": "B-collage-naert",
+    "pexelsId": 7858825,
+    "pexelsUrl": "https://www.pexels.com/photo/person-using-a-laptop-7858825/",
+    "photographer": "Greta Hoffman",
+    "why": "Collage-rolle NÆRT: hender i marineblå strikk taster på laptop ved hvitt skrivebord — navy-elementet knytter bildet direkte til Konteras palett, skjermtekst uleselig, naturlig lys.",
+    "altForslag": "Nærbilde av hender i marineblå genser som skriver på laptop"
+   },
+   {
+    "category": "B-collage-halvnaert",
+    "pexelsId": 6077600,
+    "pexelsUrl": "https://www.pexels.com/photo/close-up-shot-of-a-person-holding-a-paperwork-beside-a-pen-6077600/",
+    "photographer": "KATRIN BOLOVTSOVA",
+    "why": "Collage-rolle HALVNÆRT/dokumentdetalj: bunke bilag med binders og en hånd som blar — regnskapets råmateriale, anonym person i mørk blazer bak, kjølig gråblå tone som binder collagen mot navy.",
+    "altForslag": "Bunke med dokumenter og binders blas gjennom på et glassbord"
+   },
+   {
+    "category": "B-collage-miljo",
+    "pexelsId": 7594198,
+    "pexelsUrl": "https://www.pexels.com/photo/back-view-of-a-man-in-white-long-sleeve-7594198/",
+    "photographer": "Mikhail Nilov",
+    "why": "Collage-rolle MILJØ: person helt bakfra ved arbeidsbord foran store vinduer, lys og luftig skandinavisk interiørtone. Sammen gir de tre variert utsnitt (nært/halvnært/miljø) med konsistent naturlig lys og anonyme mennesker.",
+    "altForslag": "Person sett bakfra ved arbeidsbord foran store, lyse vinduer"
+   },
+   {
+    "category": "C-regnskapsforing",
+    "pexelsId": 8297058,
+    "pexelsUrl": "https://www.pexels.com/photo/woman-looking-at-the-screen-of-her-laptop-8297058/",
+    "photographer": "Mikhail Nilov",
+    "why": "Skjerm med regnskapssystem som etterspurt: regneark på laptop, permer i vinduskarmen og kalkulator på pulten — hele regnskapshverdagen i ett bilde. Person ses skrått bakfra og leses anonym; skjermtekst uleselig. Dupliserer ikke perm+kalkulator-motivet.",
+    "altForslag": "Regnskapsfører ved skjerm med regneark, med permer og kalkulator på pulten"
+   },
+   {
+    "category": "C-lonn",
+    "pexelsId": 5926243,
+    "pexelsUrl": "https://www.pexels.com/photo/credit-card-in-wallet-and-laptop-on-desk-5926243/",
+    "photographer": "Sora Shimazaki",
+    "why": "Bankkort-detalj uten merkevare: hånd tar blankt hvitt kort ut av lommebok ved laptop — 'lønn på konto'-assosiasjon, anonymt, ingen lesbar tekst. Kandidater med mBank-logo og tysk terminal-UI ble forkastet.",
+    "altForslag": "Hånd tar bankkort ut av lommebok ved laptop på hvitt skrivebord"
+   },
+   {
+    "category": "C-arsoppgjor",
+    "pexelsId": 955392,
+    "pexelsUrl": "https://www.pexels.com/photo/close-up-photography-of-person-writing-on-white-paper-955392/",
+    "photographer": "Cytonn Photography",
+    "why": "Signering som etterspurt: tett utsnitt av hender med fyllepenn over dokument på varmt trebord — årsoppgjøret leveres og signeres. Dokumentteksten står opp-ned og er uleselig i kortstørrelse; alle andre signeringskandidater hadde klart lesbar engelsk/nederlandsk tekst.",
+    "altForslag": "Nærbilde av hender som signerer et dokument med fyllepenn"
+   },
+   {
+    "category": "C-mva",
+    "pexelsId": 3570235,
+    "pexelsUrl": "https://www.pexels.com/photo/person-printing-a-receipt-3570235/",
+    "photographer": "Hook Tell",
+    "why": "Kasseapparat-motiv som etterspurt: hender betjener mobil betalingsterminal som skriver ut blank kvittering, ryddig grå bakgrunn — komplementerer eksisterende kvitteringsbilde uten å duplisere det. Ingen lesbar tekst (varianter med tsjekkisk kvitteringstekst og eurosedler forkastet).",
+    "altForslag": "Hender holder betalingsterminal som skriver ut en kvittering"
+   },
+   {
+    "category": "C-radgivning",
+    "pexelsId": 6803528,
+    "pexelsUrl": "https://www.pexels.com/photo/a-person-writing-on-a-whiteboard-6803528/",
+    "photographer": "cottonbro studio",
+    "why": "Whiteboard-detalj helt uten lesbar tekst: kun en stigende blå kurve med stiplet mållinje og en anonym hånd med tusj — vekstrådgivning visuelt fortalt, og den blå tusjen matcher navy-paletten. Variant med tegnet €-symbol ble valgt bort.",
+    "altForslag": "Hånd tegner stigende kurve med blå tusj på whiteboard"
+   },
+   {
+    "category": "C-starte-selskap",
+    "pexelsId": 6693557,
+    "pexelsUrl": "https://www.pexels.com/photo/a-top-view-of-a-person-doing-pottery-6693557/",
+    "photographer": "cottonbro studio",
+    "why": "Håndtrykk-fritt alternativ som etterspurt: nystartet keramikkatelier sett rett ovenfra — hender former leire omgitt av verktøy på varmt trebord. Anonymt, taktilt, kremhvit/tre-palett i nordisk tone, ingen tekst.",
+    "altForslag": "Hender former leire på arbeidsbord i lyst keramikkverksted, sett ovenfra"
+   }
+  ],
+  "notes": "Metode: 33 API-søk (godt under taket på 60), 44 kandidater lastet ned i medium og alle vurdert visuelt med Read før dom. Alle picks er sett med egne øyne. Nedlastede kandidater ligger i scratchpad/img for etterkontroll: C:\\Users\\HP Laserjet p2500\\AppData\\Local\\Temp\\claude\\C--Users-HP-Laserjet-p2500-Kontera\\853c4943-7b8a-4f98-a68d-3fdfe09b2c35\\scratchpad\\img\n\nViktige forkastelser (BILDEPLAN §1): (1) Amerikanske semitrailere (Peterbilt/Kenworth-front, venstrekjøring) forkastet for transport — 38729764 hadde i tillegg lesbar SCANIA-logo. (2) Alle oppstart-kandidater med dør/skilt hadde lesbar engelsk/portugisisk tekst (OPEN, ABERTO, tavlemenyer) og synlige ansikter — derfor pivotert til innflytting/esker og håndverk-i-gang. (3) Signeringsbilder bærer nesten alltid dokumenttekst; 955392 valgt fordi teksten står opp-ned og er uleselig i kortstørrelse. (4) Perm-kandidater med CASSA-etiketter og strekkode-labels forkastet; 32201000 (sepia perm-detalj, Joachim Schnürle, https://www.pexels.com/photo/close-up-of-a-binder-with-documents-in-sepia-tone-32201000/) er en god reserve for arsoppgjor om signering ikke ønskes. (5) Norske kronesedler finnes ikke på Pexels (kun EUR/USD m.fl.) — lønnsslipp-ideen droppet til fordel for blankt bankkort. (6) Rådgivnings-whiteboard med tegnet €-symbol (5310563) valgt bort til fordel for tekstfri kurve.\n\nReserver om noe ryker i endelig design: etablert-alternativ 15102482 (verktøy-flatlay med patina, FFD Restorations), starte-selskap-alternativ 5642023 (leirplate + verktøyoppsett, Anna Shvets, kjøligere gråpalett), collage-miljø-alternativ 8297068 (kvinne bakfra mot byvindu, Mikhail Nilov, litt mer fargestøy).\n\nCaveats: 37577435 (transport-vinter) er sesongpreget — bruk 37764794 som helårsdefault. 4318810 (etablert) er mørkt — sjekk kontrast mot navy-tint på mørk bakgrunn. 8297058 viser person i skrå profil — leses anonym i kortstørrelse, men verifiser i endelig crop. Collage-trioen (7858825/6077600/7594198) er kuratert som sett: nært med navy strikk, kjølig dokumentdetalj, lyst miljø bakfra — behold alle tre sammen for balansen."
+ },
+ "copy": {
+  "omskrivninger": [
+   {
+    "side": "forside",
+    "element": "H1",
+    "naa": "Regnskapet i orden. Alltid.",
+    "forslag": "Regnskapet i orden. Spørsmål koster aldri ekstra.",
+    "hvorfor": "Beholder rytmen som fungerer, men bytter det abstrakte «Alltid» mot den skarpeste sanne differensiatoren (0 kr for korte spørsmål). Utfall + konkret løfte i én linje, 7 ord. Frigjør samtidig «taksameter» til seksjonene under, så ordet ikke slites ut."
+   },
+   {
+    "side": "forside",
+    "element": "eyebrow (hero)",
+    "naa": "Regnskapsbyrå med statsautoriserte regnskapsførere",
+    "forslag": "Autorisert regnskapsbyrå — to statsautoriserte regnskapsførere",
+    "hvorfor": "«Autorisert» + tallet 2 er etterprøvbart (Finanstilsynet) og gir mer tillit enn en ubestemt flertallsform. Sant tall > adjektiv."
+   },
+   {
+    "side": "forside",
+    "element": "chips (hero)",
+    "naa": "6 dedikerte ansatte · 2 statsautoriserte · Kunder i hele Norge",
+    "forslag": "6 ansatte — du kjenner alle · 2 statsautoriserte · Korte spørsmål: 0 kr",
+    "hvorfor": "«Dedikerte» er floskel; «du kjenner alle» gjør tallet til et utfall. «Kunder i hele Norge» selger ingenting — 0 kr-løftet er det mest klikkverdige beviset byrået har, og det er sant."
+   },
+   {
+    "side": "forside",
+    "element": "H2:ProblemSolution",
+    "naa": "Regnskapsfører skal ikke være et taksameter",
+    "forslag": "Tør du ringe regnskapsføreren din?",
+    "hvorfor": "Spørsmål i du-form treffer den faktiske smerten (frykten for fakturaen som tikker) og tvinger fram et ja/nei i hodet på leseren. Taksameter-metaforen lander like etterpå i brødteksten — sterkere som forklaring enn som overskrift."
+   },
+   {
+    "side": "forside",
+    "element": "H2:ServicesBento",
+    "naa": "Alt du trenger — fra bilag til årsoppgjør",
+    "forslag": "Fra bilag til årsoppgjør — samlet hos én fast fører",
+    "hvorfor": "Nå-versjonen beskriver bredde; forslaget legger til differensiatoren som gjør bredden verdifull: alt hos én person, ikke et byrå-samlebånd."
+   },
+   {
+    "side": "forside",
+    "element": "H2:StatBand",
+    "naa": "Et lite byrå — med full kontroll",
+    "forslag": "Lite nok til å kjenne deg. Stort nok til alt.",
+    "hvorfor": "Forsvarer den eneste innvendingen mot et 6-personers byrå («klarer de alt?») før den oppstår, og gjør «lite» til en fordel. Tallene under leverer beviset."
+   },
+   {
+    "side": "forside",
+    "element": "H2:PromiseSplit",
+    "naa": "Ikke kunde. Samarbeidspartner.",
+    "forslag": "Ikke et kundenummer. En fast fører — med backup.",
+    "hvorfor": "«Samarbeidspartner» er internspråk; «kundenummer» er fienden leseren faktisk har opplevd. Kontrastformelen beholdes, men fylles med den konkrete differensiatoren fast fører + backup."
+   },
+   {
+    "side": "forside",
+    "element": "H2:IndustryCards",
+    "naa": "Spisskompetanse der det teller mest",
+    "forslag": "Spisskompetanse på bil, bygg, eiendom og netthandel",
+    "hvorfor": "«Der det teller mest» sier ingenting; å navngi bransjene lar leseren selvselektere på ett sekund — og de som ikke er der, fanges av brødteksten om bred kompetanse."
+   },
+   {
+    "side": "forside",
+    "element": "H2:NumberedJourney",
+    "naa": "Slik kommer du i gang",
+    "forslag": "Slik kommer du i gang — det meste gjør vi",
+    "hvorfor": "Seksjonens jobb er å rive byttebarrieren; halen sier eksplisitt at innsatsen ligger hos Kontera. Jordnær, lett Fiken-aktig underdrivelse."
+   },
+   {
+    "side": "forside",
+    "element": "H2:PricingSection",
+    "naa": "Middels pris. Høy kvalitet. Ingen overraskelser.",
+    "forslag": "Middels pris. Høy kvalitet. Null taksameter.",
+    "hvorfor": "«Ingen overraskelser» er en generisk forsikring; «null taksameter» er merkevarens eget bilde og betyr noe konkret (spørsmål koster ikke). Ærligheten i «middels pris» beholdes — den avvæpner og bygger troverdighet for resten."
+   },
+   {
+    "side": "forside",
+    "element": "H2:ComparisonTable",
+    "naa": "Hva skiller oss fra mange andre byråer?",
+    "forslag": "Sjekk oss mot byrået du har i dag",
+    "hvorfor": "Retter seg direkte mot bytteren (tabellens målgruppe) og inviterer til en aktiv handling — sammenligning — i stedet for å stille et spørsmål på egne vegne."
+   },
+   {
+    "side": "forside",
+    "element": "H2:Team-teaser",
+    "naa": "Seks personer. Null sentralbord.",
+    "forslag": "Seks personer. Null sentralbord. (behold uendret)",
+    "hvorfor": "Allerede blant sidens beste linjer: sant tall + konkret fravær av smerte, perfekt rytme. Ikke rør."
+   },
+   {
+    "side": "forside",
+    "element": "CtaBanner-tekst",
+    "naa": "Lurer du på om vi passer for din bedrift? Det finner vi ut av på fem minutter.",
+    "forslag": "Fem minutter på telefonen — så vet du om vi passer.",
+    "hvorfor": "Samme løfte, halvparten så mange ord; tidskostnaden (5 min) frontlastes som terskelsenker."
+   },
+   {
+    "side": "forside",
+    "element": "H2:Faq",
+    "naa": "Ofte stilte spørsmål",
+    "forslag": "Svar på det de fleste lurer på",
+    "hvorfor": "Lover utbyttet (svar) i stedet for å beskrive formatet. Beskjeden endring med vilje — FAQ skal være gjenkjennelig og AEO-vennlig."
+   },
+   {
+    "side": "forside",
+    "element": "H2:FinalCta",
+    "naa": "Klar for en regnskapsfører som faktisk kjenner deg?",
+    "forslag": "Ta praten — den koster deg ingenting",
+    "hvorfor": "Siste seksjon skal senke terskelen, ikke re-argumentere. 0-kroners-psykologien gjør telefonnummeret rett under til et risikofritt neste steg. (Nå-versjonen er OK som variant på undersider.)"
+   },
+   {
+    "side": "forside",
+    "element": "CTA-knapp (banner/lead)",
+    "naa": "Få et uforpliktende tilbud",
+    "forslag": "Få et konkret pristilbud",
+    "hvorfor": "«Konkret» lover substans og matcher subheadingen («ærlig, konkret tilbud»); «uforpliktende» er brukt opp av hele bransjen og flyttes til mikroteksten der den fortsatt gjør jobben."
+   },
+   {
+    "side": "forside",
+    "element": "LeadCard-heading",
+    "naa": "Få pristilbud for din bedrift",
+    "forslag": "Se hva regnskapet vil koste deg",
+    "hvorfor": "Svarer på det eneste spørsmålet besøkeren faktisk har i hodet ved skjemaet. Nysgjerrighet + utfall i stedet for prosessbeskrivelse."
+   },
+   {
+    "side": "tjeneste:regnskapsforing",
+    "element": "H1",
+    "naa": "Regnskapet i orden – uten at du løfter en finger",
+    "forslag": "Regnskapsføring med fast fører som kjenner bedriften din",
+    "hvorfor": "Nå-versjonen mangler søkeordet. Forslaget åpner med «regnskapsføring» (SEO) og bærer hoveddifferensiatoren; 8 ord. «Uten at du løfter en finger» kan leve videre i heroUndertekst."
+   },
+   {
+    "side": "tjeneste:lonn",
+    "element": "H1",
+    "naa": "Riktig lønn til rett tid – hver eneste måned",
+    "forslag": "Lønnskjøring: riktig utbetalt, riktig innberettet — hver måned",
+    "hvorfor": "Bytter til søkeordet «lønnskjøring» og dekker begge risikoene kunden frykter (feil lønn OG feil a-melding). Gjentakelsen «riktig … riktig» gir rytme uten å bli tabloid."
+   },
+   {
+    "side": "tjeneste:mva",
+    "element": "H1",
+    "naa": "Mva-meldingen riktig og levert – hver eneste termin",
+    "forslag": "Mva-meldingen levert til hver frist — vårt ansvar",
+    "hvorfor": "«Vårt ansvar» er ansvarsoverføring — det kunden egentlig kjøper er å slippe å tenke på terminen. Søkeordet «mva-meldingen» beholdes i front, 8 ord."
+   },
+   {
+    "side": "tjeneste:arsoppgjor",
+    "element": "H1",
+    "naa": "Årsoppgjør levert riktig – i god tid før fristen",
+    "forslag": "Årsoppgjør uten skippertak — levert i god tid",
+    "hvorfor": "«Skippertak» er ordet kunden selv bruker om mai/juni-panikken; å negere det selger følelsen av forsprang. Søkeord i front, 7 ord."
+   },
+   {
+    "side": "tjeneste:radgivning",
+    "element": "H1",
+    "naa": "Rådgivning som gjør tallene dine til bedre beslutninger",
+    "forslag": "Rådgivning på vanlig norsk — inkludert i samarbeidet",
+    "hvorfor": "To sanne differensiatorer fra deres eget fagstoff løftes til H1: språket (ikke revisorspråk) og prismodellen (ikke tilleggsmodul/taksameter). Mer kjøpsutløsende enn den abstrakte «bedre beslutninger»."
+   },
+   {
+    "side": "tjeneste:starte-selskap",
+    "element": "H1",
+    "naa": "Start selskapet riktig fra dag én",
+    "forslag": "Starte selskap? Vi rigger alt riktig fra dag én",
+    "hvorfor": "Åpner med eksakt søkefrase («starte selskap») som spørsmål — speiler googlerens intensjon — og svarer med hvem som tar jobben. 9 ord."
+   },
+   {
+    "side": "bransje:bilforhandlere",
+    "element": "H1",
+    "naa": "Regnskap for bilforhandlere – riktig moms på hver bil",
+    "forslag": "Regnskap for bilforhandlere — avansemoms som tåler bokettersyn",
+    "hvorfor": "«Avansemoms» signaliserer nisjekompetanse med ett ord (forhandleren vet at generalister ikke kan den), og «tåler bokettersyn» selger på bransjens reelle frykt. Sterkeste sanne spissing byrået har."
+   },
+   {
+    "side": "bransje:handverkere",
+    "element": "H1",
+    "naa": "Regnskap for håndverkere som vil tjene på hver jobb",
+    "forslag": "Regnskap for håndverkere — vit hva du tjener per jobb",
+    "hvorfor": "Fra ambisjon («vil tjene») til konkret utfall («vit hva du tjener») — det er etterkalkylen som er produktet. Imperativ i du-form, 9 ord."
+   },
+   {
+    "side": "bransje:eiendom",
+    "element": "H1",
+    "naa": "Regnskap for eiendom – kontroll på mva, skatt og struktur",
+    "forslag": "Regnskap for eiendom — frivillig mva uten feller",
+    "hvorfor": "Oppramsingen mva/skatt/struktur er flat; «frivillig registrering er et valg — og en felle» er sidens beste innsikt og hører hjemme i H1. Eiendomsfolk kjenner igjen fagbegrepet umiddelbart."
+   },
+   {
+    "side": "bransje:netthandel",
+    "element": "H1",
+    "naa": "Netthandelsregnskap som stemmer – helt ned til siste gebyr",
+    "forslag": "Regnskap for netthandel — avstemt ned til siste gebyr",
+    "hvorfor": "«Regnskap for netthandel» matcher søkemønsteret bedre enn sammensetningen «netthandelsregnskap», og «avstemt» er fagordet som treffer Klarna-smerten. Løftet beholdes, 8 ord."
+   },
+   {
+    "side": "bransje:tjenesteytende",
+    "element": "H1",
+    "naa": "Regnskap for konsulenter – mer tid til fakturerbare timer",
+    "forslag": "Regnskap for konsulenter — enkel pris, flere fakturerbare timer",
+    "hvorfor": "Beholder tids-utbyttet, men legger til prisløftet fra deres eget fagstoff («enkelt regnskap skal ha enkel pris») — konsulentens to kjøpskriterier i én linje."
+   },
+   {
+    "side": "bransje:borettslag-sameier",
+    "element": "H1",
+    "naa": "Regnskap styret i borettslag og sameier kan stole på",
+    "forslag": "Regnskap for borettslag og sameier — trygghet for styret",
+    "hvorfor": "Søkefrasen «regnskap for borettslag» flyttes helt fram (nå står den brutt opp), og «trygghet for styret» adresserer kjøperens reelle motiv: personlig ansvar i et verv."
+   },
+   {
+    "side": "geo:fylke",
+    "element": "H1",
+    "naa": "Regnskapsfører i {fylke} — uten taksameter",
+    "forslag": "Regnskapsfører i {fylke} — fast fører, digitalt i hele fylket",
+    "hvorfor": "Fylkessiden er hub for hele dekningsområdet; «digitalt i hele fylket» svarer på det lokale tvilsspørsmålet («dekker de meg?») som «uten taksameter» ikke gjør. Søkeord urørt, 9 ord."
+   },
+   {
+    "side": "geo:fylke",
+    "element": "H2:kommunevelger",
+    "naa": "Velg din kommune i {fylke}",
+    "forslag": "Velg kommunen din — lokale tall og svar",
+    "hvorfor": "Lover utbyttet av klikket (lokale tall, lokale svar), ikke bare navigasjonen. Ankertekstene under bærer uansett søkeordene."
+   },
+   {
+    "side": "geo:fylke",
+    "element": "H2:ServicesBento",
+    "naa": "Tjenestene våre i {fylke}",
+    "forslag": "Regnskapstjenester i hele {fylke} — levert digitalt",
+    "hvorfor": "«Tjenestene våre» er innsiden-og-ut; forslaget bærer søkeord + dekningsløfte og gjentar sidens kjerneargument."
+   },
+   {
+    "side": "geo:kommune",
+    "element": "H1-variant (revidert)",
+    "naa": "Regnskapsfører i {sted} — alle frister, null stress",
+    "forslag": "Regnskapsfører i {sted} — fristene er vårt ansvar",
+    "hvorfor": "«Null stress» lover en følelse (floskelfare); «vårt ansvar» er en kontraktsfestet ansvarsoverføring — konkret og etterprøvbar. De tre andre eksisterende variantene holder mål og beholdes."
+   },
+   {
+    "side": "geo:kommune",
+    "element": "H1-variant (NY til pool)",
+    "naa": "— (ny)",
+    "forslag": "Regnskapsfører i {sted} — én fast fører, alltid backup",
+    "hvorfor": "Differensiator-paret som er sannest og minst kopierbart; «alltid backup» svarer på ferie/sykdoms-innvendingen mot små byråer."
+   },
+   {
+    "side": "geo:kommune",
+    "element": "H1-variant (NY til pool)",
+    "naa": "— (ny)",
+    "forslag": "Regnskapsfører i {sted} du kan ringe uten å nøle",
+    "hvorfor": "Taksameter-frykten snudd til utfall i du-form — varierer poolen med en følelsesformel uten å påstå noe udokumenterbart (0 kr-løftet dekker den)."
+   },
+   {
+    "side": "geo:kommune",
+    "element": "H1-variant (NY til pool)",
+    "naa": "— (ny)",
+    "forslag": "Regnskapsfører i {sted} — statsautorisert kvalitet, heldigital hverdag",
+    "hvorfor": "Kombinerer tillitsmarkøren (statsautorisert = sann og regulert) med svaret på avstandsinnvendingen. Gir poolen en autoritetsformel."
+   },
+   {
+    "side": "geo:kommune",
+    "element": "H1-variant (NY til pool)",
+    "naa": "— (ny)",
+    "forslag": "Regnskapsfører i {sted} som tar alle fristene for deg",
+    "hvorfor": "Ansvarsoverføring i relativsetning — samme formel som fungerer i de betingede bransjevariantene («som kan bilbransjen»), så poolen blir konsistent."
+   },
+   {
+    "side": "geo:kommune",
+    "element": "H1-variant (NY til pool)",
+    "naa": "— (ny)",
+    "forslag": "Regnskapsfører i {sted} — like nær som et lokalkontor",
+    "hvorfor": "Adresserer den viktigste innvendingen på fjern-kommunesidene (avstand) og gjenbruker undertittelens dokumenterte løfte, nå med H1-tyngde."
+   },
+   {
+    "side": "geo:kommune",
+    "element": "H1-variant (NY til pool)",
+    "naa": "— (ny)",
+    "forslag": "Regnskapsfører i {sted}: korte spørsmål koster aldri ekstra",
+    "hvorfor": "Det skarpeste 0 kr-løftet inn i geo-poolen med kolonformel — presist, sant og ulikt alt konkurrentene i {sted} skriver."
+   },
+   {
+    "side": "geo:kommune",
+    "element": "H2:lokal innsikt",
+    "naa": "Bedriftene i {sted} — og hva de trenger fra en regnskapsfører",
+    "forslag": "Vi kjenner tallene til næringslivet i {sted}",
+    "hvorfor": "Gjør seksjonens egentlige funksjon (bevise at siden ikke er masseprodusert) eksplisitt: «vi har gjort leksene». Kortere, med eierskap til dataene som følger."
+   },
+   {
+    "side": "geo:kommune",
+    "element": "H2:ServicesBento",
+    "naa": "Regnskapstjenester for bedrifter i {sted}",
+    "forslag": "Regnskapstjenester i {sted} — alt fra én fast fører",
+    "hvorfor": "Beholder søkeordet, men legger på differensiatoren som skiller bentoen fra en ren tjenesteliste."
+   },
+   {
+    "side": "geo:kommune",
+    "element": "H2:NumberedJourney",
+    "naa": "Slik kommer du i gang fra {sted}",
+    "forslag": "Slik kommer du i gang fra {sted} — det meste gjør vi",
+    "hvorfor": "Samme grep som på forsiden: byttebarrieren rives ved å plassere innsatsen hos Kontera. Konsistent formel på tvers av maler er riktig her, siden seksjonen er identisk."
+   },
+   {
+    "side": "geo:kommune",
+    "element": "H2:Arshjul",
+    "naa": "Fristene vi tar ansvar for — for bedrifter i {sted}",
+    "forslag": "Fristene vi tar ansvar for — for bedrifter i {sted} (behold uendret)",
+    "hvorfor": "Allerede perfekt: ansvarsoverføring + lokal forankring. Ikke rør."
+   }
+  ],
+  "prinsipper": "1) Utfall foran beskrivelse: si hva leseren får eller slipper («levert i god tid», «vit hva du tjener»), aldri hva byrået gjør internt. 2) Én sann, konkret differensiator per overskrift — fast fører, backup, 0 kr for korte spørsmål, fristansvar — aldri to stablet i samme linje, og aldri samme differensiator i to naboseksjoner på samme side. 3) Bare etterprøvbare tall: 6 ansatte, 2 statsautoriserte, 0 kr, 357 kommuner, autorisasjon hos Finanstilsynet — aldri diktede kundetall, ratings eller «markedsledende». 4) Søkeordet står urørt der SEO krever det: geo-H1 inneholder alltid «Regnskapsfører i {sted}», tjeneste- og bransje-H1 åpner med tjeneste-/bransjenavnet — salgsløftet kommer etter tankestrek eller kolon. 5) Maks 9 ord i H1; det tyngste ordet først eller sist, aldri gjemt i midten. 6) Du-form og tap/lettelse-psykologi: frykten for taksameteret, skippertaket og bokettersynet er de reelle kjøpsmotivene — adresser dem direkte («Tør du ringe regnskapsføreren din?»), men uten tabloide superlativer. 7) Varier formelen bevisst: spørsmål, kontrastpar, kolon-løfte, punktum-rytme og relativsetning brukes om hverandre, slik at variantpoolen og malene ikke selger likt side mot side. 8) CTA-er lover neste steg med lav terskel og konkret utbytte («Få et konkret pristilbud», «Fem minutter på telefonen») — det utslitte «uforpliktende» degraderes til mikrotekst."
+ },
+ "layout": {
+  "funn": [
+   {
+    "mal": "Alle maler (HeroSplit + LeadCard)",
+    "problem": "LeadCard flyter uforankret: hvitt kort (bg-surface) på papir-grunn (#FAFAF8) skilt kun av en 10%-hairline, toppjustert mot eyebrow i en items-start-grid. Ingen av planens vedtatte overlapp-grep (§2.3) er implementert noe sted — kortet ser 'hengt på' ut i stedet for å være heroens tyngdepunkt. Mercury/Ramp gir alltid hero-asiden en egen grunn eller lar den bryte en seksjonsgrense.",
+    "grep": "To lag i components/sections/HeroSplit.tsx: (1) Backdrop-forskyvning: wrap aside i `<div className=\"relative lg:mt-6 before:absolute before:inset-0 before:-z-10 before:translate-x-3 before:translate-y-3 before:rounded-2xl before:bg-mist\">` — flytt samtidig `overflow-hidden` fra section til radial-diven så ingenting klippes. (2) Stat-chip med overlapp på selve kortet: `<p className=\"absolute -top-3 left-6 rounded-full border border-navy/15 bg-paper px-3 py-1 text-xs font-bold tabular-nums text-navy\">0 kr for korte spørsmål</p>` (eget sant løfte, ikke sitat). Alternativ til (1) på forsiden: la kortet henge ned i ProofStrip med `lg:-mb-16 relative z-10` på aside + `lg:pt-14` på ProofStrip — men bruk kun ett av grepene per side (§2.3: maks 1–2 overlapp).",
+    "prioritet": "HØY"
+   },
+   {
+    "mal": "Geo kommune/fylke + tjenester/[slug] + bransjer/[slug] (compact hero)",
+    "problem": "HeroSplit `compact` reduserer kun py, ikke typografien: H1 bruker alltid `text-display` (clamp opp til 5.25rem). Geo-H1-ene er lange («Regnskapsfører i {kommune} — fast kontaktperson, …») og brekker til 3–5 linjer i 7/12-kolonnen, som dytter chips og LeadCard-CTA under folden på laptop. 2026-praksis (Mercury/Linear): landing ~80px, undersider ~40–52px.",
+    "grep": "I HeroSplit.tsx: `<h1 className={compact ? \"mt-3 font-display text-[clamp(2.1rem,1.3rem+2.4vw,3.4rem)] leading-[1.08] tracking-[-0.02em] font-bold text-ink [text-wrap:balance]\" : \"mt-3 font-display text-display font-bold text-ink [text-wrap:balance]\"}>` — eller legg en `--text-display-sm`-token i @theme i globals.css og bruk `text-display-sm` i compact. Subtittel ned til `text-base lg:text-lg` i compact samtidig.",
+    "prioritet": "HØY"
+   },
+   {
+    "mal": "Geo kommune ([kommune]/page.tsx L163–180) + fylke (L166–183) + tjenester/[slug] (L149–164) + bransjer/[slug] (L130–147)",
+    "problem": "Fagblokk-seksjonen er én sentrert `max-w-3xl`-kolonne med `space-y-10` — 2–4 blokker à flere avsnitt blir en lang, uartikulert tekstsøyle uten noe for øyet å henge rytmen på. Dette er sidens fagverdi, men layoutmessig er det den flateste seksjonen på hele geo-malen, og samme mønster gjentas på tjeneste- og bransjesidene.",
+    "grep": "Redaksjonell 4/8-split per blokk (behold lesemålet): bytt `mx-auto max-w-3xl space-y-10` til `mx-auto max-w-5xl divide-y divide-navy/10`, og hver blokk til `<div className=\"grid gap-4 py-10 first:pt-0 last:pb-0 lg:grid-cols-12 lg:gap-10\">` med tittel-kolonne `<div className=\"lg:col-span-4\"><span className=\"font-display text-2xl font-bold tabular-nums text-azure\">01</span><h2 className=\"mt-1 font-display text-2xl font-bold tracking-[-0.01em] text-ink [text-wrap:balance] lg:sticky lg:top-24\">…</h2></div>` og avsnitt i `<div className=\"lg:col-span-8\">` med `max-w-[62ch]`. Serif-nummereringen gjenbruker PromiseSplit-motivet — systemet blir mer, ikke mindre, konsistent.",
+    "prioritet": "HØY"
+   },
+   {
+    "mal": "Geo kommune + fylke (StatBand → PricingSection → FinalCta)",
+    "problem": "Tre mørke fullbredde-bånd per geo-side (StatBand bg-navy-deep, PricingSection bg-navy, FinalCta bg-navy-deep) — planen selv sier 1–2 (§2.3). Det mørke mister slagkraft som rytmebrudd, og siden får ingen tydelig 'endgame': navy skal bygge mot konvertering, ikke være tapet.",
+    "grep": "Etabler mørkehierarki: StatBand fra fullbredde-bånd til innfelt panel — i StatBand.tsx bytt `<section className=\"bg-navy-deep py-14 …\">` til `<section className=\"mx-auto max-w-6xl px-4\"><div className=\"rounded-3xl bg-navy px-6 py-12 text-white lg:px-10\">` (gir samtidig et etterlengtet bredde-/formbrudd). PricingSection på geo: lys variant `bg-surface border-y border-navy/10 text-ink` der kun CTA-boksen beholder navy (`rounded-2xl bg-navy text-white`) — behold dagens mørke variant på forsiden. navy-deep reserveres FinalCta + footer.",
+    "prioritet": "HØY"
+   },
+   {
+    "mal": "Alle maler (StickyCallBar + FinalCta/Footer, mobil)",
+    "problem": "StickyCallBar (fixed bottom, z-50) forsvinner aldri etter 520px scroll: den ligger over ContactForm-knappen i FinalCta (#kontakt — selve ankermålet den peker til) og dekker permanent de siste ~56px av footeren (personvern/org.nr) på mobil. CTA-en som skygger for sitt eget mål er det dyreste mobilproblemet på siden.",
+    "grep": "I StickyCallBar.tsx: skjul baren når målet er synlig — `const el = document.getElementById(\"kontakt\"); if (el) { const io = new IntersectionObserver(([e]) => setVisible(window.scrollY > 520 && !e.isIntersecting)); io.observe(el); }`. I tillegg footer-fallback: `pb-[calc(env(safe-area-inset-bottom)+4.5rem)] lg:pb-8` på footerens bunnrad.",
+    "prioritet": "HØY"
+   },
+   {
+    "mal": "Alle maler (FinalCta → Footer)",
+    "problem": "FinalCta (bg-navy-deep) og Footer (bg-navy-deep) er identiske flater, og footerens `border-t border-navy/10` er usynlig på mørk grunn — hele bunnen smelter sammen til én diger mørk blokk uten artikulert overgang. Wordmark-signaturen drukner i den.",
+    "grep": "Trapp ned i to steg: FinalCta beholder `bg-navy` (ett hakk lysere), Footer beholder `bg-navy-deep` og får synlig skille `border-t border-white/10`. Ev. i tillegg: la ContactForm-kortet i FinalCta stå i `bg-surface rounded-2xl p-6` slik at den lyse flaten bryter opp det mørke feltet der konverteringen skjer.",
+    "prioritet": "MIDDELS"
+   },
+   {
+    "mal": "Geo kommune + fylke (og bransjer/[slug] som mangler mørkt bånd helt)",
+    "problem": "Midtsiden mangler et typografisk øyeblikk/pull-quote-brudd — alle seksjoner er eyebrow+H2+innhold i samme volum. Kundesitater finnes ikke, men egne garantier gjør: de er i dag gjemt som liste-punkter i PricingSection/PromiseSplit i stedet for å få ett stort redaksjonelt slag (Fiken/Randi-grepet: løftet satt i serif-display).",
+    "grep": "Ny liten seksjon `GarantiBand` plassert mellom ComparisonTable og PromiseSplit på geo (og etter fagseksjonene på bransjesider): `<section className=\"border-y border-navy/10 bg-paper py-16 lg:py-20\"><blockquote className=\"mx-auto max-w-4xl px-4 text-center font-display text-[clamp(1.6rem,1rem+2.2vw,2.75rem)] italic leading-tight text-navy [text-wrap:balance]\">«Du skal aldri måtte tenke på en offentlig frist igjen.»</blockquote><p className=\"mt-5 text-center font-sans text-[0.72rem] font-bold uppercase tracking-[0.14em] text-slate\">Vårt løfte — ikke et kundesitat</p></section>`. Kun egne, sanne løfter roteres per mal (frist-løftet, «korte spørsmål koster aldri noe», fast kontaktperson).",
+    "prioritet": "MIDDELS"
+   },
+   {
+    "mal": "Geo kommune (CtaBanner #1) + bransjer/[slug]",
+    "problem": "CtaBanner er `bg-mist` og står med bare `pb-4` rett før en fullbredde `bg-mist`-seksjon (fagblokkene) — mist-på-mist gjør at banneren visuelt smelter inn i neste bånd, og pb-4-wrapperen gir asymmetrisk luft (py-20 over, 1rem under). Banneren mister jobben sin som frittstående CTA-punkt akkurat der den trengs mest.",
+    "grep": "Gi CtaBanner en flate-prop eller autokontrast: `bg-surface border-navy/15` når neste seksjon er mist (geo: `<CtaBanner variant=\"surface\" …>`), og normaliser wrapper til `py-8` i stedet for `pb-4`. Alternativ med mer karakter: navy-variant `bg-navy text-white` med hvit knapp — banneren blir da sidens andre mørke aksent i stedet for et tredje fullbredde-bånd.",
+    "prioritet": "MIDDELS"
+   },
+   {
+    "mal": "Geo kommune (dekningsblokk, L199–225)",
+    "problem": "Dekningsblokken er en ren tekstlenkeliste i ett kort — sidens visuelt fattigste seksjon, plassert rett før FinalCta. Nabokommune-lenkene har SSB/Brreg-tall tilgjengelig i datamotoren, men viser ingen; 'vis tallene' er ifølge designplanen byråets sterkeste bildespråk.",
+    "grep": "12-kol-split: venstre `lg:col-span-5` med eyebrow + H2 «Vi hjelper bedrifter i hele {fylke}» + fylkes-CTA-lenke; høyre `lg:col-span-7 grid gap-3 sm:grid-cols-2` med nabokort `<Link className=\"group card-line card-line-hover flex items-baseline justify-between gap-3 px-4 py-3\"><span className=\"font-sans text-sm font-bold text-navy group-hover:text-blue\">{navn} <Arrow/></span><span className=\"text-xs tabular-nums text-slate\">{antall} virksomheter</span></Link>`. Krever kun et lite oppslag i geo-stats per nabo — ingen ny data.",
+    "prioritet": "MIDDELS"
+   },
+   {
+    "mal": "Geo fylke (kommunevelgeren, L142–164)",
+    "problem": "Kommunevelgeren er en vegg av opptil 40+ identiske tekstlenker i 4 kolonner — hub-seksjonens viktigste jobb (få brukeren til riktig spoke) drukner i uniform lenkestøy, og alle ankertekster starter med samme fire ord.",
+    "grep": "To nivåer: topp 6–8 kommuner etter antall virksomheter som `card-line card-line-hover`-kort i `grid sm:grid-cols-2 lg:grid-cols-4 gap-3` med kommunenavn + `tabular-nums text-xs text-slate` virksomhetstall; resten som kompakt liste i `columns-2 sm:columns-3 lg:columns-4 gap-8 text-sm [&>li]:break-inside-avoid` med kortere ankertekst (kun kommunenavnet — 'Regnskapsfører i' er implisitt av seksjonens H2, behold full frase i topp-kortene for SEO-ankertekst).",
+    "prioritet": "MIDDELS"
+   },
+   {
+    "mal": "Geo kommune + tjenester/[slug] (seksjonshalen)",
+    "problem": "Seksjonsrytmen i siste tredjedel er monoton: NumberedJourney → ComparisonTable (begge paper, samme max-w-6xl) og Arshjul → Faq → dekningsblokk (tre paper-seksjoner på rad). Alle seksjoner på siten deler dessuten nøyaktig samme container (max-w-6xl px-4) og nesten samme py (14/16/20 uten logikk) — planens §1.3 ('meta-klisjeen') er redusert, men ikke løst.",
+    "grep": "Tre grep: (1) ComparisonTable strammes til `max-w-5xl` (cellene er i dag for brede for skanning) og får `bg-mist border-y border-navy/10 py-16` som flatebrudd mellom to paper-seksjoner. (2) Dekningsblokken flyttes FØR Faq (FAQ→FinalCta blir da en renere intent-overgang) og arver mist-flaten fra funn 9. (3) Standardiser vertikal skala: store seksjoner `py-16 lg:py-24`, sekundære `py-12 lg:py-16` — dagens py-14 utgår.",
+    "prioritet": "MIDDELS"
+   },
+   {
+    "mal": "Geo kommune + forside (StatBand)",
+    "problem": "StatBand er et flatt bånd med seks like tellere i én rad — planens eget signaturgrep («ett stat-kort overlapper båndkanten», §3) er ikke implementert, og på forsiden konkurrerer '1 + backup'-strengen (ikke-numerisk) visuelt med tallene i samme azur/størrelse.",
+    "grep": "Hvis panelvarianten fra funn 4 gjennomføres: gi panelet `relative -mt-8` så det bryter kanten til seksjonen over (dette ER overlapp-grepet, gratis). Inne i panelet: la første stat få featurevekt `col-span-2 text-5xl lg:text-6xl` og de øvrige stå mindre (`text-2xl lg:text-3xl`) i `grid-cols-2 sm:grid-cols-3 lg:grid-cols-5` — hierarki i stedet for seks like. Ikke-numeriske verdier ('1 + backup') settes ett steg mindre: `text-xl text-white/90`.",
+    "prioritet": "MIDDELS"
+   },
+   {
+    "mal": "Alle maler (ServicesBento, IndustryCards, relaterte-lenker)",
+    "problem": "Hver småcelle gjentar samme trio: 40px ikon-i-blå-tintet-firkant + tittel + «Les mer →» — ikonfirkanten er eksplisitt listet som 2014/AI-slop-tell i planens §1.2, og seks like 'Les mer' gir grid-monotoni selv med varierte spans.",
+    "grep": "Behold ikonchipen kun i featurecellen. Småceller: inline 20px-ikon foran tittelen (`<Icon className=\"mr-2 inline h-5 w-5 align-[-0.2em] text-azure\"/>`) eller dropp ikonet, og erstatt «Les mer»-linjen med pil i tittelraden: `<Arrow className=\"transition-transform group-hover:translate-x-0.5\"/>` — hover-affordansen bor allerede i card-line-hover.",
+    "prioritet": "LAV"
+   },
+   {
+    "mal": "Geo kommune + fylke (ServicesBento, mobil)",
+    "problem": "På mobil (<640px) stables featurecellen + 5 kort som seks fulle kort etter hverandre — sammen med StatBand, fagblokker og FAQ blir geo-siden en svært lang mobilscroll der bento-en alene tar ~3 skjermer.",
+    "grep": "La småcellene degradere til hairline-rader på mobil: `max-sm:rounded-none max-sm:border-x-0 max-sm:border-b-0 max-sm:border-t max-sm:bg-transparent max-sm:px-0 max-sm:py-4` på cellene + `max-sm:gap-0` på grid-wrapperen — featurecellen (med NaeringsProfil-viz) beholder kortformen som eneste 'objekt'. Sparer ~40% av seksjonshøyden uten å miste innhold.",
+    "prioritet": "LAV"
+   },
+   {
+    "mal": "Alle maler (ProofStrip)",
+    "problem": "ProofStrip sentrerer chips (`justify-center`) mens hele resten av systemet er venstrestilt mot 6xl-grid-kanten (§2.2-doktrinen: aldri sentrert overalt) — en liten, men synlig brudd på rytmen rett under heroen, og fem fakta i én linje wrapper vilkårlig på mellombredder.",
+    "grep": "`justify-start lg:justify-between` på ul-en så chipsene spenner grid-bredden og starter på samme venstrekant som H1 — `justify-between` gir samtidig jevn wrap. Vurder `hidden sm:flex` på de to svakeste chipsene så mobil viser tre sterke i stedet for fem brukne.",
+    "prioritet": "LAV"
+   }
+  ],
+  "notes": "Helhetsdom: Designsystem 2.0 er reelt gjennomført og konsistent — serif-display + grotesk, papir-grunn, hairlines i stedet for skygger, navy-disiplin, varierte bento-spans og venstrestilte kickers er på plass i koden, og geo-malen har full seksjonsparitet med forsiden. Gapet mot Mercury/Ramp/Linear-nivå er ikke språket, men (a) FORANKRING: hero-asiden og stat-båndet mangler planens egne overlapp-grep (§2.3/§3 lover dem, koden har null), (b) RYTME: alle seksjoner deler samme container (max-w-6xl) og nesten samme py, geo-siden har tre mørke bånd der planen sier 1–2, og halen er tre-fire paper-seksjoner på rad, (c) TETTHET/HIERARKI: fagblokkene og dekningsblokken er ren tekstsøyle/lenkeliste uten layoutartikulasjon. Anbefalt gjennomføringsrekkefølge: funn 1+2 (hero — størst konverteringsflate, 372 sider), 5 (sticky-bar dekker eget ankermål — ren bug-aktig), 4+12 (mørkehierarki + StatBand-panel løses som ett grep), 3 (fagblokk-split), deretter MIDDELS-bolken. Alt er innenfor eksisterende tokens — ingen nye farger, fonter, skygger eller CTA-mål er foreslått; garanti-båndet (funn 7) bruker kun egne, sanne løfter i tråd med ekthetsregelen. Filreferanser: C:\\Users\\HP Laserjet p2500\\Kontera\\components\\sections\\HeroSplit.tsx, components\\LeadCard.tsx, components\\sections\\StatBand.tsx, components\\sections\\CtaBanner.tsx, components\\sections\\ComparisonTable.tsx, components\\layout\\StickyCallBar.tsx, components\\layout\\Footer.tsx, components\\sections\\FinalCta.tsx, app\\(marketing)\\regnskapsforer\\[fylke]\\[kommune]\\page.tsx (fagblokker L163–180, dekning L199–225), app\\(marketing)\\regnskapsforer\\[fylke]\\page.tsx (kommunevelger L142–164), app\\(marketing)\\tjenester\\[slug]\\page.tsx, app\\(marketing)\\bransjer\\[slug]\\page.tsx, app\\globals.css."
+ }
+}

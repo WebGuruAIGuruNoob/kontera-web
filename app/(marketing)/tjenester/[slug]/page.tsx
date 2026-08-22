@@ -18,7 +18,8 @@ import { serviceSchema } from "@/lib/schema";
 import { Icon } from "@/components/Icon";
 import { CheckIcon, Arrow } from "@/components/icons";
 import { FramedImage } from "@/components/FramedImage";
-import { tjenesteBilde } from "@/lib/bilder";
+import { tjenesteBilde, tjeneste2Bilde } from "@/lib/bilder";
+import { EditorialSections } from "@/components/sections/EditorialSections";
 
 export const dynamicParams = false;
 
@@ -52,6 +53,7 @@ export default async function TjenestePage({
 
   const enabled = leadEnabled();
   const tjenesteFoto = tjenesteBilde(t.slug);
+  const tjenesteFoto2 = tjeneste2Bilde(t.slug);
   const relaterte = t.relaterte
     .map((s) => getTjeneste(s))
     .filter((x): x is NonNullable<typeof x> => !!x);
@@ -147,20 +149,10 @@ export default async function TjenestePage({
       />
 
       <section className="mx-auto max-w-6xl px-4 py-14">
-        <div className="mx-auto max-w-3xl space-y-10">
-          {t.seksjoner.map((seksjon) => (
-            <div key={seksjon.tittel}>
-              <h2 className="font-display text-2xl font-bold tracking-[-0.01em] text-ink [text-wrap:balance]">
-                {seksjon.tittel}
-              </h2>
-              {seksjon.avsnitt.map((avsnitt, i) => (
-                <p key={i} className="mt-4 max-w-[70ch] leading-relaxed text-slate">
-                  {avsnitt}
-                </p>
-              ))}
-            </div>
-          ))}
-        </div>
+        <EditorialSections
+          blokker={t.seksjoner}
+          bilder={(_, i) => (i === 1 ? tjenesteFoto2 : null)}
+        />
       </section>
 
       {relaterte.length > 0 && (

@@ -3,7 +3,7 @@ import type { TjenesteContent } from "@/lib/content-types";
 export const mva: TjenesteContent = {
   slug: "mva",
   navn: "Mva-melding",
-  tittel: "Mva-meldingen riktig og levert – hver eneste termin",
+  tittel: "Mva-meldingen levert til hver frist — vårt ansvar",
   metaTitle: "Mva-melding: frister, terminer og hjelp | Kontera Regnskap",
   metaDescription:
     "Vi fører mva-en riktig og leverer mva-meldingen til hver frist – registrering, terminer og fradrag uten stress. Ring 960 00 400 for en uforpliktende prat.",

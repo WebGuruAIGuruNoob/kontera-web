@@ -10,7 +10,7 @@ import { bransjer } from "@/content/bransjer";
  */
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-navy/10 bg-navy-deep text-white">
+    <footer className="relative overflow-hidden border-t border-white/10 bg-navy-deep text-white">
       <div className="mx-auto max-w-6xl px-4 py-14 pb-8">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>

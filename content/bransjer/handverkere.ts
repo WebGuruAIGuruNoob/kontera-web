@@ -3,7 +3,7 @@ import type { BransjeContent } from "@/lib/content-types";
 export const handverkere: BransjeContent = {
   slug: "handverkere",
   navn: "Håndverkere og bygg",
-  tittel: "Regnskap for håndverkere som vil tjene på hver jobb",
+  tittel: "Regnskap for håndverkere — vit hva du tjener per jobb",
   metaTitle: "Regnskap for håndverkere og bygg | Kontera Regnskap",
   metaDescription:
     "Regnskapsfører med lang erfaring fra bygg og håndverk. Prosjektregnskap, lønn, mva og igangværende arbeid – alt i orden. Ring 960 00 400 for en prat.",

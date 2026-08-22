@@ -30,10 +30,14 @@ if (!KEY) {
 const kuratering = JSON.parse(
   readFileSync(join(root, "data", "bilde-kuratering.json"), "utf8")
 );
+const loeft = JSON.parse(
+  readFileSync(join(root, "data", "loeft-kuratering.json"), "utf8")
+);
 const allePicks = [
   ...kuratering.arbeid.picks,
   ...kuratering.blogg.picks,
   ...kuratering.fylker.picks,
+  ...loeft.bilder.picks,
 ];
 const pickById = new Map(allePicks.map((p) => [p.pexelsId, p]));
 
@@ -56,6 +60,24 @@ const SLOTS = [
   // stedet for ekte teamfoto). Ansikter aldri synlige — kan ikke leses som «teamet».
   { slot: "team:samarbeid-1", id: 4345106, fil: "team-1.jpg", alt: "To kolleger samarbeider om en laptop, sett rett ovenfra" },
   { slot: "team:samarbeid-2", id: 7731371, fil: "team-2.jpg", alt: "Rådgivning over skulderen: to personer går gjennom tall på en skjerm" },
+  // LØFTEPLAN spor 1: fagblokk-motiver (velges av geo-datamotoren), forside-collage
+  // og tjeneste-sekundærbilder — alle visuelt kuratert 2026-08-22.
+  { slot: "fagblokk:landbruk", id: 12736538, fil: "fagblokk-landbruk.jpg" },
+  { slot: "fagblokk:reiseliv", id: 4349946, fil: "fagblokk-reiseliv.jpg" },
+  { slot: "fagblokk:transport", id: 37764794, fil: "fagblokk-transport.jpg" },
+  { slot: "fagblokk:handel", id: 8475161, fil: "fagblokk-handel.jpg" },
+  { slot: "fagblokk:oppstart", id: 7203849, fil: "fagblokk-oppstart.jpg" },
+  { slot: "fagblokk:etablert", id: 5691541, fil: "fagblokk-etablert.jpg" },
+  { slot: "fagblokk:enk", id: 5410130, fil: "fagblokk-enk.jpg" },
+  { slot: "collage:naert", id: 7858825, fil: "collage-1.jpg" },
+  { slot: "collage:halvnaert", id: 6077600, fil: "collage-2.jpg" },
+  { slot: "collage:miljo", id: 7594198, fil: "collage-3.jpg" },
+  { slot: "tjeneste2:regnskapsforing", id: 8297058, fil: "tjeneste2-regnskapsforing.jpg" },
+  { slot: "tjeneste2:lonn", id: 5926243, fil: "tjeneste2-lonn.jpg" },
+  { slot: "tjeneste2:arsoppgjor", id: 955392, fil: "tjeneste2-arsoppgjor.jpg" },
+  { slot: "tjeneste2:mva", id: 3570235, fil: "tjeneste2-mva.jpg" },
+  { slot: "tjeneste2:radgivning", id: 6803528, fil: "tjeneste2-radgivning.jpg" },
+  { slot: "tjeneste2:starte-selskap", id: 6693557, fil: "tjeneste2-starte-selskap.jpg" },
   { slot: "blogg:hva-koster-regnskapsforer", id: 33175673, fil: "blogg-hva-koster-regnskapsforer.jpg" },
   { slot: "blogg:bytte-regnskapsforer", id: 8371705, fil: "blogg-bytte-regnskapsforer.jpg" },
   { slot: "blogg:regnskapsforer-enkeltpersonforetak", id: 13005858, fil: "blogg-regnskapsforer-enkeltpersonforetak.jpg" },

@@ -31,7 +31,7 @@ export function PricingSection({
             Priser
           </p>
           <h2 className="mt-2 font-display text-h2 font-bold [text-wrap:balance]">
-            Middels pris. Høy kvalitet. <span className="text-azure">Ingen overraskelser.</span>
+            Middels pris. Høy kvalitet. <span className="text-azure">Null taksameter.</span>
           </h2>
           <p className="mt-4 max-w-[36rem] leading-relaxed text-white/80">
             Vi er ikke billigst — det er et bevisst valg. Du betaler for en

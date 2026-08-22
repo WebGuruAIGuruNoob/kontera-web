@@ -4,6 +4,9 @@ import { notFound } from "next/navigation";
 import { fylker, getFylke } from "@/lib/geo";
 import { buildFylkeInnhold } from "@/lib/geo-content";
 import { generatedAt, tall } from "@/lib/geo-stats";
+import { fagblokkBilde } from "@/lib/bilder";
+import { EditorialSections } from "@/components/sections/EditorialSections";
+import { GarantiBand } from "@/components/sections/GarantiBand";
 import { site } from "@/data/site";
 import { leadEnabled } from "@/lib/lead";
 import { HeroSplit } from "@/components/sections/HeroSplit";
@@ -138,62 +141,72 @@ export default async function FylkePage({
         source={`Kilder: Brønnøysundregistrene (Enhetsregisteret) og SSB. Sist oppdatert ${generatedAt}.`}
       />
 
-      {/* Kommunevelger — hub-funksjonen: beskrivende ankertekster til alle spokes */}
+      {/* Kommunevelger i to nivåer (LØFTEPLAN funn 9): topp-kort med tall + kompakt liste */}
       <section className="bg-mist py-14">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="font-display text-h2 font-bold text-ink [text-wrap:balance]">
-            Velg din kommune i {navn}
+            Velg kommunen din — lokale tall og svar
           </h2>
           <p className="mt-3 max-w-2xl text-slate">
             Hver kommuneside gir deg lokale næringstall, bransjeinnsikten som er
             mest relevant der — og svar på det bedrifter i kommunen lurer på.
           </p>
-          <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-2.5 sm:grid-cols-3 lg:grid-cols-4">
-            {kommunerSortert.map((kommune) => (
-              <li key={kommune.nr}>
-                <Link
-                  href={`/regnskapsforer/${fylke.slug}/${kommune.slug}`}
-                  className="text-[0.95rem] font-semibold text-navy hover:text-blue hover:underline"
-                >
+          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {innhold.toppKommuner.map(({ kommune, total }) => (
+              <Link
+                key={kommune.nr}
+                href={`/regnskapsforer/${fylke.slug}/${kommune.slug}`}
+                className="group card-line card-line-hover px-4 py-3.5"
+              >
+                <span className="block font-sans text-sm font-bold text-navy group-hover:text-blue">
                   Regnskapsfører i {kommune.visningsnavn}
-                </Link>
-              </li>
+                </span>
+                <span className="mt-0.5 block text-xs tabular-nums text-slate">
+                  {tall(total)} virksomheter
+                </span>
+              </Link>
             ))}
+          </div>
+          <ul className="mt-8 columns-2 gap-8 text-sm sm:columns-3 lg:columns-4 [&>li]:break-inside-avoid">
+            {kommunerSortert
+              .filter((k) => !innhold.toppKommuner.some((t) => t.kommune.nr === k.nr))
+              .map((kommune) => (
+                <li key={kommune.nr} className="py-1">
+                  <Link
+                    href={`/regnskapsforer/${fylke.slug}/${kommune.slug}`}
+                    className="font-semibold text-navy hover:text-blue hover:underline"
+                  >
+                    Regnskapsfører i {kommune.visningsnavn}
+                  </Link>
+                </li>
+              ))}
           </ul>
         </div>
       </section>
 
       {innhold.blokker.length > 0 && (
         <section className="mx-auto max-w-6xl px-4 py-14">
-          <div className="mx-auto max-w-3xl space-y-10">
-            {innhold.blokker.map((blokk) => (
-              <div key={blokk.id}>
-                <h2 className="font-display text-2xl font-bold tracking-[-0.01em] text-ink [text-wrap:balance]">
-                  {blokk.tittel}
-                </h2>
-                {blokk.avsnitt.map((avsnitt, i) => (
-                  <p key={i} className="mt-4 max-w-[70ch] leading-relaxed text-slate">
-                    {avsnitt}
-                  </p>
-                ))}
-              </div>
-            ))}
-          </div>
+          <EditorialSections
+            blokker={innhold.blokker}
+            bilder={(blokk, i) => (i < 2 && blokk.id ? fagblokkBilde(blokk.id) : null)}
+          />
         </section>
       )}
 
       <ServicesBento
-        title={`Tjenestene våre i ${navn}`}
+        title={`Regnskapstjenester i hele ${navn} — levert digitalt`}
         intro="Samme faste regnskapsfører tar helheten — du velger hvor mye du vil gjøre selv."
         geoSuffix={`i ${navn}`}
       />
       <CtaBanner
         leadEnabled={enabled}
-        text={`Driver du bedrift i ${navn}? Ta en uforpliktende prat om hva du faktisk trenger.`}
+        variant="surface"
+        text={`Driver du bedrift i ${navn}? Fem minutter på telefonen — så vet du om vi passer.`}
       />
       <PricingSection leadEnabled={enabled} stedsnavn={navn} />
       <NumberedJourney leadEnabled={enabled} />
       <ComparisonTable />
+      <GarantiBand seed={fylke.nr} />
       <PromiseSplit />
       <Faq
         items={innhold.faq}

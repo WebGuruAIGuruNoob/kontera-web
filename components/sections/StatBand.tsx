@@ -1,14 +1,13 @@
 /**
- * Mørkt navy fullbredde-bånd med store tabular-nums-tellere (DESIGNPLAN §3).
- * Numeriske verdier telles opp ved scroll (MotionInit); statiske vises som de er.
+ * Statistikk som INNFELT navy-panel (LØFTEPLAN funn 4+12): rounded-3xl,
+ * -mt-overlapp mot seksjonen over (overlapp-grepet §2.3), featurevektet
+ * førstetall. Ikke lenger fullbredde-bånd — mørkehierarkiet er
+ * PricingSection (bånd) → FinalCta (navy) → Footer (navy-deep).
  */
 export type StatItem = {
   label: string;
-  /** Ferdig formatert visningsverdi (fallback + reduced-motion) */
   value: string;
-  /** Råtall → aktiverer telleren */
   numeric?: number;
-  /** Suffiks etter telleren, f.eks. « kr» eller « år» */
   suffix?: string;
 };
 
@@ -16,14 +15,17 @@ export function StatBand({
   items,
   source,
   title,
+  overlap = true,
 }: {
   items: StatItem[];
   source?: string;
   title?: string;
+  overlap?: boolean;
 }) {
+  const [feature, ...rest] = items;
   return (
-    <section className="bg-navy-deep py-14 text-white lg:py-16">
-      <div className="mx-auto max-w-6xl px-4">
+    <section className={`mx-auto max-w-6xl px-4 pb-14 ${overlap ? "relative z-10 -mt-4" : "pt-4"}`}>
+      <div className="rounded-3xl bg-navy px-6 py-10 text-white lg:px-10 lg:py-12">
         {title && (
           <h2 className="mb-8 font-display text-h2 font-bold [text-wrap:balance]">
             {title}
@@ -33,9 +35,28 @@ export function StatBand({
           data-reveal-group
           className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-6"
         >
-          {items.map((item) => (
+          {feature && (
+            <div className="col-span-2 sm:col-span-3 lg:col-span-2">
+              <dd className="font-display text-5xl font-bold tabular-nums text-azure lg:text-6xl">
+                {feature.numeric !== undefined ? (
+                  <>
+                    <span data-count-to={feature.numeric}>
+                      {feature.numeric.toLocaleString("nb-NO")}
+                    </span>
+                    {feature.suffix}
+                  </>
+                ) : (
+                  feature.value
+                )}
+              </dd>
+              <dt className="mt-1.5 text-sm font-semibold uppercase tracking-wider text-white/75">
+                {feature.label}
+              </dt>
+            </div>
+          )}
+          {rest.map((item) => (
             <div key={item.label}>
-              <dd className="font-display text-3xl font-bold tabular-nums text-azure lg:text-4xl">
+              <dd className="font-display text-2xl font-bold tabular-nums text-azure lg:text-3xl">
                 {item.numeric !== undefined ? (
                   <>
                     <span data-count-to={item.numeric}>

@@ -3,7 +3,7 @@ import type { TjenesteContent } from "@/lib/content-types";
 export const lonn: TjenesteContent = {
   slug: "lonn",
   navn: "Lønnskjøring",
-  tittel: "Riktig lønn til rett tid – hver eneste måned",
+  tittel: "Lønnskjøring: riktig utbetalt, riktig innberettet — hver måned",
   metaTitle: "Lønnskjøring for små bedrifter | Kontera Regnskap",
   metaDescription:
     "Vi tar hele lønnskjøringen: lønnsberegning, a-melding, feriepenger, sykepenger og OTP. Fast lønnsansvarlig som kjenner bedriften din. Ring 960 00 400.",

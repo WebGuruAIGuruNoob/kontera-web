@@ -3,7 +3,7 @@ import type { BransjeContent } from "@/lib/content-types";
 export const eiendom: BransjeContent = {
   slug: "eiendom",
   navn: "Eiendom",
-  tittel: "Regnskap for eiendom – kontroll på mva, skatt og struktur",
+  tittel: "Regnskap for eiendom — frivillig mva uten feller",
   metaTitle: "Regnskap for eiendomsselskap | Kontera Regnskap",
   metaDescription:
     "Regnskapsfører med lang erfaring fra eiendom: frivillig mva-registrering, justeringsregler, avskrivninger og konsernstruktur. Ring 960 00 400 for en prat.",

@@ -2,9 +2,10 @@ import { site } from "@/data/site";
 import { PhoneIcon, CheckIcon } from "@/components/icons";
 
 /**
- * Typografiledet split-hero (DESIGNPLAN §3): ingen foto, papir-grunn,
- * én subtil navy/azur-radial. Venstre 7/12 tekst, høyre 5/12 aside (LeadCard el.l.).
- * Mobil: tekst først, aside etter (sticky-baren dekker hurtighandling).
+ * Typografiledet split-hero (DESIGNPLAN §3 + LØFTEPLAN funn 1–2):
+ * - aside (LeadCard) forankres med mist-backdrop-forskyvning (overlapp-grepet)
+ * - compact-modus får egen, mindre display-skala (lange geo-H1-er brakk)
+ * - `extra` rendres under chips (forside: bilde-collage)
  */
 export function HeroSplit({
   eyebrow,
@@ -12,6 +13,7 @@ export function HeroSplit({
   subtitle,
   chips,
   aside,
+  extra,
   compact = false,
 }: {
   eyebrow?: string;
@@ -19,6 +21,7 @@ export function HeroSplit({
   subtitle: string;
   chips?: string[];
   aside?: React.ReactNode;
+  extra?: React.ReactNode;
   compact?: boolean;
 }) {
   return (
@@ -34,7 +37,13 @@ export function HeroSplit({
       >
         <div className={aside ? "lg:col-span-7" : "lg:col-span-9"}>
           {eyebrow && <p className="section-eyebrow">{eyebrow}</p>}
-          <h1 className="mt-3 font-display text-display font-bold text-ink [text-wrap:balance]">
+          <h1
+            className={
+              compact
+                ? "mt-3 font-display text-[clamp(2.1rem,1.3rem+2.4vw,3.4rem)] font-bold leading-[1.08] tracking-[-0.02em] text-ink [text-wrap:balance]"
+                : "mt-3 font-display text-display font-bold text-ink [text-wrap:balance]"
+            }
+          >
             {title}
           </h1>
           <p className="mt-5 max-w-[36rem] text-lg leading-relaxed text-slate">
@@ -71,9 +80,15 @@ export function HeroSplit({
               ))}
             </ul>
           )}
+
+          {extra}
         </div>
 
-        {aside && <div className="lg:col-span-5">{aside}</div>}
+        {aside && (
+          <div className="relative lg:col-span-5 lg:mt-4 before:absolute before:inset-0 before:-z-10 before:translate-x-3 before:translate-y-3 before:rounded-2xl before:bg-mist">
+            {aside}
+          </div>
+        )}
       </div>
     </section>
   );
