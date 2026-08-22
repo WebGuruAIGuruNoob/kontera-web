@@ -1,0 +1,650 @@
+{
+ "generert": "2026-08-22",
+ "kilde": "Visuell kuratering av 4 bilderedaktor-agenter (workflow wf_7a8392df-aae)",
+ "audit": {
+  "keep": [
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\bilforhandler-1.jpg",
+    "why": "Ren, lys bilbutikk-interiør med tydelig hovedmotiv og mye hvitt som tåler navy-tint. Ingen mennesker, ingen klisjé.",
+    "bestFor": "bransje:bilforhandler (i bruk)"
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\eiendom-1.jpg",
+    "why": "Nordeuropeiske bindingsverksfasader og teglrekker — karakterfullt, folketomt, sier «bygningsmasse/eiendom» umiddelbart.",
+    "bestFor": "bransje:eiendom (i bruk)"
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\netthandel-1.jpg",
+    "why": "Troverdig liten nettbutikk: pakker merkes i naturlig lys, ingen kamerasmil. Illustrerer bransjen, ikke «teamet».",
+    "bestFor": "bransje:netthandel (i bruk)"
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\borettslag-1.jpg",
+    "why": "Skandinavisk boligblokk med glassbalkonger, høstlys, folketom — treffer borettslag/sameie presist og tåler tint.",
+    "bestFor": "bransje:borettslag (i bruk)"
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\konsulent-1.jpg",
+    "why": "Rolig, naturlig arbeidsscene med laptop; blikket i skjermen, ikke i kamera. Dempet palett som kler navy.",
+    "bestFor": "bransje:konsulent (i bruk)"
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\handverker-4.jpg",
+    "why": "Europeisk byggeplass i tømmerhus, hjelm og drill, ansiktet vendt ned — riktig tone og beste håndverker-kandidaten i settet.",
+    "bestFor": "bransje:håndverker (bør erstatte handverker-1)"
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\bygg-1.jpg",
+    "why": "Grafisk s/h-silhuett av råbygg — rolig, anonym og svært tint-vennlig (blir naturlig duotone).",
+    "bestFor": "bransje:bygg/entreprenør (ubrukt-reserve)"
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\verksted-1.jpg",
+    "why": "Karakterfullt europeisk bilverksted, mekaniker i profil konsentrert om arbeidet — bransjeillustrasjon uten posering.",
+    "bestFor": "bransje:bilverksted (ubrukt-reserve)"
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\samarbeid-2.jpg",
+    "why": "Hender, kontrakt, penn og laptop ovenfra — sier «rådgivningsmøte» uten ett eneste ansikt. Ekthetsregel-perfekt detalj.",
+    "bestFor": "tjeneste:rådgivning / om-oss-detalj"
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\tall-2.jpg",
+    "why": "Hender med kalkulator og bilagsbunke i dempet vinduslys — det beste rene regnskapsdetalj-bildet; tekst uleselig, ingen ansikter.",
+    "bestFor": "tjeneste:regnskap/årsoppgjør-detalj"
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\netthandel-4.jpg",
+    "why": "Nærbilde av teiping av pakke — nøytral palett, tydelig motiv, null ansikter. Fin sekundærdetalj til netthandel/lager.",
+    "bestFor": "bransje:netthandel-detalj / blogg om lager og vareflyt"
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\konsulent-2.jpg",
+    "why": "Frilanser bakfra ved lys pult — helt anonym, lys nordisk tone; kan aldri leses som «Konteras ansatte».",
+    "bestFor": "tjeneste/blogg: hjemmekontor, frilans, ENK"
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\borettslag-2.jpg",
+    "why": "Bygårdskvartal sett oppover i kjølige blåtoner — elegant, folketomt og grafisk; god variasjon mot borettslag-1.",
+    "bestFor": "bransje:borettslag/eiendom alternativ (eldre bygård)"
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\norge-by-3.jpg",
+    "why": "Bjørvika i skumring med bro og Barcode — balansert eksponering, umiskjennelig Oslo, blåtimen matcher navy-profilen.",
+    "bestFor": "fylke:Oslo"
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\norge-fjord-1.jpg",
+    "why": "Lofoten-fjell i gyllent lys med fiskevær og speilblank fjord — sterkt, rolig og umiskjennelig norsk.",
+    "bestFor": "fylke:Nordland"
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\norge-fjord-3.jpg",
+    "why": "Geiranger med bygd og fjord — ikonisk Vestlands-motiv med god luft og dybde.",
+    "bestFor": "fylke:Møre og Romsdal"
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\norge-nord-3.jpg",
+    "why": "Tromsø-fjorden i blåtimen med snøfjell — dramatisk men rolig, nesten ferdig navy-tintet av naturen.",
+    "bestFor": "fylke:Troms"
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\norge-kyst-2.jpg",
+    "why": "Fiskebåter i nordnorsk havn i lavt sollys — konkret næringsmotiv, karakterfullt uten mennesker.",
+    "bestFor": "bransje:fiskeri/sjømat (evt. fylke:Finnmark)"
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\norge-kyst-3.jpg",
+    "why": "Haugesund-sundet fra broen — kystby, brygger og båter i klart lys; tydelig Rogalands-identitet.",
+    "bestFor": "fylke:Rogaland"
+   }
+  ],
+  "drop": [
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\kontor-1.jpg",
+    "why": "Tre ansikter i møtescene leses som «teamet» (bryter ekthetsregelen); nordamerikansk gateskilt i vinduet."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\kontor-2.jpg",
+    "why": "Tomt kafébord — pent, men sier «restaurant», ikke regnskap; ingen plass i dagens sidestruktur = dekorativt fyll."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\kontor-3.jpg",
+    "why": "Sterilt møterom med skrikende rød vegg — corporate tone som kolliderer med navy-paletten og sier ingenting."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\kontor-4.jpg",
+    "why": "Fire ansikter rundt laptop leses som «teamet vårt» på om-oss/tjenester — ekthetsregelen; mørkt og stocky."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\samarbeid-1.jpg",
+    "why": "Rotete beskjæring og mørke dresser; samarbeid-2 sier det samme langt bedre."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\samarbeid-3.jpg",
+    "why": "To tydelige ansikter i kontordress — leses som ansatte/kunder; generisk corporate stock."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\samarbeid-4.jpg",
+    "why": "Posert stock-scene med lupe-rekvisitt på pulten; ansikter mot hverandre i kunstig oppsett."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\radgivning-1.jpg",
+    "why": "Amerikansk coworking-klisjé med Starbucks-kopper og ID-bånd; ansikter leses som rådgivere."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\radgivning-2.jpg",
+    "why": "Salgs-/bankaktig signeringsscene med engelsk «Application Form» og smilende ansikt speilet i nettbrettet."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\radgivning-3.jpg",
+    "why": "Tredje variant av samme hender-og-dokumenter-motiv; rotete og rød bluse dominerer — samarbeid-2 dekker behovet."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\tall-1.jpg",
+    "why": "Lesbar kyrillisk kontrakt (Minsk-adresse) og skrikende gul/rød rekvisitt — feil lokale, feil tone."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\tall-3.jpg",
+    "why": "Lesbart russisk stempel og rubelbeløp på fakturaen; duplikat av tall-2 med dårligere beskjæring."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\tall-4.jpg",
+    "why": "Amerikansk kontoutskrift og IRS-skjema med dollarbeløp — feil land for et norsk regnskapsbyrå."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\handverker-1.jpg",
+    "why": "I BRUK, men tropisk takarbeid i sandaler — ikke nordisk/europeisk, HMS-galt; erstatt med handverker-4 på bransjesiden."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\handverker-2.jpg",
+    "why": "Rotete vestafrikansk gårdsplass, fjernt motiv, fremmed reklameskilting — verken nordisk eller lesbart i ramme."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\handverker-3.jpg",
+    "why": "Indonesisk takarbeid med sigarett i munnen — feil geografi og tone for norsk håndverksbransje."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\bygg-2.jpg",
+    "why": "Varmt støvete anleggsscene (Sør-Asia) med ansikter mot kamera — ikke nordisk, glorete fargestikk."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\bilforhandler-2.jpg",
+    "why": "Lamborghini-showroom i gyllent kveldslys — luksusflash og varm fargetemperatur som slåss med navy; bilforhandler-1 dekker plassen."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\bilforhandler-3.jpg",
+    "why": "Flyfoto av fabrikklager med hundrevis av like biler — sier «import/engros», ikke norsk forhandler; repetitivt mønster uten hovedmotiv."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\bilforhandler-4.jpg",
+    "why": "Brasiliansk tuning-garasje med WD-40/Pennzoil-reklame og São Paulo-skilter — feil bransje og lokale."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\verksted-2.jpg",
+    "why": "Posert mekaniker med skiftenøkkel rett i kamera på åpenbart innkomponert bakgrunn — modellsmil + kunstig/AI-preg."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\netthandel-2.jpg",
+    "why": "Klein beskjæring med dyp utringning som blikkfang — uprofesjonelt; netthandel-1/-4 dekker motivet."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\netthandel-3.jpg",
+    "why": "Grei, men tredje netthandel-variant uten ny historie — overflødig ved streng linje."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\eiendom-2.jpg",
+    "why": "Nesten identisk boligprosjekt som borettslag-1 (samme svenske utbygging) — ren duplikat."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\eiendom-3.jpg",
+    "why": "Grei skandinavisk fasade, men fjerde boligblokk-bilde i settet — tilfører ingenting borettslag-1/-2 ikke har."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\eiendom-4.jpg",
+    "why": "Femte boligblokk; svenske veiskilt (Jönköping/E4) godt synlige — overflødig og feil land i bildet."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\konsulent-3.jpg",
+    "why": "Fint bilde, men tredje frilanser-motiv — konsulent-1 (i bruk) og konsulent-2 (anonym) dekker behovet."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\norge-by-1.jpg",
+    "why": "Oslo om natten med nesten helsvart himmel — blir gjørmete under navy-tint; norge-by-3 er samme motiv i bedre lys."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\norge-by-2.jpg",
+    "why": "Barcode i blåtime, men dødt taklandskap i forgrunnen stjeler tredjedelen av rammen; norge-by-3 vinner."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\norge-fjord-2.jpg",
+    "why": "Samme Romsdals-motiv som norge-fjord-4/3-området — overflødig når M&R alt er dekket av Geiranger-bildet."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\norge-fjord-4.jpg",
+    "why": "Vakkert, men andre Åndalsnes/Romsdal-variant — fylket er dekket av norge-fjord-3; kutt for å holde settet stramt."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\norge-nord-1.jpg",
+    "why": "Flat vinterli med bebyggelse — minst distinkt av de tre nord-bildene; norge-nord-3 dekker plassen langt sterkere."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\norge-nord-2.jpg",
+    "why": "Fin blåtime i Harstad, men samme fylke som norge-nord-3 — behold det sterkeste, kutt resten."
+   },
+   {
+    "file": "C:\\Users\\HP Laserjet p2500\\Kontera\\public\\images\\pexels\\norge-kyst-1.jpg",
+    "why": "Fritidsbåt med synlig merkenavn dominerer foran ferga — splittet motiv som sier «båtliv», ikke næringsliv."
+   }
+  ],
+  "notes": "Alle 53 filer er åpnet og vurdert visuelt. Resultat: 19 keep / 34 drop. Viktigste aksjonspunkt: handverker-1 er I BRUK på bransjesiden, men strøk på nordisk-tone-kravet (tropisk takarbeid i sandaler) — bytt til handverker-4 i koden før filen slettes. De øvrige fem bildene i bruk (bilforhandler-1, eiendom-1, netthandel-1, borettslag-1, konsulent-1) består. Gjennomgående funn i drop-bunken: (1) møte-/kontorserien med synlige ansikter bryter ekthetsregelen fordi den leses som «Konteras team», (2) tall-serien har lesbare kyrilliske/amerikanske dokumenter (tall-1, tall-3, tall-4) — feil lokale for norsk regnskap, (3) mye redundans: fem boligblokk-bilder, tre Oslo-panoramaer, fire netthandel-varianter. eiendom-2 er praktisk talt samme utbygging som borettslag-1. Hull som bør fylles med nye kjøp: bransje:bilverksted i lysere nordisk setting (verksted-1 er godkjent, men mørk), et rent «Konteras lokaler/skjerm med regnskapssystem»-detaljbilde til om-oss, og fylkesbilder for Trøndelag/Vestland (Bergen/Trondheim mangler helt)."
+ },
+ "arbeid": {
+  "picks": [
+   {
+    "category": "tjeneste:regnskapsforing",
+    "pexelsId": 7658352,
+    "pexelsUrl": "https://www.pexels.com/photo/a-person-holding-a-financial-statement-7658352/",
+    "photographer": "Pavel Danilyuk",
+    "why": "Verifisert visuelt: ovenfra-perspektiv av hender som holder utskrevne balanseoppstillinger over et arbeidsbord med tastatur og mappe. Kun hender, ingen ansikter. Motivet sier presist «bilag og regnskapsdokumenter under arbeid». Rolig komposisjon med luft, tåler navy-tint godt.",
+    "altForslag": "Hender som gjennomgår utskrevne regnskapsrapporter over et skrivebord"
+   },
+   {
+    "category": "tjeneste:regnskapsforing",
+    "pexelsId": 8296974,
+    "pexelsUrl": "https://www.pexels.com/photo/a-woman-computing-with-a-calculator-8296974/",
+    "photographer": "Mikhail Nilov",
+    "why": "Verifisert visuelt: flatlay av hender med kalkulator og penn over en åpen ringperm med bilag — selve kjernemotivet for bokføring. Ingen ansikter, naturlig lys, lys treflate. Noe fargesterk (gul mappe, neglelakk), men hovedmotivet er tydelig og profesjonelt. Sekundærvalg.",
+    "altForslag": "Hender med kalkulator over en perm med bilag på et skrivebord"
+   },
+   {
+    "category": "tjeneste:lonn",
+    "pexelsId": 11773871,
+    "pexelsUrl": "https://www.pexels.com/photo/a-person-holding-black-pen-pointing-on-calendar-11773871/",
+    "photographer": "Towfiqu barbhuiya",
+    "why": "Verifisert visuelt: nærbilde av hånd med penn ved en bordkalender der den 30. er ringet inn med rødt — leser umiddelbart som «lønningsdag». Nøytrale, rolige farger (hvit, grønn list, tre), tydelig hovedmotiv med luft rundt, ingen ansikter. Perfekt fortelling for lønnskjøring og frister.",
+    "altForslag": "Kalender med den 30. ringet inn — lønningsdagen er markert"
+   },
+   {
+    "category": "tjeneste:arsoppgjor",
+    "pexelsId": 6694481,
+    "pexelsUrl": "https://www.pexels.com/photo/person-in-black-long-sleeve-polo-shirt-working-on-a-wooden-table-6694481/",
+    "photographer": "Tima Miroshnichenko",
+    "why": "Verifisert visuelt: ovenfra-bilde av hender som sorterer og gjennomgår en hel flate av utskrevne rapporter og tall på et trebord. Kun hender og underarmer, ingen ansikter. Sier presist «årsavslutning: alle tall gjennomgås». Dokumentene er sort-hvite og rolige — tåler navy-tint svært godt.",
+    "altForslag": "Hender som gjennomgår årsrapporter og regnskapsutskrifter på et bord"
+   },
+   {
+    "category": "tjeneste:arsoppgjor",
+    "pexelsId": 17065813,
+    "pexelsUrl": "https://www.pexels.com/photo/documents-17065813/",
+    "photographer": "Jakub Zerdzicki",
+    "why": "Verifisert visuelt: grafisk, minimalistisk stabel av sorte permer med fargede indeksfliker mot lys bakgrunn. Ingen mennesker, mye luft, nesten monokrom — ideell for navy-tint og rounded-3xl-innramming. Leser som «komplett dokumentasjon, klart til levering». Sekundærvalg med mer abstrakt tone.",
+    "altForslag": "Stabel med sorte permer med markeringsfliker — årsoppgjøret samlet"
+   },
+   {
+    "category": "tjeneste:mva",
+    "pexelsId": 7680681,
+    "pexelsUrl": "https://www.pexels.com/photo/receipts-and-documents-on-top-of-a-desk-7680681/",
+    "photographer": "https://kaboompics.com/",
+    "why": "Verifisert visuelt: ryddig skrivebord med kvitteringer, fakturautskrifter, binders og penn — kjernemotivet for mva-grunnlag og kvitteringshåndtering. Ingen mennesker, hvit rolig flate med god luft. Oransje kvitteringer gir et tydelig hovedmotiv som fortsatt fungerer under navy-tint.",
+    "altForslag": "Kvitteringer og bilag sortert på et ryddig skrivebord"
+   },
+   {
+    "category": "tjeneste:mva",
+    "pexelsId": 5239814,
+    "pexelsUrl": "https://www.pexels.com/photo/digital-terminal-beside-a-white-box-5239814/",
+    "photographer": "https://kaboompics.com/",
+    "why": "Verifisert visuelt: betalingsterminal med kvitteringsrull på lys trebenk ved siden av en hvit pose — leser som «salg, omsetning og mva i kassa». Helt nøytralt, ingen mennesker eller merkevarer, mye luft og dempede farger som tåler mørk-blå fargelegging. God bransjebredde (butikk/kafé/håndverk).",
+    "altForslag": "Betalingsterminal på en butikkdisk — omsetning som gir mva-grunnlag"
+   },
+   {
+    "category": "tjeneste:radgivning",
+    "pexelsId": 7433832,
+    "pexelsUrl": "https://www.pexels.com/photo/a-person-using-a-calculator-7433832/",
+    "photographer": "Vlada Karpovich",
+    "why": "Verifisert visuelt: to personer ved et møtebord — kun hender, underarmer og utskrevne grafer synlig, den ene taster på kalkulator. Ingen ansikter (ekthetsregelen ivaretatt), naturlig lys, varm tre- og hvittone. Sier presist «rådgivningsmøte om tallene» uten amerikansk møteklisjé.",
+    "altForslag": "Rådgivningsmøte: hender, kalkulator og grafer på et møtebord"
+   },
+   {
+    "category": "tjeneste:radgivning",
+    "pexelsId": 8424479,
+    "pexelsUrl": "https://www.pexels.com/photo/person-writing-on-notebook-in-close-up-photography-8424479/",
+    "photographer": "Pavel Danilyuk",
+    "why": "Verifisert visuelt: over-skulder-detalj av hender som noterer i blokk omgitt av utskrevne diagrammer og en kaffekopp på lyst møtebord. Ingen ansikter, lys og luftig flate, rolig fargeholdning. Leser som «konkrete råd skrives ned» — arbeidsdetalj, ikke posert møte. Sekundærvalg.",
+    "altForslag": "Hender som noterer i en skriveblokk omgitt av grafer og rapporter"
+   },
+   {
+    "category": "tjeneste:starte-selskap",
+    "pexelsId": 3643926,
+    "pexelsUrl": "https://www.pexels.com/photo/silver-open-signage-3643926/",
+    "photographer": "Tim Mossholder",
+    "why": "Verifisert visuelt: håndlaget metallskilt med «OPEN» hengende i en hvit glassdør mot mørkt interiør. Elegant, rolig og nesten monokromt i kjølige toner — sitter perfekt med navy-tint. Ingen mennesker. Sier «dørene åpner — bedriften er i gang». Engelsk «OPEN»-skilt er vanlig også i norske butikker.",
+    "altForslag": "Åpent-skilt i døren til en nystartet bedrift",
+    "stedVerifisert": "nei — nøytral bruk (fotografert i Paso Robles iflg. alt-tekst, men ingen stedsmarkører synlige i motivet)"
+   },
+   {
+    "category": "tjeneste:starte-selskap",
+    "pexelsId": 6205504,
+    "pexelsUrl": "https://www.pexels.com/photo/crop-barista-putting-signboard-with-open-inscription-on-glass-wall-6205504/",
+    "photographer": "Tim Douglas",
+    "why": "Verifisert visuelt: gjennom glassdøren henger en kvinne opp et rundt «OPEN»-treskilt i kaféen sin — ansiktet er uskarpt bak glass og refleks, hovedmotivet er skiltet og hendene. Illustrerer en gründer i egen bransje (kafé), ikke Konteras team. Varmt, naturlig lys, sterk «første åpningsdag»-fortelling.",
+    "altForslag": "Gründer henger opp åpent-skiltet på første åpningsdag",
+    "stedVerifisert": "nei — nøytral bruk (ingen stedsmarkører synlige)"
+   },
+   {
+    "category": "om-oss:kaffe-og-notater",
+    "pexelsId": 5951549,
+    "pexelsUrl": "https://www.pexels.com/photo/black-cup-with-saucer-on-brown-surface-5951549/",
+    "photographer": "Arina Krasnikova",
+    "why": "Verifisert visuelt: mørkt bord ved vindu med svart kaffekopp, briller, notatbok og lukket laptop i lavt sidelys. Ingen mennesker, dempet og nordisk stemning — nærmest ferdig navy-tintet i utgangspunktet. Leser som «rolig, konsentrert arbeid» — riktig tone for om-oss.",
+    "altForslag": "Kaffekopp, briller og notatbok på et arbeidsbord ved vinduet"
+   },
+   {
+    "category": "om-oss:hender-i-arbeid",
+    "pexelsId": 7255295,
+    "pexelsUrl": "https://www.pexels.com/photo/close-up-photo-of-a-person-typing-7255295/",
+    "photographer": "MART  PRODUCTION",
+    "why": "Verifisert visuelt: ovenfra-bilde av hender med klokke som skriver på laptop, ved siden av kaffekopp og notatblokk med penn på trebord. Kun hender og skjorteermer — ingen ansikter som kan leses som «teamet». Profesjonelt, varmt naturlig lys, tydelig hovedmotiv.",
+    "altForslag": "Hender som arbeider på laptop ved siden av kaffe og notatblokk"
+   },
+   {
+    "category": "om-oss:kontorlokale",
+    "pexelsId": 8436906,
+    "pexelsUrl": "https://www.pexels.com/photo/a-workspace-inside-the-room-8436906/",
+    "photographer": "MART  PRODUCTION",
+    "why": "Verifisert visuelt: minimalistisk kontorhjørne med trebord, sort stol, lampe og laptop ved vindu — hvite vegger og fiskebeinsparkett i skandinavisk stil. Helt uten mennesker, mye luft og naturlig dagslys. Leser som «ryddig, moderne norsk kontor» og tåler navy-tint utmerket.",
+    "altForslag": "Lyst og ryddig kontorhjørne med skrivebord ved vinduet"
+   }
+  ],
+  "notes": "Metode: 12 API-søk (engelske søkeord), 38 kandidater lastet ned i medium-størrelse til scratchpad og vurdert visuelt med Read før dom. 14 finalister valgt (2 per tjenesteside, 3 om-oss-arbeidsdetaljer). Alle er landskapsorientering, 2600px+ bredde i original, og fri for ansikter som kan leses som Konteras team (unntak: starte-selskap 6205504, der en kafé-gründer illustrerer egen bransje i tråd med ekthetsregelen — ansiktet er uskarpt bak glass). Forkastet under visuell kontroll: 33175651 og 6863384 (kyrillisk/russisk tekst synlig), 6390088 (Walgreens/KitKat-branding), 4126739 (Canva-skjerm), 29509514 (portugisisk månedsnavn), 7580934 (rotete/leken kalender), 357514 (kaotisk permstabel), 26694030 (rødt skilt som blir grumsete under navy-tint), 590014/7495552 (flatlay-klisjé/for lekent), 6694560 (rent og pent, men dokumentteksten er opsjonsprising — feil budskap for bokføring). Fargeforbehold: 7680681 (oransje kvitteringer) og 8296974 (gul mappe) er de mest fargesterke valgene — sjekk dem mot navy-tinten i faktisk kontekst; bytt til alternativet i samme kategori om de blir urolige. Nedlastede vurderingsfiler ligger i C:\\Users\\HPLASE~1\\AppData\\Local\\Temp\\claude\\C--Users-HP-Laserjet-p2500-Kontera\\853c4943-7b8a-4f98-a68d-3fdfe09b2c35\\scratchpad\\pexels\\ (filnavn = pexelsId). Husk Pexels-attribusjon ved bruk."
+ },
+ "blogg": {
+  "picks": [
+   {
+    "category": "blogg:hva-koster-regnskapsforer",
+    "pexelsId": 33175673,
+    "pexelsUrl": "https://www.pexels.com/photo/close-up-of-finance-document-with-calculator-and-glasses-33175673/",
+    "photographer": "Bia Limova",
+    "why": "FINALIST. Verifisert visuelt: rolig skrivebordsdetalj — kalkulator, briller og penn oppa en finansrapport med diagrammer, mørkt treverk, dempet naturlig lys. Sier direkte 'kalkyle/pris', ingen mennesker, tydelig hovedmotiv med luft rundt, tåler navy-tint godt. Ingen klisjeer.",
+    "altForslag": "Kalkulator, briller og penn oppå en finansrapport på et skrivebord",
+    "stedVerifisert": "nei — nøytral bruk"
+   },
+   {
+    "category": "blogg:hva-koster-regnskapsforer",
+    "pexelsId": 7688524,
+    "pexelsUrl": "https://www.pexels.com/photo/close-up-shot-of-a-person-using-calculator-7688524/",
+    "photographer": "Kindel Media",
+    "why": "RESERVE. Verifisert visuelt: hender taster på kalkulator rett over en faktura ('company invoice') — mest direkte prismotiv av kandidatene. Kun hender, ingen ansikt. Litt travlere komposisjon enn finalisten, men kjolige toner som kler navy-tinten.",
+    "altForslag": "Hender med kalkulator over en faktura på et skrivebord",
+    "stedVerifisert": "nei — nøytral bruk"
+   },
+   {
+    "category": "blogg:bytte-regnskapsforer",
+    "pexelsId": 8371705,
+    "pexelsUrl": "https://www.pexels.com/photo/cardboard-box-full-of-file-folders-8371705/",
+    "photographer": "cottonbro studio",
+    "why": "FINALIST. Verifisert visuelt: to par hender løfter/overtar en pappeske full av ryddig bundne dokumentbunter — perfekt metafor for overlevering av regnskapsmateriale ved bytte, uten klisjé-håndtrykk. Kun hender, varme dempede toner, ryddig motiv som tåler tint.",
+    "altForslag": "Hender overleverer en eske med ryddig bundne dokumentmapper",
+    "stedVerifisert": "nei — nøytral bruk"
+   },
+   {
+    "category": "blogg:bytte-regnskapsforer",
+    "pexelsId": 4792285,
+    "pexelsUrl": "https://www.pexels.com/photo/person-choosing-document-in-folder-4792285/",
+    "photographer": "Anete Lusina",
+    "why": "RESERVE. Verifisert visuelt: hender blar gjennom en blå dokumentkoffert med sorterte mapper på et lyst trebord — 'papirene klare til flytting'. Rolig nordisk fargepalett (gråblått/tre), kun hender, skarp og luftig.",
+    "altForslag": "Hender blar gjennom sorterte dokumentmapper i en dokumentkoffert",
+    "stedVerifisert": "nei — nøytral bruk"
+   },
+   {
+    "category": "blogg:regnskapsforer-enkeltpersonforetak",
+    "pexelsId": 13005858,
+    "pexelsUrl": "https://www.pexels.com/photo/a-person-in-white-long-sleeve-shirt-scraping-wood-plank-13005858/",
+    "photographer": "Brian Magill",
+    "why": "FINALIST. Verifisert visuelt: nærbilde av hender som høvler en treplanke i lyst verksted — arbeidsdetalj uten ansikt, naturlig lys, mye luft (hvit vegg). Soloprenør-i-verksted-følelsen artikkelen trenger, og følger ekthetsregelen (illustrerer bransje/arbeid, ikke 'teamet').",
+    "altForslag": "Hender høvler en treplanke i et lyst snekkerverksted",
+    "stedVerifisert": "nei — nøytral bruk"
+   },
+   {
+    "category": "blogg:regnskapsforer-enkeltpersonforetak",
+    "pexelsId": 7755540,
+    "pexelsUrl": "https://www.pexels.com/photo/workspace-beside-a-window-7755540/",
+    "photographer": "Warmth (Personalrecorduse)",
+    "why": "RESERVE. Verifisert visuelt: hjemmekontor ved stort vindu med laptop, lampe og notater i mykt dagslys — autentisk (ikke stylet) soloprenor-arbeidsplass uten mennesker. Litt mer rotete enn finalisten, men god varm ro.",
+    "altForslag": "Hjemmekontor med laptop og skrivebordslampe foran et stort vindu",
+    "stedVerifisert": "nei — nøytral bruk"
+   },
+   {
+    "category": "blogg:fore-regnskap-selv-eller-regnskapsforer",
+    "pexelsId": 20061882,
+    "pexelsUrl": "https://www.pexels.com/photo/dirt-road-in-winter-20061882/",
+    "photographer": "Peter Holmboe",
+    "why": "FINALIST. Verifisert visuelt: dronefoto rett ovenfra av en grusvei som deler seg i to i et tynt snodekt landskap (Bindslev, Danmark) — grafisk, stille og umiskjennelig 'to veier å velge'. Nordisk motiv, mye luft, lyse flater som tar navy-tinten svært pent.",
+    "altForslag": "Grusvei som deler seg i to, sett rett ovenfra i snødekt landskap",
+    "stedVerifisert": "Bindslev, Danmark iflg. Pexels-alt/tittel — brukes som nøytralt nordisk motiv, ikke stedspåstand"
+   },
+   {
+    "category": "blogg:fore-regnskap-selv-eller-regnskapsforer",
+    "pexelsId": 1578750,
+    "pexelsUrl": "https://www.pexels.com/photo/photo-of-pathway-surrounded-by-fir-trees-1578750/",
+    "photographer": "James Wheeler",
+    "why": "RESERVE. Verifisert visuelt: tursti som deler seg i to gjennom granskog, med umerket treskilt i forgrunnen — tydelig veivalg-metafor med nordisk skogsuttrykk (granskog). Rolig, ingen mennesker, ingen tekst.",
+    "altForslag": "Skogssti som deler seg i to retninger mellom grantrær",
+    "stedVerifisert": "Manning Park, Canada iflg. Pexels-alt — visuelt nøytral barskog, brukes uten stedspåstand"
+   },
+   {
+    "category": "blogg:mva-frister",
+    "pexelsId": 9810172,
+    "pexelsUrl": "https://www.pexels.com/photo/close-up-photo-of-red-pins-on-a-calendar-9810172/",
+    "photographer": "Towfiqu barbhuiya",
+    "why": "FINALIST. Verifisert visuelt: lys, grafisk kalender med røde tegnestifter på flere datoer og én dato ringet inn med rødt — 'flere frister gjennom året' matcher mva-terminene perfekt. Rent, rolig, ingen mennesker, hvit flate som tinter pent. Engelske dagforkortelser er små og diskrete.",
+    "altForslag": "Kalender med røde nåler på flere datoer og en frist ringet inn",
+    "stedVerifisert": "nei — nøytral bruk"
+   },
+   {
+    "category": "blogg:mva-frister",
+    "pexelsId": 11773871,
+    "pexelsUrl": "https://www.pexels.com/photo/a-person-holding-black-pen-pointing-on-calendar-11773871/",
+    "photographer": "Towfiqu barbhuiya",
+    "why": "RESERVE. Verifisert visuelt: hånd med penn ringer inn den 30. på en bordkalender, kalkulator i forgrunnen, varmt treverk — naturlig fristmarkering med menneskelig nærvær uten ansikt. Litt varmere og mindre grafisk enn finalisten.",
+    "altForslag": "Hånd ringer inn en fristdato på en bordkalender med penn",
+    "stedVerifisert": "nei — nøytral bruk"
+   },
+   {
+    "category": "blogg:starte-as-steg-for-steg",
+    "pexelsId": 3643926,
+    "pexelsUrl": "https://www.pexels.com/photo/silver-open-signage-3643926/",
+    "photographer": "Tim Mossholder",
+    "why": "FINALIST. Verifisert visuelt: hamret metallskilt med 'OPEN' hengende på hvit butikkdør med glassfelt — stillferdig og taktilt 'første åpningsdag'-motiv uten mennesker eller jubel. 'OPEN' er universelt forståelig i Norge. Rolige gråtoner som kler navy-tint.",
+    "altForslag": "Åpent-skilt i metall på døren til en nystartet butikk",
+    "stedVerifisert": "nei — nøytral bruk (Paso Robles iflg. alt, ikke synlig i motivet)"
+   },
+   {
+    "category": "blogg:starte-as-steg-for-steg",
+    "pexelsId": 101808,
+    "pexelsUrl": "https://www.pexels.com/photo/black-handled-key-on-key-hole-101808/",
+    "photographer": "AS Photography",
+    "why": "RESERVE. Verifisert visuelt: nøkkel i dørlås med grønn, myk bokeh utenfor — 'nøkkelen til egne lokaler/første dag'. Detaljmotiv uten mennesker, naturlig lys. Leses litt mer privatbolig enn næringslokale, derav reserveplass.",
+    "altForslag": "Nøkkel som står i låsen på en dør, klar til å åpnes",
+    "stedVerifisert": "nei — nøytral bruk"
+   },
+   {
+    "category": "blogg:hva-er-statsautorisert-regnskapsforer",
+    "pexelsId": 6358840,
+    "pexelsUrl": "https://www.pexels.com/photo/a-person-s-hand-using-a-stamp-6358840/",
+    "photographer": "Anna Tarazevich",
+    "why": "FINALIST. Verifisert visuelt: hånd trykker et rundt trestempel mot papir, stempelpute ved siden, lyst trebord og naturlig vinduslys — 'godkjent/autorisert'-motiv uten ansikt og uten lesbar fremmedspråklig tekst (kandidater med tydelig tysk stempeltekst ble forkastet). Rolig og luftig.",
+    "altForslag": "Hånd setter et stempel på et dokument ved et lyst skrivebord",
+    "stedVerifisert": "nei — nøytral bruk"
+   },
+   {
+    "category": "blogg:hva-er-statsautorisert-regnskapsforer",
+    "pexelsId": 7567600,
+    "pexelsUrl": "https://www.pexels.com/photo/person-signing-on-a-paper-7567600/",
+    "photographer": "Tima Miroshnichenko",
+    "why": "RESERVE. Verifisert visuelt: nærbilde av hånd som signerer et offisielt skjema med hvit penn — attestasjon/formell godkjenning. Kun hånd, dokumentteksten er uskarp og upåtrengende, dempet fargepalett som tåler tint.",
+    "altForslag": "Hånd signerer et offisielt dokument med penn",
+    "stedVerifisert": "nei — nøytral bruk"
+   },
+   {
+    "category": "blogg:regnskap-bilforhandler-avansemoms",
+    "pexelsId": 97079,
+    "pexelsUrl": "https://www.pexels.com/photo/person-in-grey-shirt-handing-keys-97079/",
+    "photographer": "Negative Space",
+    "why": "FINALIST. Verifisert visuelt: hånd rekker frem en bilnøkkel utendørs i lyst dagslys med myk bokeh — selve salgsøyeblikket hos en bruktbilforhandler, som detalj uten ansikter og uten luksus-showroom. Lyst og luftig, tåler navy-tint svært godt.",
+    "altForslag": "Hånd rekker frem en bilnøkkel ved et bilsalg",
+    "stedVerifisert": "nei — nøytral bruk"
+   },
+   {
+    "category": "blogg:regnskap-bilforhandler-avansemoms",
+    "pexelsId": 29566899,
+    "pexelsUrl": "https://www.pexels.com/photo/row-of-new-cars-in-outdoor-parking-lot-29566899/",
+    "photographer": "Luke Miller",
+    "why": "RESERVE. Verifisert visuelt: rekke av biler på utendørs forhandlertomt i overskyet dagslys med snørester på panserne — leses som varelager hos en nøktern forhandler (relevant for avansemoms), ikke showroom. Minus: bilene er SUV-er/pickuper med litt amerikansk preg, derav reserveplass. Det eksplisitte 'Premium Pre-Owned'-alternativet (12700837) ble forkastet som nattbilde med dominerende engelsk skilting.",
+    "altForslag": "Rekke av biler oppstilt på en forhandlertomt i dagslys",
+    "stedVerifisert": "nei — nøytral bruk"
+   }
+  ],
+  "notes": "Metode: 31 API-søk (under taket på 40) mot https://api.pexels.com/v1/search med orientation=landscape, engelske søkeord per motiv. 44 medium-kandidater lastet ned til scratchpad og ALLE 16 valgte bilder (pluss forkastede kandidater) er inspisert visuelt med Read før dom. Alle picks er landskapsorientering med god kildeoppløsning (min ~3000px bredde; 97079 er 3888x2592). Kryssjekket mot data/image-credits.json — ingen av de 16 ID-ene er i bruk på siden fra før, og ingen av de 8 bloggartiklene i content/blogg/ har bilde i frontmatter i dag, så alle slots er nye. Forkastelser verdt å nevne: rosa kalkulator (kaboompics-serien, off-brand farge), alle håndtrykk-/jubel-/poserte motiv, stempel-/dokumentbilder med lesbar tysk tekst (9858904, 11145683), portugisisk kalender (29509502) og 'Aberto'-skilt (8475169), natt-/luksusbilmotiv for bilforhandler. Rollene er merket FINALIST/RESERVE først i why-feltet; kategoriformat blogg:<slug>. Attribusjon (fotografnavn + pexelsUrl) bør legges inn i data/image-credits.json på samme format som eksisterende oppføringer når bildene tas i bruk."
+ },
+ "fylker": {
+  "picks": [
+   {
+    "category": "fylke:oslo",
+    "pexelsId": 18170373,
+    "pexelsUrl": "https://www.pexels.com/photo/oslo-opera-house-18170373/",
+    "photographer": "Piotrek Wilk",
+    "why": "Operahuset sett fra sjøsiden i naturlig dagslys med blå himmel og rolig fjord — umiddelbart gjenkjennelig, ryddig komposisjon med luft rundt motivet, ingen poserte mennesker (kun små figurer på taket). Verifisert visuelt: marmortaket, Barcode bak.",
+    "altForslag": "Operahuset i Oslo sett fra fjorden en klar dag",
+    "stedVerifisert": "URL-slug «oslo-opera-house»; bygget er visuelt umiskjennelig"
+   },
+   {
+    "category": "fylke:akershus",
+    "pexelsId": 14033714,
+    "pexelsUrl": "https://www.pexels.com/photo/nes-church-ruins-near-rivers-in-norway-14033714/",
+    "photographer": "Sebastian kj",
+    "why": "Dronefoto av Nes kirkeruiner ved samløpet av Glomma og Vorma (Nes kommune, Akershus) — sommerlig, rolig Romerike-landskap med elv og kornåkre. Karakteristisk for fylket uten å låne Oslo-motiver. Verifisert visuelt: ruinen på neset mellom to elveløp.",
+    "altForslag": "Nes kirkeruiner ved samløpet av Glomma og Vorma på Romerike",
+    "stedVerifisert": "URL-slug «nes-church-ruins-near-rivers-in-norway» + alt-tekst nevner Glomma; Nes kirkeruiner ligger i Nes kommune i Akershus"
+   },
+   {
+    "category": "fylke:ostfold",
+    "pexelsId": 32446688,
+    "pexelsUrl": "https://www.pexels.com/photo/lone-oak-tree-in-green-field-sarpsborg-norway-32446688/",
+    "photographer": "Jan Arve Pettersen",
+    "why": "Ensom eik i grønn kornåker i Sarpsborg — Østfolds jordbrukslandskap i et nøkternt, rolig motiv med mye luft som tåler navy-tint godt. Verifisert visuelt: flatt kulturlandskap, ikke fjell.",
+    "altForslag": "Eiketre i kornåker i Sarpsborg, typisk østfoldsk kulturlandskap",
+    "stedVerifisert": "URL-slug «...sarpsborg-norway» + alt-tekst «Sarpsborg, Norway»"
+   },
+   {
+    "category": "fylke:buskerud",
+    "pexelsId": 29584872,
+    "pexelsUrl": "https://www.pexels.com/photo/drammen-bridge-and-river-scenic-view-in-norway-29584872/",
+    "photographer": "Travel Photographer",
+    "why": "Drammenselva med Ypsilon-brua i klart høstlys — gjenkjennelig Drammen-motiv, rolig vannflate og naturlige farger. Verifisert visuelt: den karakteristiske skråstag-gangbrua midt i bildet.",
+    "altForslag": "Drammenselva med gangbrua Ypsilon en klar høstdag",
+    "stedVerifisert": "URL-slug «drammen-bridge-and-river-scenic-view-in-norway»; Ypsilon-brua gjenkjennelig i bildet"
+   },
+   {
+    "category": "fylke:innlandet",
+    "pexelsId": 28208825,
+    "pexelsUrl": "https://www.pexels.com/photo/cloudy-cityscape-of-lillehammer-featuring-the-church-lillehammer-bridge-over-mjosa-green-fields-farms-and-pine-forest-in-the-background-28208825/",
+    "photographer": "Barnabas Davoti",
+    "why": "Panorama over Lillehammer med kirken, brua over Mjøsa og grønne gårder i bakgrunnen — fanger både by og innlandslandskapet (Mjøsa + kulturlandskap) i rolig, overskyet nordisk lys. Verifisert visuelt: lav bru over innsjø, jordbruksåser.",
+    "altForslag": "Lillehammer med Mjøsa og kulturlandskapet i Gudbrandsdalen",
+    "stedVerifisert": "URL-slug nevner «lillehammer», «bridge over Mjøsa»"
+   },
+   {
+    "category": "fylke:vestfold",
+    "pexelsId": 16829228,
+    "pexelsUrl": "https://www.pexels.com/photo/lake-and-village-in-norway-16829228/",
+    "photographer": "John Winther",
+    "why": "Bryggen i Tønsberg i stille kveldslys med Slottsfjelltårnet synlig på høyden bak — karakteristisk og rolig havnemotiv for Norges eldste by. Litt mørkere/gyllnere enn resten av settet, men naturlig lys og tåler navy-tint. Verifisert visuelt: tårnet på Slottsfjellet.",
+    "altForslag": "Bryggen i Tønsberg med Slottsfjelltårnet i bakgrunnen",
+    "stedVerifisert": "Alt-tekst: «Tønsberg, Norway's oldest city»; Slottsfjelltårnet synlig i bildet"
+   },
+   {
+    "category": "fylke:telemark",
+    "pexelsId": 34804243,
+    "pexelsUrl": "https://www.pexels.com/photo/heddal-stave-church-iconic-norwegian-landmark-34804243/",
+    "photographer": "Barnabas Davoti",
+    "why": "Heddal stavkirke (Notodden) i naturlig dagslys med steingjerdet i front — Telemarks mest gjenkjennelige landemerke, rolig komposisjon uten mennesker. Verifisert visuelt: den trippel-tårnede stavkirken er umiskjennelig.",
+    "altForslag": "Heddal stavkirke i Notodden, Norges største stavkirke",
+    "stedVerifisert": "URL-slug «heddal-stave-church» + alt-tekst «Notodden, Norway»"
+   },
+   {
+    "category": "fylke:agder",
+    "pexelsId": 12745512,
+    "pexelsUrl": "https://www.pexels.com/photo/the-lighthouse-at-lindesnes-norway-12745512/",
+    "photographer": "stein egil liland",
+    "why": "Lindesnes fyr på klar dag — Norges sørspiss og Sørlandets mest gjenkjennelige landemerke, rolig blått lys, tydelig hovedmotiv med luft. Verifisert visuelt: det rød-hvite fyret på svabergene.",
+    "altForslag": "Lindesnes fyr på Norges sørligste fastlandspunkt",
+    "stedVerifisert": "URL-slug «the-lighthouse-at-lindesnes-norway» + alt-tekst «Agder, Norway»"
+   },
+   {
+    "category": "fylke:rogaland",
+    "pexelsId": 25036885,
+    "pexelsUrl": "https://www.pexels.com/photo/view-of-boats-and-buildings-by-the-harbor-in-stavanger-norway-25036885/",
+    "photographer": "Adam Cole",
+    "why": "Vågen i Stavanger med trehusbebyggelse og Valbergtårnet — sommerlig, naturlig lys, forteller by/næringsliv uten poserte mennesker. Valgt foran et Preikestolen-foto som var for mørkt/dystert for tonen i settet. Verifisert visuelt: Valbergtårnet midt i bildet.",
+    "altForslag": "Vågen i Stavanger med Valbergtårnet over bryggehusene",
+    "stedVerifisert": "URL-slug «...harbor-in-stavanger-norway»; Valbergtårnet gjenkjennelig"
+   },
+   {
+    "category": "fylke:vestland",
+    "pexelsId": 33583891,
+    "pexelsUrl": "https://www.pexels.com/photo/picturesque-view-of-historic-bryggen-waterfront-33583891/",
+    "photographer": "Jonathan Borba",
+    "why": "Bryggen i Bergen i dempet, overskyet nordisk lys — gavlrekka med byfjellsbebyggelsen bak, rolige jordfarger som tåler navy-tint svært godt. Verifisert visuelt: hanseatiske gavlhus og Fløyen-siden bak.",
+    "altForslag": "Bryggen i Bergen, UNESCO-verdensarv ved Vågen",
+    "stedVerifisert": "URL-slug «historic-bryggen-waterfront» + alt-tekst «Bryggen in Bergen ... UNESCO World Heritage Site»"
+   },
+   {
+    "category": "fylke:more-og-romsdal",
+    "pexelsId": 16481701,
+    "pexelsUrl": "https://www.pexels.com/photo/landscape-seen-from-the-aksla-viewpoint-in-alesund-norway-16481701/",
+    "photographer": "Cynrar",
+    "why": "Det klassiske utsynet fra Aksla over Ålesund sentrum, øyene og havet — umiddelbart gjenkjennelig, naturlig overskyet kystlys, blågrå toner som matcher navy-tinten. Verifisert visuelt: jugendbyen på tangen mellom sundene.",
+    "altForslag": "Ålesund sett fra utsiktspunktet Aksla",
+    "stedVerifisert": "URL-slug «landscape-seen-from-the-aksla-viewpoint-in-alesund-norway»; bybildet umiskjennelig"
+   },
+   {
+    "category": "fylke:trondelag",
+    "pexelsId": 36364328,
+    "pexelsUrl": "https://www.pexels.com/photo/colorful-waterfront-buildings-along-river-in-trondheim-36364328/",
+    "photographer": "Zak Mogel",
+    "why": "Bryggerekka langs Nidelva i Trondheim i klart, naturlig lys med dyp blå elv — rolig og gjenkjennelig, uten HDR (to alternative Trondheim-bilder ble forkastet for overprosessering). Verifisert visuelt: stolpebryggene og kirkespir bak.",
+    "altForslag": "Bryggerekka langs Nidelva i Trondheim",
+    "stedVerifisert": "URL-slug «colorful-waterfront-buildings-along-river-in-trondheim»"
+   },
+   {
+    "category": "fylke:nordland",
+    "pexelsId": 38658942,
+    "pexelsUrl": "https://www.pexels.com/photo/scenic-view-of-lofoten-islands-with-mountains-38658942/",
+    "photographer": "Deimantas Viburys",
+    "why": "Reine i Lofoten under dempet, overskyet lys — dramatiske tinder og fiskevær i rolige gråblå/grønne toner, ingen postkort-metning. Umiskjennelig Lofoten. Verifisert visuelt: Reinefjorden-profilen og rorbuene.",
+    "altForslag": "Fiskeværet Reine i Lofoten med Lofotveggen bak",
+    "stedVerifisert": "Alt-tekst: «Reine, Lofoten Islands»; fjellprofilen umiskjennelig"
+   },
+   {
+    "category": "fylke:troms",
+    "pexelsId": 31113255,
+    "pexelsUrl": "https://www.pexels.com/photo/stunning-arctic-bridge-view-in-tromso-norway-31113255/",
+    "photographer": "Efrem Efre",
+    "why": "Tromsøbrua over Tromsøysundet i blekt arktisk dagslys med snødekte fjell — gjenkjennelig, grafisk rent motiv med mye rolig vannflate som tar navy-tint pent. Verifisert visuelt: den karakteristiske søylebrua og byen bak.",
+    "altForslag": "Tromsøbrua over Tromsøysundet en vinterdag",
+    "stedVerifisert": "URL-slug «arctic-bridge-view-in-tromso-norway» + alt-tekst «Tromsø Bridge»"
+   },
+   {
+    "category": "fylke:finnmark",
+    "pexelsId": 37968340,
+    "pexelsUrl": "https://www.pexels.com/photo/stunning-north-cape-globe-monument-in-norway-37968340/",
+    "photographer": "Thea Cintia Paixão da Silva",
+    "why": "Globusen på Nordkapp-platået mot Barentshavet i mykt, blekt arktisk lys — ikonisk, ekstremt rolig komposisjon med stort hav og himmel, perfekt for tint og tekst-overlays. Verifisert visuelt: globus-monumentet.",
+    "altForslag": "Globusen på Nordkapp-platået mot Barentshavet",
+    "stedVerifisert": "URL-slug «north-cape-globe-monument» + alt-tekst «North Cape Globe ... Arctic Ocean»"
+   }
+  ],
+  "notes": "Alle 15 fylker dekket med stedsverifiserte bilder (URL-slug/alt-tekst + visuell kontroll — hvert bilde er sett med Read før dom). 21 API-søk brukt av ~50. Alle bilder er landskapsorientering, naturlig lys, uten poserte modeller eller AI-preg. To ærlighetskompromisser å kjenne til: (1) ØSTFOLD: Pexels har praktisk talt ingen brukbare, verifiserbare bybilder fra Fredrikstad/Gamlebyen/Moss — de eneste verifiserte alternativene var Halden i oransje solnedgang (for varm/dramatisk) og et gress-tungt Halden-havnebilde. Valget falt på et rolig kulturlandskapsbilde fra Sarpsborg (ensom eik i kornåker) som er ærlig og karakteristisk for fylkets jordbruksflater, men det er landskap, ikke bylandemerke — vurder egen fotoinnkjøp hvis Gamlebyen ønskes. (2) AKERSHUS: Akershus festning ligger fysisk i Oslo og ble bevisst unngått; valget er Nes kirkeruiner ved Glomma/Vorma (Nes kommune, Akershus) — verifisert, men mindre allment gjenkjennelig enn de andre landemerkene. Tonemessig avvik: Tønsberg-bildet (Vestfold) er i stille kveldslys og ligger noe mørkere enn resten av settet; det nest beste verifiserte Vestfold-alternativet var Verdens Ende (id 27642060), som er lysere men mer feriepreget/mettet. Rogaland: Stavanger havn ble valgt foran Preikestolen fordi det eneste gode Preikestolen-bildet (id 10643915) var i mørk skumring og brøt med settets rolige dagslys-tone. Nedlastede kandidatfiler ligger i scratchpad-mappen img/ for egen kontroll. Pexels-lisensen krever ikke kreditering, men fotografnavn er inkludert per bilde om dere vil kreditere."
+ }
+}
