@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { site } from "@/data/site";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { HeroSplit } from "@/components/sections/HeroSplit";
-import { ProofStrip } from "@/components/sections/ProofStrip";
-import { PromiseSplit } from "@/components/sections/PromiseSplit";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { FramedImage } from "@/components/FramedImage";
 import { bilde } from "@/lib/bilder";
@@ -28,11 +26,11 @@ export default function OmOssPage() {
             <span className="hl-serif-italic">Små nok til å kjenne deg.</span>
           </>
         }
+        chips={["Statsautoriserte regnskapsførere", "Fast kontaktperson + backup", "Korte spørsmål: 0 kr"]}
         subtitle="Kontera Regnskap er seks mennesker som mener regnskap handler om samarbeid — ikke om et kundenummer i et køsystem."
       />
-      <ProofStrip />
 
-      <section className="mx-auto max-w-6xl px-4 py-14">
+      <section className="section-y mx-auto max-w-6xl px-4">
         <div className="mx-auto max-w-3xl space-y-10">
           <div>
             <h2 className="font-display text-2xl font-extrabold text-ink">
@@ -125,12 +123,6 @@ export default function OmOssPage() {
           </div>
         </div>
       </section>
-
-      <PromiseSplit
-        eyebrow="Det vi lover"
-        title="Fire løfter vi faktisk holder"
-        intro="Dette er ikke verdiord fra en strategisamling — det er slik vi jobber, hver dag."
-      />
       <FinalCta />
     </>
   );

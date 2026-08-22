@@ -45,7 +45,7 @@ export default function JobbPage() {
         subtitle="Vi er seks i dag — og ser alltid etter dyktige folk som deler troen på at regnskap er et samarbeidsfag. Send en åpen søknad til post@kontera.no."
       />
 
-      <section className="mx-auto max-w-6xl px-4 py-14">
+      <section className="section-y mx-auto max-w-6xl px-4">
         <div className="max-w-2xl">
           <h2 className="font-display text-3xl font-extrabold text-ink [text-wrap:balance]">
             Hvorfor jobbe hos oss?

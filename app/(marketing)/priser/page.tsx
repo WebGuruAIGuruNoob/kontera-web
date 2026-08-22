@@ -3,7 +3,6 @@ import { leadEnabled } from "@/lib/lead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { HeroSplit } from "@/components/sections/HeroSplit";
 import { LeadCard } from "@/components/LeadCard";
-import { ProofStrip } from "@/components/sections/ProofStrip";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
@@ -86,6 +85,11 @@ export default function PriserPage() {
           </>
         }
         subtitle="Vi ligger på et middels prisnivå med høy kvalitet — og gir deg et konkret tilbud tilpasset bedriften din etter en kort, uforpliktende prat."
+        chips={[
+          "Statsautoriserte regnskapsførere",
+          "Fast kontaktperson + backup",
+          "Korte spørsmål: 0 kr",
+        ]}
         aside={
           <LeadCard
             enabled={enabled}
@@ -94,9 +98,8 @@ export default function PriserPage() {
           />
         }
       />
-      <ProofStrip />
 
-      <section className="mx-auto max-w-6xl px-4 py-14">
+      <section className="section-y mx-auto max-w-6xl px-4">
         <div className="max-w-2xl">
           <p className="section-eyebrow">Prismodellen</p>
           <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
@@ -120,7 +123,7 @@ export default function PriserPage() {
         </div>
       </section>
 
-      <section className="bg-mist py-14">
+      <section className="section-y bg-mist">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="font-display text-h2 font-bold text-ink [text-wrap:balance]">
             Alltid inkludert — uansett pakke

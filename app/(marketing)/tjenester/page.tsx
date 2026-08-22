@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { leadEnabled } from "@/lib/lead";
 import { HeroSplit } from "@/components/sections/HeroSplit";
 import { LeadCard } from "@/components/LeadCard";
-import { ProofStrip } from "@/components/sections/ProofStrip";
 import { ServicesBento } from "@/components/sections/ServicesBento";
 import { NumberedJourney } from "@/components/sections/NumberedJourney";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
@@ -30,6 +29,11 @@ export default function TjenesterPage() {
           </>
         }
         subtitle="Fra løpende bokføring til årsoppgjør og rådgivning – vi setter sammen akkurat den pakken bedriften din trenger, og justerer den når behovet endrer seg."
+        chips={[
+          "Statsautoriserte regnskapsførere",
+          "Fast kontaktperson + backup",
+          "Korte spørsmål: 0 kr",
+        ]}
         aside={
           <LeadCard
             enabled={enabled}
@@ -38,7 +42,6 @@ export default function TjenesterPage() {
           />
         }
       />
-      <ProofStrip />
       <ServicesBento
         title="Velg tjenesten du vil vite mer om"
         intro="Alle tjenester leveres av samme faste regnskapsfører – du slipper å bli sendt rundt mellom avdelinger."

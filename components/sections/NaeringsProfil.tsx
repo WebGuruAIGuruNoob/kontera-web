@@ -36,7 +36,7 @@ export function NaeringsProfil({
           </div>
         ))}
       </div>
-      <p className="mt-3 text-[0.68rem] text-slate">
+      <p className="mt-3 text-xs text-slate">
         Kilde: Brønnøysundregistrene · {total.toLocaleString("nb-NO")} virksomheter totalt
       </p>
     </figure>

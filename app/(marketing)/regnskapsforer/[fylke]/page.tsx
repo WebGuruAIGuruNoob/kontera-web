@@ -6,19 +6,15 @@ import { buildFylkeInnhold } from "@/lib/geo-content";
 import { generatedAt, tall } from "@/lib/geo-stats";
 import { fagblokkBilde } from "@/lib/bilder";
 import { EditorialSections } from "@/components/sections/EditorialSections";
-import { GarantiBand } from "@/components/sections/GarantiBand";
 import { site } from "@/data/site";
 import { leadEnabled } from "@/lib/lead";
 import { HeroSplit } from "@/components/sections/HeroSplit";
 import { LeadCard } from "@/components/LeadCard";
-import { ProofStrip } from "@/components/sections/ProofStrip";
 import { StatBand } from "@/components/sections/StatBand";
 import { ServicesBento } from "@/components/sections/ServicesBento";
-import { CtaBanner } from "@/components/sections/CtaBanner";
 import { PricingSection } from "@/components/sections/PricingSection";
 import { NumberedJourney } from "@/components/sections/NumberedJourney";
-import { ComparisonTable } from "@/components/sections/ComparisonTable";
-import { PromiseSplit } from "@/components/sections/PromiseSplit";
+import { SectionHeading } from "@/components/SectionHeading";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -103,20 +99,21 @@ export default async function FylkePage({
           />
         }
       />
-      <ProofStrip />
 
-      <section className="mx-auto max-w-6xl px-4 py-14">
+      <section className="section-y mx-auto max-w-6xl px-4">
         <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
-          <div className="lg:col-span-7" data-unique>
-            <p className="section-eyebrow">Næringslivet i {navn}</p>
-            <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
-              Et fylke i tall — og hva det betyr for regnskapet ditt
-            </h2>
-            {innhold.intro.map((avsnitt, i) => (
-              <p key={i} className="mt-4 max-w-[70ch] leading-relaxed text-slate">
-                {avsnitt}
-              </p>
-            ))}
+          <div className="lg:col-span-7">
+            <SectionHeading
+              eyebrow={`Næringslivet i ${navn}`}
+              title="Et fylke i tall — og hva det betyr for regnskapet ditt"
+            />
+            <div data-unique>
+              {innhold.intro.map((avsnitt, i) => (
+                <p key={i} className="mt-4 max-w-[70ch] leading-relaxed text-slate">
+                  {avsnitt}
+                </p>
+              ))}
+            </div>
           </div>
           {regionFoto && (
             <FramedImage
@@ -141,16 +138,14 @@ export default async function FylkePage({
         source={`Kilder: Brønnøysundregistrene (Enhetsregisteret) og SSB. Sist oppdatert ${generatedAt}.`}
       />
 
-      {/* Kommunevelger i to nivåer (LØFTEPLAN funn 9): topp-kort med tall + kompakt liste */}
-      <section className="bg-mist py-14">
+      {/* Kommunevelger i to nivåer: topp-kort med tall + kompakt liste */}
+      <section className="section-y bg-mist">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="font-display text-h2 font-bold text-ink [text-wrap:balance]">
-            Velg kommunen din — lokale tall og svar
-          </h2>
-          <p className="mt-3 max-w-2xl text-slate">
-            Hver kommuneside gir deg lokale næringstall, bransjeinnsikten som er
-            mest relevant der — og svar på det bedrifter i kommunen lurer på.
-          </p>
+          <SectionHeading
+            eyebrow="Velg område"
+            title="Velg kommunen din — lokale tall og svar"
+            intro="Hver kommuneside gir deg lokale næringstall, bransjeinnsikten som er mest relevant der — og svar på det bedrifter i kommunen lurer på."
+          />
           <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {innhold.toppKommuner.map(({ kommune, total }) => (
               <Link
@@ -185,7 +180,7 @@ export default async function FylkePage({
       </section>
 
       {innhold.blokker.length > 0 && (
-        <section className="mx-auto max-w-6xl px-4 py-14">
+        <section className="section-y mx-auto max-w-6xl px-4">
           <EditorialSections
             blokker={innhold.blokker}
             bilder={(blokk, i) => (i < 2 && blokk.id ? fagblokkBilde(blokk.id) : null)}
@@ -198,16 +193,8 @@ export default async function FylkePage({
         intro="Samme faste regnskapsfører tar helheten — du velger hvor mye du vil gjøre selv."
         geoSuffix={`i ${navn}`}
       />
-      <CtaBanner
-        leadEnabled={enabled}
-        variant="surface"
-        text={`Driver du bedrift i ${navn}? Fem minutter på telefonen — så vet du om vi passer.`}
-      />
       <PricingSection leadEnabled={enabled} stedsnavn={navn} />
       <NumberedJourney leadEnabled={enabled} />
-      <ComparisonTable />
-      <GarantiBand seed={fylke.nr} />
-      <PromiseSplit />
       <Faq
         items={innhold.faq}
         title={`Spørsmål og svar — regnskapsfører i ${navn}`}

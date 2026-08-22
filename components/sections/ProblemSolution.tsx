@@ -1,4 +1,5 @@
 import { CheckIcon } from "@/components/icons";
+import { SectionHeading } from "@/components/SectionHeading";
 
 const pairs = [
   {
@@ -26,13 +27,11 @@ const pairs = [
 /** Redaksjonell problem→løsning (DESIGNPLAN §3): serif-sitater, hairline-rader. */
 export function ProblemSolution() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-16 lg:py-20">
-      <div className="max-w-2xl">
-        <p className="section-eyebrow">Kjenner du deg igjen?</p>
-        <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
-          <span className="hl-serif-italic">Tør du</span> ringe regnskapsføreren din?
-        </h2>
-      </div>
+    <section className="section-y mx-auto max-w-6xl px-4">
+      <SectionHeading
+        eyebrow="Kjenner du deg igjen?"
+        title="Tør du ringe regnskapsføreren din?"
+      />
       <div data-reveal-group className="mt-10 grid gap-x-12 gap-y-0 lg:grid-cols-2">
         {pairs.map((pair) => (
           <div key={pair.problem} className="border-t border-navy/10 py-7">

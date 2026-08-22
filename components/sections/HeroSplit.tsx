@@ -2,10 +2,9 @@ import { site } from "@/data/site";
 import { PhoneIcon, CheckIcon } from "@/components/icons";
 
 /**
- * Typografiledet split-hero (DESIGNPLAN §3 + LØFTEPLAN funn 1–2):
- * - aside (LeadCard) forankres med mist-backdrop-forskyvning (overlapp-grepet)
- * - compact-modus får egen, mindre display-skala (lange geo-H1-er brakk)
- * - `extra` rendres under chips (forside: bilde-collage)
+ * Typografiledet split-hero (DESIGNPLAN §3, forenklet i RYDDEPLAN R10:
+ * backdrop-forskyvning og collage-extra er strøket — grid og luft gir roen).
+ * compact-modus har egen, mindre display-skala.
  */
 export function HeroSplit({
   eyebrow,
@@ -13,7 +12,6 @@ export function HeroSplit({
   subtitle,
   chips,
   aside,
-  extra,
   compact = false,
 }: {
   eyebrow?: string;
@@ -21,7 +19,6 @@ export function HeroSplit({
   subtitle: string;
   chips?: string[];
   aside?: React.ReactNode;
-  extra?: React.ReactNode;
   compact?: boolean;
 }) {
   return (
@@ -81,14 +78,9 @@ export function HeroSplit({
             </ul>
           )}
 
-          {extra}
         </div>
 
-        {aside && (
-          <div className="relative lg:col-span-5 lg:mt-4 before:absolute before:inset-0 before:-z-10 before:translate-x-3 before:translate-y-3 before:rounded-2xl before:bg-mist">
-            {aside}
-          </div>
-        )}
+        {aside && <div className="lg:col-span-5 lg:mt-4">{aside}</div>}
       </div>
     </section>
   );

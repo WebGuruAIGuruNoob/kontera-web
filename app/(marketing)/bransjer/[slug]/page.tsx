@@ -7,8 +7,6 @@ import { site } from "@/data/site";
 import { leadEnabled } from "@/lib/lead";
 import { HeroSplit } from "@/components/sections/HeroSplit";
 import { LeadCard } from "@/components/LeadCard";
-import { ProofStrip } from "@/components/sections/ProofStrip";
-import { CtaBanner } from "@/components/sections/CtaBanner";
 import { NumberedJourney } from "@/components/sections/NumberedJourney";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
@@ -19,7 +17,6 @@ import { Icon } from "@/components/Icon";
 import { Arrow } from "@/components/icons";
 import { FramedImage } from "@/components/FramedImage";
 import { EditorialSections } from "@/components/sections/EditorialSections";
-import { GarantiBand } from "@/components/sections/GarantiBand";
 
 export const dynamicParams = false;
 
@@ -86,6 +83,11 @@ export default async function BransjePage({
         eyebrow={`Regnskap for ${b.navn.toLowerCase()}`}
         title={b.tittel}
         subtitle={b.heroUndertekst}
+        chips={[
+          "Statsautoriserte regnskapsførere",
+          "Fast kontaktperson + backup",
+          enabled ? "Svar innen én arbeidsdag" : "Korte spørsmål: 0 kr",
+        ]}
         aside={
           <LeadCard
             enabled={enabled}
@@ -94,10 +96,9 @@ export default async function BransjePage({
           />
         }
       />
-      <ProofStrip />
 
       {/* Bransjesmerter — redaksjonelle serif-sitater + rammet, tintet foto */}
-      <section className="mx-auto max-w-6xl px-4 py-14">
+      <section className="section-y mx-auto max-w-6xl px-4">
         <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-7">
             <h2 className="font-display text-h2 font-bold text-ink [text-wrap:balance]">
@@ -129,20 +130,13 @@ export default async function BransjePage({
         </div>
       </section>
 
-      <section className="bg-mist py-14">
+      <section className="section-y bg-mist">
         <div className="mx-auto max-w-6xl px-4">
           <EditorialSections blokker={b.seksjoner} />
         </div>
       </section>
 
-      <GarantiBand seed={b.slug} />
-
-      <CtaBanner
-        leadEnabled={enabled}
-        text={`Driver du innen ${b.navn.toLowerCase()}? Ta en uforpliktende prat med noen som kan bransjen.`}
-      />
-
-      <section className="mx-auto max-w-6xl px-4 py-14">
+      <section className="section-y mx-auto max-w-6xl px-4">
         <h2 className="font-display text-h2 font-bold text-ink">
           Slik hjelper vi {b.navn.toLowerCase()}
         </h2>

@@ -9,7 +9,8 @@
     "lint": "next lint",
     "geo:stats": "node scripts/fetch-geo-stats.mjs",
     "images:fetch": "node scripts/fetch-pexels.mjs",
-    "qa:geo": "node scripts/quality-gate.mjs"
+    "qa:geo": "node scripts/quality-gate.mjs",
+    "qa:design": "node scripts/design-lint.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

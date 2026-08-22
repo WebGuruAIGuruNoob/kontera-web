@@ -1,4 +1,5 @@
 import { JsonLd } from "@/components/JsonLd";
+import { SectionHeading } from "@/components/SectionHeading";
 import { faqSchema } from "@/lib/schema";
 import type { FaqItem } from "@/lib/content-types";
 
@@ -17,17 +18,14 @@ export function Faq({
 }) {
   if (!items.length) return null;
   return (
-    <section className="mx-auto max-w-6xl px-4 py-16">
+    <section className="section-y-sm mx-auto max-w-6xl px-4">
       <JsonLd data={faqSchema(items)} />
       <div className="mx-auto max-w-3xl">
-        <p className="section-eyebrow">{eyebrow}</p>
-        <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
-          {title}
-        </h2>
+        <SectionHeading eyebrow={eyebrow} title={title} />
         <div className="mt-8 divide-y divide-navy/10 rounded-2xl border border-navy/10 bg-surface">
           {items.map((item) => (
             <details key={item.q} className="group px-5 py-4 sm:px-6">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-sans text-[0.98rem] font-bold text-navy [&::-webkit-details-marker]:hidden">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-sans text-base font-bold text-navy [&::-webkit-details-marker]:hidden">
                 {item.q}
                 <span
                   aria-hidden="true"

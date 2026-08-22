@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { leadEnabled } from "@/lib/lead";
 import { HeroSplit } from "@/components/sections/HeroSplit";
 import { LeadCard } from "@/components/LeadCard";
-import { ProofStrip } from "@/components/sections/ProofStrip";
 import { IndustryCards } from "@/components/sections/IndustryCards";
 import { NumberedJourney } from "@/components/sections/NumberedJourney";
 import { FinalCta } from "@/components/sections/FinalCta";
@@ -29,6 +28,11 @@ export default function BransjerPage() {
           </>
         }
         subtitle="Avansemoms for bilforhandlere. Prosjektregnskap for byggmestere. Betalingsavstemming for nettbutikker. Bransjekunnskap er forskjellen på ført – og ført riktig."
+        chips={[
+          "Statsautoriserte regnskapsførere",
+          "Fast kontaktperson + backup",
+          "Korte spørsmål: 0 kr",
+        ]}
         aside={
           <LeadCard
             enabled={enabled}
@@ -37,7 +41,6 @@ export default function BransjerPage() {
           />
         }
       />
-      <ProofStrip />
       <IndustryCards
         title="Bransjene vi kjenner best"
         intro="Vi har bygget dyp kompetanse der regelverket er mest krevende – og har bred erfaring som passer de fleste andre bransjer."

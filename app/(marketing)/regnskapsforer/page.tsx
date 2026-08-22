@@ -5,8 +5,6 @@ import { getStats, tall } from "@/lib/geo-stats";
 import { leadEnabled } from "@/lib/lead";
 import { HeroSplit } from "@/components/sections/HeroSplit";
 import { LeadCard } from "@/components/LeadCard";
-import { ProofStrip } from "@/components/sections/ProofStrip";
-import { PromiseSplit } from "@/components/sections/PromiseSplit";
 import { NumberedJourney } from "@/components/sections/NumberedJourney";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -32,6 +30,11 @@ export default function GeoHubPage() {
           </>
         }
         subtitle="Vi jobber digitalt med samarbeidspartnere i hele Norge – med kontorer på Jar i Bærum og Ask i Gjerdrum. Velg fylket ditt for lokale tall, bransjeinnsikt og svar."
+        chips={[
+          "Statsautoriserte regnskapsførere",
+          "Fast kontaktperson + backup",
+          "Korte spørsmål: 0 kr",
+        ]}
         aside={
           <LeadCard
             enabled={enabled}
@@ -40,9 +43,8 @@ export default function GeoHubPage() {
           />
         }
       />
-      <ProofStrip />
 
-      <section className="mx-auto max-w-6xl px-4 py-14">
+      <section className="section-y mx-auto max-w-6xl px-4">
         <div className="max-w-2xl">
           <p className="section-eyebrow">Velg område</p>
           <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
@@ -84,7 +86,6 @@ export default function GeoHubPage() {
         </div>
       </section>
 
-      <PromiseSplit />
       <NumberedJourney leadEnabled={enabled} />
       <FinalCta />
     </>

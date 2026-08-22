@@ -1,4 +1,5 @@
 import { CheckIcon } from "@/components/icons";
+import { SectionHeading } from "@/components/SectionHeading";
 
 /**
  * «Kontera vs. mange byråer» (DESIGNPLAN §3 — konverterer byttere).
@@ -34,14 +35,9 @@ const rows: { tema: string; kontera: string; andre: string }[] = [
 
 export function ComparisonTable({ title = "Sjekk oss mot byrået du har i dag" }: { title?: string }) {
   return (
-    <section className="border-y border-navy/10 bg-mist py-16">
-      <div className="mx-auto max-w-5xl px-4">
-      <div className="max-w-2xl">
-        <p className="section-eyebrow">Sammenlign</p>
-        <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
-          {title}
-        </h2>
-      </div>
+    <section className="section-y bg-mist">
+      <div className="mx-auto max-w-6xl px-4">
+      <SectionHeading eyebrow="Sammenlign" title={title} />
       <div className="mt-8 overflow-x-auto rounded-2xl border border-navy/10 bg-surface">
         <table className="w-full min-w-[36rem] border-collapse text-sm">
           <thead>

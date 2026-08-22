@@ -20,7 +20,7 @@ export function EditorialSections({
   bilder?: (blokk: EditorialBlokk, index: number) => { src: string; alt: string } | null;
 }) {
   return (
-    <div className="mx-auto max-w-5xl divide-y divide-navy/10">
+    <div className="divide-y divide-navy/10">
       {blokker.map((blokk, i) => {
         const img = bilder?.(blokk, i) ?? null;
         return (

@@ -1,5 +1,6 @@
 import { site } from "@/data/site";
 import { ContactForm } from "@/components/ContactForm";
+import { SectionHeading } from "@/components/SectionHeading";
 import { PhoneIcon } from "@/components/icons";
 import { leadEnabled } from "@/lib/lead";
 
@@ -16,16 +17,10 @@ export function FinalCta({
 }) {
   const enabled = leadEnabled();
   return (
-    <section id="kontakt" className="bg-navy py-16 text-white lg:py-20">
+    <section id="kontakt" className="section-y-lg bg-navy text-white">
       <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-12 lg:gap-14">
         <div className="lg:col-span-6">
-          <p className="font-sans text-[0.72rem] font-bold uppercase tracking-[0.14em] text-azure">
-            Ta kontakt
-          </p>
-          <h2 className="mt-3 font-display text-h2 font-bold leading-tight [text-wrap:balance]">
-            {title}
-          </h2>
-          <p className="mt-4 max-w-lg leading-relaxed text-white/80">{text}</p>
+          <SectionHeading tone="dark" eyebrow="Ta kontakt" title={title} intro={text} />
 
           <a
             href={site.phoneHref}

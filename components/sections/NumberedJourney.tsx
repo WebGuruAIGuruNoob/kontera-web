@@ -1,4 +1,5 @@
 import { site } from "@/data/site";
+import { SectionHeading } from "@/components/SectionHeading";
 
 /**
  * Nummerert reise 1→2→3 (DESIGNPLAN §3, Linear/Conta-grepet).
@@ -29,13 +30,8 @@ export function NumberedJourney({
   ];
 
   return (
-    <section className="mx-auto max-w-6xl px-4 py-16 lg:py-20">
-      <div className="max-w-2xl">
-        <p className="section-eyebrow">Enkelt å starte — enkelt å bytte</p>
-        <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
-          {title}
-        </h2>
-      </div>
+    <section className="section-y mx-auto max-w-6xl px-4">
+      <SectionHeading eyebrow="Enkelt å starte — enkelt å bytte" title={title} />
       <ol data-reveal-group className="mt-10 grid gap-x-8 gap-y-10 md:grid-cols-3">
         {steps.map((step, i) => (
           <li key={step.title} className="relative border-t-2 border-navy/10 pt-6">

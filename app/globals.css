@@ -50,9 +50,24 @@ body {
   line-height: 1.65;
 }
 
-/* Kicker/eyebrow — venstrestilt, aldri sentrert overalt (§2.2) */
+/* Kicker/eyebrow — venstrestilt, aldri sentrert overalt (§2.2).
+   Eneste hjem for eyebrow-størrelsen (R7 — tokenhjemmet er globals.css). */
 .section-eyebrow {
   @apply font-sans text-[0.72rem] font-bold uppercase tracking-[0.14em] text-blue;
+}
+.section-eyebrow-dark {
+  @apply font-sans text-[0.72rem] font-bold uppercase tracking-[0.14em] text-azure;
+}
+
+/* R2 (RYDDEPLAN): luftskala i tre trinn — eneste lovlige seksjons-padding */
+.section-y-sm {
+  @apply py-12 lg:py-16;
+}
+.section-y {
+  @apply py-16 lg:py-20;
+}
+.section-y-lg {
+  @apply py-16 lg:py-24;
 }
 
 /* Hairline-kort: border i stedet for skygge (§2.3) */

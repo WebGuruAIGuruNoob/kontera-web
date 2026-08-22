@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { site } from "@/data/site";
+import { SectionHeading } from "@/components/SectionHeading";
 import { CheckIcon, PhoneIcon, Arrow } from "@/components/icons";
 
 /**
@@ -24,22 +25,20 @@ export function PricingSection({
   stedsnavn?: string;
 }) {
   return (
-    <section className="bg-navy py-16 text-white lg:py-20">
+    <section className="section-y bg-navy text-white">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 lg:grid-cols-12 lg:gap-14">
         <div className="lg:col-span-7">
-          <p className="font-sans text-[0.72rem] font-bold uppercase tracking-[0.14em] text-azure">
-            Priser
-          </p>
-          <h2 className="mt-2 font-display text-h2 font-bold [text-wrap:balance]">
-            Middels pris. Høy kvalitet. <span className="text-azure">Null taksameter.</span>
-          </h2>
-          <p className="mt-4 max-w-[36rem] leading-relaxed text-white/80">
-            Vi er ikke billigst — det er et bevisst valg. Du betaler for en
-            erfaren regnskapsfører som kjenner deg, ikke et anonymt tastesenter.
-            Prisen settes av bilagsmengde, ansatte og hvor mye du vil gjøre
-            selv{stedsnavn ? ` — ikke av at du holder til i ${stedsnavn}` : ""}, og
-            avtales tydelig før vi starter.
-          </p>
+          <SectionHeading
+            tone="dark"
+            eyebrow="Priser"
+            title={
+              <>
+                Middels pris. Høy kvalitet.{" "}
+                <span className="text-azure">Null taksameter.</span>
+              </>
+            }
+            intro={`Vi er ikke billigst — det er et bevisst valg. Du betaler for en erfaren regnskapsfører som kjenner deg, ikke et anonymt tastesenter. Prisen settes av bilagsmengde, ansatte og hvor mye du vil gjøre selv${stedsnavn ? ` — ikke av at du holder til i ${stedsnavn}` : ""}, og avtales tydelig før vi starter.`}
+          />
           <ul className="mt-6 grid gap-2.5 text-sm font-semibold text-white/90 sm:grid-cols-2">
             {inkludert.map((punkt) => (
               <li key={punkt} className="flex items-start gap-2.5">

@@ -7,21 +7,17 @@ import { generatedAt, getStats, tall } from "@/lib/geo-stats";
 import { fagblokkBilde, fylkeBilde } from "@/lib/bilder";
 import { FramedImage } from "@/components/FramedImage";
 import { EditorialSections } from "@/components/sections/EditorialSections";
-import { GarantiBand } from "@/components/sections/GarantiBand";
 import { site } from "@/data/site";
 import { leadEnabled } from "@/lib/lead";
 import { HeroSplit } from "@/components/sections/HeroSplit";
 import { LeadCard } from "@/components/LeadCard";
-import { ProofStrip } from "@/components/sections/ProofStrip";
 import { StatBand } from "@/components/sections/StatBand";
 import { ServicesBento } from "@/components/sections/ServicesBento";
 import { NaeringsProfil } from "@/components/sections/NaeringsProfil";
-import { CtaBanner } from "@/components/sections/CtaBanner";
 import { PricingSection } from "@/components/sections/PricingSection";
 import { NumberedJourney } from "@/components/sections/NumberedJourney";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
-import { PromiseSplit } from "@/components/sections/PromiseSplit";
-import { Arshjul } from "@/components/sections/Arshjul";
+import { SectionHeading } from "@/components/SectionHeading";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -113,20 +109,30 @@ export default async function KommunePage({
           />
         }
       />
-      <ProofStrip />
 
-      {/* 3. Unik lokal innsikt — sidens SEO-payload og relevansbevis */}
-      <section className="mx-auto max-w-6xl px-4 py-14">
-        <div className="max-w-3xl" data-unique>
-          <p className="section-eyebrow">Næringslivet i {navn}</p>
-          <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
-            Vi kjenner tallene til næringslivet i {navn}
-          </h2>
-          {innhold.intro.map((avsnitt, i) => (
-            <p key={i} className="mt-4 max-w-[70ch] leading-relaxed text-slate">
-              {avsnitt}
-            </p>
-          ))}
+      {/* 2. Unik lokal innsikt (SEO-payload) + næringsprofil i høyrekolonnen (R5) */}
+      <section className="section-y mx-auto max-w-6xl px-4">
+        <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
+          <div className="lg:col-span-7">
+            <SectionHeading
+              eyebrow={`Næringslivet i ${navn}`}
+              title={`Vi kjenner tallene til næringslivet i ${navn}`}
+            />
+            <div data-unique>
+              {innhold.intro.map((avsnitt, i) => (
+                <p key={i} className="mt-4 max-w-[70ch] leading-relaxed text-slate">
+                  {avsnitt}
+                </p>
+              ))}
+            </div>
+          </div>
+          <div className="lg:col-span-5 lg:mt-10">
+            <NaeringsProfil
+              navn={navn}
+              næringer={innhold.topNæringer}
+              total={innhold.stats.total}
+            />
+          </div>
         </div>
       </section>
 
@@ -143,30 +149,17 @@ export default async function KommunePage({
         source={`Kilder: Brønnøysundregistrene (Enhetsregisteret) og SSB. Sist oppdatert ${generatedAt}.`}
       />
 
-      {/* 5. Tjenestebento — bransjesortert med lokaliserte setninger */}
+      {/* 4. Tjenestebento — bransjesortert med lokaliserte setninger */}
       <ServicesBento
         title={`Regnskapstjenester i ${navn} — alt fra én fast fører`}
         intro={`Alt fra løpende bokføring til årsoppgjør — levert digitalt til ${navn}, med én fast regnskapsfører som tar helheten.`}
         order={innhold.tjenesteRekkefolge}
         localSentences={innhold.tjenesteSetninger}
         geoSuffix={`i ${navn}`}
-        featureExtra={
-          <NaeringsProfil
-            navn={navn}
-            næringer={innhold.topNæringer}
-            total={innhold.stats.total}
-          />
-        }
       />
 
-      <CtaBanner
-        leadEnabled={enabled}
-        variant="surface"
-        text={`Usikker på hva din bedrift i ${navn} trenger? Fem minutter på telefonen — så vet du det.`}
-      />
-
-      {/* 6. Betingede fagblokker — redaksjonell 4/8 med datavalgte fagbilder */}
-      <section className="bg-mist py-14">
+      {/* 5. Betingede fagblokker — redaksjonell 4/8 med datavalgte fagbilder */}
+      <section className="section-y bg-mist">
         <div className="mx-auto max-w-6xl px-4">
           <EditorialSections
             blokker={innhold.blokker}
@@ -175,35 +168,25 @@ export default async function KommunePage({
         </div>
       </section>
 
-      {/* 7. Pris (CTA #2 — høyest intent) */}
+      {/* 6. Pris (CTA #2 — høyest intent) */}
       <PricingSection leadEnabled={enabled} stedsnavn={navn} />
 
-      {/* 8–9. Prosess + sammenligning */}
+      {/* 7–8. Prosess + sammenligning (kanonisk løftehjem på geo) */}
       <NumberedJourney
         leadEnabled={enabled}
         title={`Slik kommer du i gang fra ${navn} — det meste gjør vi`}
       />
       <ComparisonTable />
 
-      {/* 10. Garantiband — typografisk brudd med egne løfter */}
-      <GarantiBand seed={kommune.nr} />
-
-      {/* 11–12. Samarbeidsmodellen + årshjulet (ordgulv + differensiatorer) */}
-      <PromiseSplit />
-      <Arshjul stedsnavn={navn} />
-
-      {/* 13. Dekning + intern lenking: fylkeslandemerke + nabokort med tall */}
-      <section className="border-y border-navy/10 bg-mist py-14">
+      {/* 9. Dekning + intern lenking: fylkeslandemerke + nabokort med tall (papir — aldri to bånd rygg mot rygg, R3/R11) */}
+      <section className="section-y-sm">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-5">
-            <p className="section-eyebrow">Dekning</p>
-            <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
-              Vi hjelper bedrifter i hele {fylke.visningsnavn}
-            </h2>
-            <p className="mt-3 max-w-[48ch] text-sm leading-relaxed text-slate">
-              Heldigitalt samarbeid gir like tett oppfølging enten du driver i{" "}
-              {navn} eller i nabokommunen.
-            </p>
+            <SectionHeading
+              eyebrow="Dekning"
+              title={`Vi hjelper bedrifter i hele ${fylke.visningsnavn}`}
+              intro={`Heldigitalt samarbeid gir like tett oppfølging enten du driver i ${navn} eller i nabokommunen.`}
+            />
             {regionFoto && (
               <FramedImage
                 src={regionFoto.src}

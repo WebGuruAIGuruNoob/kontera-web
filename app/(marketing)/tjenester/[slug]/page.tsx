@@ -6,16 +6,12 @@ import { site } from "@/data/site";
 import { leadEnabled } from "@/lib/lead";
 import { HeroSplit } from "@/components/sections/HeroSplit";
 import { LeadCard } from "@/components/LeadCard";
-import { ProofStrip } from "@/components/sections/ProofStrip";
-import { CtaBanner } from "@/components/sections/CtaBanner";
-import { ComparisonTable } from "@/components/sections/ComparisonTable";
 import { NumberedJourney } from "@/components/sections/NumberedJourney";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { serviceSchema } from "@/lib/schema";
-import { Icon } from "@/components/Icon";
 import { CheckIcon, Arrow } from "@/components/icons";
 import { FramedImage } from "@/components/FramedImage";
 import { tjenesteBilde, tjeneste2Bilde } from "@/lib/bilder";
@@ -89,6 +85,11 @@ export default async function TjenestePage({
         eyebrow={t.navn}
         title={t.tittel}
         subtitle={t.heroUndertekst}
+        chips={[
+          "Statsautoriserte regnskapsførere",
+          "Fast kontaktperson + backup",
+          enabled ? "Svar innen én arbeidsdag" : "Korte spørsmål: 0 kr",
+        ]}
         aside={
           <LeadCard
             enabled={enabled}
@@ -97,9 +98,8 @@ export default async function TjenestePage({
           />
         }
       />
-      <ProofStrip />
 
-      <section className="mx-auto max-w-6xl px-4 py-14">
+      <section className="section-y mx-auto max-w-6xl px-4">
         <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-7">
             <h2 className="font-display text-h2 font-bold text-ink">
@@ -126,7 +126,7 @@ export default async function TjenestePage({
         </div>
       </section>
 
-      <section className="bg-mist py-14">
+      <section className="section-y bg-mist">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="font-display text-h2 font-bold text-ink">Dette inngår</h2>
           <div data-reveal-group className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-12">
@@ -143,42 +143,29 @@ export default async function TjenestePage({
         </div>
       </section>
 
-      <CtaBanner
-        leadEnabled={enabled}
-        text={`Lurer du på noe om ${t.navn.toLowerCase()}? Korte spørsmål koster aldri noe.`}
-      />
-
-      <section className="mx-auto max-w-6xl px-4 py-14">
+      <section className="section-y mx-auto max-w-6xl px-4">
         <EditorialSections
           blokker={t.seksjoner}
           bilder={(_, i) => (i === 1 ? tjenesteFoto2 : null)}
         />
-      </section>
-
-      {relaterte.length > 0 && (
-        <section className="mx-auto max-w-6xl px-4 pb-14">
-          <h2 className="font-sans text-xl font-bold text-ink">Relaterte tjenester</h2>
-          <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {relaterte.length > 0 && (
+          // R-B: relaterte tjenester som lenkerad i fagseksjonen — ikke egen seksjon
+          <p className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-navy/10 pt-6 text-sm">
+            <span className="font-bold text-slate">Relaterte tjenester:</span>
             {relaterte.map((rel) => (
               <Link
                 key={rel.slug}
                 href={`/tjenester/${rel.slug}`}
-                className="group card-line card-line-hover flex items-center gap-4 p-4"
+                className="font-bold text-blue hover:underline"
               >
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue/10 text-blue">
-                  <Icon name={rel.ikon} className="h-5 w-5" />
-                </span>
-                <span className="font-sans font-bold text-navy group-hover:text-blue">
-                  {rel.navn} <Arrow />
-                </span>
+                {rel.navn} <Arrow />
               </Link>
             ))}
-          </div>
-        </section>
-      )}
+          </p>
+        )}
+      </section>
 
       <NumberedJourney leadEnabled={enabled} />
-      <ComparisonTable />
       <Faq items={t.faq} title={`Spørsmål og svar om ${t.navn.toLowerCase()}`} />
       <FinalCta />
     </>

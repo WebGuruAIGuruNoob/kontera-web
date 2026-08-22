@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Icon } from "@/components/Icon";
+import { SectionHeading } from "@/components/SectionHeading";
 import { bransjer } from "@/content/bransjer";
 import { Arrow } from "@/components/icons";
 
@@ -26,15 +27,9 @@ export function IndustryCards({
   ];
 
   return (
-    <section className="bg-mist py-16 lg:py-20">
+    <section className="section-y bg-mist">
       <div className="mx-auto max-w-6xl px-4">
-        <div className="max-w-2xl">
-          <p className="section-eyebrow">{eyebrow}</p>
-          <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
-            {title}
-          </h2>
-          <p className="mt-4 leading-relaxed text-slate">{intro}</p>
-        </div>
+        <SectionHeading eyebrow={eyebrow} title={title} intro={intro} />
 
         <div data-reveal-group className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-12">
           <Link
@@ -46,7 +41,7 @@ export function IndustryCards({
                 <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue/10 text-blue transition-colors group-hover:bg-blue group-hover:text-white">
                   <Icon name={feature.ikon} className="h-6 w-6" />
                 </span>
-                <span className="rounded-full bg-azure/15 px-3 py-1 font-sans text-[0.65rem] font-bold uppercase tracking-wider text-blue">
+                <span className="rounded-full bg-azure/15 px-3 py-1 font-sans text-xs font-bold uppercase tracking-wider text-blue">
                   Spisskompetanse
                 </span>
               </div>

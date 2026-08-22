@@ -11,7 +11,7 @@ import { bransjer } from "@/content/bransjer";
 export function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-white/10 bg-navy-deep text-white">
-      <div className="mx-auto max-w-6xl px-4 py-14 pb-8">
+      <div className="mx-auto max-w-6xl px-4 py-12 pb-8">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <p className="font-sans text-lg font-bold tracking-wide">
@@ -49,7 +49,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="font-sans text-[0.72rem] font-bold uppercase tracking-[0.14em] text-azure">
+            <p className="section-eyebrow-dark">
               Tjenester
             </p>
             <ul className="mt-3 space-y-2 text-sm">
@@ -69,7 +69,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="font-sans text-[0.72rem] font-bold uppercase tracking-[0.14em] text-azure">
+            <p className="section-eyebrow-dark">
               Bransjer
             </p>
             <ul className="mt-3 space-y-2 text-sm">
@@ -94,7 +94,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="font-sans text-[0.72rem] font-bold uppercase tracking-[0.14em] text-azure">
+            <p className="section-eyebrow-dark">
               Regnskapsfører der du er
             </p>
             <ul className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2 text-sm">

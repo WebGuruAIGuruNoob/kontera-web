@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Icon } from "@/components/Icon";
+import { SectionHeading } from "@/components/SectionHeading";
 import { tjenester } from "@/content/tjenester";
 import { Arrow } from "@/components/icons";
 
@@ -14,7 +15,6 @@ export function ServicesBento({
   intro,
   order,
   localSentences,
-  featureExtra,
   geoSuffix,
 }: {
   eyebrow?: string;
@@ -24,8 +24,6 @@ export function ServicesBento({
   order?: string[];
   /** Lokalisert setning per tjeneste-slug (data-parameterisert, unik per side) */
   localSentences?: Record<string, string>;
-  /** Ekstra innhold i featurecellen, f.eks. næringsprofil-viz */
-  featureExtra?: React.ReactNode;
   geoSuffix?: string;
 }) {
   const sorted = order
@@ -44,14 +42,8 @@ export function ServicesBento({
   ];
 
   return (
-    <section className="mx-auto max-w-6xl px-4 py-16 lg:py-20">
-      <div className="max-w-2xl">
-        <p className="section-eyebrow">{eyebrow}</p>
-        <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
-          {title}
-        </h2>
-        {intro && <p className="mt-4 leading-relaxed text-slate">{intro}</p>}
-      </div>
+    <section className="section-y mx-auto max-w-6xl px-4">
+      <SectionHeading eyebrow={eyebrow} title={title} intro={intro} />
 
       <div data-reveal-group className="mt-10 grid grid-cols-1 gap-4 max-sm:gap-0 sm:grid-cols-12">
         {/* Featurecelle */}
@@ -75,8 +67,7 @@ export function ServicesBento({
                 {localSentences[feature.slug]}
               </p>
             )}
-            {featureExtra && <div className="mt-6 flex-1">{featureExtra}</div>}
-            <span className="mt-6 text-sm font-bold text-blue group-hover:underline">
+            <span className="mt-6 flex-1 content-end text-sm font-bold text-blue group-hover:underline">
               Les mer <Arrow />
             </span>
           </div>

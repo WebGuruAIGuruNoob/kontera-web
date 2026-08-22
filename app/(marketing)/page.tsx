@@ -3,21 +3,17 @@ import Link from "next/link";
 import { leadEnabled } from "@/lib/lead";
 import { HeroSplit } from "@/components/sections/HeroSplit";
 import { LeadCard } from "@/components/LeadCard";
-import { ProofStrip } from "@/components/sections/ProofStrip";
 import { ProblemSolution } from "@/components/sections/ProblemSolution";
 import { ServicesBento } from "@/components/sections/ServicesBento";
-import { StatBand } from "@/components/sections/StatBand";
-import { PromiseSplit } from "@/components/sections/PromiseSplit";
 import { IndustryCards } from "@/components/sections/IndustryCards";
 import { NumberedJourney } from "@/components/sections/NumberedJourney";
 import { PricingSection } from "@/components/sections/PricingSection";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
-import { CtaBanner } from "@/components/sections/CtaBanner";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { FramedImage } from "@/components/FramedImage";
-import { GarantiBand } from "@/components/sections/GarantiBand";
-import { bilde, collageBilder } from "@/lib/bilder";
+import { SectionHeading } from "@/components/SectionHeading";
+import { bilde } from "@/lib/bilder";
 import { site } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -65,7 +61,6 @@ const homeFaq = [
 export default function HomePage() {
   const enabled = leadEnabled();
   const kontorFoto = bilde("team:samarbeid-1");
-  const collage = collageBilder();
   return (
     <>
       <HeroSplit
@@ -82,25 +77,6 @@ export default function HomePage() {
           `${site.statsautoriserte} statsautoriserte`,
           "Korte spørsmål: 0 kr",
         ]}
-        extra={
-          collage.length === 3 && (
-            <div className="mt-10 grid max-w-xl grid-cols-3 items-start gap-3">
-              <FramedImage
-                src={collage[0].src}
-                alt={collage[0].alt}
-                className="translate-y-2"
-                sizes="180px"
-              />
-              <FramedImage src={collage[1].src} alt={collage[1].alt} sizes="180px" />
-              <FramedImage
-                src={collage[2].src}
-                alt={collage[2].alt}
-                className="translate-y-4"
-                sizes="180px"
-              />
-            </div>
-          )
-        }
         aside={
           <LeadCard
             enabled={enabled}
@@ -109,43 +85,25 @@ export default function HomePage() {
           />
         }
       />
-      <ProofStrip />
       <ProblemSolution />
       <ServicesBento
         title="Fra bilag til årsoppgjør — samlet hos én fast fører"
         intro="Vi leverer alt en liten og mellomstor bedrift trenger: løpende regnskap, lønn, mva, årsoppgjør, rådgivning og hjelp til å starte selskap."
       />
-      <StatBand
-        title="Lite nok til å kjenne deg. Stort nok til alt."
-        items={[
-          { label: "Dedikerte ansatte", value: `${site.employees}`, numeric: site.employees },
-          { label: "Statsautoriserte regnskapsførere", value: `${site.statsautoriserte}`, numeric: site.statsautoriserte },
-          { label: "År i bransjen", value: "11", numeric: new Date().getFullYear() - site.founded },
-          { label: "Kommuner vi dekker digitalt", value: "357", numeric: 357 },
-          { label: "Kroner for korte spørsmål", value: "0", numeric: 0 },
-          { label: "Faste kontaktpersoner per kunde", value: "1 + backup" },
-        ]}
-      />
-      <PromiseSplit />
       <IndustryCards title="Spisskompetanse på bil, bygg, eiendom og netthandel" />
       <NumberedJourney leadEnabled={enabled} />
       <PricingSection leadEnabled={enabled} />
       <ComparisonTable />
 
       {/* Team-teaser: sanne tall, ingen stock-ansikter (ekthetsregel §9.3) */}
-      <section className="mx-auto max-w-6xl px-4 py-16 lg:py-20">
+      <section className="section-y mx-auto max-w-6xl px-4">
         <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-5">
-            <p className="section-eyebrow">Menneskene bak</p>
-            <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
-              Seks personer. Null sentralbord.
-            </h2>
-            <p className="mt-4 max-w-lg leading-relaxed text-slate">
-              Kontera er {site.employees} ansatte, hvorav{" "}
-              {site.statsautoriserte} statsautoriserte regnskapsførere, fordelt
-              på kontorene våre på Jar i Bærum og Ask i Gjerdrum. Hos oss får du
-              ikke et køsystem – du får folk som vet hvem du er når du ringer.
-            </p>
+            <SectionHeading
+              eyebrow="Menneskene bak"
+              title="Seks personer. Null sentralbord."
+              intro={`Kontera er ${site.employees} ansatte, hvorav ${site.statsautoriserte} statsautoriserte regnskapsførere, fordelt på kontorene våre på Jar i Bærum og Ask i Gjerdrum. Hos oss får du ikke et køsystem – du får folk som vet hvem du er når du ringer.`}
+            />
             <Link
               href="/om-oss"
               className="mt-6 inline-block rounded-lg border border-navy/25 px-5 py-3 font-sans font-bold text-navy transition-colors hover:border-navy/50 hover:text-blue"
@@ -179,11 +137,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <GarantiBand seed="forside" />
-      <CtaBanner
-        leadEnabled={enabled}
-        text="Fem minutter på telefonen — så vet du om vi passer."
-      />
       <Faq items={homeFaq} />
       <FinalCta />
     </>
