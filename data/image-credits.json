@@ -1,50 +1,5 @@
 [
   {
-    "file": "images/pexels/kontor-1.jpg",
-    "pexelsId": 8276185,
-    "photographer": "PNW Production",
-    "photographerUrl": "https://www.pexels.com/@pnw-prod",
-    "pexelsUrl": "https://www.pexels.com/photo/men-having-a-business-meeting-at-the-office-8276185/",
-    "alt": "Three men discussing a project at a table in a bright office setting.",
-    "query": "modern scandinavian office meeting daylight"
-  },
-  {
-    "file": "images/pexels/kontor-2.jpg",
-    "pexelsId": 16480439,
-    "photographer": "Efrem  Efre",
-    "photographerUrl": "https://www.pexels.com/@efrem-efre-2786187",
-    "pexelsUrl": "https://www.pexels.com/photo/white-chairs-at-the-tables-of-the-restaurant-16480439/",
-    "alt": "Cozy café setting in Gothenburg featuring modern furniture and large windows.",
-    "query": "modern scandinavian office meeting daylight"
-  },
-  {
-    "file": "images/pexels/kontor-3.jpg",
-    "pexelsId": 6899396,
-    "photographer": "Max Vakhtbovych",
-    "photographerUrl": "https://www.pexels.com/@artbovich",
-    "pexelsUrl": "https://www.pexels.com/photo/office-interior-with-table-and-chairs-near-window-6899396/",
-    "alt": "Interior of modern conference room with wooden table and chairs next to red shelves near window with jalousie",
-    "query": "modern scandinavian office meeting daylight"
-  },
-  {
-    "file": "images/pexels/kontor-4.jpg",
-    "pexelsId": 5324992,
-    "photographer": "Anna Shvets",
-    "photographerUrl": "https://www.pexels.com/@shvetsa",
-    "pexelsUrl": "https://www.pexels.com/photo/group-of-diverse-colleagues-using-laptop-and-talking-in-office-5324992/",
-    "alt": "Multiethnic young ambitious businesspeople in formal outfits discussing job at table of office in daytime",
-    "query": "modern scandinavian office meeting daylight"
-  },
-  {
-    "file": "images/pexels/samarbeid-1.jpg",
-    "pexelsId": 5668826,
-    "photographer": "Sora Shimazaki",
-    "photographerUrl": "https://www.pexels.com/@sora-shimazaki",
-    "pexelsUrl": "https://www.pexels.com/photo/crop-female-employee-pointing-at-document-while-working-in-office-with-male-colleague-5668826/",
-    "alt": "Crop faceless ethnic female entrepreneur in classy suit showing document to anonymous male boss sitting at table with laptop",
-    "query": "two people reviewing documents laptop office"
-  },
-  {
     "file": "images/pexels/samarbeid-2.jpg",
     "pexelsId": 7876785,
     "photographer": "https://kaboompics.com/",
@@ -54,60 +9,6 @@
     "query": "two people reviewing documents laptop office"
   },
   {
-    "file": "images/pexels/samarbeid-3.jpg",
-    "pexelsId": 7964538,
-    "photographer": "Felicity Tai",
-    "photographerUrl": "https://www.pexels.com/@felicity-tai",
-    "pexelsUrl": "https://www.pexels.com/photo/men-looking-the-paper-together-7964538/",
-    "alt": "Two professional men engaged in a focused discussion in a contemporary office environment.",
-    "query": "two people reviewing documents laptop office"
-  },
-  {
-    "file": "images/pexels/samarbeid-4.jpg",
-    "pexelsId": 7693757,
-    "photographer": "Yan Krukau",
-    "photographerUrl": "https://www.pexels.com/@yankrukov",
-    "pexelsUrl": "https://www.pexels.com/photo/men-working-in-an-office-7693757/",
-    "alt": "Two men in a modern office discussing and analyzing documents with charts.",
-    "query": "two people reviewing documents laptop office"
-  },
-  {
-    "file": "images/pexels/radgivning-1.jpg",
-    "pexelsId": 7964192,
-    "photographer": "Felicity Tai",
-    "photographerUrl": "https://www.pexels.com/@felicity-tai",
-    "pexelsUrl": "https://www.pexels.com/photo/two-men-and-woman-sitting-on-chairs-in-front-of-table-7964192/",
-    "alt": "Three colleagues engaging in a team discussion in a modern office environment. Ideal for business and teamwork concepts.",
-    "query": "business advisor meeting discussion table"
-  },
-  {
-    "file": "images/pexels/radgivning-2.jpg",
-    "pexelsId": 8441780,
-    "photographer": "Kampus Production",
-    "photographerUrl": "https://www.pexels.com/@kampus",
-    "pexelsUrl": "https://www.pexels.com/photo/an-elderly-man-consulting-an-insurance-agent-8441780/",
-    "alt": "A business meeting between an elderly client and a consultant discussing documents at an office table.",
-    "query": "business advisor meeting discussion table"
-  },
-  {
-    "file": "images/pexels/radgivning-3.jpg",
-    "pexelsId": 8439697,
-    "photographer": "Kampus Production",
-    "photographerUrl": "https://www.pexels.com/@kampus",
-    "pexelsUrl": "https://www.pexels.com/photo/person-in-black-suit-holding-white-digital-tablet-8439697/",
-    "alt": "Business meeting at a wooden table with consultant reviewing documents and using a digital tablet.",
-    "query": "business advisor meeting discussion table"
-  },
-  {
-    "file": "images/pexels/tall-1.jpg",
-    "pexelsId": 8296974,
-    "photographer": "Mikhail Nilov",
-    "photographerUrl": "https://www.pexels.com/@mikhail-nilov",
-    "pexelsUrl": "https://www.pexels.com/photo/a-woman-computing-with-a-calculator-8296974/",
-    "alt": "Hands using a calculator at a desk with documents and folders, ideal for finance or accounting themes.",
-    "query": "accounting documents calculator desk"
-  },
-  {
     "file": "images/pexels/tall-2.jpg",
     "pexelsId": 8297031,
     "photographer": "Mikhail Nilov",
@@ -115,51 +16,6 @@
     "pexelsUrl": "https://www.pexels.com/photo/person-in-long-sleeve-shirt-holding-a-calculator-8297031/",
     "alt": "Close-up of person using a calculator with financial documents in an office.",
     "query": "accounting documents calculator desk"
-  },
-  {
-    "file": "images/pexels/tall-3.jpg",
-    "pexelsId": 8296977,
-    "photographer": "Mikhail Nilov",
-    "photographerUrl": "https://www.pexels.com/@mikhail-nilov",
-    "pexelsUrl": "https://www.pexels.com/photo/a-person-examining-a-document-8296977/",
-    "alt": "An accountant using a calculator and signing paperwork, showcasing financial analysis.",
-    "query": "accounting documents calculator desk"
-  },
-  {
-    "file": "images/pexels/tall-4.jpg",
-    "pexelsId": 7821708,
-    "photographer": "RDNE Stock project",
-    "photographerUrl": "https://www.pexels.com/@rdne",
-    "pexelsUrl": "https://www.pexels.com/photo/white-papers-on-the-table-7821708/",
-    "alt": "Hands holding financial documents with calculator and laptop on office desk, business analysis scene.",
-    "query": "accounting documents calculator desk"
-  },
-  {
-    "file": "images/pexels/handverker-1.jpg",
-    "pexelsId": 14226719,
-    "photographer": "Irgi Nur Fadil",
-    "photographerUrl": "https://www.pexels.com/@irginurfadil",
-    "pexelsUrl": "https://www.pexels.com/photo/carpenter-cutting-a-roof-frame-14226719/",
-    "alt": "Asian carpenter skillfully sawing wooden beams on a roof under a bright blue sky.",
-    "query": "carpenter working construction site"
-  },
-  {
-    "file": "images/pexels/handverker-2.jpg",
-    "pexelsId": 16368372,
-    "photographer": "David Iloba",
-    "photographerUrl": "https://www.pexels.com/@david-iloba-28486424",
-    "pexelsUrl": "https://www.pexels.com/photo/carpenter-working-on-construction-16368372/",
-    "alt": "A carpenter working on a wooden frame outdoors in Lagos, showcasing skill and craftsmanship.",
-    "query": "carpenter working construction site"
-  },
-  {
-    "file": "images/pexels/handverker-3.jpg",
-    "pexelsId": 14232056,
-    "photographer": "Irgi Nur Fadil",
-    "photographerUrl": "https://www.pexels.com/@irginurfadil",
-    "pexelsUrl": "https://www.pexels.com/photo/man-in-white-and-yellow-shirt-holding-14232056/",
-    "alt": "Carpenter working on a wooden roof structure outdoors in a rural setting with traditional tools.",
-    "query": "carpenter working construction site"
   },
   {
     "file": "images/pexels/handverker-4.jpg",
@@ -180,48 +36,12 @@
     "query": "construction workers building scandinavia"
   },
   {
-    "file": "images/pexels/bygg-2.jpg",
-    "pexelsId": 32826199,
-    "photographer": "Purvesh Photography",
-    "photographerUrl": "https://www.pexels.com/@purvesh-photography-34809134",
-    "pexelsUrl": "https://www.pexels.com/photo/indian-construction-workers-at-construction-site-32826199/",
-    "alt": "Two construction workers wearing helmets at a site in India with a crane and building.",
-    "query": "construction workers building scandinavia"
-  },
-  {
     "file": "images/pexels/bilforhandler-1.jpg",
     "pexelsId": 18108314,
     "photographer": "Dextar Studio ™",
     "photographerUrl": "https://www.pexels.com/@dextarstudio",
     "pexelsUrl": "https://www.pexels.com/photo/modern-expensive-cars-in-the-garage-18108314/",
     "alt": "Sleek luxury cars showcased in a stylish, modern automotive dealership.",
-    "query": "car dealership showroom cars"
-  },
-  {
-    "file": "images/pexels/bilforhandler-2.jpg",
-    "pexelsId": 17632052,
-    "photographer": "I'm Zion",
-    "photographerUrl": "https://www.pexels.com/@zion",
-    "pexelsUrl": "https://www.pexels.com/photo/sports-car-on-display-in-dealership-17632052/",
-    "alt": "Showroom featuring luxury sports cars, Lamborghini models, with sleek design and modern architecture.",
-    "query": "car dealership showroom cars"
-  },
-  {
-    "file": "images/pexels/bilforhandler-3.jpg",
-    "pexelsId": 29566897,
-    "photographer": "Luke Miller",
-    "photographerUrl": "https://www.pexels.com/@bylukemiller",
-    "pexelsUrl": "https://www.pexels.com/photo/aerial-view-of-vehicle-storage-lot-with-cars-29566897/",
-    "alt": "Aerial shot showcasing a vast storage lot filled with parked cars lined up in rows.",
-    "query": "car dealership showroom cars"
-  },
-  {
-    "file": "images/pexels/bilforhandler-4.jpg",
-    "pexelsId": 9702328,
-    "photographer": "Matheus Bertelli",
-    "photographerUrl": "https://www.pexels.com/@bertellifotografia",
-    "pexelsUrl": "https://www.pexels.com/photo/white-and-red-cars-in-the-parking-lot-9702328/",
-    "alt": "Close-up of parked Mitsubishi Lancer cars in an indoor lot featuring a variety of colors.",
     "query": "car dealership showroom cars"
   },
   {
@@ -234,39 +54,12 @@
     "query": "car mechanic workshop"
   },
   {
-    "file": "images/pexels/verksted-2.jpg",
-    "pexelsId": 7807035,
-    "photographer": "Imtiaz Ahmed",
-    "photographerUrl": "https://www.pexels.com/@imtiazahmed",
-    "pexelsUrl": "https://www.pexels.com/photo/a-mechanic-holding-a-tire-wrench-7807035/",
-    "alt": "Portrait of a skilled mechanic holding a lug wrench in a Karachi auto repair shop.",
-    "query": "car mechanic workshop"
-  },
-  {
     "file": "images/pexels/netthandel-1.jpg",
     "pexelsId": 7857542,
     "photographer": "Kampus Production",
     "photographerUrl": "https://www.pexels.com/@kampus",
     "pexelsUrl": "https://www.pexels.com/photo/online-sellers-writing-details-on-the-box-7857542/",
     "alt": "Two women packing boxes for an online store, focusing on barcode and labeling processes.",
-    "query": "small business owner packing orders boxes"
-  },
-  {
-    "file": "images/pexels/netthandel-2.jpg",
-    "pexelsId": 7857532,
-    "photographer": "Kampus Production",
-    "photographerUrl": "https://www.pexels.com/@kampus",
-    "pexelsUrl": "https://www.pexels.com/photo/woman-sitting-at-the-table-and-packing-orders-7857532/",
-    "alt": "Two people packing online orders in a small business setting with a laptop.",
-    "query": "small business owner packing orders boxes"
-  },
-  {
-    "file": "images/pexels/netthandel-3.jpg",
-    "pexelsId": 7309456,
-    "photographer": "RDNE Stock project",
-    "photographerUrl": "https://www.pexels.com/@rdne",
-    "pexelsUrl": "https://www.pexels.com/photo/man-putting-stamps-in-ink-pad-7309456/",
-    "alt": "Bearded man in home office preparing packages for a small business startup.",
     "query": "small business owner packing orders boxes"
   },
   {
@@ -285,33 +78,6 @@
     "photographerUrl": "https://www.pexels.com/@efrem-efre-2786187",
     "pexelsUrl": "https://www.pexels.com/photo/close-up-of-facades-of-historic-houses-in-helsingor-denmark-17797495/",
     "alt": "Historic facades and roofs in Helsingør, Denmark capture classic Danish architecture.",
-    "query": "apartment buildings facade nordic"
-  },
-  {
-    "file": "images/pexels/eiendom-2.jpg",
-    "pexelsId": 17327952,
-    "photographer": "Efrem  Efre",
-    "photographerUrl": "https://www.pexels.com/@efrem-efre-2786187",
-    "pexelsUrl": "https://www.pexels.com/photo/apartment-blocks-in-a-residential-part-of-a-city-17327952/",
-    "alt": "Contemporary apartment buildings with colorful balconies in Jönköping, Sweden.",
-    "query": "apartment buildings facade nordic"
-  },
-  {
-    "file": "images/pexels/eiendom-3.jpg",
-    "pexelsId": 36625558,
-    "photographer": "Efrem  Efre",
-    "photographerUrl": "https://www.pexels.com/@efrem-efre-2786187",
-    "pexelsUrl": "https://www.pexels.com/photo/modern-apartment-building-in-jonkoping-sweden-36625558/",
-    "alt": "Sunny view of a modern apartment block in Jönköping, Sweden showcasing urban architecture.",
-    "query": "apartment buildings facade nordic"
-  },
-  {
-    "file": "images/pexels/eiendom-4.jpg",
-    "pexelsId": 15916284,
-    "photographer": "Efrem  Efre",
-    "photographerUrl": "https://www.pexels.com/@efrem-efre-2786187",
-    "pexelsUrl": "https://www.pexels.com/photo/residential-building-near-road-in-winter-15916284/",
-    "alt": "Yellow apartment building with balconies in snowy Jönköping, Sweden, during winter.",
     "query": "apartment buildings facade nordic"
   },
   {
@@ -351,33 +117,6 @@
     "query": "freelancer working laptop bright office"
   },
   {
-    "file": "images/pexels/konsulent-3.jpg",
-    "pexelsId": 7014928,
-    "photographer": "George Milton",
-    "photographerUrl": "https://www.pexels.com/@george-milton",
-    "pexelsUrl": "https://www.pexels.com/photo/thoughtful-photographer-drawing-on-graphic-tablet-7014928/",
-    "alt": "Side view of serious female with short hair drawing with stylus while editing photos at table with photo camera during work in room with green plant",
-    "query": "freelancer working laptop bright office"
-  },
-  {
-    "file": "images/pexels/norge-by-1.jpg",
-    "pexelsId": 9993243,
-    "photographer": "Naren Yogarajah",
-    "photographerUrl": "https://www.pexels.com/@naren-yogarajah-2550806",
-    "pexelsUrl": "https://www.pexels.com/photo/city-buildings-during-night-time-9993243/",
-    "alt": "A stunning view of Oslo's illuminated skyline at night, capturing the vibrant urban atmosphere.",
-    "query": "oslo norway city"
-  },
-  {
-    "file": "images/pexels/norge-by-2.jpg",
-    "pexelsId": 8547967,
-    "photographer": "Naren Yogarajah",
-    "photographerUrl": "https://www.pexels.com/@naren-yogarajah-2550806",
-    "pexelsUrl": "https://www.pexels.com/photo/oslo-cityscape-norway-8547967/",
-    "alt": "Illuminated modern buildings in Oslo's downtown at twilight, showcasing architecture.",
-    "query": "oslo norway city"
-  },
-  {
     "file": "images/pexels/norge-by-3.jpg",
     "pexelsId": 9224464,
     "photographer": "Barnabas Davoti",
@@ -396,15 +135,6 @@
     "query": "norway fjord village"
   },
   {
-    "file": "images/pexels/norge-fjord-2.jpg",
-    "pexelsId": 28271728,
-    "photographer": "Nils R",
-    "photographerUrl": "https://www.pexels.com/@nilsr",
-    "pexelsUrl": "https://www.pexels.com/photo/a-view-of-mountains-and-a-river-in-norway-28271728/",
-    "alt": "Breathtaking view of Åndalsnes with mountains, river, and settlement.",
-    "query": "norway fjord village"
-  },
-  {
     "file": "images/pexels/norge-fjord-3.jpg",
     "pexelsId": 32160255,
     "photographer": "Zachary  Baltimore",
@@ -414,33 +144,6 @@
     "query": "norway fjord village"
   },
   {
-    "file": "images/pexels/norge-fjord-4.jpg",
-    "pexelsId": 28271729,
-    "photographer": "Nils R",
-    "photographerUrl": "https://www.pexels.com/@nilsr",
-    "pexelsUrl": "https://www.pexels.com/photo/a-view-of-a-mountain-range-with-a-town-in-the-middle-28271729/",
-    "alt": "Breathtaking view of snow-capped mountains and a tranquil settlement in Åndalsnes, Norway.",
-    "query": "norway fjord village"
-  },
-  {
-    "file": "images/pexels/norge-nord-1.jpg",
-    "pexelsId": 358581,
-    "photographer": "Pixabay",
-    "photographerUrl": "https://www.pexels.com/@pixabay",
-    "pexelsUrl": "https://www.pexels.com/photo/white-mountains-under-blue-sky-358581/",
-    "alt": "A scenic winter view of a Norwegian town beneath snowy mountains reflecting in a fjord.",
-    "query": "northern norway town winter"
-  },
-  {
-    "file": "images/pexels/norge-nord-2.jpg",
-    "pexelsId": 358428,
-    "photographer": "Pixabay",
-    "photographerUrl": "https://www.pexels.com/@pixabay",
-    "pexelsUrl": "https://www.pexels.com/photo/buildings-and-houses-on-mountain-slope-358428/",
-    "alt": "Captivating winter cityscape featuring colorful buildings by a snowy waterfront at twilight.",
-    "query": "northern norway town winter"
-  },
-  {
     "file": "images/pexels/norge-nord-3.jpg",
     "pexelsId": 20360740,
     "photographer": "Francesco Ungaro",
@@ -448,15 +151,6 @@
     "pexelsUrl": "https://www.pexels.com/photo/clouds-among-mountains-by-the-town-20360740/",
     "alt": "Stunning view of snow-capped mountains towering above a serene coastal town, captured at daylight.",
     "query": "northern norway town winter"
-  },
-  {
-    "file": "images/pexels/norge-kyst-1.jpg",
-    "pexelsId": 17645457,
-    "photographer": "Helena Jankovičová Kováčová",
-    "photographerUrl": "https://www.pexels.com/@helen1",
-    "pexelsUrl": "https://www.pexels.com/photo/luxury-motorboat-moored-in-harbor-17645457/",
-    "alt": "Luxury motorboat and cruise ship in scenic Sandefjord harbor under cloudy skies.",
-    "query": "norwegian coast harbor boats"
   },
   {
     "file": "images/pexels/norge-kyst-2.jpg",
@@ -475,5 +169,293 @@
     "pexelsUrl": "https://www.pexels.com/photo/charming-harbor-view-in-haugesund-norway-33692831/",
     "alt": "A scenic view of Haugesund harbor with moored boats, quaint buildings, and a vibrant sky.",
     "query": "norwegian coast harbor boats"
+  },
+  {
+    "file": "images/pexels/tjeneste-regnskapsforing.jpg",
+    "pexelsId": 8296974,
+    "photographer": "Mikhail Nilov",
+    "photographerUrl": "https://www.pexels.com/@mikhail-nilov",
+    "pexelsUrl": "https://www.pexels.com/photo/a-woman-computing-with-a-calculator-8296974/",
+    "alt": "Hender med kalkulator over en perm med bilag på et skrivebord",
+    "query": "kuratert:tjeneste:regnskapsforing"
+  },
+  {
+    "file": "images/pexels/tjeneste-lonn.jpg",
+    "pexelsId": 11773871,
+    "photographer": "Towfiqu barbhuiya",
+    "photographerUrl": "https://www.pexels.com/@towfiqu-barbhuiya-3440682",
+    "pexelsUrl": "https://www.pexels.com/photo/a-person-holding-black-pen-pointing-on-calendar-11773871/",
+    "alt": "Hånd ringer inn en fristdato på en bordkalender med penn",
+    "query": "kuratert:tjeneste:lonn"
+  },
+  {
+    "file": "images/pexels/tjeneste-arsoppgjor.jpg",
+    "pexelsId": 6694481,
+    "photographer": "Tima Miroshnichenko",
+    "photographerUrl": "https://www.pexels.com/@tima-miroshnichenko",
+    "pexelsUrl": "https://www.pexels.com/photo/person-in-black-long-sleeve-polo-shirt-working-on-a-wooden-table-6694481/",
+    "alt": "Hender som gjennomgår årsrapporter og regnskapsutskrifter på et bord",
+    "query": "kuratert:tjeneste:arsoppgjor"
+  },
+  {
+    "file": "images/pexels/tjeneste-mva.jpg",
+    "pexelsId": 7680681,
+    "photographer": "https://kaboompics.com/",
+    "photographerUrl": "https://www.pexels.com/@karola-g",
+    "pexelsUrl": "https://www.pexels.com/photo/receipts-and-documents-on-top-of-a-desk-7680681/",
+    "alt": "Kvitteringer og bilag sortert på et ryddig skrivebord",
+    "query": "kuratert:tjeneste:mva"
+  },
+  {
+    "file": "images/pexels/tjeneste-radgivning.jpg",
+    "pexelsId": 7433832,
+    "photographer": "Vlada Karpovich",
+    "photographerUrl": "https://www.pexels.com/@vlada-karpovich",
+    "pexelsUrl": "https://www.pexels.com/photo/a-person-using-a-calculator-7433832/",
+    "alt": "Rådgivningsmøte: hender, kalkulator og grafer på et møtebord",
+    "query": "kuratert:tjeneste:radgivning"
+  },
+  {
+    "file": "images/pexels/tjeneste-starte-selskap.jpg",
+    "pexelsId": 3643926,
+    "photographer": "Tim Mossholder",
+    "photographerUrl": "https://www.pexels.com/@timmossholder",
+    "pexelsUrl": "https://www.pexels.com/photo/silver-open-signage-3643926/",
+    "alt": "Åpent-skilt i metall på døren til en nystartet butikk",
+    "query": "kuratert:tjeneste:starte-selskap"
+  },
+  {
+    "file": "images/pexels/omoss-1.jpg",
+    "pexelsId": 5951549,
+    "photographer": "Arina Krasnikova",
+    "photographerUrl": "https://www.pexels.com/@arina-krasnikova",
+    "pexelsUrl": "https://www.pexels.com/photo/black-cup-with-saucer-on-brown-surface-5951549/",
+    "alt": "Kaffekopp, briller og notatbok på et arbeidsbord ved vinduet",
+    "query": "kuratert:omoss:kaffe-og-notater"
+  },
+  {
+    "file": "images/pexels/omoss-2.jpg",
+    "pexelsId": 7255295,
+    "photographer": "MART  PRODUCTION",
+    "photographerUrl": "https://www.pexels.com/@mart-production",
+    "pexelsUrl": "https://www.pexels.com/photo/close-up-photo-of-a-person-typing-7255295/",
+    "alt": "Hender som arbeider på laptop ved siden av kaffe og notatblokk",
+    "query": "kuratert:omoss:hender-i-arbeid"
+  },
+  {
+    "file": "images/pexels/omoss-3.jpg",
+    "pexelsId": 8436906,
+    "photographer": "MART  PRODUCTION",
+    "photographerUrl": "https://www.pexels.com/@mart-production",
+    "pexelsUrl": "https://www.pexels.com/photo/a-workspace-inside-the-room-8436906/",
+    "alt": "Lyst og ryddig kontorhjørne med skrivebord ved vinduet",
+    "query": "kuratert:omoss:kontorlokale"
+  },
+  {
+    "file": "images/pexels/blogg-hva-koster-regnskapsforer.jpg",
+    "pexelsId": 33175673,
+    "photographer": "Bia Limova",
+    "photographerUrl": "https://www.pexels.com/@bia-limova-1908542654",
+    "pexelsUrl": "https://www.pexels.com/photo/close-up-of-finance-document-with-calculator-and-glasses-33175673/",
+    "alt": "Kalkulator, briller og penn oppå en finansrapport på et skrivebord",
+    "query": "kuratert:blogg:hva-koster-regnskapsforer"
+  },
+  {
+    "file": "images/pexels/blogg-bytte-regnskapsforer.jpg",
+    "pexelsId": 8371705,
+    "photographer": "cottonbro studio",
+    "photographerUrl": "https://www.pexels.com/@cottonbro",
+    "pexelsUrl": "https://www.pexels.com/photo/cardboard-box-full-of-file-folders-8371705/",
+    "alt": "Hender overleverer en eske med ryddig bundne dokumentmapper",
+    "query": "kuratert:blogg:bytte-regnskapsforer"
+  },
+  {
+    "file": "images/pexels/blogg-regnskapsforer-enkeltpersonforetak.jpg",
+    "pexelsId": 13005858,
+    "photographer": "Brian Magill",
+    "photographerUrl": "https://www.pexels.com/@brian-magill-157994702",
+    "pexelsUrl": "https://www.pexels.com/photo/a-person-in-white-long-sleeve-shirt-scraping-wood-plank-13005858/",
+    "alt": "Hender høvler en treplanke i et lyst snekkerverksted",
+    "query": "kuratert:blogg:regnskapsforer-enkeltpersonforetak"
+  },
+  {
+    "file": "images/pexels/blogg-fore-regnskap-selv-eller-regnskapsforer.jpg",
+    "pexelsId": 20061882,
+    "photographer": "Peter Holmboe",
+    "photographerUrl": "https://www.pexels.com/@holmboe",
+    "pexelsUrl": "https://www.pexels.com/photo/dirt-road-in-winter-20061882/",
+    "alt": "Grusvei som deler seg i to, sett rett ovenfra i snødekt landskap",
+    "query": "kuratert:blogg:fore-regnskap-selv-eller-regnskapsforer"
+  },
+  {
+    "file": "images/pexels/blogg-mva-frister.jpg",
+    "pexelsId": 9810172,
+    "photographer": "Towfiqu barbhuiya",
+    "photographerUrl": "https://www.pexels.com/@towfiqu-barbhuiya-3440682",
+    "pexelsUrl": "https://www.pexels.com/photo/close-up-photo-of-red-pins-on-a-calendar-9810172/",
+    "alt": "Kalender med røde nåler på flere datoer og en frist ringet inn",
+    "query": "kuratert:blogg:mva-frister"
+  },
+  {
+    "file": "images/pexels/blogg-starte-as-steg-for-steg.jpg",
+    "pexelsId": 101808,
+    "photographer": "AS Photography",
+    "photographerUrl": "https://www.pexels.com/@asphotography",
+    "pexelsUrl": "https://www.pexels.com/photo/black-handled-key-on-key-hole-101808/",
+    "alt": "Nøkkel som står i låsen på en dør, klar til å åpnes",
+    "query": "kuratert:blogg:starte-as-steg-for-steg"
+  },
+  {
+    "file": "images/pexels/blogg-hva-er-statsautorisert-regnskapsforer.jpg",
+    "pexelsId": 6358840,
+    "photographer": "Anna Tarazevich",
+    "photographerUrl": "https://www.pexels.com/@anntarazevich",
+    "pexelsUrl": "https://www.pexels.com/photo/a-person-s-hand-using-a-stamp-6358840/",
+    "alt": "Hånd setter et stempel på et dokument ved et lyst skrivebord",
+    "query": "kuratert:blogg:hva-er-statsautorisert-regnskapsforer"
+  },
+  {
+    "file": "images/pexels/blogg-regnskap-bilforhandler-avansemoms.jpg",
+    "pexelsId": 97079,
+    "photographer": "Negative Space",
+    "photographerUrl": "https://www.pexels.com/@negativespace",
+    "pexelsUrl": "https://www.pexels.com/photo/person-in-grey-shirt-handing-keys-97079/",
+    "alt": "Hånd rekker frem en bilnøkkel ved et bilsalg",
+    "query": "kuratert:blogg:regnskap-bilforhandler-avansemoms"
+  },
+  {
+    "file": "images/pexels/fylke-oslo.jpg",
+    "pexelsId": 18170373,
+    "photographer": "Piotrek Wilk",
+    "photographerUrl": "https://www.pexels.com/@piotrek-wilk-643479",
+    "pexelsUrl": "https://www.pexels.com/photo/oslo-opera-house-18170373/",
+    "alt": "Operahuset i Oslo sett fra fjorden en klar dag",
+    "query": "kuratert:fylke:oslo"
+  },
+  {
+    "file": "images/pexels/fylke-akershus.jpg",
+    "pexelsId": 14033714,
+    "photographer": "Sebastian  kj",
+    "photographerUrl": "https://www.pexels.com/@sebastian123123",
+    "pexelsUrl": "https://www.pexels.com/photo/nes-church-ruins-near-rivers-in-norway-14033714/",
+    "alt": "Nes kirkeruiner ved samløpet av Glomma og Vorma på Romerike",
+    "query": "kuratert:fylke:akershus"
+  },
+  {
+    "file": "images/pexels/fylke-ostfold.jpg",
+    "pexelsId": 32446688,
+    "photographer": "Jan Arve Pettersen",
+    "photographerUrl": "https://www.pexels.com/@jan-arve-pettersen-61077019",
+    "pexelsUrl": "https://www.pexels.com/photo/lone-oak-tree-in-green-field-sarpsborg-norway-32446688/",
+    "alt": "Eiketre i kornåker i Sarpsborg, typisk østfoldsk kulturlandskap",
+    "query": "kuratert:fylke:ostfold"
+  },
+  {
+    "file": "images/pexels/fylke-buskerud.jpg",
+    "pexelsId": 29584872,
+    "photographer": "Travel Photographer",
+    "photographerUrl": "https://www.pexels.com/@travel-photographer-127255675",
+    "pexelsUrl": "https://www.pexels.com/photo/drammen-bridge-and-river-scenic-view-in-norway-29584872/",
+    "alt": "Drammenselva med gangbrua Ypsilon en klar høstdag",
+    "query": "kuratert:fylke:buskerud"
+  },
+  {
+    "file": "images/pexels/fylke-innlandet.jpg",
+    "pexelsId": 28208825,
+    "photographer": "Barnabas Davoti",
+    "photographerUrl": "https://www.pexels.com/@barnabas-davoti-31615494",
+    "pexelsUrl": "https://www.pexels.com/photo/cloudy-cityscape-of-lillehammer-featuring-the-church-lillehammer-bridge-over-mjosa-green-fields-farms-and-pine-forest-in-the-background-28208825/",
+    "alt": "Lillehammer med Mjøsa og kulturlandskapet i Gudbrandsdalen",
+    "query": "kuratert:fylke:innlandet"
+  },
+  {
+    "file": "images/pexels/fylke-vestfold.jpg",
+    "pexelsId": 16829228,
+    "photographer": "John Winther",
+    "photographerUrl": "https://www.pexels.com/@john-winther-90718",
+    "pexelsUrl": "https://www.pexels.com/photo/lake-and-village-in-norway-16829228/",
+    "alt": "Bryggen i Tønsberg med Slottsfjelltårnet i bakgrunnen",
+    "query": "kuratert:fylke:vestfold"
+  },
+  {
+    "file": "images/pexels/fylke-telemark.jpg",
+    "pexelsId": 34804243,
+    "photographer": "Barnabas Davoti",
+    "photographerUrl": "https://www.pexels.com/@barnabas-davoti-31615494",
+    "pexelsUrl": "https://www.pexels.com/photo/heddal-stave-church-iconic-norwegian-landmark-34804243/",
+    "alt": "Heddal stavkirke i Notodden, Norges største stavkirke",
+    "query": "kuratert:fylke:telemark"
+  },
+  {
+    "file": "images/pexels/fylke-agder.jpg",
+    "pexelsId": 12745512,
+    "photographer": "stein egil liland",
+    "photographerUrl": "https://www.pexels.com/@therato",
+    "pexelsUrl": "https://www.pexels.com/photo/the-lighthouse-at-lindesnes-norway-12745512/",
+    "alt": "Lindesnes fyr på Norges sørligste fastlandspunkt",
+    "query": "kuratert:fylke:agder"
+  },
+  {
+    "file": "images/pexels/fylke-rogaland.jpg",
+    "pexelsId": 25036885,
+    "photographer": "Adam Cole",
+    "photographerUrl": "https://www.pexels.com/@adamcole-photography",
+    "pexelsUrl": "https://www.pexels.com/photo/view-of-boats-and-buildings-by-the-harbor-in-stavanger-norway-25036885/",
+    "alt": "Vågen i Stavanger med Valbergtårnet over bryggehusene",
+    "query": "kuratert:fylke:rogaland"
+  },
+  {
+    "file": "images/pexels/fylke-vestland.jpg",
+    "pexelsId": 33583891,
+    "photographer": "Jonathan Borba",
+    "photographerUrl": "https://www.pexels.com/@jonathanborba",
+    "pexelsUrl": "https://www.pexels.com/photo/picturesque-view-of-historic-bryggen-waterfront-33583891/",
+    "alt": "Bryggen i Bergen, UNESCO-verdensarv ved Vågen",
+    "query": "kuratert:fylke:vestland"
+  },
+  {
+    "file": "images/pexels/fylke-more-og-romsdal.jpg",
+    "pexelsId": 16481701,
+    "photographer": "Cynrar",
+    "photographerUrl": "https://www.pexels.com/@cynrar-526338331",
+    "pexelsUrl": "https://www.pexels.com/photo/landscape-seen-from-the-aksla-viewpoint-in-alesund-norway-16481701/",
+    "alt": "Ålesund sett fra utsiktspunktet Aksla",
+    "query": "kuratert:fylke:more-og-romsdal"
+  },
+  {
+    "file": "images/pexels/fylke-trondelag.jpg",
+    "pexelsId": 36364328,
+    "photographer": "Zak Mogel",
+    "photographerUrl": "https://www.pexels.com/@zak-mogel-2158251013",
+    "pexelsUrl": "https://www.pexels.com/photo/colorful-waterfront-buildings-along-river-in-trondheim-36364328/",
+    "alt": "Bryggerekka langs Nidelva i Trondheim",
+    "query": "kuratert:fylke:trondelag"
+  },
+  {
+    "file": "images/pexels/fylke-nordland.jpg",
+    "pexelsId": 38658942,
+    "photographer": "Deimantas Viburys",
+    "photographerUrl": "https://www.pexels.com/@deimantas-viburys-1188635",
+    "pexelsUrl": "https://www.pexels.com/photo/scenic-view-of-lofoten-islands-with-mountains-38658942/",
+    "alt": "Fiskeværet Reine i Lofoten med Lofotveggen bak",
+    "query": "kuratert:fylke:nordland"
+  },
+  {
+    "file": "images/pexels/fylke-troms.jpg",
+    "pexelsId": 31113255,
+    "photographer": "Efrem  Efre",
+    "photographerUrl": "https://www.pexels.com/@efrem-efre-2786187",
+    "pexelsUrl": "https://www.pexels.com/photo/stunning-arctic-bridge-view-in-tromso-norway-31113255/",
+    "alt": "Tromsøbrua over Tromsøysundet en vinterdag",
+    "query": "kuratert:fylke:troms"
+  },
+  {
+    "file": "images/pexels/fylke-finnmark.jpg",
+    "pexelsId": 37968340,
+    "photographer": "Thea Cintia Paixão da Silva",
+    "photographerUrl": "https://www.pexels.com/@cintiapaixao",
+    "pexelsUrl": "https://www.pexels.com/photo/stunning-north-cape-globe-monument-in-norway-37968340/",
+    "alt": "Globusen på Nordkapp-platået mot Barentshavet",
+    "query": "kuratert:fylke:finnmark"
   }
 ]

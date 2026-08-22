@@ -9,6 +9,8 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { JsonLd } from "@/components/JsonLd";
 import { articleSchema } from "@/lib/schema";
+import { FramedImage } from "@/components/FramedImage";
+import { bloggBilde } from "@/lib/bilder";
 
 export const dynamicParams = false;
 
@@ -44,6 +46,7 @@ export default async function BlogPostPage({
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) notFound();
+  const toppBilde = bloggBilde(slug);
 
   return (
     <>
@@ -74,6 +77,17 @@ export default async function BlogPostPage({
             {post.updated !== post.date && ` · Sist faglig oppdatert ${formatDate(post.updated)}`}
           </p>
         </header>
+
+        {toppBilde && (
+          <div className="mx-auto mt-8 max-w-3xl">
+            <FramedImage
+              src={toppBilde.src}
+              alt={toppBilde.alt}
+              priority
+              sizes="(min-width: 768px) 48rem, 100vw"
+            />
+          </div>
+        )}
 
         <div className="article-prose mx-auto mt-10 max-w-3xl">
           <MDXRemote

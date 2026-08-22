@@ -5,6 +5,8 @@ import { HeroSplit } from "@/components/sections/HeroSplit";
 import { ProofStrip } from "@/components/sections/ProofStrip";
 import { PromiseSplit } from "@/components/sections/PromiseSplit";
 import { FinalCta } from "@/components/sections/FinalCta";
+import { FramedImage } from "@/components/FramedImage";
+import { omossBilder } from "@/lib/bilder";
 
 export const metadata: Metadata = {
   title: "Om oss – et lite byrå med store fordeler",
@@ -50,6 +52,19 @@ export default function OmOssPage() {
               kjenner virksomheten — og en fast backup som gjør det samme. Det
               fungerer når vi er seks. Det forsvinner når man blir seks hundre.
             </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            {omossBilder()
+              .slice(0, 2)
+              .map((foto) => (
+                <FramedImage
+                  key={foto.src}
+                  src={foto.src}
+                  alt={foto.alt}
+                  sizes="(min-width: 640px) 24rem, 100vw"
+                />
+              ))}
           </div>
 
           <div>

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { bransjer, getBransje } from "@/content/bransjer";
@@ -18,6 +17,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { serviceSchema } from "@/lib/schema";
 import { Icon } from "@/components/Icon";
 import { Arrow } from "@/components/icons";
+import { FramedImage } from "@/components/FramedImage";
 
 export const dynamicParams = false;
 
@@ -28,7 +28,7 @@ export function generateStaticParams() {
 /** Rammede, tintede bransjefoto (DESIGNPLAN §2.4 — aldri fullbredde med overlay) */
 const bransjeFoto: Record<string, string> = {
   bilforhandlere: "/images/pexels/bilforhandler-1.jpg",
-  handverkere: "/images/pexels/handverker-1.jpg",
+  handverkere: "/images/pexels/handverker-4.jpg", // handverker-1 strøket i bilderevisjonen (BILDEPLAN §2)
   eiendom: "/images/pexels/eiendom-1.jpg",
   netthandel: "/images/pexels/netthandel-1.jpg",
   "borettslag-sameier": "/images/pexels/borettslag-1.jpg",
@@ -118,19 +118,11 @@ export default async function BransjePage({
             </p>
           </div>
           {bransjeFoto[b.slug] && (
-            <div className="relative overflow-hidden rounded-3xl border border-navy/10 lg:col-span-5">
-              <Image
-                src={bransjeFoto[b.slug]}
-                alt={`Regnskap for ${b.navn.toLowerCase()}`}
-                width={720}
-                height={480}
-                className="h-full w-full object-cover"
-              />
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 bg-navy/20 mix-blend-multiply"
-              />
-            </div>
+            <FramedImage
+              src={bransjeFoto[b.slug]}
+              alt={`Regnskap for ${b.navn.toLowerCase()} — illustrasjon fra bransjen`}
+              className="lg:col-span-5"
+            />
           )}
         </div>
       </section>

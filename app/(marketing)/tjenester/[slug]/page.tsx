@@ -17,6 +17,8 @@ import { JsonLd } from "@/components/JsonLd";
 import { serviceSchema } from "@/lib/schema";
 import { Icon } from "@/components/Icon";
 import { CheckIcon, Arrow } from "@/components/icons";
+import { FramedImage } from "@/components/FramedImage";
+import { tjenesteBilde } from "@/lib/bilder";
 
 export const dynamicParams = false;
 
@@ -49,6 +51,7 @@ export default async function TjenestePage({
   if (!t) notFound();
 
   const enabled = leadEnabled();
+  const tjenesteFoto = tjenesteBilde(t.slug);
   const relaterte = t.relaterte
     .map((s) => getTjeneste(s))
     .filter((x): x is NonNullable<typeof x> => !!x);
@@ -95,19 +98,30 @@ export default async function TjenestePage({
       <ProofStrip />
 
       <section className="mx-auto max-w-6xl px-4 py-14">
-        <h2 className="font-display text-h2 font-bold text-ink">
-          Passer for deg som …
-        </h2>
-        <ul data-reveal-group className="mt-6 grid gap-x-10 gap-y-0 md:grid-cols-2">
-          {t.passerFor.map((punkt) => (
-            <li key={punkt} className="flex items-start gap-3 border-t border-navy/10 py-4">
-              <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal/20 text-navy">
-                <CheckIcon className="h-3.5 w-3.5" />
-              </span>
-              <span className="leading-relaxed text-ink">{punkt}</span>
-            </li>
-          ))}
-        </ul>
+        <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
+          <div className="lg:col-span-7">
+            <h2 className="font-display text-h2 font-bold text-ink">
+              Passer for deg som …
+            </h2>
+            <ul data-reveal-group className="mt-6">
+              {t.passerFor.map((punkt) => (
+                <li key={punkt} className="flex items-start gap-3 border-t border-navy/10 py-4">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal/20 text-navy">
+                    <CheckIcon className="h-3.5 w-3.5" />
+                  </span>
+                  <span className="leading-relaxed text-ink">{punkt}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {tjenesteFoto && (
+            <FramedImage
+              src={tjenesteFoto.src}
+              alt={tjenesteFoto.alt}
+              className="lg:col-span-5 lg:mt-14"
+            />
+          )}
+        </div>
       </section>
 
       <section className="bg-mist py-14">

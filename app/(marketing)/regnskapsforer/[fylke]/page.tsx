@@ -21,6 +21,8 @@ import { FinalCta } from "@/components/sections/FinalCta";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { serviceSchema } from "@/lib/schema";
+import { FramedImage } from "@/components/FramedImage";
+import { fylkeBilde } from "@/lib/bilder";
 
 export const dynamicParams = false;
 
@@ -58,6 +60,7 @@ export default async function FylkePage({
   const innhold = buildFylkeInnhold(fylke);
   const enabled = leadEnabled();
   const navn = fylke.visningsnavn;
+  const regionFoto = fylkeBilde(fylke.slug);
   const kommunerSortert = [...fylke.kommuner].sort((a, b) =>
     a.visningsnavn.localeCompare(b.visningsnavn, "nb")
   );
@@ -100,16 +103,26 @@ export default async function FylkePage({
       <ProofStrip />
 
       <section className="mx-auto max-w-6xl px-4 py-14">
-        <div className="max-w-3xl" data-unique>
-          <p className="section-eyebrow">Næringslivet i {navn}</p>
-          <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
-            Et fylke i tall — og hva det betyr for regnskapet ditt
-          </h2>
-          {innhold.intro.map((avsnitt, i) => (
-            <p key={i} className="mt-4 max-w-[70ch] leading-relaxed text-slate">
-              {avsnitt}
-            </p>
-          ))}
+        <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
+          <div className="lg:col-span-7" data-unique>
+            <p className="section-eyebrow">Næringslivet i {navn}</p>
+            <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
+              Et fylke i tall — og hva det betyr for regnskapet ditt
+            </h2>
+            {innhold.intro.map((avsnitt, i) => (
+              <p key={i} className="mt-4 max-w-[70ch] leading-relaxed text-slate">
+                {avsnitt}
+              </p>
+            ))}
+          </div>
+          {regionFoto && (
+            <FramedImage
+              src={regionFoto.src}
+              alt={regionFoto.alt}
+              caption={regionFoto.caption}
+              className="lg:col-span-5 lg:mt-10"
+            />
+          )}
         </div>
       </section>
 

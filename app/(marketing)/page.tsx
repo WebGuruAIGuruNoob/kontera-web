@@ -15,6 +15,8 @@ import { ComparisonTable } from "@/components/sections/ComparisonTable";
 import { CtaBanner } from "@/components/sections/CtaBanner";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
+import { FramedImage } from "@/components/FramedImage";
+import { bilde } from "@/lib/bilder";
 import { site } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -61,6 +63,7 @@ const homeFaq = [
 
 export default function HomePage() {
   const enabled = leadEnabled();
+  const kontorFoto = bilde("omoss:kontorlokale");
   return (
     <>
       <HeroSplit
@@ -128,7 +131,16 @@ export default function HomePage() {
               Bli kjent med oss →
             </Link>
           </div>
-          <ul data-reveal-group className="grid gap-x-8 gap-y-0 sm:grid-cols-2 lg:col-span-7">
+          <div className="lg:col-span-7">
+            {kontorFoto && (
+              <FramedImage
+                src={kontorFoto.src}
+                alt={kontorFoto.alt}
+                className="mb-8"
+                sizes="(min-width: 1024px) 55vw, 100vw"
+              />
+            )}
+            <ul data-reveal-group className="grid gap-x-8 gap-y-0 sm:grid-cols-2">
             {[
               ["Siden " + site.founded, "Solid erfaring fra bil, bygg, eiendom og en lang rekke andre bransjer."],
               ["To kontorer", "Jar i Bærum og Ask i Gjerdrum – og digitale kunder i hele landet."],
@@ -140,7 +152,8 @@ export default function HomePage() {
                 <p className="mt-1.5 text-sm leading-relaxed text-slate">{text}</p>
               </li>
             ))}
-          </ul>
+            </ul>
+          </div>
         </div>
       </section>
 
