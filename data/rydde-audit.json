@@ -1,0 +1,156 @@
+{
+ "generert": "2026-08-22",
+ "kilde": "Ryddeplan-research (wf_f535f027-266)",
+ "kutt": {
+  "perMal": [
+   {
+    "mal": "Forside — app/(marketing)/page.tsx",
+    "seksjonerNaa": 15,
+    "rotFunn": [
+     "«2 statsautoriserte» sies FEM ganger på én side: hero-eyebrow, hero-chips, ProofStrip, StatBand og team-teaser. «6 ansatte» fire ganger. «Korte spørsmål 0 kr» finnes i chips, ProofStrip, StatBand ('Kroner for korte spørsmål: 0'), ProblemSolution-svar 1, PromiseSplit-løfte 3, PricingSection-inkludert, ComparisonTable-rad 1, FinalCta og FAQ — ni forekomster.",
+     "Hero-chips (1–3) er ORDRETT identiske med ProofStrip-fakta (1–3), rendret ~200 px under hverandre.",
+     "ProblemSolution-svarene ER de fire site.promises; PromiseSplit (seksjon 6) gjenforteller nøyaktig samme fire løfter i nummerert form tre seksjoner senere. To redaksjonelle tokolonnere som selger samme innhold.",
+     "StatBand på forsiden er slagord i statistikk-kostyme: «Kroner for korte spørsmål: 0» og «Faste kontaktpersoner: 1 + backup» er ikke tall — de utvanner de to ekte tallene og skurrer mot ekthetsregelen i ånd.",
+     "GarantiBand (seed 'forside') er fjerde/femte gjenfortelling av et løfte, klemt mellom team-teaser og CtaBanner — to stille bånd som kolliderer rett før FAQ.",
+     "CtaBanner peker på #kontakt som ligger 1,5 viewport lenger ned (FinalCta) — tredje CTA-flate i sidens nedre halvdel (PricingSection-kortet er den andre).",
+     "Hero-støy: radial-gradient + eyebrow + serif-italic-H1 + undertekst + 3 chips + 3-bilders collage med translate-offsets + LeadCard med mist-backdrop-forskyvning = åtte konkurrerende virkemidler i første viewport. Dette er 'collage+backdrop+chips i samme hero'-tilfellet."
+    ],
+    "kutt": [
+     "1. KUTT ProofStrip — ordrett duplikat av hero-chips 200 px over. Chips beholdes (de bor der tilliten trengs, ved LeadCard).",
+     "2. KUTT hero-collagen (extra-prop) — team-teaseren har allerede kontorfoto; heroen beholder chips + LeadCard som eneste devices.",
+     "3. KUTT PromiseSplit — SLÅS SAMMEN med ProblemSolution, som allerede leverer samme fire løfter som svar på smertesitater (sterkere form). PricingSection-inkludert blir kanonisk løfteliste.",
+     "4. KUTT StatBand (forsidevarianten) — tallene finnes i chips og team-teaser; geo-sidenes StatBand med ekte Brønnøysund-tall forblir det eneste stat-båndet på siten.",
+     "5. KUTT GarantiBand — 37 ord som gjentar løfte nr. 4 i rekka; det typografiske bruddet mister effekt når PricingSection (navy) og FinalCta (navy) allerede bryter.",
+     "6. KUTT CtaBanner — PricingSection-kortet og FinalCta dekker nedre halvdel; FAQ→FinalCta blir en renere avslutning."
+    ],
+    "behold": "Hero+LeadCard, ProblemSolution(+løftene), ServicesBento, IndustryCards, NumberedJourney, PricingSection, ComparisonTable, team-teaser, Faq, FinalCta = 10 blokker (−33 %). Forsiden er ikke omfattet av quality-gate (porten skanner kun .next/server/app/regnskapsforer). CTA-er igjen: header 2 + leadcard 2 + pris 1 + final 1 + skjema 2 = 8."
+   },
+   {
+    "mal": "Kommune — app/(marketing)/regnskapsforer/[fylke]/[kommune]/page.tsx",
+    "seksjonerNaa": 16,
+    "rotFunn": [
+     "Målt på bygget HTML (asker.html): 6 generiske seksjoner på rad i nedre halvdel — PricingSection (121 ord) → NumberedJourney (104) → ComparisonTable (76) → GarantiBand (23) → PromiseSplit (117) → Arshjul (153) = ~594 ord identisk boilerplate på alle 357 sider. Det er nettopp dette som gjør siden «rotete» og senker unik-andelen (doorway-lukt).",
+     "Hero-chips ('Statsautoriserte', 'Fast kontaktperson + backup', 'Ingen faktura for korte spørsmål') vs ProofStrip rett under: samme tre påstander to ganger i første viewport.",
+     "Hero-undertekst «Én fast regnskapsfører tar helheten, en fast backup kjenner deg også, og alle frister er vårt ansvar» gjenfortelles av ServicesBento-intro («…én fast regnskapsfører som tar helheten»), PromiseSplit (alle fire løfter), GarantiBand-sitatet, Arshjul-milepæl 6 («uten taksameter») og PricingSection-inkludert. Frist-budskapet alene står 5 steder.",
+     "ServicesBento-featurecellen bærer 6 elementtyper: ikon + h3 + beskrivelse + lokal setning + hele NaeringsProfil-stolpediagrammet (5 stolper, tall, kildelinje) + les-mer-lenke — tettest kort på hele siten. Samtidig står «Lokal innsikt»-seksjonen (nr. 3) som max-w-3xl med en TOM høyrekolonne.",
+     "CtaBanner (surface-varianten finnes kun fordi mist-på-mist kolliderte — LØFTEPLAN funn 8; symptom på for mange bånd) ligger én seksjon over PricingSection-kortet som selger nøyaktig samme telefonsamtale.",
+     "GarantiBand → PromiseSplit → Arshjul er tre løfte-gjenfortellinger rygg mot rygg mellom ComparisonTable og Dekning-seksjonen."
+    ],
+    "kutt": [
+     "1. KUTT ProofStrip (20 ord) — chips-duplikat.",
+     "2. KUTT PromiseSplit (117 ord) — løftene bor allerede i hero-undertekst, PricingSection-inkludert og ComparisonTable-radene.",
+     "3. KUTT Arshjul (153 ord) — generisk fristkalender identisk på 357 sider; budskapet «fristene er vårt ansvar» står i hero, ComparisonTable og FAQ. (Kan gjenoppstå som EN redaksjonell blokk på /tjenester/arsoppgjor der den er tematisk hjemme.)",
+     "4. KUTT GarantiBand (23 ord) — fjerde gjentakelse; navy-hierarkiet StatBand→PricingSection→FinalCta bærer allerede bruddene.",
+     "5. KUTT CtaBanner (15 ord) — PricingSection-kortet er neste seksjon; mister banner-ring-CTA-en: 9→8 data-cta, fortsatt over kravet 4.",
+     "6. FLYTT (ikke kutt) NaeringsProfil ut av bento-featurecellen og inn i den tomme høyrekolonnen i «Lokal innsikt»-seksjonen — intro-teksten får sin datavisualisering, featurecellen faller til normal tetthet. Ingen ord fjernes."
+    ],
+    "behold": "MÅ bestå urørt: H1 med «Regnskapsfører i …», Breadcrumbs, LeadCard (data-lead-card), StatBand med «Registrerte virksomheter» + Brønnøysund-kilde, intro (136 data-unique-ord), ServicesBento-localSentences (data-local-service+data-unique), NaeringsProfil, unike FAQ-svar, Dekning/nabolenker (intern lenking), Faq («Spørsmål og svar»-tittel), FinalCta. ADVARSEL: unik-marginen er sidens trangeste tall — min 362 mot krav 350, bare 12 ords slingring — så IKKE ett ord kan røres i data-unique-innhold. Ordregnskap etter kutt: 2038 − 328 ≈ 1710 ≥ 1500 på den tynneste siden. Resultat: 16 → 11 blokker (−31 %). ComparisonTable BEHOLDES her — søkeintensjonen er byråbytte, og den blir eneste differensieringsseksjon etter kuttene."
+   },
+   {
+    "mal": "Fylke — app/(marketing)/regnskapsforer/[fylke]/page.tsx",
+    "seksjonerNaa": 15,
+    "rotFunn": [
+     "Halen PricingSection → NumberedJourney → ComparisonTable → GarantiBand → PromiseSplit er FEM generiske seksjoner på rad før FAQ — på en side hvis egentlige jobb er å rute brukeren til riktig kommuneside (Kommunevelgeren) og ta «regnskapsfører i [fylke]»-søket.",
+     "Chips vs ProofStrip: samme dublett som kommune ('Statsautoriserte' + 'Fast kontaktperson + backup' begge steder).",
+     "GarantiBand + PromiseSplit rygg mot rygg rett før FAQ — to løfte-gjenfortellinger etter at ComparisonTable nettopp listet de samme løftene som tabellrader.",
+     "ComparisonTable vises her OG på hver kommuneside brukeren klikker seg videre til — samme tabell to klikk på rad.",
+     "Fylkessiden er IKKE numerisk portet: quality-gate.mjs filtrerer på erKommune (rel.split('/').length === 2) før bruddsjekken, så fylket kan kuttes hardere enn kommunen."
+    ],
+    "kutt": [
+     "1. KUTT ProofStrip — chips-duplikat.",
+     "2. KUTT GarantiBand + PromiseSplit — tre-i-rad-gjentakelsen før FAQ.",
+     "3. KUTT ComparisonTable — den venter på brukeren på neste klikk (kommunesiden); NumberedJourney beholdes som eneste 'slik starter du'-seksjon.",
+     "4. KUTT CtaBanner — PricingSection-kortet er neste seksjon."
+    ],
+    "behold": "Hero+LeadCard, fylkesintro+regionFoto, StatBand (Brønnøysund-tall), Kommunevelgeren (SEO-kritisk intern lenking — toppkort + kolonneliste, urørlig), EditorialSections, ServicesBento, PricingSection, NumberedJourney, Faq, FinalCta = 10 blokker (−33 %)."
+   },
+   {
+    "mal": "Tjeneste — app/(marketing)/tjenester/[slug]/page.tsx",
+    "seksjonerNaa": 11,
+    "rotFunn": [
+     "Slankest mal i dag, men: CtaBanner-teksten («Lurer du på noe om lønnskjøring? Korte spørsmål koster aldri noe») gjentar ProofStrip-faktumet «Korte spørsmål: 0 kr» fra to seksjoner over — og #kontakt-målet dekkes av LeadCard øverst og FinalCta nederst.",
+     "ComparisonTable er byrå-vs-byrå-generisk; på en tjenesteside evaluerer brukeren TJENESTEN, ikke byråvalget — 76 boilerplate-ord som ikke matcher intensjonen.",
+     "«Relaterte tjenester» er en egen seksjon på 8 ord med 2–3 kort — en hel seksjonsryggrad (h2 + grid) for tre lenker.",
+     "Heroen har ingen chips her — så ProofStrip er malens ENESTE tillitsstripe. Dagens site har altså to konkurrerende tillits-devices (chips på geo/forside, ProofStrip på tjeneste/bransje) som gjør identisk jobb."
+    ],
+    "kutt": [
+     "1. KUTT CtaBanner — budskapsduplikat av ProofStrip + LeadCard.",
+     "2. KUTT ComparisonTable — feil intensjon på denne malen; NumberedJourney tar bytte-barrieren.",
+     "3. SLÅ SAMMEN «Relaterte tjenester» inn som lenkerad nederst i EditorialSections-seksjonen (behold lenkene — intern lenking består i DOM, bare ikke som egen seksjon).",
+     "4. Global forenkling: erstatt ProofStrip-båndet med de samme tre faktaene som hero-chips (ett tillits-device på hele siten, samme mønster som geo-malene)."
+    ],
+    "behold": "Hero(+chips)+LeadCard, «Passer for deg som…»+foto, «Dette inngår»-bento, EditorialSections (555 ord — sidens payload, urørlig)+relaterte-lenkerad, NumberedJourney, Faq (JSON-LD), FinalCta = 7–8 blokker (−27 til −36 %). Tjenestesidene er ikke omfattet av quality-gate."
+   },
+   {
+    "mal": "Bransje — app/(marketing)/bransjer/[slug]/page.tsx",
+    "seksjonerNaa": 10,
+    "rotFunn": [
+     "GarantiBand og CtaBanner ligger RYGG MOT RYGG (seksjon 5+6 i bygget HTML) — et pull-quote-bånd umiddelbart etterfulgt av et CTA-banner, to fullbredde-avbrytelser som skiller den redaksjonelle payloaden (837 ord om avansemoms) fra «Slik hjelper vi»-kortene den setter opp.",
+     "GarantiBand-sitatet er et generisk løfte (fast fører + backup) på en side hvis hele poeng er BRANSJE-spissing — det generiske sitatet svekker spisskompetanse-argumentet i stedet for å støtte det.",
+     "Samme chips-vs-ProofStrip-situasjon som tjeneste: ingen chips i heroen, ProofStrip alene — inkonsistent tillits-device på tvers av siten.",
+     "«Kjenner du deg igjen?»-smertene er bransjespesifikke og redaksjonelle — dette er ProblemSolution-formatet brukt RIKTIG; den fortjener plassen (i motsetning til GarantiBand)."
+    ],
+    "kutt": [
+     "1. KUTT GarantiBand — generisk løfte som bryter opp bransjeargumentasjonen; budskapet finnes i FinalCta og FAQ.",
+     "2. KUTT CtaBanner — LeadCard i hero + FinalCta dekker; med GarantiBand borte glir Editorial → «Slik hjelper vi» sømløst.",
+     "3. Samme globale grep: ProofStrip-båndet erstattes av hero-chips (tre fakta) — én tillitsstripe, null bånd."
+    ],
+    "behold": "Hero(+chips)+LeadCard, «Kjenner du deg igjen?»-smerter+bransjefoto, EditorialSections (payload), «Slik hjelper vi»+relaterte tjenester (allerede riktig sammenslått i én seksjon), NumberedJourney, Faq, FinalCta = 7 blokker (−30 %). Bransjesidene er ikke omfattet av quality-gate."
+   }
+  ],
+  "notes": "TVERRGÅENDE DOM (rådata for hovedagenten): Sitens rot skyldes tre systemfeil, ikke enkeltseksjoner. (1) LØFTE-INFLASJON: de fire site.promises gjenfortelles av SEKS komponenter — ProblemSolution, PromiseSplit, GarantiBand, ComparisonTable, PricingSection-inkludert og ProofStrip — pluss hero-undertekster. Kanonisk hjem etter kuttene: ProblemSolution (forside), ComparisonTable (kommune), PricingSection-inkludert (overalt). PromiseSplit og GarantiBand fjernes fra ALLE maler; ProofStrip-komponenten pensjoneres helt (chips overtar på tjeneste/bransje). (2) CTA-INFLASJON: fire konverteringsflater per side (LeadCard, CtaBanner, PricingSection-kort, FinalCta) + header. CtaBanner kuttes overalt — de tre andre er distinkte (skjema-i-hero, pris-kontekst, bunnskjema). (3) BOILERPLATE-HALEN på geo: 5–6 identiske seksjoner på rad på 357 sider — å kutte dem ØKER unik-andelen og reduserer doorway-risiko. HARDE RAMMER VERIFISERT MOT BYGGET HTML: quality-gate porter KUN kommunesider (erKommune-filter) — forside/fylke/tjeneste/bransje kan kuttes fritt. Kommune etter full kuttliste: ord 2038→~1710 (krav 1500) ✓; data-cta 9→8 (krav 4, mister kun banner-ring) ✓; data-local-service urørt (6 i DOM, krav 3) ✓; lead-kort/H1/«Registrerte virksomheter»/«Spørsmål og svar»/Brønnøysund-markører bor i StatBand/Faq/LeadCard som alle består ✓. KRITISK VARSEL: data-unique-marginen er trangest — min 362 ord mot krav 350 (12 ords slingring). Kuttene over rører ALDRI data-unique-innhold (intro, localSentences, unike FAQ-svar, NaeringsProfil-området) — hovedagenten må håndheve dette i implementasjonen. Beste enkeltstående ikke-kutt-grep: flytt NaeringsProfil fra ServicesBento-featurecellen til den tomme høyrekolonnen i «Lokal innsikt»-seksjonen (kommune) — løser sidens tetteste kort og sidens tommeste seksjon i samme flytt. Filreferanser: C:\\Users\\HP Laserjet p2500\\Kontera\\app\\(marketing)\\page.tsx, ...\\regnskapsforer\\[fylke]\\page.tsx, ...\\[fylke]\\[kommune]\\page.tsx, ...\\tjenester\\[slug]\\page.tsx, ...\\bransjer\\[slug]\\page.tsx, C:\\Users\\HP Laserjet p2500\\Kontera\\components\\sections\\{ProofStrip,PromiseSplit,GarantiBand,CtaBanner,Arshjul,ComparisonTable,StatBand,ServicesBento,NaeringsProfil}.tsx, C:\\Users\\HP Laserjet p2500\\Kontera\\scripts\\quality-gate.mjs. Måletall fra bygget HTML: .next\\server\\app\\regnskapsforer\\akershus\\asker.html (2446 ord, 412 unike, 9 CTA) og gate-kjøring 357 sider (min 2038 / median 2407 ord; min 362 unike; min 9 CTA)."
+ },
+ "system": {
+  "regler": [
+   {
+    "regel": "R1 — Ett seksjonshode: all eyebrow+H2+intro rendres av én <SectionHeading>-komponent med fast intern rytme (eyebrow → h2 mt-2 → intro mt-4) og tone-prop for mørke bånd; ingen seksjon får sette eget hode inline, og ingen H2 uten eyebrow.",
+    "implementasjon": "Ny components/SectionHeading.tsx: props {eyebrow: string (påkrevd), title, intro?, tone?: 'light'|'dark', id?}. Render: <p class='section-eyebrow'> (dark: text-azure-variant via tone) + <h2 class='mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]'> (dark: text-white) + intro <p class='mt-4 max-w-2xl leading-relaxed text-slate'> (dark: text-white/80). Erstatter i dag 5 avvik: tjenester/[slug] «Passer for deg …» og «Dette inngår» (H2 uten eyebrow), «Relaterte tjenester» (H2 i font-sans text-xl — ulovlig), bransjer/[slug] «Kjenner du deg igjen?» og «Slik hjelper vi» (uten eyebrow), fylkesidens kommunevelger (H2 uten eyebrow, intro mt-3), samt de duplerte inline-eyebrowene i PricingSection.tsx:30 og FinalCta.tsx:22 (som også driver: FinalCta har mt-3 på H2 der alle andre har mt-2). Håndhevelse: grep -rE 'text-h2' app components --include=*.tsx | grep -v SectionHeading skal gi 0 treff; grep 'section-eyebrow' utenfor SectionHeading.tsx skal gi 0."
+   },
+   {
+    "regel": "R2 — Luftskala med tre trinn: section-y-sm (py-12 lg:py-16, støtteseksjoner: Faq, Arshjul, GarantiBand, dekning), section-y (py-16 lg:py-20, standard), section-y-lg (kun forside-hero py-16 lg:py-24); avstand hode→innhold er ALLTID mt-10, aldri mt-5/6/8.",
+    "implementasjon": "Tre utilities i globals.css: .section-y-sm { @apply py-12 lg:py-16 } .section-y { @apply py-16 lg:py-20 } .section-y-lg { @apply py-16 lg:py-24 }. Dagens fordeling er kaotisk: py-14 (18 forekomster — største avviker, alle inline-seksjoner i geo/tjeneste/bransje-malene), py-16 uten lg-trinn (Faq, Arshjul, ComparisonTable), py-16 lg:py-20 (8), py-8 (CtaBanner — beholdes som eneste 'banner'-unntak), py-4 (ProofStrip — beholdes som 'strip'-unntak). Hode→innhold i dag: mt-10 (12), mt-8 (3: ComparisonTable, Faq, kommunevelger), mt-6 (6: «Dette inngår», «Slik hjelper vi», passerFor-lista m.fl.), mt-5 (Relaterte tjenester) — alle normaliseres til mt-10. Håndhevelse: grep -rE '\\bpy-14\\b|\\bpy-10\\b' app/\\(marketing\\) components/sections = 0; grep -rE '(mt-5|mt-6|mt-8) grid' components/sections app/\\(marketing\\) = 0."
+   },
+   {
+    "regel": "R3 — Flatebudsjett per side: maks 2 navy-flater før footer (StatBand-panelet teller som navy), maks 3 mist-bånd, og aldri to fullbredde-flater med samme tone som naboer; veksling skjer i fast rekkefølge papir → aksent → papir.",
+    "implementasjon": "Brudd i dag: kommunesiden har 3 navy (StatBand-panel, PricingSection, FinalCta) + navy-deep footer og 4 mist-bånd (EditorialSections-wrapper, ComparisonTable, PromiseSplit, Dekning) = 16 tonebytter nedover siden; fylkesiden har samme 3 navy; forsiden har mist-på-mist-nabofeil (PromiseSplit bg-mist rett fulgt av IndustryCards bg-mist). Fiks: PricingSection får tone-prop ('navy' på forside/tjenester, 'mist' på geo-sider der StatBand allerede tar navy-kvoten); IndustryCards på forsiden flyttes til papir (fjern bg-mist fra IndustryCards.tsx:29); PromiseSplit på kommunesiden går til papir (Arshjul-naboen er papir — da må Dekning beholde mist). Håndhevelse i scripts/design-lint.mjs mot .next/server/app-HTML: tell 'bg-navy'-seksjoner før <footer> ≤ 2 og sjekk at to påfølgende <section> aldri deler bg-mist/bg-navy."
+   },
+   {
+    "regel": "R4 — Breddehierarki med tre nivåer, aldri per-seksjon-valg: max-w-6xl er ENESTE seksjonscontainer; max-w-3xl er ENESTE bredde for énkolonne-tekstmoduler (Faq-indre, innsiktsblokk, GarantiBand); løpende avsnitt måles ALLTID med max-w-[65ch].",
+    "implementasjon": "Dagens spredning: max-w-6xl (40), max-w-2xl (13, hode-introer — erstattes av SectionHeadings innebygde max-w-2xl), max-w-3xl (8), max-w-5xl (2: ComparisonTable-container + EditorialSections-indre — begge flyttes til 6xl-container med indre 3xl/65ch), max-w-4xl (1: GarantiBand → 3xl), max-w-xl/lg (4 ad hoc). Prose-cap-zoo saneres: [70ch]/[52ch]/[48ch]/[44ch]/[46ch]/[65ch]/[36rem]/[34rem] → alle brødtekstavsnitt max-w-[65ch], korttekst uten cap (kortbredden begrenser). Håndhevelse: grep -rE 'max-w-(4xl|5xl|xl|lg)\\b' app/\\(marketing\\) components/sections = 0; grep -rE 'max-w-\\[(3[0-9]rem|[45][0-9]ch|70ch)\\]' = 0."
+   },
+   {
+    "regel": "R5 — Elementbudsjett per seksjon: maks 6 repeterte enheter synlig (kort/stats/steg), lister over 6 enheter rendres som hairline-liste eller kolonneliste — aldri kortgrid; maks 1 dekorativ pill/badge per seksjon; en bento-featurecelle bærer maks ett tilleggselement (viz ELLER lokalsetning-cluster, ikke fritt påfyll).",
+    "implementasjon": "Dagens tellinger er stort sett innenfor (StatBand 6, bento 6, nabokort 6, steg 3, chips 3, ProofStrip 5 — behold), men featurecellen i ServicesBento på kommunesider stabler i dag ikon + h3 + beskrivelse + data-local-service-setning + NaeringsProfil-viz + «Les mer» = 6 elementer i én celle; regelen kapper til ikon + h3 + beskrivelse + viz + lenke, og data-local-service-setningene bor i de små cellene (kvalitetsporten krever ≥3 totalt på siden, ikke i featurecellen — markørantallet er uendret). Pills i dag: Arshjul-tidspill (bg-azure/12 rounded-full, Arshjul.tsx:52) → erstattes med ren uppercase text-xs-etikett uten pill; IndustryCards «Spisskompetanse»-pillen beholdes (1 per seksjon = innenfor budsjett). Håndhevelse: design-lint teller <a|div class*='card-line' per section ≤ 6 og rounded-full-pills per section ≤ 1."
+   },
+   {
+    "regel": "R6 — Bildestandard: FramedImage er eneste fotoramme, i nøyaktig 3 plasseringer — (a) splitkolonne lg:col-span-5 toppjustert uten optisk offset, (b) editorial-kolonne (col-span-4, maks 2 per side), (c) forsidens teambilde i 7-kolonnen; maks 3 foto per side; caption obligatorisk på stedsbilder; collage-3-up er forside-eksklusiv signatur.",
+    "implementasjon": "Dagens varianter: collage 3-up m/ stagger (forside), teambilde 7-kol, fylkeslandemerke lg:col-span-5 lg:mt-10, kommune-dekningsbilde inni tekstkolonnen (mt-6), tjenestebilde lg:col-span-5 lg:mt-14, tjeneste2 i editorial (hidden under lg), bransjebilde col-span-5 uten offset — 7 varianter blir 3. Konkret: fjern lg:mt-10 (fylke/[fylke]/page.tsx:126) og lg:mt-14 (tjenester/[slug]/page.tsx:123) — toppjustering mot innholdskolonnen er standard; kommune-dekningsbildet flyttes ut av 5-kolonne-teksten eller ut (siden har allerede 3 foto: region + 2 fagblokk). sizes-prop standardiseres per plassering: splitkolonne '(min-width:1024px) 26rem, 100vw', editorial '(min-width:1024px) 20rem, 100vw'. Håndhevelse: grep -rn 'FramedImage' app components | wc per side ≤ 3 (design-lint teller <figure i bygget HTML); grep 'lg:mt-1[04]' rundt FramedImage = 0."
+   },
+   {
+    "regel": "R7 — Typoskala-sanering: null vilkårlige piksel-størrelser — alle ad-hoc [rem]-verdier erstattes av tokens; kort-H3 har ÉN stil (font-sans text-base font-bold), feature-/liste-H3 har ÉN stil (font-display text-xl font-bold); tabular-nums på ALLE tall inkl. ProofStrip-fakta og chips.",
+    "implementasjon": "Ad-hoc-verdier i dag: text-[0.72rem] (eyebrow-duplikatene i PricingSection/FinalCta — dør med R1), text-[0.68rem] (Arshjul-pill + NaeringsProfil-kilde), text-[0.65rem] (IndustryCards-pill), text-[0.98rem] (Faq-summary → text-base). Nye tokens i globals.css: .text-tag { @apply text-xs font-bold uppercase tracking-wider } for pills/etiketter. H3-drift i dag: font-sans text-base (bento-småceller, Arshjul, kort), font-sans text-lg (NumberedJourney, tjenestelenker-heading), font-display text-xl (PromiseSplit), font-display text-2xl (featureceller), font-display text-lg (forside-teamliste) — normaliseres til to nivåer. StatBand-tallstørrelser (text-5xl/6xl feature, text-2xl/3xl rest) beholdes som komponent-intern skala. Håndhevelse: grep -rE 'text-\\[0\\.[0-9]+rem\\]' app components = 0; grep -rE 'font-sans text-lg font-bold' components/sections = 0."
+   },
+   {
+    "regel": "R8 — Italic-budsjett: serif-kursiv finnes maks 2 steder per side — hl-serif-italic KUN i H1-display (ett nøkkelord) og roman «guillemet»-sitater ellers; ProblemSolution-H2, bransje-smertelister og GarantiBand mister italic.",
+    "implementasjon": "I dag 10 filer med italic og opptil 4 italic-flater på forsiden (hero-H1 + ProblemSolution-H2 «Tør du» + 4 sitat-rader + GarantiBand). Konkret: fjern italic fra GarantiBand.tsx:22 (behold font-display font-semibold + guillemets — ro uten å miste pull-quote-karakteren), fjern italic fra bransjer/[slug]/page.tsx:110 (smertelisten beholder font-display text-lg + «»), fjern hl-serif-italic fra ProblemSolution.tsx:33 sin H2 (H2 er ikke display), sitatene i ProblemSolution.tsx:39 beholder italic som sidens ene sitatflate. hl-serif-italic er da reservert H1 (forsiden). Håndhevelse: grep -rn 'italic' components/sections app/\\(marketing\\) --include=*.tsx ≤ 1 treff per fil, og hl-serif-italic kun i h1-kontekst (grep -B2 skal vise <h1)."
+   },
+   {
+    "regel": "R9 — CTA-stige med fast rytme: nøyaktig én CtaBanner per side, plassert etter bento/fagstoff; stigen er alltid LeadCard(hero) → CtaBanner → PricingSection-CTA → FinalCta; banner-varianten (mist/surface) beregnes av naboseksjonens tone, ikke velges manuelt.",
+    "implementasjon": "Kvalitetsporten (≥4 data-cta) dekkes av stigen: leadcard-send/-tel (2) + banner-tilbud (1) + pris-tilbud (1) + final-ring (1) = 5, med ring-primær-modus intakt (CtaBanner/LeadCard/Pricing bytter selv til tel: når !leadEnabled). variant-propen i CtaBanner.tsx gjøres om fra manuell ('surface' når naboen er mist, LØFTEPLAN funn 8) til påkrevd 'neighborTone'-prop som malene setter fra flatebudsjett-planen i R3 — dermed kan ikke mist-på-mist-bannere oppstå ved omrokkering. Håndhevelse: design-lint teller data-cta='banner-*' per bygget side == 1 og verifiserer data-cta totalt ≥ 4 (uendret gate)."
+   },
+   {
+    "regel": "R10 — Dekor-strykeliste for 2026-ro: stryk collage-staggeren (translate-y-2/4), stryk LeadCard-asidens mist-backdrop-forskyvning (before:translate-x-3/y-3), stryk gradienten i NaeringsProfil-søylene, stryk →-halen i NumberedJourney-tallene; BEHOLD som eneste signaturgrep per side: StatBand-overlappen (-mt-4), azure-tellerne og hairline-systemet.",
+    "implementasjon": "Konkret: app/(marketing)/page.tsx:91+98 fjern className='translate-y-2'/'translate-y-4' på collage-bildene (grid-en alene gir nok liv); HeroSplit.tsx:88 fjern before:absolute…before:translate-x-3 before:translate-y-3 before:bg-mist (LeadCard-hairlinen bærer kortet alene); NaeringsProfil.tsx:32 bg-gradient-to-r from-blue to-azure → bg-blue (DESIGNPLAN §2.1s gradientskepsis + roligere datauttrykk); NumberedJourney.tsx:47 fjern <span class='ml-2 text-navy/25'>→</span> (tallet holder; → beholdes i lenker/CTA-er der det er retningsmotiv). StatBand-overlappen beholdes som sidens ene overlapp-grep (§2.3 tillater 1–2). Håndhevelse: grep -rE 'translate-y-[0-9]' app/\\(marketing\\)/page.tsx = 0; grep 'before:translate' components/sections = 0; grep 'gradient-to-r' components/sections/NaeringsProfil.tsx = 0."
+   },
+   {
+    "regel": "R11 — Hairline-disiplin ved tonebytte: border-y kun på fullbredde-flater der BEGGE naboer er papir; flater som grenser til en annen tonet flate deler én hairline (border-t hos den nederste), aldri doble streker; kort-hairlines er alltid border-navy/10 med hover border-navy/25 — ingen andre kantfarger på lys grunn.",
+    "implementasjon": "I dag har ProofStrip, ComparisonTable, GarantiBand og Dekning border-y uavhengig av naboer — etter R3-omrokkeringen ville GarantiBand(border-y surface) møte ComparisonTable(border-y mist) med dobbel strek. Implementeres som edge-prop på båndseksjonene: edge?: 'both'|'top'|'none', satt av malen ut fra R3-sekvensen. Kantfarge-avvik som saneres: LeadCard-inputs beholder border-navy/30 (WCAG-unntaket §7b.5), PricingSection-kortet border-white/15 og StatBand-kilde på navy beholder white-hairlines (--color-hairline-dark er definert for dette). Håndhevelse: design-lint sjekker i bygget HTML at ingen to naboseksjoner begge har border-klasser mot samme kant; grep -rE 'border-(slate|gray|ink)/' components = 0."
+   },
+   {
+    "regel": "R12 — Håndhevelsen kodes, ikke huskes: nytt scripts/design-lint.mjs kjøres i samme npm-steg som quality-gate og bryter bygget ved regelbrudd; kvalitetsportens markører er fredet tekst som ALDRI refaktoreres bort.",
+    "implementasjon": "design-lint.mjs får to moduser: (1) kilde-greps (R1/R2/R4/R7/R8/R10-uttrykkene over som regex-liste med 0-treff-krav), (2) DOM-tellinger mot .next/server/app/*.html (R3 navy≤2/mist≤3/nabo-tone, R5 kort≤6, R6 figure≤3, R9 banner==1). Fredet-liste som lint-en verifiserer FORTSATT finnes etter enhver omskriving: data-lead-card, data-cta≥4, data-local-service≥3, data-unique-regioner (≥350 ord), «Registrerte virksomheter»-label i StatBand-items (kommunesider), «Spørsmål og svar»-streng i Faq eyebrow/title, «Brønnøysundregistrene» i StatBand source-linje, «Regnskapsfører i» i H1, Breadcrumbs + FAQ details/summary server-rendret i DOM, ring-primær når !leadEnabled. Kjøres som npm run qa:design; grønn port = alle 372 geo-sider + kjerne-sidene består både quality-gate.mjs og design-lint.mjs."
+   }
+  ],
+  "notes": "RÅDATA-GRUNNLAG (målt i kildekoden 2026-08-22):\n\nSPACING-DRIFT: py-14×18 (alle inline-seksjoner i geo/tjeneste/bransje-maler), py-16×12 hvorav bare 8 har lg:py-20-trinn (Faq/Arshjul/ComparisonTable mangler lg-trinn), py-12+lg:py-16 (compact-hero), py-8 (CtaBanner), py-4 (ProofStrip), pb-14+-mt-4 (StatBand). Hode→innhold: mt-10×12, mt-8×3, mt-6×6, mt-5×1. Intro-avstand: mt-4 standard, mt-3 i 3 seksjoner (dekning, kommunevelger, fylke-intro-caption-kolonnen).\n\nSEKSJONSHODE-AVVIK (7 stk): tjenester «Passer for deg…»/«Dette inngår» uten eyebrow; «Relaterte tjenester» som font-sans text-xl-H2 (eneste sans-H2 i systemet); bransjer «Kjenner du deg igjen?»/«Slik hjelper vi» uten eyebrow; fylke-kommunevelger uten eyebrow; PricingSection.tsx:30 og FinalCta.tsx:22 duplerer eyebrow-stilen inline (text-[0.72rem]…text-azure) og FinalCta bruker mt-3/leading-tight på H2 mot mt-2 ellers.\n\nFLATESEKVENS kommuneside (verst): papir→surface-strip→papir→NAVY-panel→papir→surface-banner→MIST→NAVY→papir→MIST→surface→MIST→papir→MIST→papir→NAVY→navy-deep-footer = 3 navy før footer og 4 mist-bånd. Fylkeside: samme 3 navy. Forside: mist-på-mist-feil (PromiseSplit+IndustryCards) + 3 navy.\n\nBREDDE: max-w-6xl×40, 2xl×13, 3xl×8, 5xl×2 (ComparisonTable-container, EditorialSections-indre), 4xl×1 (GarantiBand), xl/lg×4. Prose-caps i 8 varianter: 70/65/52/48/46/44ch + 36/34rem.\n\nTYPO: ad-hoc-størrelser [0.98rem]/[0.72rem]/[0.68rem]/[0.65rem]; H3 i 5 varianter (sans base/lg, display lg/xl/2xl). Italic i 10 filer; forsiden har 4 italic-flater. tabular-nums finnes i StatBand/NaeringsProfil/nabokort/kommunevelger/PromiseSplit-numre men mangler i ProofStrip/chips-tall.\n\nBILDEVARIANTER: 7 (collage-3up m/stagger, team-7kol, fylke-5kol+lg:mt-10, kommune-dekning-i-tekstkolonne, tjeneste-5kol+lg:mt-14, editorial-4kol hidden-under-lg, bransje-5kol uten offset) → standardiseres til 3.\n\nHARDE RAMMER RESPEKTERT: Ingen regel rører kvalitetsportens markører (scripts/quality-gate.mjs:51-72: ≥1500 ord, ≥350 data-unique, ≥4 data-cta, ≥3 data-local-service, data-lead-card, «Regnskapsfører i»-H1, «Registrerte virksomheter»/«Spørsmål og svar»/«Brønnøysundregistrene»), ekthetsregelen (ingen nye tall/sitater innføres), ring-primær-modusen (all CTA-logikk beholder !leadEnabled-grenene) eller SEO-DOM (breadcrumbs, details/summary-FAQ, interne lenker, JsonLd). R5s flytting av lokalsetninger ut av featurecellen endrer ikke data-local-service-antallet (≥3 totalt består). R3s tone-varianter endrer bakgrunn, aldri innhold/rekkefølge i DOM.\n\nANBEFALT REKKEFØLGE FOR HOVEDAGENT: R1+R2 først (fjerner mest visuell støy per time), så R3+R11 sammen (flate+hairline er ett refaktoreringspass i malene), R4/R7/R8 som mekaniske greps, R5/R6/R9/R10 per komponent, R12 til slutt som port. Filer som berøres mest: components/SectionHeading.tsx (ny), globals.css (tokens), de 5 malene, ServicesBento/StatBand/PricingSection/CtaBanner/GarantiBand/NumberedJourney/NaeringsProfil/HeroSplit, scripts/design-lint.mjs (ny). Absolutte stier: C:\\Users\\HP Laserjet p2500\\Kontera\\components\\sections\\*.tsx, C:\\Users\\HP Laserjet p2500\\Kontera\\app\\(marketing)\\..., C:\\Users\\HP Laserjet p2500\\Kontera\\scripts\\quality-gate.mjs."
+ }
+}
