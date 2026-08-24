@@ -28,14 +28,14 @@ export function ContactForm({ enabled }: { enabled: boolean }) {
           <a
             href={site.phoneHref}
             data-cta="skjema-ring-fallback"
-            className="rounded-lg bg-blue px-6 py-3 font-sans font-bold text-white hover:bg-blue-dark"
+            className="pille"
           >
             Ring {site.phoneDisplay}
           </a>
           <a
             href={site.emailHref}
             data-cta="skjema-epost-fallback"
-            className="rounded-lg border border-navy/25 px-6 py-3 font-sans font-bold text-navy hover:border-navy/50"
+            className="inline-flex h-[52px] items-center justify-center rounded-full border border-navy/25 px-6 font-sans font-bold text-navy transition-colors hover:border-navy/50"
           >
             {site.email}
           </a>
@@ -133,7 +133,7 @@ export function ContactForm({ enabled }: { enabled: boolean }) {
           type="submit"
           disabled={status === "sending"}
           data-cta="skjema-send"
-          className="rounded-lg bg-blue px-6 py-3.5 font-sans text-base font-bold text-white transition-colors hover:bg-blue-dark disabled:opacity-60"
+          className="pille disabled:opacity-60"
         >
           {status === "sending" ? "Sender …" : "Få et uforpliktende tilbud"}
         </button>

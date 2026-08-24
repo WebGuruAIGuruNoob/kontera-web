@@ -65,7 +65,7 @@ export function LeadCard({
         <a
           href={site.phoneHref}
           data-cta="leadcard-ring"
-          className="mt-5 flex items-center justify-center gap-2.5 rounded-lg bg-blue px-6 py-4 font-sans text-lg font-bold text-white transition-colors hover:bg-blue-dark"
+          className="pille mt-5 w-full text-lg"
         >
           <PhoneIcon className="h-5 w-5" />
           {site.phoneDisplay}
@@ -173,7 +173,7 @@ export function LeadCard({
           type="submit"
           disabled={status === "sending"}
           data-cta="leadcard-send"
-          className="rounded-lg bg-blue px-6 py-3.5 font-sans text-base font-bold text-white transition-colors hover:bg-blue-dark disabled:opacity-60"
+          className="pille disabled:opacity-60"
         >
           {status === "sending" ? "Sender …" : "Få et uforpliktende tilbud"}
         </button>

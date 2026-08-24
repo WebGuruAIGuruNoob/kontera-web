@@ -69,7 +69,7 @@ export default async function BlogPostPage({
       <article className="mx-auto max-w-6xl px-4 py-12">
         <header className="mx-auto max-w-3xl">
           <p className="section-eyebrow">Fagstoff</p>
-          <h1 className="mt-2 font-display text-3xl font-extrabold leading-tight text-ink [text-wrap:balance] lg:text-4xl">
+          <h1 className="mt-2 font-display text-3xl font-semibold leading-tight text-navy [text-wrap:balance] lg:text-4xl">
             {post.title}
           </h1>
           <p className="mt-4 text-sm text-slate">
@@ -96,8 +96,8 @@ export default async function BlogPostPage({
           />
         </div>
 
-        <aside className="mx-auto mt-12 max-w-3xl rounded-lg border border-azure/40 bg-mist p-6">
-          <p className="font-display text-lg font-bold text-navy">
+        <aside className="mx-auto mt-12 max-w-3xl rounded-3xl bg-mist p-6 shadow-[0_4px_12px_rgba(28,79,45,0.06)]">
+          <p className="font-display text-lg font-semibold text-navy">
             Snakk med en regnskapsfører om din situasjon
           </p>
           <p className="mt-2 text-sm leading-relaxed text-slate">
@@ -106,15 +106,12 @@ export default async function BlogPostPage({
             honoraret.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
-            <a
-              href={site.phoneHref}
-              className="rounded-md bg-blue px-5 py-2.5 font-display text-sm font-bold text-white hover:bg-blue-dark"
-            >
+            <a href={site.phoneHref} className="pille-sm">
               Ring {site.phoneDisplay}
             </a>
             <Link
               href="/kontakt"
-              className="rounded-md border border-line bg-white px-5 py-2.5 font-display text-sm font-bold text-navy hover:border-blue"
+              className="inline-flex h-11 items-center rounded-full border border-navy/25 bg-white px-5 text-sm font-bold text-navy transition-colors hover:border-navy/50"
             >
               Send en melding
             </Link>

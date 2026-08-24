@@ -3,6 +3,27 @@
 Nettsiden til Kontera Regnskap AS. Next.js (App Router, SSG) + Tailwind v4 + MDX.
 **Les [MASTERPLAN.md](MASTERPLAN.md) først** — den er kanonisk for strategi, struktur og regler.
 
+## Designsystem 3.0 — «Inkludert» (Henriks valg 2026-08-24, gjelder HELE siten)
+
+Vinnerdesignet fra /forslag-runden (stil-DNA: Randi/Fiken/Testen/Drivly) er rullet ut globalt:
+
+- **Palett:** skoggrønn `navy` #1C4F2D (mørk rolle), elgul `gul` #FFD505 (KUN signatur-CTA),
+  grønntonede nøytraler (`paper` #F5F8F5, `ink` #1E2A20, `slate` #3C5243), pastellbånd
+  `mist` #E4F2E4 / `cream` #FBF7EC / `varm` #FFFBEB. Token-NAVNENE fra 2.0 består
+  (navy/blue/azure/teal) med nye verdier — IKKE innfør nye fargenavn eller rå hexer i maler.
+- **Typografi:** Fraunces (display, `font-display`, semibold — ikke bold) + Hanken Grotesk
+  (`font-sans`). Overskrifter i `text-navy`, deadpan-tosetningsstil («Alt du trenger.
+  Ingenting du ikke trenger.»).
+- **CTA:** `className="pille"` (elgul glød-pille, definert i globals.css) er ENESTE
+  primærknapp; `pille-sm` i header. Sekundær = tekstlenke `font-semibold text-navy
+  underline-offset-4 hover:underline`. Ring er primærhandling til Resend er verifisert.
+- **Seksjonsrytme:** pastellbånd veksler mot papir (aldri to bånd rygg mot rygg), kort er
+  `rounded-3xl` med myk grønn skygge + løft-hover, FAQ ligger på `varm`-bånd, og sidens
+  ENESTE mørke flate er finalen (`FinalCta`, `.finale-mork` med gul glød) — pluss ev.
+  StatBand-panelet på geo-sider.
+- **Vakter:** `npm run qa:design` er omkalibrert (R3b: maks 5 pastellbånd/side; R6: maks
+  4 foto/side). /forslag-sandkassen er SLETTET — unntaket i design-lint er fjernet.
+
 ## Arbeidsflyt (Henriks regel)
 
 **«Push og commit» = commit → push til GitHub `main` → Vercel auto-deployer.**
@@ -25,13 +46,15 @@ og `next.config.ts` + `app/robots.ts` holder *.vercel.app ute av Googles indeks 
 3. **Aldri LocalBusiness-schema** for kommuner uten kontor. Geo-sider bruker `Service`
    + `areaServed` (se `lib/schema.ts`).
 4. **NAP-data hardkodes aldri** — alt hentes fra `data/site.ts`.
-5. **Tonen er vedtatt i [TONEPLAN.md](TONEPLAN.md)** — «saklig fagperson». Les den FØR du
-   skriver eller endrer copy. De 20 kanoniske omskrivingene er vedtak, ikke forslag.
-   Kortversjon: ingen gimmick eller slang, ingen retoriske spørsmål som overskrift, ingen
-   omtale av konkurrenter, ingen forsterkere («faktisk», «ærlig», «solid»), ingen absolutte
-   løfter («aldri igjen», «vi ordner alt», «sømløs»), «stedfortreder» (ikke «backup»),
-   «regnskapsfører» skrevet helt ut (aldri «fører»), og «autorisert regnskapsforetak» der
-   autorisasjonen omtales — `regnskapsselskap` er terminologi fra opphevet lov.
+5. **Tonen: «Inkludert»-stemmen har forrang** (Henriks designvalg 2026-08-24 — han så og
+   valgte D-prototypen med denne stemmen). Deadpan-tosetninger, folkelig ro, ærlighet som
+   virkemiddel («Ærlig svar: det spørs», «Fristene? Glem dem.») ER vedtatt stil — også der
+   [TONEPLAN.md](TONEPLAN.md) tidligere forbød retoriske spørsmål/forsterkere. TONEPLANs
+   øvrige vedtak GJELDER FORTSATT: ingen omtale av konkurrenter, ingen absolutte løfter
+   («aldri igjen», «vi ordner alt», «sømløs», «gratis», «alltid»), «stedfortreder» (ikke
+   «backup»), «regnskapsfører» skrevet helt ut (aldri «fører»), «inkludert i honoraret»,
+   og «autorisert regnskapsforetak» der autorisasjonen omtales — `regnskapsselskap` er
+   terminologi fra opphevet lov.
 
 ## Vanlige oppgaver
 

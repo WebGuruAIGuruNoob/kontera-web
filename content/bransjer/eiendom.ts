@@ -3,12 +3,12 @@ import type { BransjeContent } from "@/lib/content-types";
 export const eiendom: BransjeContent = {
   slug: "eiendom",
   navn: "Eiendom",
-  tittel: "Regnskap for eiendom — frivillig mva-registrering og justeringsreglene",
+  tittel: "Regnskap for eiendom. Detaljene avgjør store beløp.",
   metaTitle: "Regnskap for eiendomsselskap | Kontera Regnskap",
   metaDescription:
     "Regnskapsfører med lang erfaring fra eiendom: frivillig mva-registrering, justeringsregler, avskrivninger og konsernstruktur. Ring 960 00 400.",
   heroUndertekst:
-    "Vi har ført regnskap for eiendomsselskaper og forvaltere i mange år og kjenner områdene som krever mest presisjon: frivillig mva-registrering, justeringsreglene og grensen mellom vedlikehold og påkostning. Du får en fast regnskapsfører med eiendom som spesialområde, og korte spørsmål og småavklaringer er inkludert i honoraret.",
+    "Frivillig mva-registrering. Justeringsreglene. Grensen mellom vedlikehold og påkostning. Det er detaljer som avgjør store beløp — og det er dem vi jobber med til daglig. Du får en fast regnskapsfører med eiendom som spesialområde, og korte spørsmål er inkludert i honoraret.",
   kortBeskrivelse:
     "Regnskap for eiendomsselskap, utleiere og forvaltere – med kontroll på mva, avskrivninger og konsernstruktur.",
   ikon: "bygg",
@@ -16,22 +16,22 @@ export const eiendom: BransjeContent = {
   virksomhetsord: "eiendomsselskapet ditt",
   smerter: [
     "Du er usikker på om husleien skal faktureres med eller uten mva",
-    "Ingen har full oversikt over justeringsforpliktelsene, eller hva som skjer den dagen bygget selges",
+    "Ingen har full oversikt over justeringsforpliktelsene — eller hva som skjer den dagen bygget selges",
     "Du vil ikke miste fradrag fordi alt aktiveres som påkostning for sikkerhets skyld",
     "Dere har mange små selskaper, og hvert årsoppgjør blir en heldagsjobb",
-    "Banken vil ha tall per eiendom, mens rapportene viser bare totalen",
+    "Banken vil ha tall per eiendom — rapportene dine viser bare totalen",
   ],
   seksjoner: [
     {
-      tittel: "Mva på utleie: frivillig registrering er et valg med konsekvenser",
+      tittel: "Mva på husleie er valgfritt. Konsekvensene er det ikke.",
       avsnitt: [
         "Utleie av fast eiendom er i utgangspunktet unntatt fra mva. Baksiden er at du heller ikke får fradrag for mva på drift, vedlikehold og byggekostnader. For et næringsbygg med store kostnader betyr det at hele merverdiavgiften blir en ren kostnad – også i tilfeller der vilkårene for frivillig registrering er oppfylt.",
         "Leier du ut til leietakere som er registrert i Merverdiavgiftsregisteret og bruker lokalene i avgiftspliktig virksomhet, kan utleien frivillig registreres. Da fakturerer du husleie med mva og får fradrag for inngående mva på kostnadene. Er selskapet allerede ordinært registrert, holder det å tilkjennegi valget – altså behandle leieforholdet som avgiftspliktig i leiekontrakt og faktura. Ellers må du søke. Grunnvilkåret er leieinntekter fra registrerte leietakere over 50 000 kroner i løpet av tolv måneder, og det må foreligge en bindende leiekontrakt.",
-        "Registreringen omfatter bare arealene som leies ut til avgiftspliktige leietakere. Har du et bygg med både butikk, legekontor og leiligheter, må du fordele arealer og kostnader – og dokumentere fordelingen. Boligutleie kan aldri inn i ordningen. Flytter en avgiftspliktig leietaker ut og en unntatt virksomhet inn, endres fradragsretten din. Dette er detaljer som avgjør store beløp, og de må håndteres løpende gjennom året.",
+        "Registreringen omfatter bare arealene som leies ut til avgiftspliktige leietakere. Har du et bygg med både butikk, legekontor og leiligheter, må du fordele arealer og kostnader – og dokumentere fordelingen. Boligutleie kan uansett ikke inn i ordningen. Flytter en avgiftspliktig leietaker ut og en unntatt virksomhet inn, endres fradragsretten din. Dette er detaljer som avgjør store beløp, og de må håndteres løpende gjennom året.",
       ],
     },
     {
-      tittel: "Justeringsreglene: mva-fradraget følger bygget i ti år",
+      tittel: "Mva-fradraget følger bygget. I ti år.",
       avsnitt: [
         "Har du bygget nytt, bygget på eller bygget om, og inngående mva på tiltaket var minst 100 000 kroner, er bygget en kapitalvare etter merverdiavgiftsloven. Da gjelder justeringsreglene i ti år fra byggetiltaket ble fullført: Endres bruken i perioden – ny leietaker uten mva-registrering, lokaler som gjøres om til bolig, eller salg av eiendommen – skal fradraget justeres opp eller ned for den gjenværende delen av perioden. Fradrag du tok for fem år siden, kan altså måtte betales tilbake.",
         "Ved salg kan hele den gjenværende justeringsforpliktelsen bli utløst på én gang. Den kan i stedet overføres til kjøper gjennom en justeringsavtale – men avtalen må ha riktig innhold og være på plass innen bestemte frister. I eiendomstransaksjoner er dette et fast punkt i oppgjøret, og feil her kan bli kostbart for selger.",
@@ -39,7 +39,7 @@ export const eiendom: BransjeContent = {
       ],
     },
     {
-      tittel: "Vedlikehold eller påkostning – grensen med størst skattemessig betydning",
+      tittel: "Vedlikehold eller påkostning. Én grense, stor skatteeffekt.",
       avsnitt: [
         "Grensen mellom vedlikehold og påkostning er trolig den enkeltvurderingen med størst skatteeffekt i eiendom. Vedlikehold – å føre bygget tilbake til den standen det har vært i tidligere – gir fullt fradrag med en gang. Påkostning – å heve bygget til en høyere standard eller endre det – må aktiveres og avskrives over mange år. For et forretningsbygg med 2 prosent saldoavskrivning er forskjellen i nåverdi betydelig.",
         "Vurderingen gjøres per arbeid, ikke per prosjekt, og dokumentasjonen underveis er avgjørende. Et rehabiliteringsprosjekt inneholder som regel begge deler, og da skal kostnadene splittes. Og gjør du endringsarbeider som erstatter vedlikehold som uansett måtte vært gjort, kan deler av kostnaden likevel gi direkte fradrag – såkalt tenkt vedlikehold. Aktiveres alt uten vurdering, går du glipp av fradrag du har krav på.",
@@ -47,7 +47,7 @@ export const eiendom: BransjeContent = {
       ],
     },
     {
-      tittel: "Single purpose, konsern og dokumentavgift",
+      tittel: "Ett selskap per eiendom. Strukturen bør på plass før salget.",
       avsnitt: [
         "De fleste som eier flere eiendommer, legger hver eiendom i sitt eget single purpose-selskap under et holdingselskap. Det isolerer risiko, og det gjør at et salg kan gjennomføres som aksjesalg i stedet for eiendomssalg. Da skjer ingen tinglyst hjemmelsovergang, og kjøper slipper dokumentavgiften på 2,5 prosent av eiendomsverdien. For selger kan gevinst på aksjene være skattefri etter fritaksmetoden når aksjonæren er et selskap. Strukturen bør imidlertid være på plass i god tid – å endre den rett før et salg er både dyrere og mer risikabelt.",
         "Prisen for strukturen er flere regnskap: hvert selskap skal ha egen bokføring, eget årsregnskap og egen skattemelding, og mellomværender, felleskostnader og konsernbidrag skal henge sammen på tvers. Med gode rutiner og likt oppsett i alle selskapene blir dette effektivt. Vi fører flere slike konserner og vet hvor arbeidet kan effektiviseres uten at kvaliteten svekkes.",
@@ -93,7 +93,7 @@ export const eiendom: BransjeContent = {
       a: "Utgangspunktet er uten mva. Men er utleien frivillig registrert og leietakeren bruker lokalene i mva-pliktig virksomhet, skal husleien faktureres med mva – og da får du også fradrag for mva på kostnadene. Vurderingen gjøres per leieforhold, ikke per bygg, så samme eiendom kan ha begge deler.",
     },
     {
-      q: "Lønner det seg alltid å frivillig registrere utleien?",
+      q: "Lønner det seg å frivillig registrere utleien?",
       a: "Som regel ja når leietakeren er mva-pliktig, fordi du får fradrag for mva på drift og byggekostnader. Men det forplikter: riktig fakturering, arealdokumentasjon og justeringsoppfølging. Vi går gjennom leietakerne dine og anbefaler konkret hva som lønner seg for ditt bygg.",
     },
     {

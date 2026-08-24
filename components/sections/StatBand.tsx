@@ -27,7 +27,7 @@ export function StatBand({
     <section className={`mx-auto max-w-6xl px-4 pb-14 ${overlap ? "relative z-10 -mt-4" : "pt-4"}`}>
       <div className="rounded-3xl bg-navy px-6 py-10 text-white lg:px-10 lg:py-12">
         {title && (
-          <h2 className="mb-8 font-display text-h2 font-bold [text-wrap:balance]">
+          <h2 className="mb-8 font-display text-h2 font-semibold [text-wrap:balance]">
             {title}
           </h2>
         )}
@@ -37,7 +37,7 @@ export function StatBand({
         >
           {feature && (
             <div className="col-span-2 sm:col-span-3 lg:col-span-2">
-              <dd className="font-display text-5xl font-bold tabular-nums text-azure lg:text-6xl">
+              <dd className="font-display text-5xl font-bold tabular-nums text-gul lg:text-6xl">
                 {feature.numeric !== undefined ? (
                   <>
                     <span data-count-to={feature.numeric}>
@@ -56,7 +56,7 @@ export function StatBand({
           )}
           {rest.map((item) => (
             <div key={item.label}>
-              <dd className="font-display text-2xl font-bold tabular-nums text-azure lg:text-3xl">
+              <dd className="font-display text-2xl font-bold tabular-nums text-gul lg:text-3xl">
                 {item.numeric !== undefined ? (
                   <>
                     <span data-count-to={item.numeric}>

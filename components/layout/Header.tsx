@@ -53,13 +53,11 @@ export function Header() {
             <PhoneIcon className="h-4 w-4 text-blue" />
             {site.phoneDisplay}
           </a>
-          <Link
-            href="/kontakt"
-            data-cta="header-tilbud"
-            className="hidden rounded-lg bg-blue px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-blue-dark sm:block"
-          >
-            Få tilbud
-          </Link>
+          <div className="hidden sm:block">
+            <Link href="/kontakt" data-cta="header-tilbud" className="pille-sm">
+              Få tilbud
+            </Link>
+          </div>
           <MobileNav items={nav} />
         </div>
       </div>

@@ -3,6 +3,7 @@ import { leadEnabled } from "@/lib/lead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { HeroSplit } from "@/components/sections/HeroSplit";
 import { LeadCard } from "@/components/LeadCard";
+import { SectionHeading } from "@/components/SectionHeading";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
@@ -99,35 +100,38 @@ export default function PriserPage() {
         }
       />
 
+      {/* ===== Prisdriverne: fire hvite kort med gule tall ===== */}
       <section className="section-y mx-auto max-w-6xl px-4">
-        <div className="max-w-2xl">
-          <p className="section-eyebrow">Prismodellen</p>
-          <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
-            Dette avgjør hva regnskapet ditt koster
-          </h2>
-          <p className="mt-4 leading-relaxed text-slate">
-            Prisen avhenger av hvordan bedriften din drives. Fire forhold
-            avgjør det meste:
-          </p>
-        </div>
-        <div data-reveal-group className="mt-8 grid gap-x-10 gap-y-0 sm:grid-cols-2">
+        <SectionHeading
+          eyebrow="Prismodellen"
+          title="Hva koster det? Fire ting avgjør."
+          intro="Ingen beløp før vi mener dem. Prisen settes etter hvordan bedriften din drives — og forklares så du skjønner hva du betaler for."
+        />
+        <div className="mt-10 grid gap-5 sm:grid-cols-2">
           {prisDrivere.map((driver, i) => (
-            <div key={driver.tittel} className="border-t border-navy/10 py-6">
-              <p className="font-display text-2xl font-bold tabular-nums text-azure">
-                {String(i + 1).padStart(2, "0")}
+            <div
+              key={driver.tittel}
+              className="rounded-3xl bg-surface p-8 shadow-[0_4px_12px_rgba(28,79,45,0.06)]"
+            >
+              <p className="font-display text-4xl font-semibold text-gul [text-shadow:0_1px_0_rgba(28,79,45,0.25)] tabular-nums">
+                {i + 1}
               </p>
-              <h3 className="mt-1.5 font-sans text-base font-bold text-navy">{driver.tittel}</h3>
-              <p className="mt-2 max-w-[52ch] text-sm leading-relaxed text-slate">{driver.tekst}</p>
+              <h3 className="mt-3 font-display text-lg font-semibold text-navy">
+                {driver.tittel}
+              </h3>
+              <p className="mt-2 text-[15px] leading-relaxed text-slate">{driver.tekst}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="section-y bg-mist">
+      {/* ===== Inkludert-listen på cream-bånd ===== */}
+      <section className="section-y bg-cream">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="font-display text-h2 font-bold text-ink [text-wrap:balance]">
-            Alltid inkludert i prisen
-          </h2>
+          <SectionHeading
+            eyebrow="Inkludert"
+            title="Honoraret dekker mer enn bokføringen."
+          />
           <ul data-reveal-group className="mt-8 grid gap-3 md:grid-cols-2">
             {inkludert.map((punkt) => (
               <li key={punkt} className="card-line flex items-start gap-3 p-4">
@@ -142,10 +146,10 @@ export default function PriserPage() {
       </section>
 
       <ComparisonTable />
-      <Faq items={prisFaq} title="Spørsmål og svar om pris" />
+      <Faq items={prisFaq} title="Vanlige spørsmål om pris" />
       <FinalCta
-        title="Få et konkret tilbud — som regel samme dag"
-        text="Ring oss eller send skjemaet, så tar vi en kort samtale om bilagsmengde og behov. Deretter får du et konkret tilbud med tydelige forutsetninger."
+        title="Én samtale. Ett konkret tilbud."
+        text="Vi går gjennom bilagsmengde, ansatte og hva du vil gjøre selv — så får du et tilbud med tydelige forutsetninger. Som regel samme dag."
       />
     </>
   );

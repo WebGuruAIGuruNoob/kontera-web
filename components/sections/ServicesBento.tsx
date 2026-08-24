@@ -40,6 +40,8 @@ export function ServicesBento({
     "sm:col-span-6 lg:col-span-3",
     "sm:col-span-6 lg:col-span-3",
   ];
+  // «Inkludert»-pastellrotasjonen (Drivly-grepet) — featurecellen er mist
+  const tinter = ["bg-cream", "bg-varm", "bg-cream", "bg-varm", "bg-cream"];
 
   return (
     <section className="section-y mx-auto max-w-6xl px-4">
@@ -49,13 +51,13 @@ export function ServicesBento({
         {/* Featurecelle */}
         <Link
           href={`/tjenester/${feature.slug}`}
-          className="group sm:col-span-12 lg:col-span-6 lg:row-span-2 card-line card-line-hover rounded-2xl p-7 lg:p-8"
+          className="group sm:col-span-12 lg:col-span-6 lg:row-span-2 rounded-3xl border border-navy/10 bg-mist p-7 shadow-[0_2px_8px_rgba(28,79,45,0.05)] transition-all hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(28,79,45,0.14)] lg:p-8"
         >
           <div className="flex h-full flex-col">
-            <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue/10 text-blue transition-colors group-hover:bg-blue group-hover:text-white">
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-surface text-navy transition-colors group-hover:bg-navy group-hover:text-white">
               <Icon name={feature.ikon} className="h-6 w-6" />
             </span>
-            <h3 className="mt-5 font-display text-2xl font-bold text-navy">
+            <h3 className="mt-5 font-display text-2xl font-semibold text-navy">
               {feature.navn}
               {geoSuffix ? ` ${geoSuffix}` : ""}
             </h3>
@@ -77,7 +79,7 @@ export function ServicesBento({
           <Link
             key={t.slug}
             href={`/tjenester/${t.slug}`}
-            className={`group ${spans[i]} card-line card-line-hover p-6 max-sm:rounded-none max-sm:border-x-0 max-sm:border-b-0 max-sm:border-t max-sm:bg-transparent max-sm:px-0 max-sm:py-4`}
+            className={`group ${spans[i]} ${tinter[i]} rounded-3xl border border-navy/10 p-6 shadow-[0_2px_8px_rgba(28,79,45,0.05)] transition-all hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(28,79,45,0.14)] max-sm:rounded-none max-sm:border-x-0 max-sm:border-b-0 max-sm:border-t max-sm:bg-transparent max-sm:px-0 max-sm:py-4 max-sm:shadow-none max-sm:hover:translate-y-0 max-sm:hover:shadow-none`}
           >
             <h3 className="flex items-baseline justify-between gap-3 font-sans text-base font-bold text-navy">
               <span>

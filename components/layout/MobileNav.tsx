@@ -52,7 +52,7 @@ export function MobileNav({ items }: { items: { href: string; label: string }[] 
                 <Link
                   href="/kontakt"
                   onClick={() => setOpen(false)}
-                  className="block rounded-md bg-blue px-3 py-2.5 text-center font-bold text-white"
+                  className="block rounded-full bg-gul px-3 py-2.5 text-center font-bold text-ink"
                 >
                   Få et uforpliktende tilbud
                 </Link>
@@ -60,7 +60,7 @@ export function MobileNav({ items }: { items: { href: string; label: string }[] 
               <li className="pt-1">
                 <a
                   href={site.phoneHref}
-                  className="block rounded-md border border-line px-3 py-2.5 text-center font-bold text-navy"
+                  className="block rounded-full border border-navy/25 px-3 py-2.5 text-center font-bold text-navy"
                 >
                   Ring {site.phoneDisplay}
                 </a>

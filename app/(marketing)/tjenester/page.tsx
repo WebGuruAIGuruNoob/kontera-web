@@ -15,6 +15,11 @@ export const metadata: Metadata = {
   alternates: { canonical: "/tjenester" },
 };
 
+/**
+ * Tjeneste-hub («Inkludert»-rytmen): mist-hero → paper-bento →
+ * mist-sammenligning → paper-reise → mørk finale. Pastellrotasjonen i
+ * kortene bor i ServicesBento (delt komponent).
+ */
 export default function TjenesterPage() {
   const enabled = leadEnabled();
   return (
@@ -25,10 +30,10 @@ export default function TjenesterPage() {
         eyebrow="Tjenester"
         title={
           <>
-            Alle regnskapstjenester. <span className="hl-serif-italic">Én</span> fast regnskapsfører.
+            Seks regnskapstjenester. <span className="hl-serif-italic">Én</span> fast regnskapsfører.
           </>
         }
-        subtitle="Fra løpende bokføring til årsoppgjør og rådgivning. Vi setter sammen tjenestene bedriften din trenger, og justerer omfanget når behovet endrer seg."
+        subtitle="Fra løpende bokføring til årsoppgjør og rådgivning. Sett sammen det bedriften din trenger — og juster omfanget når behovet endrer seg. Samme faste person leverer det hele."
         chips={[
           "Statsautoriserte regnskapsførere",
           "Fast kontaktperson og stedfortreder",
@@ -43,12 +48,15 @@ export default function TjenesterPage() {
         }
       />
       <ServicesBento
-        title="Velg tjenesten du vil vite mer om"
-        intro="Alle tjenester leveres av den samme faste regnskapsføreren – én som kjenner bedriften din og historikken i tallene."
+        title="Velg det du trenger. Dropp resten."
+        intro="Alt leveres av den samme faste regnskapsføreren — én som kjenner bedriften din og historikken i tallene. Trenger du mer senere, utvider vi. Trenger du mindre, sier du ifra."
       />
-      <NumberedJourney leadEnabled={enabled} />
       <ComparisonTable />
-      <FinalCta />
+      <NumberedJourney leadEnabled={enabled} />
+      <FinalCta
+        title="Usikker på hvor du skal begynne? Begynn med en telefon."
+        text="Én uforpliktende samtale om bedriften din — så foreslår vi hvilke tjenester som gir mening, og hva de vil koste."
+      />
     </>
   );
 }

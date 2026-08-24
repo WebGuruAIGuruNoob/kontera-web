@@ -29,7 +29,7 @@ export function EditorialSections({
             className="grid gap-5 py-10 first:pt-0 last:pb-0 lg:grid-cols-12 lg:gap-10"
           >
             <div className="lg:col-span-4">
-              <h2 className="font-display text-xl font-bold leading-snug tracking-[-0.01em] text-ink [text-wrap:balance] lg:text-2xl">
+              <h2 className="font-display text-xl font-semibold leading-snug tracking-[-0.01em] text-navy [text-wrap:balance] lg:text-2xl">
                 {blokk.tittel}
               </h2>
               {img && (

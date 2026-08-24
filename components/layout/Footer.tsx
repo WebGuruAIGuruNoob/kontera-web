@@ -15,7 +15,7 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <p className="font-sans text-lg font-bold tracking-wide">
-              KONTERA<span className="text-azure"> REGNSKAP</span>
+              KONTERA<span className="text-gul"> REGNSKAP</span>
             </p>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-white/70">
               Autorisert regnskapsforetak under tilsyn av Finanstilsynet. Du får
@@ -23,11 +23,11 @@ export function Footer() {
               bedriften, og korte spørsmål er inkludert.
             </p>
             <p className="mt-4 text-sm font-semibold text-white/90">
-              <a href={site.phoneHref} className="hover:text-azure">
+              <a href={site.phoneHref} className="hover:text-gul">
                 {site.phoneDisplay}
               </a>
               {" · "}
-              <a href={site.emailHref} className="hover:text-azure">
+              <a href={site.emailHref} className="hover:text-gul">
                 {site.email}
               </a>
             </p>
@@ -39,7 +39,7 @@ export function Footer() {
                     href={office.mapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-azure"
+                    className="hover:text-gul"
                   >
                     {office.street}, {office.postalCode} {office.city}
                   </a>
@@ -55,13 +55,13 @@ export function Footer() {
             <ul className="mt-3 space-y-2 text-sm">
               {tjenester.map((t) => (
                 <li key={t.slug}>
-                  <Link href={`/tjenester/${t.slug}`} className="text-white/80 hover:text-azure">
+                  <Link href={`/tjenester/${t.slug}`} className="text-white/80 hover:text-gul">
                     {t.navn}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href="/priser" className="text-white/80 hover:text-azure">
+                <Link href="/priser" className="text-white/80 hover:text-gul">
                   Priser
                 </Link>
               </li>
@@ -75,18 +75,18 @@ export function Footer() {
             <ul className="mt-3 space-y-2 text-sm">
               {bransjer.map((b) => (
                 <li key={b.slug}>
-                  <Link href={`/bransjer/${b.slug}`} className="text-white/80 hover:text-azure">
+                  <Link href={`/bransjer/${b.slug}`} className="text-white/80 hover:text-gul">
                     {b.navn}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href="/blogg" className="text-white/80 hover:text-azure">
+                <Link href="/blogg" className="text-white/80 hover:text-gul">
                   Fagstoff og guider
                 </Link>
               </li>
               <li>
-                <Link href="/jobb" className="text-white/80 hover:text-azure">
+                <Link href="/jobb" className="text-white/80 hover:text-gul">
                   Jobb i Kontera
                 </Link>
               </li>
@@ -102,7 +102,7 @@ export function Footer() {
                 <li key={f.nr}>
                   <Link
                     href={`/regnskapsforer/${f.slug}`}
-                    className="text-white/80 hover:text-azure"
+                    className="text-white/80 hover:text-gul"
                   >
                     {f.visningsnavn}
                   </Link>
@@ -111,7 +111,7 @@ export function Footer() {
             </ul>
             <Link
               href="/regnskapsforer"
-              className="mt-3 inline-block text-sm font-bold text-azure hover:underline"
+              className="mt-3 inline-block text-sm font-bold text-gul hover:underline"
             >
               Alle områder →
             </Link>
@@ -124,14 +124,14 @@ export function Footer() {
             Statsautoriserte regnskapsførere
           </p>
           <p className="flex gap-4">
-            <Link href="/personvern" className="hover:text-azure">
+            <Link href="/personvern" className="hover:text-gul">
               Personvern
             </Link>
             <a
               href={site.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-azure"
+              className="hover:text-gul"
             >
               LinkedIn
             </a>

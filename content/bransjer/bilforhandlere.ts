@@ -3,35 +3,35 @@ import type { BransjeContent } from "@/lib/content-types";
 export const bilforhandlere: BransjeContent = {
   slug: "bilforhandlere",
   navn: "Bilforhandlere",
-  tittel: "Regnskap for bilforhandlere — avansemetoden og dokumentasjon ved kontroll",
+  tittel: "Regnskap for bilforhandlere. Vi kan avansemetoden.",
   metaTitle: "Regnskap for bilforhandlere | Kontera Regnskap",
   metaDescription:
     "Regnskapsfører for bruktbilforhandlere: avansemetoden, innbytte, lagerbiler og dagsoppgjør. Statsautorisert kompetanse. Ring 960 00 400.",
   heroUndertekst:
-    "Avansemetoden, mva-fritak, innbyttebiler og dagsoppgjør – bruktbilregnskap er et eget fagfelt, og et av områdene vi har spesialisert oss på. Du får en fast regnskapsfører som kjenner bilbransjen, og korte spørsmål og småavklaringer er inkludert i honoraret.",
+    "Avansemetoden, mva-fritak, innbyttebiler, dagsoppgjør. Bruktbilregnskap er et eget fagfelt — og fagfeltet vi har spesialisert oss mest på. Du får en fast regnskapsfører som kjenner bilbransjen, og korte spørsmål er inkludert i honoraret.",
   kortBeskrivelse:
-    "Regnskap for bruktbilforhandlere: avansemetoden, innbytte, lagerbiler og de øvrige særreglene i bransjen.",
+    "Avansemetoden, innbytte, lagerbiler og resten av særreglene i bruktbilbransjen. Vårt sterkeste fagfelt.",
   ikon: "bil",
   omtale: "bilforhandlere",
   virksomhetsord: "bilforretningen din",
   smerter: [
-    "Du trenger en regnskapsfører som kan avansemetoden uten at du må forklare reglene selv",
+    "Du må forklare avansemetoden til regnskapsføreren din — det skal være omvendt",
     "Du vet ikke hva du sitter igjen med per bil før langt ut i neste måned",
-    "Innbytte, omregistrering og klargjøring – det henger alltid igjen noe som ikke stemmer",
+    "Innbytte, omregistrering og klargjøring – det henger gjerne igjen noe som ikke stemmer",
     "Du er usikker på om dokumentasjonen holder den dagen Skatteetaten kommer på kontroll",
     "Demobilene ble firmabiler, og du er usikker på hva det betyr for mva og skatt",
   ],
   seksjoner: [
     {
-      tittel: "Mva på bruktbil: fritak, avansemetode eller full sats",
+      tittel: "Fritak, avansemetode eller full sats. Det avgjøres per bil.",
       avsnitt: [
         "Merverdiavgift ved bruktbilsalg er krevende å håndtere, fordi flere regelsett gjelder side om side. Hovedregelen for norske bruktbiler er et fritak: Kjøretøy som omfattes av omregistreringsavgiften, og som har vært registrert i Norge, selges uten merverdiavgift. Det er derfor bruktbiler annonseres uten mva. Men fritaket har vilkår, og det stilles krav til dokumentasjonen – blant annet når du legger deler og verkstedtimer i bilen før videresalg.",
-        "Faller kjøretøyet utenfor fritaket, blir salget avgiftspliktig. Det gjelder for eksempel kjøretøy som aldri har vært registrert i Norge, og tunge kjøretøy over 7 500 kg, som ikke omfattes av omregistreringsavgiften. Da kommer avansemetoden inn: Har du kjøpt kjøretøyet av en privatperson eller andre som ikke kunne fakturere med mva, kan du beregne merverdiavgift av avansen – differansen mellom salgssum og kjøpesum – i stedet for av hele salgssummen. Forskjellen er stor: mva av marginen din i stedet for av hele bilens verdi.",
+        "Faller kjøretøyet utenfor fritaket, blir salget avgiftspliktig. Det gjelder for eksempel kjøretøy som ikke har vært registrert i Norge, og tunge kjøretøy over 7 500 kg, som ikke omfattes av omregistreringsavgiften. Da kommer avansemetoden inn: Har du kjøpt kjøretøyet av en privatperson eller andre som ikke kunne fakturere med mva, kan du beregne merverdiavgift av avansen – differansen mellom salgssum og kjøpesum – i stedet for av hele salgssummen. Forskjellen er stor: mva av marginen din i stedet for av hele bilens verdi.",
         "Avansemetoden har strenge vilkår. Du velger metode per salg, men taper du penger på en bil, blir det ingen mva å betale – og tapet kan ikke trekkes fra avansen på andre biler. Mva-beløpet skal ikke vises i salgsdokumentet, og kjøperen får ikke fradrag. Brukes metoden feil, risikerer du etterberegning ved kontroll. Brukes den ikke der den kunne vært brukt, betaler du mva av hele salgssummen unødvendig. Riktig vurdering per kjøretøy avgjør marginen din, og den vurderingen gjør vi for hvert enkelt salg.",
       ],
     },
     {
-      tittel: "Innbyttebiler, lagerbiler og hva lageret er verdt",
+      tittel: "Et innbytte er to handler i én. Regnskapet må vise begge.",
       avsnitt: [
         "Et innbytte er to transaksjoner i én: Du selger én bil og kjøper en annen. Innbytteverdien du gir kunden, blir kostprisen på neste lagerbil – setter du den for høyt eller for lavt, flytter du margin fra én bil til en annen og mister oversikten over inntjeningen per bil. Kjøpet skal dokumenteres med et kjøpsdokument som selgeren signerer, med de opplysningene bokføringsreglene krever. Uten den dokumentasjonen står du svakt både i regnskapet og i en kontroll.",
         "Bokføringsreglene stiller nemlig særkrav til deg som videreforhandler av brukte kjøretøy: Hver bil skal merkes med nummer straks du mottar den, kjøp og salg skal spesifiseres per kjøretøy, og det skal fremgå om avansemetoden eller de alminnelige reglene er brukt ved videresalget. Deler og verkstedtimer som legges i en bil før salg, skal knyttes til riktig bil. Kravene er detaljerte, men gjort riktig gir de deg et bilregnskap der du ser dekningsbidraget per bil ved siden av den samlede bunnlinjen.",
@@ -39,7 +39,7 @@ export const bilforhandlere: BransjeContent = {
       ],
     },
     {
-      tittel: "Demobiler, verksted og provisjoner – tre områder som krever ekstra presisjon",
+      tittel: "Demobiler, verksted og provisjon. Tre mva-verdener samtidig.",
       avsnitt: [
         "En lagerbil er en salgsvare, og som bilforhandler har du fradragsrett for mva på biler du kjøper inn for videresalg. Men i det øyeblikket du registrerer en lagerbil på firmaet som demobil eller firmabil, endrer den status: Engangsavgift utløses, mva-behandlingen endres fordi bilen tas i bruk i stedet for å selges, og bruker ansatte bilen privat, skal fordelen lønnsbeskattes med a-melding og arbeidsgiveravgift. Demobiler er et fast tema når Skatteetaten kontrollerer bilforhandlere, og konsekvensene av å håndtere dem feil kan bli store.",
         "Mange bilforhandlere driver dessuten tre mva-verdener samtidig: Bruktbilsalget er ofte fritatt, verksted og delesalg er avgiftspliktig, og provisjon fra finansierings- og forsikringsselskaper er unntatt mva som formidling av finansielle tjenester. Da skal felleskostnader som husleie, strøm og systemer fordeles, og du får bare forholdsmessig mva-fradrag på dem. Settes fordelingen opp feil, betaler du enten for mye mva eller får en korreksjon ved kontroll.",
@@ -47,7 +47,7 @@ export const bilforhandlere: BransjeContent = {
       ],
     },
     {
-      tittel: "Dagsoppgjør, kontanter og dokumentasjonskravene i bransjen",
+      tittel: "Kontanter og dagsoppgjør. Reglene er strengere enn folk tror.",
       avsnitt: [
         "Bilbransjen har egne kontantregler som er lette å overse. Som forhandler av gjenstander kan du ikke ta imot 40 000 kroner eller mer i kontanter – grensen gjelder også når beløpet deles opp i flere betalinger. Og betaler du selv kontant for varer eller tjenester til 10 000 kroner eller mer, mister du både skattefradraget og mva-fradraget. I praksis bør all inn- og utbetaling av betydning gå gjennom bank.",
         "I tillegg kommer hverdagsrutinene: dagsoppgjør som stemmer, kassasystem som brukes riktig, og avstemming mellom kontrakter, finansiering og innbetalinger. Bruktbilbransjen er jevnlig tema i Skatteetatens kontroller, og da er det rutinene og dokumentasjonen som avgjør hvor omfattende kontrollen blir. Vi setter opp rutinene sammen med deg, og følger dem opp løpende slik at de holder.",
@@ -93,7 +93,7 @@ export const bilforhandlere: BransjeContent = {
     },
     {
       q: "Skal jeg beregne mva når jeg selger en norskregistrert bruktbil?",
-      a: "Som hovedregel nei. Kjøretøy som omfattes av omregistreringsavgiften, og som har vært registrert i Norge, er fritatt for mva ved videresalg. Men fritaket har vilkår og dokumentasjonskrav – og kjøretøy som aldri har vært registrert i Norge, faller utenfor. Da blir salget avgiftspliktig, og riktig metode må vurderes.",
+      a: "Som hovedregel nei. Kjøretøy som omfattes av omregistreringsavgiften, og som har vært registrert i Norge, er fritatt for mva ved videresalg. Men fritaket har vilkår og dokumentasjonskrav – og kjøretøy som ikke har vært registrert i Norge, faller utenfor. Da blir salget avgiftspliktig, og riktig metode må vurderes.",
     },
     {
       q: "Hva skjer hvis jeg selger en bil med tap under avansemetoden?",

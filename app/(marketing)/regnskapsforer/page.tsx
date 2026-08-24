@@ -47,8 +47,8 @@ export default function GeoHubPage() {
       <section className="section-y mx-auto max-w-6xl px-4">
         <div className="max-w-2xl">
           <p className="section-eyebrow">Velg område</p>
-          <h2 className="mt-2 font-display text-h2 font-bold text-ink [text-wrap:balance]">
-            Alle fylker — alle kommuner
+          <h2 className="mt-2 font-display text-h2 font-semibold text-navy [text-wrap:balance]">
+            Alle fylker. Alle kommuner. Velg ditt.
           </h2>
           <p className="mt-4 leading-relaxed text-slate">
             Hver side gir deg ferske tall om næringslivet i området (fra
@@ -57,16 +57,17 @@ export default function GeoHubPage() {
           </p>
         </div>
         <div data-reveal-group className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {fylker.map((fylke) => {
+          {fylker.map((fylke, i) => {
             const total = fylke.kommuner.reduce(
               (sum, k) => sum + (getStats(k.nr)?.total ?? 0),
               0
             );
+            const tint = ["bg-mist", "bg-cream", "bg-varm"][i % 3];
             return (
               <Link
                 key={fylke.nr}
                 href={`/regnskapsforer/${fylke.slug}`}
-                className="group card-line card-line-hover p-5"
+                className={`group rounded-3xl ${tint} border border-navy/10 p-5 shadow-[0_2px_8px_rgba(28,79,45,0.05)] transition-all hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(28,79,45,0.14)]`}
               >
                 <h3 className="font-display text-lg font-bold text-navy group-hover:text-blue">
                   {fylke.visningsnavn}

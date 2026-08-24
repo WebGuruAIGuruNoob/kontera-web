@@ -1,36 +1,43 @@
 @import "tailwindcss";
 
 @theme {
-  /* ==== KONTERA DESIGNSYSTEM 2.0 (DESIGNPLAN.md §2) ==== */
+  /* ==== KONTERA DESIGNSYSTEM 3.0 — «INKLUDERT» (Henriks valg 2026-08-24) ====
+     Skoggrønn + elgul, hue-tintede nøytraler (Testen-grepet), pastellbånd.
+     Token-NAVNENE beholdes fra 2.0 (navy/mist/azure…) så alle komponenter
+     restyles i ett grep — VERDIENE er den nye paletten. */
 
-  /* Grunn og tekst */
-  --color-paper: #fafaf8;
+  /* Grunn og tekst — grønntonet, aldri grå dødhet */
+  --color-paper: #f5f8f5;
   --color-surface: #ffffff;
-  --color-mist: #eef4f8;
-  --color-ink: #182530;
-  --color-slate: #4e6373;
+  --color-mist: #e4f2e4;   /* grønt pastellbånd */
+  --color-cream: #fbf7ec;  /* cream-bånd */
+  --color-varm: #fffbeb;   /* varm gul-50-bånd (FAQ/avslutning) */
+  --color-ink: #1e2a20;
+  --color-slate: #3c5243;
 
-  /* Brand — beholdt, rolledisiplinert */
-  --color-navy: #084666;
-  --color-navy-deep: #062f45;
-  --color-blue: #0c71c3;   /* ENESTE knappfarge */
-  --color-blue-dark: #0a5d9f;
-  --color-azure: #07a0e4;  /* kun utheving */
-  --color-teal: #7ebec5;   /* kun duse tinter */
+  /* Brand */
+  --color-navy: #1c4f2d;      /* skoggrønn tar den mørke rollen */
+  --color-navy-deep: #143d22;
+  --color-blue: #1c4f2d;      /* sekundærknapper/lenker i skoggrønn */
+  --color-blue-dark: #143d22;
+  --color-azure: #3e7d50;     /* frisk grønn — piler/utheving */
+  --color-teal: #8fbf9f;      /* sage — check-ikoner/duse tinter */
+  --color-gul: #ffd505;       /* elgul — SIGNATUR-CTA (glød-pillen) */
+  --color-gul-lys: #ffdf3d;   /* pillens hover-tilstand */
 
-  /* Hairline (borders erstatter skygger) */
-  --color-line: #dce4ea;
+  /* Hairline — grønntonet */
+  --color-line: #dde6dd;
 
-  /* Typografi: Source Serif 4 (display) + Schibsted Grotesk (sans) */
+  /* Typografi: Fraunces (display) + Hanken Grotesk (sans) */
   --font-display: var(--font-serif-display), Georgia, "Times New Roman", serif;
   --font-sans: var(--font-grotesk), system-ui, -apple-system, sans-serif;
 
-  --text-display: clamp(2.75rem, 1.5rem + 4.5vw, 5.25rem);
-  --text-display--line-height: 1.04;
-  --text-display--letter-spacing: -0.025em;
-  --text-h2: clamp(1.9rem, 1.2rem + 2.2vw, 3rem);
-  --text-h2--line-height: 1.12;
-  --text-h2--letter-spacing: -0.015em;
+  --text-display: clamp(2.4rem, 1.4rem + 3.6vw, 4.4rem);
+  --text-display--line-height: 1.06;
+  --text-display--letter-spacing: -0.015em;
+  --text-h2: clamp(1.8rem, 1.2rem + 2vw, 2.8rem);
+  --text-h2--line-height: 1.14;
+  --text-h2--letter-spacing: -0.01em;
 
   --radius-card: 0.75rem;
   --radius-feature: 1.25rem;
@@ -50,13 +57,13 @@ body {
   line-height: 1.65;
 }
 
-/* Kicker/eyebrow — venstrestilt, aldri sentrert overalt (§2.2).
-   Eneste hjem for eyebrow-størrelsen (R7 — tokenhjemmet er globals.css). */
+/* Kicker/eyebrow — «Inkludert»-stil: rolig kicker uten VERSALER (D-språket).
+   Eneste hjem for eyebrow-stilen (R7 — tokenhjemmet er globals.css). */
 .section-eyebrow {
-  @apply font-sans text-[0.72rem] font-bold uppercase tracking-[0.14em] text-blue;
+  @apply font-sans text-sm font-semibold text-navy/70;
 }
 .section-eyebrow-dark {
-  @apply font-sans text-[0.72rem] font-bold uppercase tracking-[0.14em] text-azure;
+  @apply font-sans text-sm font-semibold text-gul;
 }
 /* Mikroetikett uten fast farge — fargen settes av bruksstedet */
 .microlabel {
@@ -74,12 +81,28 @@ body {
   @apply py-16 lg:py-24;
 }
 
-/* Hairline-kort: border i stedet for skygge (§2.3) */
+/* «Inkludert»-kort: myk grønn skygge + løft-hover (Drivly-grepet) */
 .card-line {
-  @apply rounded-xl border border-navy/10 bg-surface transition-colors;
+  @apply rounded-2xl border border-navy/10 bg-surface shadow-[0_2px_8px_rgba(28,79,45,0.05)] transition-all;
 }
 .card-line-hover {
-  @apply hover:border-navy/25 hover:bg-mist/40;
+  @apply hover:-translate-y-1 hover:border-navy/25 hover:shadow-[0_12px_32px_rgba(28,79,45,0.14)];
+}
+
+/* Signatur-CTA: elgul glød-pille (Testen-oppskriften med Randi-fargen).
+   ENESTE primærknapp på siten — sekundær er tekstlenke i skoggrønn. */
+.pille {
+  @apply inline-flex h-[52px] items-center justify-center gap-2.5 rounded-full bg-gul px-7 font-sans font-semibold text-ink shadow-[0_10px_34px_rgba(255,213,5,0.45)] transition-all hover:-translate-y-0.5 hover:bg-gul-lys active:scale-[0.97];
+}
+.pille-sm {
+  @apply inline-flex h-11 items-center justify-center gap-2 rounded-full bg-gul px-5 text-[15px] font-sans font-semibold text-ink shadow-[0_6px_20px_rgba(255,213,5,0.4)] transition-all hover:-translate-y-0.5 hover:bg-gul-lys active:scale-[0.97];
+}
+
+/* Mørk skoggrønn finale med gul glød (sitefinalen — maks én per side) */
+.finale-mork {
+  background:
+    radial-gradient(70% 90% at 50% -10%, rgb(255 213 5 / 0.14), transparent 58%),
+    linear-gradient(175deg, #1c4f2d, #143d22);
 }
 
 /* Azur-uthevet nøkkelord i display-overskrifter */
@@ -90,21 +113,21 @@ body {
   font-style: italic;
   @apply text-azure;
 }
-/* 2030-forside: gradient-nøkkelord (brand-hues, aldri lilla) */
+/* Gradient-nøkkelord i display-overskrifter (grønn-hues, aldri lilla) */
 .hl-gradient {
   font-style: italic;
-  background: linear-gradient(100deg, #07a0e4 0%, #7ebec5 55%, #0c71c3 100%);
+  background: linear-gradient(100deg, #3e7d50 0%, #8fbf9f 55%, #1c4f2d 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-/* 2030-forside: aurora-hero — sidens ENESTE ambient-bevegelse (DESIGNPLAN §2.5) */
+/* Aurora-hero — sidens ENESTE ambient-bevegelse (DESIGNPLAN §2.5) */
 .aurora {
   background:
-    radial-gradient(42rem 26rem at 15% -10%, rgb(7 160 228 / 0.16), transparent 65%),
-    radial-gradient(38rem 24rem at 85% -5%, rgb(126 190 197 / 0.2), transparent 60%),
-    radial-gradient(50rem 30rem at 55% 115%, rgb(12 113 195 / 0.1), transparent 65%);
+    radial-gradient(42rem 26rem at 15% -10%, rgb(62 125 80 / 0.14), transparent 65%),
+    radial-gradient(38rem 24rem at 85% -5%, rgb(255 213 5 / 0.1), transparent 60%),
+    radial-gradient(50rem 30rem at 55% 115%, rgb(28 79 45 / 0.08), transparent 65%);
 }
 @media (prefers-reduced-motion: no-preference) {
   .aurora {

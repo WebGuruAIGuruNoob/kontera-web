@@ -38,7 +38,7 @@ export function ComparisonTable({ title = "Sammenlign med byrået du har i dag" 
     <section className="section-y bg-mist">
       <div className="mx-auto max-w-6xl px-4">
       <SectionHeading eyebrow="Sammenlign" title={title} />
-      <div className="mt-8 overflow-x-auto rounded-2xl border border-navy/10 bg-surface">
+      <div className="mt-8 overflow-x-auto rounded-3xl border border-navy/10 bg-surface shadow-[0_4px_12px_rgba(28,79,45,0.06)]">
         <table className="w-full min-w-[36rem] border-collapse text-sm">
           <thead>
             <tr className="border-b border-navy/10 text-left">

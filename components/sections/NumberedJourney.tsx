@@ -37,7 +37,7 @@ export function NumberedJourney({
           <li key={step.title} className="relative border-t-2 border-navy/10 pt-6">
             <span
               aria-hidden="true"
-              className="absolute -top-[1.4rem] left-0 bg-paper pr-3 font-display text-3xl font-bold text-azure"
+              className="absolute -top-[1.4rem] left-0 bg-paper pr-3 font-display text-3xl font-semibold text-gul [text-shadow:0_1px_0_rgba(28,79,45,0.25)]"
             >
               {i + 1}
               <span className="ml-2 text-navy/25">→</span>

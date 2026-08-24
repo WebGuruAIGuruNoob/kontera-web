@@ -3,42 +3,42 @@ import type { TjenesteContent } from "@/lib/content-types";
 export const mva: TjenesteContent = {
   slug: "mva",
   navn: "Mva-melding",
-  tittel: "Mva-meldingen levert riktig, til hver frist",
+  tittel: "Mva-meldingen? Levert. Hver termin, år etter år.",
   metaTitle: "Mva-melding: frister, terminer og hjelp | Kontera Regnskap",
   metaDescription:
     "Vi fører mva riktig og leverer mva-meldingen til hver frist – registrering, terminer og fradrag. Ring 960 00 400 for en uforpliktende samtale.",
   heroUndertekst:
-    "Mva er området der små feil fortest blir dyre: tapte fradrag, tvangsmulkt og etterberegning. Vi sørger for riktig mva-behandling av hvert bilag og leverer meldingen i god tid før fristen – hver termin, år etter år.",
+    "Mva er området der små feil fortest blir dyre: tapte fradrag, tvangsmulkt, etterberegning. Vi fører hvert bilag med riktig mva-behandling og leverer meldingen i god tid før fristen — hver termin.",
   kortBeskrivelse:
-    "Riktig mva-kontering, levering til hver frist og kontroll på fradragene dine.",
+    "Riktig mva-kode på hvert bilag, melding levert til hver frist, kontroll på fradragene dine.",
   ikon: "prosent",
   passerFor: [
     "Du nærmer deg 50 000 kroner i omsetning og lurer på når og hvordan du skal mva-registrere deg",
     "Du har levert mva-meldingen selv, men er usikker på om fradragene og satsene er riktige",
     "Du har fått tvangsmulkt eller brev fra Skatteetaten og vil ha det ryddet opp i",
-    "Du driver virksomhet med både mva-pliktig og mva-fritt salg og er usikker på fordelingen av fradraget",
+    "Du har både mva-pliktig og mva-fritt salg og er usikker på fordelingen av fradraget",
     "Du selger bruktbiler, leier ut næringseiendom eller har andre spesialregler du vil være trygg på",
   ],
   hvaInngar: [
     {
       tittel: "Mva-registrering",
       tekst:
-        "Vi vurderer når du passerer grensen, sender søknaden til Mva-registeret og setter opp riktig mva-behandling i regnskapet fra første faktura, slik at oppstarten ikke må ryddes opp i senere.",
+        "Vi vurderer når du passerer grensen, sender søknaden til Mva-registeret og setter opp riktig mva-behandling i regnskapet fra første faktura — så oppstarten ikke må ryddes opp i senere.",
     },
     {
       tittel: "Riktig mva-kode på hvert bilag",
       tekst:
-        "25, 15 eller 12 prosent, fritatt eller unntatt – vi konterer bilagene med riktig mva-behandling. Feil mva-kode på bilagsnivå er en vanlig kilde til avvik, og kontrolleres derfor når bilaget føres.",
+        "25, 15 eller 12 prosent, fritatt eller unntatt — vi konterer bilagene med riktig mva-behandling. Feil mva-kode på bilagsnivå er en vanlig kilde til avvik, og kontrolleres derfor når bilaget føres.",
     },
     {
       tittel: "Utarbeidelse og levering av mva-meldingen",
       tekst:
-        "Vi avstemmer mva-kontoene mot regnskapet, kontrollerer at tallene henger sammen og leverer meldingen til Skatteetaten i god tid før fristen – hver termin.",
+        "Vi avstemmer mva-kontoene mot regnskapet, kontrollerer at tallene henger sammen og leverer meldingen til Skatteetaten i god tid før fristen — hver termin.",
     },
     {
       tittel: "Kontroll av fradragsretten",
       tekst:
-        "Vi passer på at du får fradraget du har krav på – og at du ikke krever fradrag der loven sier nei, som ved representasjon og personbiler. Begge deler sparer deg for penger.",
+        "Vi passer på at du får fradraget du har krav på — og at du ikke krever fradrag der loven sier nei, som ved representasjon og personbiler. Begge deler sparer deg for penger.",
     },
     {
       tittel: "Varsling om betaling",
@@ -48,54 +48,54 @@ export const mva: TjenesteContent = {
     {
       tittel: "Dialog med Skatteetaten",
       tekst:
-        "Får du varsel om kontroll eller spørsmål til en melding, svarer vi for deg. Vi kjenner tallene dine og tar dialogen, så du slipper å formulere svaret til Skatteetaten på egen hånd.",
+        "Får du varsel om kontroll eller spørsmål til en melding, svarer vi for deg. Vi kjenner tallene dine og tar dialogen — du slipper å formulere svaret til Skatteetaten på egen hånd.",
     },
   ],
   seksjoner: [
     {
       tittel: "Når du må registrere deg i Mva-registeret",
       avsnitt: [
-        "Hovedregelen er slik: Når virksomheten din har solgt mva-pliktige varer eller tjenester for mer enn 50 000 kroner i løpet av en tolvmånedersperiode, skal du registreres i Mva-registeret. Merk at det er en rullerende tolvmånedersperiode, ikke kalenderåret – og at grensen gjelder omsetning, ikke overskudd. Fakturaen som gjør at du passerer grensen, skal som hovedregel ha med mva.",
-        "Timingen rundt registreringen er verdt å få riktig. Registrerer du deg for sent, risikerer du etterberegning av mva du skulle ha krevd inn. Og har du hatt store kostnader før registreringen – typisk i en oppstartsfase – kan du på visse vilkår få tilbake mva på disse gjennom et tilbakegående avgiftsoppgjør. Dette er et fradrag som ofte blir oversett i oppstartsfasen.",
-        "Noen kan registrere seg frivillig selv uten å ha passert grensen. Det mest praktiske eksempelet er utleie av bygg til mva-pliktige leietakere: Frivillig registrering gir deg fradrag for mva på oppføring, vedlikehold og drift, og kan utgjøre store beløp for deg som eier næringseiendom. Her er reglene detaljerte, så ta kontakt med oss før du bestemmer deg.",
+        "Hovedregelen er slik: Når virksomheten din har solgt mva-pliktige varer eller tjenester for mer enn 50 000 kroner i løpet av en tolvmånedersperiode, skal du registreres i Mva-registeret. Merk at det er en rullerende tolvmånedersperiode, ikke kalenderåret — og at grensen gjelder omsetning, ikke overskudd. Fakturaen som gjør at du passerer grensen, skal som hovedregel ha med mva.",
+        "Timingen rundt registreringen er verdt å få riktig. Registrerer du deg for sent, risikerer du etterberegning av mva du skulle ha krevd inn. Og har du hatt store kostnader før registreringen — typisk i en oppstartsfase — kan du på visse vilkår få tilbake mva på disse gjennom et tilbakegående avgiftsoppgjør. Det fradraget blir ofte oversett.",
+        "Noen kan registrere seg frivillig uten å ha passert grensen. Det mest praktiske eksempelet er utleie av bygg til mva-pliktige leietakere: Frivillig registrering gir fradrag for mva på oppføring, vedlikehold og drift, og kan utgjøre store beløp for deg som eier næringseiendom. Reglene er detaljerte, så ta kontakt med oss før du bestemmer deg.",
       ],
     },
     {
       tittel: "Mva-terminer og frister i 2026",
       avsnitt: [
         "De fleste virksomheter leverer mva-melding seks ganger i året, i tomånedersterminer. Fristen er som hovedregel én måned og ti dager etter at terminen er slutt: 10. april for januar–februar, 10. juni for mars–april, 10. oktober for juli–august, 10. desember for september–oktober og 10. februar året etter for november–desember. Unntaket er 3. termin (mai–juni), som har utsatt frist til 31. august på grunn av fellesferien. Faller en frist på helg eller helligdag, skyves den til første virkedag.",
-        "Har du omsetning under én million kroner i året, kan du søke om å levere mva-melding bare én gang i året – den såkalte årsterminen, med frist 10. mars året etter. Vilkårene er blant annet at du har vært registrert i Mva-registeret i minst ett år og levert riktig og i tide i perioden før. Søknadsfristen er 1. februar for at ordningen skal gjelde samme år. Årstermin gir mindre administrasjon, men krever at du setter av mva-pengene selv gjennom året.",
-        "Husk at fristen gjelder både levering og betaling: Skyldig mva forfaller samme dag som meldingen skal være levert. Som kunde hos oss trenger du ikke holde oversikt over datoene selv – vi leverer i god tid og gir deg beskjed om hva som skal betales, og når.",
+        "Har du omsetning under én million kroner i året, kan du søke om å levere mva-melding bare én gang i året — den såkalte årsterminen, med frist 10. mars året etter. Vilkårene er blant annet at du har vært registrert i Mva-registeret i minst ett år og levert riktig og i tide i perioden før. Søknadsfristen er 1. februar for at ordningen skal gjelde samme år. Årstermin gir mindre administrasjon, men krever at du setter av mva-pengene selv gjennom året.",
+        "Husk at fristen gjelder både levering og betaling: Skyldig mva forfaller samme dag som meldingen skal være levert. Som kunde hos oss trenger du ikke holde oversikt over datoene selv — vi leverer i god tid og gir deg beskjed om hva som skal betales, og når.",
       ],
     },
     {
-      tittel: "Fradragsrett – unntakene du må kjenne til",
+      tittel: "Fradragsrett — unntakene du må kjenne til",
       avsnitt: [
-        "Utgangspunktet er at du får fradrag for inngående mva på varer og tjenester du kjøper til bruk i den mva-pliktige virksomheten. Men det finnes viktige unntak, og det er her vi oftest rydder opp når vi tar over et regnskap. Representasjon er det vanligste eksempelet: Mva på servering og gaver til kunder og forretningsforbindelser gir ikke fradrag, selv om kostnaden er forretningsmessig begrunnet. Personbiler er et annet: Kjøp, leie og drift av personkjøretøy gir som hovedregel ikke mva-fradrag, selv om bilen brukes i næring – reglene er andre for varebiler og kjøretøy i enkelte bransjer.",
-        "Driver du delt virksomhet – altså både mva-pliktig og unntatt omsetning, som en fysioterapeut som også selger treningsutstyr, eller et eiendomsselskap med både bolig- og næringsleie – skal fradraget for felleskostnader fordeles forholdsmessig. Fordelingsnøkkelen må kunne forsvares overfor Skatteetaten, og dette er et av områdene de oftest kontrollerer.",
+        "Utgangspunktet er at du får fradrag for inngående mva på varer og tjenester du kjøper til bruk i den mva-pliktige virksomheten. Men det finnes viktige unntak, og det er her vi oftest rydder opp når vi tar over et regnskap. Representasjon er det vanligste eksempelet: Mva på servering og gaver til kunder og forretningsforbindelser gir ikke fradrag, selv om kostnaden er forretningsmessig begrunnet. Personbiler er et annet: Kjøp, leie og drift av personkjøretøy gir som hovedregel ikke mva-fradrag, selv om bilen brukes i næring — reglene er andre for varebiler og kjøretøy i enkelte bransjer.",
+        "Driver du delt virksomhet — altså både mva-pliktig og unntatt omsetning, som en fysioterapeut som også selger treningsutstyr, eller et eiendomsselskap med både bolig- og næringsleie — skal fradraget for felleskostnader fordeles forholdsmessig. Fordelingsnøkkelen må kunne forsvares overfor Skatteetaten, og dette er et av områdene de oftest kontrollerer.",
         "Så finnes det egne spesialregler i enkelte bransjer. Selger du brukte kjøretøy eller andre brukte varer, kan avansemetoden gi mva bare på fortjenesten din i stedet for hele salgssummen. Riktig anvendt gir metoden lavere avgiftsbelastning; feil anvendt er den en vanlig kilde til etterberegning ved bokettersyn. Dette kjenner vi godt fra kundene våre, blant annet bilforhandlere.",
       ],
     },
     {
-      tittel: "Konsekvensene av å levere mva-meldingen for sent",
+      tittel: "Hva det koster å levere mva-meldingen for sent",
       avsnitt: [
-        "Leverer du ikke mva-meldingen innen fristen, kan Skatteetaten ilegge tvangsmulkt – en dagbot som løper til meldingen er levert. Satsen er et halvt rettsgebyr per dag, oppad begrenset til 50 rettsgebyr, så en melding som blir liggende kan fort koste titusenvis av kroner. I tillegg løper det forsinkelsesrenter på mva som betales for sent, og gir du uriktige opplysninger i meldingen, risikerer du tilleggsskatt.",
-        "Den vanligste årsaken til forsinkelse er sårbarhet i rutinen: Én person fører alt selv, og så inntreffer sykdom, ferie eller en særlig travel periode samtidig med fristen. Hos oss er det alltid to som kjenner regnskapet ditt – din faste regnskapsfører og en fast stedfortreder – slik at meldingen blir levert i tide også når én av dem er borte. Har du allerede fått tvangsmulkt eller ligger etter med flere terminer, hjelper vi deg med å få levert, rydde opp og eventuelt klage der det er grunnlag for det.",
+        "Leverer du ikke mva-meldingen innen fristen, kan Skatteetaten ilegge tvangsmulkt — en dagbot som løper til meldingen er levert. Satsen er et halvt rettsgebyr per dag, oppad begrenset til 50 rettsgebyr, så en melding som blir liggende kan fort koste titusenvis av kroner. I tillegg løper det forsinkelsesrenter på mva som betales for sent, og gir du uriktige opplysninger i meldingen, risikerer du tilleggsskatt.",
+        "Den vanligste årsaken til forsinkelse er sårbarhet i rutinen: Én person fører alt selv, og så inntreffer sykdom, ferie eller en travel periode samtidig med fristen. Hos oss er det to som kjenner regnskapet ditt — din faste regnskapsfører og en fast stedfortreder — slik at meldingen blir levert i tide også når én av dem er borte. Har du fått tvangsmulkt eller ligger etter med flere terminer, hjelper vi deg med å få levert, rydde opp og eventuelt klage der det er grunnlag for det.",
       ],
     },
   ],
   faq: [
     {
       q: "Når er fristen for å levere mva-melding?",
-      a: "Som hovedregel én måned og ti dager etter terminslutt – for eksempel 10. april for terminen januar–februar. Unntaket er 3. termin (mai–juni) med frist 31. august. Betalingen forfaller samme dag som leveringsfristen.",
+      a: "Som hovedregel én måned og ti dager etter terminslutt — for eksempel 10. april for terminen januar–februar. Unntaket er 3. termin (mai–juni) med frist 31. august. Betalingen forfaller samme dag som leveringsfristen.",
     },
     {
       q: "Kan jeg levere mva-melding bare én gang i året?",
-      a: "Ja, hvis omsetningen er under én million kroner i året og du har vært registrert og levert riktig i minst ett år, kan du søke om årstermin. Da er fristen 10. mars året etter. Vi hjelper deg med å vurdere om det lønner seg og med søknaden.",
+      a: "Ja, hvis omsetningen er under én million kroner i året og du har vært registrert og levert riktig i minst ett år, kan du søke om årstermin. Da er fristen 10. mars året etter. Vi hjelper deg med å vurdere om det lønner seg, og med søknaden.",
     },
     {
       q: "Hva skjer hvis mva-meldingen leveres for sent?",
-      a: "Skatteetaten kan ilegge tvangsmulkt – en dagbot på et halvt rettsgebyr som løper til meldingen er levert, begrenset oppad til 50 rettsgebyr. I tillegg kommer forsinkelsesrenter på mva som betales for sent. Ligger du etter, hjelper vi deg med å rydde opp.",
+      a: "Skatteetaten kan ilegge tvangsmulkt — en dagbot på et halvt rettsgebyr som løper til meldingen er levert, begrenset oppad til 50 rettsgebyr. I tillegg kommer forsinkelsesrenter på mva som betales for sent. Ligger du etter, hjelper vi deg med å rydde opp.",
     },
     {
       q: "Når må jeg registrere meg i Mva-registeret?",
@@ -103,7 +103,7 @@ export const mva: TjenesteContent = {
     },
     {
       q: "Hvilke mva-satser gjelder i 2026?",
-      a: "Tre satser: 25 prosent er den generelle satsen, 15 prosent gjelder næringsmidler (mat og drikke), og 12 prosent gjelder blant annet persontransport, overnatting og kino. I tillegg er noe omsetning fritatt eller helt unntatt fra mva – og forskjellen på de to har mye å si for fradragsretten din.",
+      a: "Tre satser: 25 prosent er den generelle satsen, 15 prosent gjelder næringsmidler (mat og drikke), og 12 prosent gjelder blant annet persontransport, overnatting og kino. I tillegg er noe omsetning fritatt eller helt unntatt fra mva — og forskjellen på de to har mye å si for fradragsretten din.",
     },
     {
       q: "Kan dere ta mva-meldingen uten å føre hele regnskapet mitt?",

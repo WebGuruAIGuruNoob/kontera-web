@@ -3,12 +3,12 @@ import type { BransjeContent } from "@/lib/content-types";
 export const netthandel: BransjeContent = {
   slug: "netthandel",
   navn: "Netthandel",
-  tittel: "Regnskap for netthandel — avstemte betalingsløsninger og riktig mva",
+  tittel: "Regnskap for netthandel. Klarna-oppgjøret skal stemme.",
   metaTitle: "Regnskap for nettbutikk og netthandel | Kontera Regnskap",
   metaDescription:
     "Regnskap for nettbutikk: vi avstemmer Klarna, Stripe og Vipps, kobler Shopify mot regnskapet og håndterer mva ved salg til utlandet. Ring 960 00 400.",
   heroUndertekst:
-    "Vi kobler nettbutikken din til regnskapssystemet, slik at salg, gebyrer og utbetalinger avstemmes løpende. Du får en fast regnskapsfører med e-handel som spesialområde, og korte avklaringer underveis er inkludert i honoraret.",
+    "Vi kobler nettbutikken din til regnskapssystemet, så salg, gebyrer og utbetalinger avstemmes løpende — kanal for kanal, måned for måned. Du får en fast regnskapsfører med e-handel som spesialområde, og korte avklaringer underveis er inkludert i honoraret.",
   kortBeskrivelse:
     "Avstemming av Klarna, Stripe og Vipps, integrasjon mot Shopify og mva ved salg til utlandet – tilpasset høyt transaksjonsvolum.",
   ikon: "handlekurv",
@@ -16,14 +16,14 @@ export const netthandel: BransjeContent = {
   virksomhetsord: "nettbutikken din",
   smerter: [
     "Utbetalingene fra Klarna stemmer ikke med det du har solgt",
-    "Du vet ikke om tallene i Shopify og tallene i regnskapet er de samme",
+    "Shopify sier én ting om omsetningen din — regnskapet sier noe annet",
     "Returer og refusjoner skaper merarbeid gjennom hele måneden",
     "Du er usikker på hvordan mva skal håndteres ved salg til kunder i utlandet",
     "Du bruker kveldene på å flytte ordrer inn i regnskapet manuelt",
   ],
   seksjoner: [
     {
-      tittel: "Hvorfor Klarna-utbetalingen avviker fra salget",
+      tittel: "Utbetalingen er ikke omsetningen. Forskjellen må bokføres.",
       avsnitt: [
         "Selger du gjennom Klarna, Stripe, Vipps eller PayPal, får du ikke betalt per ordre. Du får en samlet utbetaling noen dager etter salget – fratrukket gebyrer. Da er det nærliggende å føre beløpet som kommer inn på konto som omsetning. Det blir feil: Salget skal bokføres brutto på salgstidspunktet, gebyrene skal føres som kostnad, og utbetalingen er bare et oppgjør av pengene betalingsløsningen skylder deg.",
         "Derfor må hver betalingsløsning avstemmes hver måned: salget per kanal fra butikksystemet, mot utbetalinger og gebyrer fra leverandørens rapporter, mot det som kom inn i banken. Differanser har som regel en naturlig forklaring – salg i månedsskiftet som utbetales neste måned, refusjoner, chargebacks eller valuta. Men finner du dem ikke løpende, hoper de seg opp til en tidkrevende opprydding ved årsslutt.",
@@ -31,7 +31,7 @@ export const netthandel: BransjeContent = {
       ],
     },
     {
-      tittel: "Systemoppsettet avgjør hvor mye manuelt arbeid regnskapet krever",
+      tittel: "Oppsettet gjøres riktig én gang. Det sparer deg hver måned.",
       avsnitt: [
         "Netthandelsregnskap er først og fremst et systemspørsmål. Shopify og WooCommerce kan kobles mot regnskapssystemer som Tripletex og Uni Micro, slik at salgsoppgjør flyter over automatisk – fordelt på betalingsmåte, med riktige mva-koder satt allerede i butikken. Da bokføres salget riktig i det øyeblikket det skjer, i stedet for å repareres i etterkant.",
         "Med høyt transaksjonsvolum skal du ikke bokføre hver enkelt ordre som eget bilag. Løsningen er samlede dagsoppgjør per salgskanal og betalingsmåte, mens butikksystemet tar vare på detaljene per ordre som underdokumentasjon. Det holder bokføringen sporbar slik bokføringsreglene krever, uten at regnskapet fylles med tusenvis av småposter.",
@@ -39,7 +39,7 @@ export const netthandel: BransjeContent = {
       ],
     },
     {
-      tittel: "Mva i nettbutikken – hjemme og over grensen",
+      tittel: "Mva hjemme og over grensen. Dokumentasjonen avgjør.",
       avsnitt: [
         "Hovedregelen i Norge er klar: Du skal mva-registreres når avgiftspliktig omsetning passerer 50 000 kroner i løpet av tolv måneder, og de fleste varer selges med alminnelig sats på 25 prosent. Til forbrukere skal prisene i butikken vises med mva inkludert – mva-kodene i butikksystemet må derfor stemme fra første ordre.",
         "Selger du varer til kunder i utlandet, er utførselen fritatt for norsk mva. Men fritaket henger på dokumentasjonen: Du må kunne vise salgsdokument og at varen faktisk er sendt ut av landet, med utførselsdeklarasjon eller attest der det kreves. Mangler dokumentasjonen, kan Skatteetaten kreve norsk mva av salget – i praksis rett fra marginen din.",
@@ -47,7 +47,7 @@ export const netthandel: BransjeContent = {
       ],
     },
     {
-      tittel: "Lager, returer og valuta – postene som avgjør bruttomarginen",
+      tittel: "Lager, returer og valuta. Der avgjøres bruttomarginen.",
       avsnitt: [
         "Vareforbruket ditt beregnes ut fra lagerbevegelsen: verdien du startet med, pluss innkjøp, minus verdien du sitter igjen med. Er lagerverdien feil, er bruttomarginen og resultatet feil, uansett hvor ryddig resten av regnskapet er. Derfor må lageret telles minst en gang i året, per 31. desember, og varer som ikke lar seg selge til full pris skal skrives ned i regnskapet. Vær oppmerksom på at du skattemessig normalt ikke får fradrag for nedskrivningen før varene er solgt eller kastet.",
         "Returer er en del av hverdagen i netthandel, og de skal krediteres ordentlig: kreditnota som reduserer både omsetning og mva-grunnlag i riktig periode. Er butikk, betalingsløsning og regnskap riktig koblet, skjer dette automatisk når du refunderer kunden. Er de ikke det, blir hver retur manuelt arbeid og en differanse i neste avstemming.",

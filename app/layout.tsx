@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Source_Serif_4, Schibsted_Grotesk } from "next/font/google";
+import { Fraunces, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 import { site } from "@/data/site";
 import { Header } from "@/components/layout/Header";
@@ -10,14 +10,15 @@ import { MotionInit } from "@/components/motion/MotionInit";
 import { organizationSchema } from "@/lib/schema";
 import { leadEnabled } from "@/lib/lead";
 
-const serifDisplay = Source_Serif_4({
+const serifDisplay = Fraunces({
   subsets: ["latin"],
-  weight: ["600", "700"],
+  weight: ["500", "600", "700"],
+  style: ["normal", "italic"],
   variable: "--font-serif-display",
   display: "swap",
 });
 
-const grotesk = Schibsted_Grotesk({
+const grotesk = Hanken_Grotesk({
   subsets: ["latin"],
   variable: "--font-grotesk",
   display: "swap",

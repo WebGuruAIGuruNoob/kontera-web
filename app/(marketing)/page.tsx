@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { leadEnabled } from "@/lib/lead";
-import { HeroSplit } from "@/components/sections/HeroSplit";
-import { LeadCard } from "@/components/LeadCard";
-import { SectionHeading } from "@/components/SectionHeading";
-import { FramedImage } from "@/components/FramedImage";
-import { ComparisonTable } from "@/components/sections/ComparisonTable";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { PhoneIcon, CheckIcon, Arrow } from "@/components/icons";
@@ -14,12 +8,13 @@ import { bilde } from "@/lib/bilder";
 import { site } from "@/data/site";
 
 /**
- * FORSIDE v3 — «Samtalen» (konseptvinner 2026-08-24, dom i data/…/w4o020fsm):
- * Én sammenhengende salgsside der hver seksjon besvarer neste tvil i den
- * rekkefølgen den faktisk oppstår, og alle veier ender i samme handling.
- * Semantisk fargebruk: AZUR = retning mot samtalen · TEAL = inkludert/trygghet
- * · NAVY = de to forpliktelsesøyeblikkene (pris + finale). Foto = bevisflater
- * med felles navy-duotone. CTA-budsjett: 6 punkter (dommerens tak).
+ * FORSIDE v4 — «INKLUDERT» (Henriks valg 2026-08-24: Forslag D promotert).
+ * Stil-DNA: Randi (skoggrønn + elgul, løfteformel) · Fiken (folkelig ro) ·
+ * Testen (hue-tintede nøytraler, glød-pille, deadpan tosetninger, ærlighets-
+ * blokk) · Drivly (pastellbånd per seksjon, rounded-3xl-kort m/løft).
+ * Normalisert mot designsystemet: globale tokens (mist/cream/varm/gul),
+ * .pille, luftskalaen og delte Faq/FinalCta. Harde regler består: sanne
+ * tall, temperert språk, ring primær (lead-sikkerhetsregelen).
  */
 
 export const metadata: Metadata = {
@@ -29,425 +24,323 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
+const trustRad = [
+  { t: "Én fast regnskapsfører", u: "samme person hver gang" },
+  { t: "Fast stedfortreder", u: "kjenner også bedriften din" },
+  { t: "Spørsmål inkludert", u: "en del av honoraret" },
+  { t: "Fristene er vårt ansvar", u: "mva, a-melding, årsoppgjør" },
+];
+
+const roKort = [
+  {
+    bg: "bg-mist",
+    tittel: "Ring uten å regne på det",
+    tekst:
+      "Korte spørsmål og småavklaringer er en del av honoraret. Du skal ikke måtte veie et spørsmål mot en regning — det er i de små avklaringene feilene fanges tidlig.",
+  },
+  {
+    bg: "bg-cream",
+    tittel: "Én som kjenner tallene dine",
+    tekst:
+      "Ikke et kønummer. Du får én fast regnskapsfører som fører hele regnskapet ditt og husker historikken — og en stedfortreder som kjenner bedriften like godt.",
+  },
+  {
+    bg: "bg-varm",
+    tittel: "Fristene? Glem dem.",
+    tekst:
+      "Mva-terminer, a-meldinger, årsoppgjør. Vi holder oversikten gjennom hele året, og sier ifra i god tid når vi trenger noe fra deg. Resten er vår jobb.",
+  },
+];
+
+const tjenesterKort = [
+  { navn: "Regnskapsføring", tekst: "Bilag inn, oversikt ut. Løpende ført og avstemt.", href: "/tjenester/regnskapsforing", bg: "bg-mist" },
+  { navn: "Lønn", tekst: "Riktig utbetalt, riktig innberettet. Hver måned.", href: "/tjenester/lonn", bg: "bg-cream" },
+  { navn: "Mva-melding", tekst: "Levert til hver termin. Uten at du merker det.", href: "/tjenester/mva", bg: "bg-varm" },
+  { navn: "Årsoppgjør", tekst: "Ferdig i god tid. Ikke i siste liten.", href: "/tjenester/arsoppgjor", bg: "bg-cream" },
+  { navn: "Rådgivning", tekst: "Sparring på vanlig norsk. Inkludert i samarbeidet.", href: "/tjenester/radgivning", bg: "bg-varm" },
+  { navn: "Starte selskap", tekst: "ENK eller AS? Vi rigger alt riktig fra start.", href: "/tjenester/starte-selskap", bg: "bg-mist" },
+];
+
 const homeFaq = [
   {
-    q: "Hva koster det å ha Kontera som regnskapsfører?",
-    a: "Prisen avhenger av bilagsmengde, antall ansatte og hvor mye du vil gjøre selv. Vi ligger på et middels prisnivå med høy kvalitet – og korte spørsmål underveis er inkludert i honoraret. Ring oss, så gir vi deg et konkret estimat.",
+    q: "Hva koster det?",
+    a: "Ærlig svar: det spørs — på bilagsmengde, ansatte og hvor mye du gjør selv. Vi ligger i midtsjiktet på pris, og du får et konkret estimat etter én samtale. Ingen beløp før vi mener dem.",
   },
   {
-    q: "Hva betyr «fast regnskapsfører med fast stedfortreder» i praksis?",
-    a: "Du får én fast person som gjør hele regnskapet ditt og er kontaktpersonen din. I tillegg blir en kollega kjent med bedriften din, slik at du ikke står uten hjelp ved ferie eller sykdom.",
+    q: "Hva betyr «spørsmål inkludert»?",
+    a: "At korte spørsmål og småavklaringer er en del av honoraret. Ring når du lurer på noe — det er sånn samarbeidet er ment å fungere.",
   },
   {
-    q: "Hvordan bytter jeg fra dagens regnskapsfører til dere?",
-    a: "Du sier opp hos dagens byrå – vi tar resten: saldobalanse, historikk, tilganger og systemer. De fleste opplever byttet som overraskende enkelt. Beste tidspunkt er ved årsskiftet eller etter en mva-termin, men det går fint når som helst.",
-  },
-  {
-    q: "Må jeg binde meg for lang tid?",
-    a: "Nei. Vi tror på samarbeid som varer fordi det fungerer – ikke fordi kontrakten tvinger deg. Vilkårene avtaler vi tydelig før vi starter.",
-  },
-  {
-    q: "Hvor holder dere til – og kan dere ta kunder i hele Norge?",
-    a: "Vi har kontorer på Jar i Bærum og på Ask i Gjerdrum, og jobber digitalt med samarbeidspartnere i hele Norge. Bilag leveres digitalt, møter tas på video eller fysisk – som det passer deg.",
+    q: "Hvor vanskelig er det å bytte?",
+    a: "Du sier opp hos dagens byrå og gir oss en fullmakt. Vi henter saldobalanse, historikk og tilganger. De fleste synes det var mindre styr enn fryktet.",
   },
   {
     q: "Hvilke bransjer kan dere?",
-    a: "Vi har spisskompetanse på bilbransjen (særlig bruktbilsalg), håndverkere og bygg, eiendom og netthandel – og bred kompetanse som passer de fleste andre bransjer, inkludert borettslag og sameier.",
+    a: "Spisskompetanse på bilbransjen (særlig bruktbil), håndverkere, eiendom og netthandel. Bred erfaring med det meste annet — inkludert borettslag og sameier.",
   },
   {
     q: "Hvilke regnskapssystemer bruker dere?",
-    a: "Mest Tripletex og Uni Micro, men vi har god kjennskap til de fleste regnskapsprogram og ERP-systemer. Bruker du et system du trives med, kan vi som regel fortsette i det.",
+    a: "Mest Tripletex og Uni Micro, men vi kjenner de fleste systemer. Trives du i systemet ditt, fortsetter vi som regel bare der.",
   },
   {
     q: "Er dere autorisert?",
-    a: "Ja. Kontera Regnskap AS er et autorisert regnskapsforetak under tilsyn av Finanstilsynet, og to av oss er statsautoriserte regnskapsførere. Du kan verifisere autorisasjonen i Finanstilsynets virksomhetsregister.",
+    a: "Ja — autorisert regnskapsforetak under tilsyn av Finanstilsynet, med to statsautoriserte regnskapsførere blant seks ansatte. Org.nr 915 554 245.",
+  },
+  {
+    q: "Kan dere ta kunder der jeg bor?",
+    a: "Ja. Vi jobber digitalt med bedrifter i hele Norge — 357 kommuner, 15 fylker — med kontorer på Jar i Bærum og Ask i Gjerdrum.",
   },
 ];
 
-/** Graft fra Konsept B: «neste frister»-datastripe over lead-kortet (kun sanne datoer) */
-function FristStripe() {
-  const frister = [
-    { hva: "Mva-melding, 3. termin", nar: "31. aug" },
-    { hva: "A-melding for august", nar: "7. sep" },
-  ];
-  return (
-    <div className="mb-3 rounded-xl border border-navy/10 bg-surface px-4 py-2.5">
-      <p className="microlabel text-slate">
-        Neste frister — vi holder oversikten
-      </p>
-      <ul className="mt-1.5 divide-y divide-navy/10">
-        {frister.map((f) => (
-          <li key={f.hva} className="flex items-baseline justify-between gap-3 py-1 text-sm">
-            <span className="font-semibold text-ink">{f.hva}</span>
-            <span className="shrink-0 font-bold tabular-nums text-navy">{f.nar}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-const bentoTjenester = [
-  { navn: "Lønnskjøring", tekst: "Riktig utbetalt og riktig innberettet — a-melding hver måned.", href: "/tjenester/lonn" },
-  { navn: "Mva-melding", tekst: "Kontert, kontrollert og levert til hver termin.", href: "/tjenester/mva" },
-  { navn: "Årsoppgjør", tekst: "Årsregnskap og skattemelding — levert i god tid.", href: "/tjenester/arsoppgjor" },
-  { navn: "Rådgivning og oppstart", tekst: "Sparring på tall og veivalg — og hjelp til å starte selskap.", href: "/tjenester/radgivning" },
-];
-
-const bransjeChips = [
-  { navn: "Bilforhandlere", fag: "avansemoms · lagerbiler · innbytte", href: "/bransjer/bilforhandlere" },
-  { navn: "Håndverkere", fag: "prosjektregnskap · timelister · byggekort", href: "/bransjer/handverkere" },
-  { navn: "Eiendom", fag: "avskrivninger · mva-justering · struktur", href: "/bransjer/eiendom" },
-  { navn: "Netthandel", fag: "betalingsløsninger · avstemming · volum", href: "/bransjer/netthandel" },
-];
-
 export default function HomePage() {
-  const enabled = leadEnabled();
-  const kortFoto = bilde("team:samarbeid-2");
   const teamFoto = bilde("team:samarbeid-1");
-  const bentoFoto = bilde("tjeneste2:regnskapsforing");
-  const bytteFoto = bilde("blogg:bytte-regnskapsforer");
+  const kaffeFoto = bilde("omoss:kaffe-og-notater");
 
   return (
     <>
-      {/* 1. HERO — løftet + handlingen. CTA #1 og #2. */}
-      <HeroSplit
-        showCtas
-        eyebrow="Autorisert regnskapsforetak · 2 statsautoriserte regnskapsførere"
-        title={
-          <>
-            Regnskap, lønn og årsoppgjør — med én fast regnskapsfører som{" "}
-            <span className="hl-serif-italic">svarer</span>.
-          </>
-        }
-        subtitle="Du får en regnskapsfører som kjenner bedriften din og holder fristene. Korte spørsmål og småavklaringer er inkludert i honoraret — og en fast stedfortreder kjenner deg også, så du ikke står uten hjelp ved ferie eller sykdom."
-        aside={
-          <div>
-            <FristStripe />
-            <LeadCard
-              enabled={enabled}
-              heading="Snakk med en regnskapsfører i dag"
-              subheading="Uforpliktende samtale om behovet ditt — tydelige vilkår før oppstart."
-              image={kortFoto ?? undefined}
-            />
-          </div>
-        }
-      />
-
-      {/* 2. Tallene bak løftet — etterprøvbar troverdighet, kun sanne tall */}
-      <section
-        aria-label="Tallene bak løftet"
-        className="border-y border-navy/10 bg-paper"
-      >
-        <div className="mx-auto max-w-6xl px-4 py-6">
-          <dl
-            data-reveal-group
-            className="grid grid-cols-2 gap-y-5 text-center sm:grid-cols-3 md:flex md:justify-between md:text-left"
-          >
-            {[
-              { tall: 6, etikett: "ansatte" },
-              { tall: 2, etikett: "statsautoriserte" },
-              { tall: 2015, etikett: "etablert", raa: true },
-              { tall: 357, etikett: "kommuner dekket" },
-              { tall: 15, etikett: "fylker" },
-            ].map((s) => (
-              <div key={s.etikett}>
-                <dd className="font-display text-2xl font-bold tabular-nums text-navy md:text-3xl">
-                  {s.raa ? s.tall : <span data-count-to={s.tall}>{s.tall}</span>}
-                </dd>
-                <dt className="mt-0.5 text-xs font-semibold uppercase tracking-[0.14em] text-slate">
-                  {s.etikett}
-                </dt>
-              </div>
-            ))}
-            <div className="col-span-2 self-center sm:col-span-1">
+      {/* ===== Hero på flatt grønt bånd ===== */}
+      <section className="bg-mist">
+        <div className="section-y-lg mx-auto grid max-w-6xl items-center gap-12 px-4 lg:grid-cols-12">
+          <div className="lg:col-span-7">
+            <p className="section-eyebrow">
+              Regnskapsbyrå for små og mellomstore bedrifter
+            </p>
+            <h1 className="mt-4 font-display text-display font-semibold text-navy [text-wrap:balance]">
+              Når vi sier inkludert, mener vi <em className="italic">inkludert</em>.
+            </h1>
+            <p className="mt-5 max-w-[34rem] text-lg leading-relaxed text-slate">
+              Korte spørsmål, småavklaringer og en regnskapsfører som faktisk
+              tar telefonen — det er en del av honoraret hos Kontera, ikke noe
+              som dukker opp på fakturaen.
+            </p>
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <a href={site.phoneHref} data-cta="hero-ring" className="pille">
+                <PhoneIcon className="h-5 w-5" />
+                Ring {site.phoneDisplay}
+              </a>
               <a
-                href="https://www.finanstilsynet.no/virksomhetsregisteret/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-bold uppercase tracking-[0.14em] text-navy hover:text-azure"
+                href="#slik"
+                data-cta="hero-slik"
+                className="font-semibold text-navy underline-offset-4 hover:underline"
               >
-                Under tilsyn av Finanstilsynet
+                Se hvordan vi jobber <Arrow />
               </a>
             </div>
-          </dl>
-        </div>
-      </section>
-
-      {/* 3. Første tvil: «koster det å spørre?» — teal = inkludert-flaten. CTA #3. */}
-      <section className="section-y mx-auto max-w-6xl px-4">
-        <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
-          <div className="lg:col-span-6">
-            <SectionHeading
-              eyebrow="Det første folk spør om"
-              title="Korte spørsmål er inkludert i honoraret."
-              intro="Mange kvier seg for å kontakte regnskapsføreren sin fordi de er usikre på om spørsmålet utløser en faktura. Hos oss er korte spørsmål og småavklaringer en del av honoraret — du trenger ikke veie et spørsmål mot en regning."
-            />
-            <p className="mt-4 max-w-[60ch] leading-relaxed text-slate">
-              Det er sånn et samarbeid skal fungere: terskelen for å ta kontakt
-              skal være null, for det er i de små avklaringene feilene fanges
-              tidlig.
+            <p className="mt-4 text-sm font-medium text-slate">
+              Ingen bindingstid · Fast kontaktperson · Svar fra ekte folk
             </p>
           </div>
-          <div className="rounded-2xl border border-navy/10 bg-teal/10 p-7 lg:col-span-5 lg:col-start-8">
-            <p className="microlabel text-navy/70">
-              Eksempler på det du bare kan spørre om
-            </p>
-            <ul className="mt-3 divide-y divide-navy/10">
-              {[
-                "«Kan jeg føre dette som driftskostnad?»",
-                "«Hva betyr denne mva-koden?»",
-                "«Rekker vi fristen — eller bør vi be om utsettelse?»",
-                "«Bør neste bil inn i selskapet eller privat?»",
-              ].map((q) => (
-                <li key={q} className="py-2.5 font-display text-base italic leading-snug text-navy">
-                  {q}
-                </li>
-              ))}
-            </ul>
-            <a
-              href={site.phoneHref}
-              data-cta="sporsmal-ring"
-              className="mt-5 inline-block text-sm font-bold text-blue hover:underline"
-            >
-              Ring oss med et kort spørsmål — så hører du hvordan vi svarer{" "}
-              <Arrow className="text-azure" />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. Andre tvil: «hvem får jeg?» — modellen fast fører + stedfortreder */}
-      <section className="section-y bg-mist">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-12 lg:gap-14">
-          <div className="lg:col-span-6">
-            <SectionHeading
-              eyebrow="Menneskene bak tallene"
-              title="Én fast regnskapsfører gjør hele regnskapet ditt — og en fast stedfortreder kjenner deg også."
-              intro="Samme person hver gang, en som kjenner historikken i tallene dine. Og skulle regnskapsføreren din være på ferie eller bli syk, står du ikke uten hjelp — stedfortrederen kjenner allerede bedriften."
-            />
-            <ul className="mt-6">
-              {[
-                ["6 ansatte", "et lite team du blir kjent med"],
-                ["2 statsautoriserte regnskapsførere", "regulert kvalitet i alle oppdrag"],
-                ["Jar i Bærum og Ask i Gjerdrum", "kontorer — og kunder digitalt i hele landet"],
-                ["Autorisert regnskapsforetak", "under tilsyn av Finanstilsynet"],
-              ].map(([tittel, tekst]) => (
-                <li key={tittel} className="border-t border-navy/10 py-3.5">
-                  <span className="font-display font-bold text-navy">{tittel}</span>{" "}
-                  <span className="text-sm text-slate">— {tekst}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="relative lg:col-span-6">
+          <div className="lg:col-span-5">
             {teamFoto && (
-              <FramedImage
-                src={teamFoto.src}
-                alt={teamFoto.alt}
-                sizes="(min-width: 1024px) 45vw, 100vw"
-              />
-            )}
-            {/* Sidens ene overlapp: modellen som kort over bildekanten */}
-            <div className="mt-4 flex items-center justify-center gap-3 rounded-xl border border-navy/10 bg-surface p-4 lg:absolute lg:-bottom-6 lg:-left-6 lg:mt-0 lg:shadow-none">
-              <span className="rounded-full bg-blue/10 px-3 py-1 text-xs font-bold text-navy">
-                Din regnskapsfører
-              </span>
-              <Arrow className="text-azure" />
-              <span className="rounded-full bg-teal/15 px-3 py-1 text-xs font-bold text-navy">
-                Fast stedfortreder
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. «Alt dette tar vi hånd om» — bento + bransjeflate med fagbegrep-lenker */}
-      <section className="section-y mx-auto max-w-6xl px-4">
-        <SectionHeading
-          eyebrow="Tjenestene"
-          title="Alt dette tar vi hånd om"
-          intro="Hele regnskapsbehovet samlet hos én fast regnskapsfører — du velger hvor mye du vil gjøre selv."
-        />
-        <div data-reveal-group className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-12">
-          {/* Featurecelle: løpende regnskap + fristløftet, med foto som bevisflate */}
-          <Link
-            href="/tjenester/regnskapsforing"
-            className="group card-line card-line-hover relative overflow-hidden rounded-2xl md:col-span-7 md:row-span-2"
-          >
-            {bentoFoto && (
-              <div className="relative h-44">
+              <div className="relative overflow-hidden rounded-3xl border border-navy/20 shadow-[0_12px_32px_rgba(28,79,45,0.14)]">
                 <Image
-                  src={bentoFoto.src}
-                  alt={bentoFoto.alt}
-                  fill
-                  sizes="(min-width: 768px) 55vw, 100vw"
-                  className="object-cover"
+                  src={teamFoto.src}
+                  alt={teamFoto.alt}
+                  width={1280}
+                  height={853}
+                  priority
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="h-auto w-full object-cover"
                 />
                 <div
                   aria-hidden="true"
-                  className="absolute inset-0 bg-gradient-to-t from-navy/40 to-navy/10 mix-blend-multiply"
+                  className="absolute inset-0 bg-navy/15 mix-blend-multiply"
                 />
               </div>
             )}
-            <div className="p-7">
-              <h3 className="font-display text-2xl font-bold text-navy">
-                Løpende regnskap — og fristene som følger med
-              </h3>
-              <p className="mt-2 max-w-[50ch] leading-relaxed text-slate">
-                Bokføring, avstemming og rapporter du forstår. Vi holder
-                oversikt over mva-terminer, a-meldinger og årsfrister gjennom
-                hele året — det er vårt ansvar, ikke ditt.
-              </p>
-              <span className="mt-4 inline-block text-sm font-bold text-blue group-hover:underline">
-                Les mer <Arrow className="text-azure" />
+          </div>
+        </div>
+      </section>
+
+      {/* ===== Trust-ikonrad rett under hero ===== */}
+      <section aria-label="Det viktigste først" className="border-b border-line bg-surface">
+        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-4 py-8 lg:grid-cols-4">
+          {trustRad.map((t) => (
+            <div key={t.t} className="flex items-start gap-3">
+              <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-mist text-navy">
+                <CheckIcon className="h-4 w-4" />
               </span>
+              <div>
+                <p className="font-semibold leading-snug text-navy">{t.t}</p>
+                <p className="text-sm text-slate/80">{t.u}</p>
+              </div>
             </div>
-          </Link>
-          {bentoTjenester.map((t) => (
-            <Link
-              key={t.href}
-              href={t.href}
-              className="group card-line card-line-hover p-6 md:col-span-5"
-            >
-              <h3 className="flex items-baseline justify-between gap-3 font-sans text-base font-bold text-navy">
-                {t.navn}
-                <Arrow className="text-azure transition-transform group-hover:translate-x-0.5" />
-              </h3>
-              <p className="mt-1.5 text-sm leading-relaxed text-slate">{t.tekst}</p>
-            </Link>
           ))}
-          {/* Bransjeflate: fagbegrep-rader som ekte lenker (SEO + kompetansesignal) */}
-          <div className="rounded-2xl border border-navy/10 bg-mist p-6 md:col-span-12">
-            <p className="font-sans text-sm font-bold text-ink">
-              Spisskompetanse der regelverket er mest krevende — og bred
-              erfaring for de fleste andre bransjer:
-            </p>
-            <div className="mt-4 grid gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-4">
-              {bransjeChips.map((b) => (
-                <Link key={b.href} href={b.href} className="group">
-                  <span className="font-display text-base font-bold text-navy group-hover:text-blue">
-                    {b.navn} <Arrow className="text-azure" />
-                  </span>
-                  <span className="microlabel mt-0.5 block !font-semibold text-slate">
-                    {b.fag}
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-        {/* CTA #4: tynn banner i retningsfargen */}
-        <div className="mt-8 flex flex-col items-start justify-between gap-4 border-y border-navy/10 py-5 sm:flex-row sm:items-center">
-          <p className="font-sans font-bold text-navy [text-wrap:balance]">
-            Usikker på hva bedriften din trenger? Det finner vi ut av sammen.
-          </p>
-          <a
-            href={site.phoneHref}
-            data-cta="bento-ring"
-            className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-blue px-5 py-2.5 font-sans text-sm font-bold text-white transition-colors hover:bg-blue-dark"
-          >
-            <PhoneIcon className="h-4 w-4" />
-            Ring {site.phoneDisplay}
-          </a>
         </div>
       </section>
 
-      {/* 6. Tredje tvil: «hva koster det?» — navy-bånd nr. 1 (forpliktelse). CTA #5. */}
-      <section className="section-y bg-navy text-white">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 lg:grid-cols-12 lg:gap-14">
-          <div className="lg:col-span-6">
-            <SectionHeading
-              tone="dark"
-              eyebrow="Hva koster det?"
-              title="Ærlig svar: det spørs. Og vi sier det rett ut."
-              intro="Prisen settes av bilagsmengde, antall ansatte og hvor mye du vil gjøre selv. Vi ligger i midtsjiktet — vi konkurrerer ikke på laveste timepris, men på fast regnskapsfører, fast stedfortreder og at korte spørsmål er inkludert i honoraret."
-            />
-            <p className="mt-4 max-w-[56ch] text-sm leading-relaxed text-white/70">
-              Etter en kort samtale om behovet ditt får du et konkret estimat
-              med tydelige forutsetninger — som regel samme dag.
-            </p>
-          </div>
-          <div className="rounded-2xl bg-surface p-7 text-ink lg:col-span-5 lg:col-start-8">
-            <p className="microlabel text-navy/70">
-              Dette er alltid inkludert
-            </p>
-            <ul className="mt-3">
-              {[
-                "Fast regnskapsfører som kjenner bedriften din",
-                "Fast stedfortreder som også kjenner deg",
-                "Korte spørsmål og småavklaringer",
-                "Oversikt over alle offentlige frister",
-                "Rapporter forklart på vanlig norsk",
-              ].map((punkt) => (
-                <li key={punkt} className="flex items-start gap-2.5 border-t border-navy/10 py-2.5 text-sm font-semibold text-ink first:border-t-0">
-                  <CheckIcon className="mt-0.5 h-4 w-4 shrink-0 text-teal" />
-                  {punkt}
-                </li>
-              ))}
-            </ul>
-            <a
-              href={site.phoneHref}
-              data-cta="pris-ring"
-              className="mt-5 inline-flex w-full items-center justify-center gap-2.5 rounded-lg bg-blue px-6 py-3.5 font-sans font-bold text-white transition-colors hover:bg-blue-dark"
+      {/* ===== Ro-trioen: tre store tintede kort ===== */}
+      <section className="section-y-lg mx-auto max-w-6xl px-4">
+        <h2 className="max-w-2xl font-display text-h2 font-semibold text-navy [text-wrap:balance]">
+          Regnskap skal gi ro. Ikke en klump i magen.
+        </h2>
+        <div className="mt-10 grid gap-5 lg:grid-cols-3">
+          {roKort.map((k) => (
+            <div
+              key={k.tittel}
+              className={`rounded-3xl ${k.bg} p-8 shadow-[0_4px_12px_rgba(28,79,45,0.06)] transition-all hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(28,79,45,0.14)]`}
             >
-              <PhoneIcon className="h-5 w-5" />
-              Få et konkret estimat
-            </a>
-            <p className="mt-2 text-center text-xs text-slate">
-              Uforpliktende · Tydelige vilkår før oppstart
-            </p>
+              <h3 className="font-display text-xl font-semibold text-navy">
+                {k.tittel}
+              </h3>
+              <p className="mt-3 leading-relaxed text-slate">{k.tekst}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ===== Deadpan-tallene ===== */}
+      <section className="section-y bg-surface">
+        <div className="mx-auto max-w-6xl px-4">
+          <h2 className="max-w-2xl font-display text-h2 font-semibold text-navy [text-wrap:balance]">
+            Seks ansatte. To statsautoriserte. Det holder.
+          </h2>
+          <p className="mt-4 max-w-[38rem] leading-relaxed text-slate">
+            Store nok til å kunne faget — små nok til at du kjenner stemmen som
+            tar telefonen. Etablert i 2015, digitale kunder i hele landet.
+          </p>
+          <div className="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
+            {[
+              { tall: "6", u: "ansatte" },
+              { tall: "2", u: "statsautoriserte regnskapsførere" },
+              { tall: "357", u: "kommuner dekket digitalt" },
+              { tall: "2015", u: "etablert — Jar og Gjerdrum" },
+            ].map((s) => (
+              <div
+                key={s.u}
+                className="rounded-2xl border border-teal/60 bg-mist/50 p-6"
+              >
+                <p className="text-[2.4rem] font-semibold leading-none tracking-[-0.03em] text-navy tabular-nums">
+                  {s.tall}
+                </p>
+                <p className="mt-2 text-sm font-medium text-slate">{s.u}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 7. Fjerde tvil: «hvor vanskelig er byttet?» */}
-      <section className="section-y mx-auto max-w-6xl px-4">
-        <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
+      {/* ===== Tjenestebento på cream-bånd ===== */}
+      <section className="section-y-lg bg-cream">
+        <div className="mx-auto max-w-6xl px-4">
+          <h2 className="max-w-2xl font-display text-h2 font-semibold text-navy [text-wrap:balance]">
+            Alt du trenger. Ingenting du ikke trenger.
+          </h2>
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {tjenesterKort.map((t) => (
+              <Link
+                key={t.href}
+                href={t.href}
+                className={`group rounded-3xl ${t.bg} border border-navy/10 p-7 shadow-[0_2px_8px_rgba(28,79,45,0.05)] transition-all hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(28,79,45,0.14)]`}
+              >
+                <h3 className="flex items-baseline justify-between font-display text-lg font-semibold text-navy">
+                  {t.navn}
+                  <Arrow className="text-navy/50 transition-transform group-hover:translate-x-1" />
+                </h3>
+                <p className="mt-2 text-[15px] leading-relaxed text-slate">{t.tekst}</p>
+              </Link>
+            ))}
+          </div>
+          <p className="mt-8 text-sm text-slate/80">
+            Bransje?{" "}
+            {[
+              ["Bilforhandlere", "/bransjer/bilforhandlere"],
+              ["Håndverkere", "/bransjer/handverkere"],
+              ["Eiendom", "/bransjer/eiendom"],
+              ["Netthandel", "/bransjer/netthandel"],
+              ["Borettslag", "/bransjer/borettslag-sameier"],
+            ].map(([navn, href], i) => (
+              <span key={href}>
+                {i > 0 && " · "}
+                <Link href={href} className="font-semibold text-navy hover:underline">
+                  {navn}
+                </Link>
+              </span>
+            ))}{" "}
+            — vi kan særreglene dine.
+          </p>
+        </div>
+      </section>
+
+      {/* ===== Ærlighetsblokken ===== */}
+      <section className="section-y-lg mx-auto max-w-6xl px-4">
+        <div className="grid items-center gap-10 lg:grid-cols-12">
+          <div className="rounded-3xl bg-surface p-8 shadow-[0_4px_12px_rgba(28,79,45,0.06)] lg:col-span-7 lg:p-10">
+            <p className="microlabel text-slate/80">Helt ærlig</p>
+            <h2 className="mt-3 font-display text-[clamp(1.6rem,1.1rem+1.8vw,2.4rem)] font-semibold leading-tight text-navy [text-wrap:balance]">
+              Hva skjer når regnskapsføreren din blir syk?
+            </h2>
+            <p className="mt-4 leading-relaxed text-slate">
+              Det er spørsmålet folk glemmer å stille — helt til det skjer. Hos
+              oss blir to personer kjent med bedriften din: din faste
+              regnskapsfører, og en stedfortreder som følger med underveis.
+              Blir én borte, tar den andre over uten at du må forklare noe på
+              nytt.
+            </p>
+            <p className="mt-4 leading-relaxed text-slate">
+              Det er ikke en nødløsning vi improviserer når det smeller. Det er
+              sånn vi har rigget hvert eneste kundeforhold siden starten.
+            </p>
+            <p className="mt-6 text-sm font-medium text-slate/80">
+              Ingen binding · Tydelige vilkår før oppstart · Org.nr {site.orgNr}
+            </p>
+          </div>
           <div className="lg:col-span-5">
-            {bytteFoto && (
-              <FramedImage
-                src={bytteFoto.src}
-                alt={bytteFoto.alt}
-                sizes="(min-width: 1024px) 38vw, 100vw"
-              />
+            {kaffeFoto && (
+              <div className="relative overflow-hidden rounded-3xl border border-line">
+                <Image
+                  src={kaffeFoto.src}
+                  alt={kaffeFoto.alt}
+                  width={1280}
+                  height={853}
+                  sizes="(min-width: 1024px) 35vw, 100vw"
+                  className="h-auto w-full object-cover"
+                />
+                <div aria-hidden="true" className="absolute inset-0 bg-navy/15 mix-blend-multiply" />
+              </div>
             )}
           </div>
-          <div className="lg:col-span-7">
-            <SectionHeading
-              eyebrow="Enkelt å bytte"
-              title="Byttet krever mindre av deg enn du tror."
-            />
-            <ol className="mt-8 grid gap-x-8 gap-y-8 sm:grid-cols-3">
-              {[
-                ["En uforpliktende prat", "Vi avklarer behovet ditt og gir et konkret estimat."],
-                ["Vi håndterer overgangen", "Du sier opp hos dagens byrå — vi ordner saldobalanse, historikk, tilganger og systemer."],
-                ["Fast fører fra dag én", "Regnskapsføreren din setter seg inn i bedriften — og stedfortrederen gjør det samme."],
-              ].map(([tittel, tekst], i) => (
-                <li key={tittel} className="border-t-2 border-navy/10 pt-4">
-                  <span className="font-display text-2xl font-bold tabular-nums text-azure">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="mt-1.5 font-sans text-base font-bold text-navy">{tittel}</h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-slate">{tekst}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
         </div>
       </section>
 
-      {/* 8. Sammenligningen — for byttere */}
-      <ComparisonTable />
+      {/* ===== Slik funker det + pris-ærlighet på grønt bånd ===== */}
+      <section id="slik" className="section-y-lg scroll-mt-20 bg-mist">
+        <div className="mx-auto max-w-6xl px-4">
+          <h2 className="max-w-2xl font-display text-h2 font-semibold text-navy [text-wrap:balance]">
+            Midtsjiktet på pris. Toppsjiktet på å ta telefonen.
+          </h2>
+          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+            {[
+              ["1", "Én samtale", "Vi går gjennom bedriften, bilagsmengden og hva du vil gjøre selv. Du får et konkret estimat med tydelige forutsetninger — som regel samme dag."],
+              ["2", "Vi ordner overgangen", "Bytter du fra et annet byrå, henter vi saldobalanse, historikk og tilganger. Din innsats: én oppsigelse og én fullmakt."],
+              ["3", "Fast fører fra dag én", "Regnskapsføreren din setter seg inn i bedriften — og stedfortrederen gjør det samme. Så er det bare å ringe når du lurer på noe."],
+            ].map(([nr, tittel, tekst]) => (
+              <div key={nr} className="rounded-3xl bg-surface p-8 shadow-[0_4px_12px_rgba(28,79,45,0.06)]">
+                <p className="font-display text-4xl font-semibold text-gul [text-shadow:0_1px_0_rgba(28,79,45,0.25)] tabular-nums">
+                  {nr}
+                </p>
+                <h3 className="mt-3 font-display text-lg font-semibold text-navy">
+                  {tittel}
+                </h3>
+                <p className="mt-2 text-[15px] leading-relaxed text-slate">{tekst}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-8 max-w-2xl text-sm font-medium text-slate">
+            Ingen beløp før vi mener dem — prisen settes etter samtalen, og den
+            forklares så du skjønner hva du betaler for.{" "}
+            <Link href="/priser" data-cta="pris-modell" className="font-semibold text-navy underline underline-offset-4">
+              Se hvordan prisen settes
+            </Link>
+          </p>
+        </div>
+      </section>
 
-      {/* 9. FAQ — ordnet etter tvilsstigen */}
-      <Faq items={homeFaq} title="Spørsmål vi ofte får" />
+      {/* ===== FAQ (varm-bånd via delt komponent) ===== */}
+      <Faq items={homeFaq} title="Lurer du på noe? Typisk oss å svare." />
 
-      {/* 10. Finalen — CTA #6, lukker sirkelen til H1-ens «svarer» */}
-      <FinalCta
-        title="Klar for en regnskapsfører som svarer?"
-        text="Én uforpliktende samtale — så vet du hvordan vi jobber, hva det vil koste for din bedrift, og om vi passer sammen."
-      />
+      {/* ===== Mørk skoggrønn finale med gul glød ===== */}
+      <FinalCta />
     </>
   );
 }

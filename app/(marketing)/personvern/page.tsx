@@ -13,15 +13,20 @@ export default function PersonvernPage() {
   return (
     <>
       <Breadcrumbs items={[{ name: "Personvern", href: "/personvern" }]} />
-      <section className="mx-auto max-w-6xl px-4 py-12">
+      <section className="bg-mist">
+        <div className="section-y-sm mx-auto max-w-6xl px-4">
+          <div className="mx-auto max-w-3xl">
+            <p className="section-eyebrow">Personvern</p>
+            <h1 className="mt-3 font-display text-[clamp(2.1rem,1.3rem+2.4vw,3.4rem)] font-semibold leading-[1.08] tracking-[-0.015em] text-navy [text-wrap:balance]">
+              Personvernerklæring
+            </h1>
+            <p className="mt-3 text-sm text-slate">Sist oppdatert: 21. august 2026</p>
+          </div>
+        </div>
+      </section>
+      <section className="section-y-sm mx-auto max-w-6xl px-4">
         <article className="prose-kontera mx-auto max-w-3xl">
-          <p className="section-eyebrow">Personvern</p>
-          <h1 className="mt-2 font-display text-4xl font-extrabold text-ink">
-            Personvernerklæring
-          </h1>
-          <p className="mt-3 text-sm text-slate">Sist oppdatert: 21. august 2026</p>
-
-          <div className="mt-8 space-y-8 leading-relaxed text-slate [&_h2]:font-display [&_h2]:text-xl [&_h2]:font-extrabold [&_h2]:text-ink [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-1">
+          <div className="space-y-8 leading-relaxed text-slate [&_h2]:font-display [&_h2]:text-xl [&_h2]:font-semibold [&_h2]:text-navy [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-1">
             <div>
               <h2>Hvem vi er</h2>
               <p className="mt-3">

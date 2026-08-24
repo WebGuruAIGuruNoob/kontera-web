@@ -3,12 +3,12 @@ import type { BransjeContent } from "@/lib/content-types";
 export const borettslagSameier: BransjeContent = {
   slug: "borettslag-sameier",
   navn: "Borettslag og sameier",
-  tittel: "Regnskap for borettslag og sameier — trygghet for styret",
+  tittel: "Regnskap for borettslag og sameier. Trygt for styret.",
   metaTitle: "Regnskap for borettslag og sameier | Kontera Regnskap",
   metaDescription:
     "Regnskap, årsoppgjør og årsmøtepapirer for borettslag og sameier. Fast regnskapsfører, og korte spørsmål er inkludert. Ring 960 00 400.",
   heroUndertekst:
-    "Styret får en fast regnskapsfører som kjenner laget deres, og en fast stedfortreder som kjenner det like godt. Vi tar regnskapet, felleskostnadene og fristene, og leverer tall hele styret forstår før årsmøtet. Korte faglige spørsmål underveis er inkludert i honoraret.",
+    "Styret får en fast regnskapsfører som kjenner laget deres — og en stedfortreder som kjenner det like godt. Vi tar regnskapet, felleskostnadene og fristene, og leverer tall hele styret forstår før årsmøtet. Korte spørsmål underveis er inkludert i honoraret.",
   kortBeskrivelse:
     "Regnskap, felleskostnader og årsmøtepapirer for styrer i borettslag og sameier.",
   ikon: "blokk",
@@ -17,13 +17,13 @@ export const borettslagSameier: BransjeContent = {
   smerter: [
     "Ingen i styret har økonomibakgrunn, og dokumentasjonen er arvet fra forrige styre",
     "Dere er usikre på om sameiet har regnskapsplikt, og om det må ha revisor",
-    "Noen av beboerne ligger etter med felleskostnadene, og det er ubehagelig å purre på naboer",
+    "Noen av beboerne ligger etter med felleskostnadene, og det er ubehagelig å purre på sine egne naboer",
     "Årsmøtet nærmer seg, og verken regnskap, budsjett eller papirer er klare",
     "Styrehonoraret er utbetalt rett fra kontoen, uten at det er innberettet",
   ],
   seksjoner: [
     {
-      tittel: "Regnskapskravene for borettslag og sameier",
+      tittel: "Regnskapsplikten avhenger av hva dere er. Og hvor store.",
       avsnitt: [
         "Borettslag har full regnskapsplikt etter regnskapsloven, og i tillegg en egen forskrift om årsregnskap og årsberetning for borettslag. Den krever blant annet en oppstilling over disponible midler – et nøkkeltall som viser om laget har midler tilgjengelig, ikke bare et regnskapsmessig overskudd. Alle borettslag skal også ha revisor, og årsregnskapet skal legges frem for ordinær generalforsamling innen utgangen av juni.",
         "For eierseksjonssameier skiller eierseksjonsloven på størrelse: Sameier med 21 eller flere seksjoner skal føre regnskap etter regnskapsloven og ha revisor. I mindre sameier holder det at styret sørger for «ordentlig og tilstrekkelig regnskapsførsel», og årsmøtet kan selv velge om sameiet skal ha revisor. I praksis anbefaler vi ordentlig regnskap uansett størrelse – det er styrets beste dokumentasjon når noen stiller spørsmål ved pengebruken, ved eierskifter og når banken skal vurdere en lånesøknad til vedlikehold.",
@@ -31,21 +31,21 @@ export const borettslagSameier: BransjeContent = {
       ],
     },
     {
-      tittel: "Felleskostnader, restanser og oppfølging av manglende betaling",
+      tittel: "Å purre på naboen er ubehagelig. La oss gjøre det.",
       avsnitt: [
         "Felleskostnadene er lagets eneste faste inntekt, og regnskapet må til enhver tid vise hvem som har betalt og hvem som ligger etter. Restanser bør følges opp raskt og helt likt for alle – det er både ryddigst og enklest å forsvare på et årsmøte. Å purre på en nabo er ubehagelig. Da er det en fordel at purringen kommer fra regnskapsføreren og ikke fra et styremedlem.",
         "Både borettslag og sameier har lovfestet panterett i boligen for ubetalte felleskostnader, begrenset oppad til to ganger folketrygdens grunnbeløp. Det gir god sikkerhet – men bare hvis kravene følges opp i tide og riktig rekkefølge: faktura, purring, varsel og eventuelt inkasso. Venter styret for lenge, kan restansen vokse forbi det panteretten dekker. Med faste rutiner følger oppfølgingen samme løp hver gang, og styret slipper å ta stilling til hver enkelt sak.",
       ],
     },
     {
-      tittel: "Styrehonorar skal innberettes – også i små lag",
+      tittel: "Styrehonorar er lønn. Også i små lag.",
       avsnitt: [
         "Styrehonorar er skattepliktig lønn, også i et frivillig styre i et lite sameie. Honoraret skal rapporteres i a-meldingen, det skal trekkes forskuddstrekk etter skattekort, og laget skal som hovedregel beregne arbeidsgiveravgift. Det samme gjelder om laget betaler noen for vaktmestertjenester, trappevask eller plenklipping. Bare små utbetalinger – under tusen kroner til én person i løpet av året – er unntatt.",
         "Den vanligste feilen ser slik ut: Årsmøtet vedtar et honorar, kassereren overfører beløpet rett fra driftskontoen, og ingen følger det opp videre. Så dukker det opp som uoppgitt inntekt hos styremedlemmet, og laget har verken trukket skatt eller levert a-melding. Oppryddingen er tidkrevende, og den kan unngås helt. Vi håndterer hele løpet fra vedtak til innberetning, slik at honoraret er gjort opp riktig første gang.",
       ],
     },
     {
-      tittel: "Budsjett, vedlikeholdsfond og større prosjekter",
+      tittel: "Vedlikeholdsfondet er ikke penger. Kontoen er penger.",
       avsnitt: [
         "Et godt budsjett er styrets viktigste verktøy og årsmøtets beste beslutningsgrunnlag. Felleskostnadene skal dekke kommunale avgifter, forsikring, strøm i fellesarealer, løpende vedlikehold og eventuelle lånekostnader, med litt margin. Settes de for lavt, skyver styret regningen foran seg til den kommer som et brått hopp, og det møter sjelden forståelse på årsmøtet. Vi setter opp budsjettet sammen med styret og viser hva hver post betyr for nivået på felleskostnadene.",
         "Mange lag snakker om vedlikeholdsfondet, men i regnskapet er et fond egenkapital – midlene finnes bare hvis de står på konto. Derfor bør en langsiktig vedlikeholdsplan henge sammen med budsjettet og likviditeten, så taket, rørene og fasaden er finansiert før arbeidet haster. Ved større prosjekter er felles lån nedbetalt gjennom økte felleskostnader det vanligste – og da bør styret kunne vise årsmøtet hva prosjektet betyr i kroner per bolig, i tillegg til totalsummen.",
@@ -88,11 +88,11 @@ export const borettslagSameier: BransjeContent = {
   faq: [
     {
       q: "Har sameiet vårt regnskapsplikt etter regnskapsloven?",
-      a: "Sameier med 21 eller flere seksjoner skal føre regnskap etter regnskapsloven. Mindre sameier skal ha «ordentlig og tilstrekkelig regnskapsførsel». Borettslag har alltid full regnskapsplikt, uansett størrelse. Er dere usikre på hva som gjelder for deres lag, går vi gjennom det i den innledende samtalen.",
+      a: "Sameier med 21 eller flere seksjoner skal føre regnskap etter regnskapsloven. Mindre sameier skal ha «ordentlig og tilstrekkelig regnskapsførsel». Borettslag har full regnskapsplikt uansett størrelse. Er dere usikre på hva som gjelder for deres lag, går vi gjennom det i den innledende samtalen.",
     },
     {
       q: "Må vi ha revisor?",
-      a: "Borettslag skal alltid ha revisor. Sameier med 21 eller flere seksjoner skal også ha det, mens mindre sameier kan velge revisor på årsmøtet hvis de ønsker. Vi er regnskapsførere og ikke revisorer, men vi leverer et regnskap revisor kan arbeide direkte i, og samarbeider tett med revisor der laget har en.",
+      a: "Borettslag skal ha revisor, uansett størrelse. Sameier med 21 eller flere seksjoner skal også ha det, mens mindre sameier kan velge revisor på årsmøtet hvis de ønsker. Vi er regnskapsførere og ikke revisorer, men vi leverer et regnskap revisor kan arbeide direkte i, og samarbeider tett med revisor der laget har en.",
     },
     {
       q: "Vi har forretningsfører – hva kan dere hjelpe med da?",

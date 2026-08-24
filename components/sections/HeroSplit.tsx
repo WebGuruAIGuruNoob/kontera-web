@@ -29,16 +29,10 @@ export function HeroSplit({
 }) {
   return (
     <section
-      className={`relative isolate overflow-hidden bg-paper ${
+      className={`relative isolate overflow-hidden bg-mist ${
         variant === "aurora" ? "aurora" : ""
       }`}
     >
-      {variant === "standard" && (
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 -z-10 bg-[radial-gradient(55rem_28rem_at_88%_-12%,rgb(7_160_228/0.08),transparent_70%)]"
-        />
-      )}
       <div
         className={`mx-auto grid max-w-6xl items-start gap-10 px-4 lg:grid-cols-12 lg:gap-14 ${
           compact ? "py-12 lg:py-16" : "py-16 lg:py-24"
@@ -49,8 +43,8 @@ export function HeroSplit({
           <h1
             className={
               compact
-                ? "mt-3 font-display text-[clamp(2.1rem,1.3rem+2.4vw,3.4rem)] font-bold leading-[1.08] tracking-[-0.02em] text-ink [text-wrap:balance]"
-                : "mt-3 font-display text-display font-bold text-ink [text-wrap:balance]"
+                ? "mt-3 font-display text-[clamp(2.1rem,1.3rem+2.4vw,3.4rem)] font-semibold leading-[1.08] tracking-[-0.015em] text-navy [text-wrap:balance]"
+                : "mt-3 font-display text-display font-semibold text-navy [text-wrap:balance]"
             }
           >
             {title}
@@ -60,21 +54,18 @@ export function HeroSplit({
           </p>
 
           {(!aside || showCtas) && (
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a
-                href={site.phoneHref}
-                data-cta="hero-ring"
-                className="inline-flex items-center justify-center gap-2.5 rounded-lg bg-blue px-6 py-3.5 font-sans text-base font-bold text-white transition-colors hover:bg-blue-dark"
-              >
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <a href={site.phoneHref} data-cta="hero-ring" className="pille">
                 <PhoneIcon className="h-5 w-5" />
                 Ring {site.phoneDisplay}
               </a>
               <a
                 href={aside ? "#lead" : "/kontakt"}
                 data-cta="hero-kontakt"
-                className="inline-flex items-center justify-center rounded-lg border border-navy/25 px-6 py-3.5 font-sans text-base font-bold text-navy transition-colors hover:border-navy/50"
+                className="font-sans font-semibold text-navy underline-offset-4 hover:underline"
               >
-                Få et uforpliktende tilbud <span aria-hidden="true" className="ml-2">→</span>
+                Få et uforpliktende tilbud{" "}
+                <span aria-hidden="true">→</span>
               </a>
             </div>
           )}

@@ -151,15 +151,16 @@ export default async function KommunePage({
 
       {/* 4. Tjenestebento — bransjesortert med lokaliserte setninger */}
       <ServicesBento
-        title={`Regnskapstjenester i ${navn} — alt fra én fast regnskapsfører`}
-        intro={`Alt fra løpende bokføring til årsoppgjør — levert digitalt til ${navn}, med én fast regnskapsfører som tar helheten.`}
+        title={`Alt bedriften i ${navn} trenger. Ingenting den ikke trenger.`}
+        intro={`Fra løpende bokføring til årsoppgjør — levert digitalt til ${navn}, med én fast regnskapsfører som tar helheten.`}
         order={innhold.tjenesteRekkefolge}
         localSentences={innhold.tjenesteSetninger}
         geoSuffix={`i ${navn}`}
       />
 
-      {/* 5. Betingede fagblokker — redaksjonell 4/8 med datavalgte fagbilder */}
-      <section className="section-y bg-mist">
+      {/* 5. Betingede fagblokker — redaksjonell 4/8 med datavalgte fagbilder
+          (cream-bånd: pastellrotasjonen mist → cream → mist, D-språket) */}
+      <section className="section-y bg-cream">
         <div className="mx-auto max-w-6xl px-4">
           <EditorialSections
             blokker={innhold.blokker}
@@ -235,8 +236,8 @@ export default async function KommunePage({
       />
 
       <FinalCta
-        title={`En fast regnskapsfører som kjenner bedriften din — i ${navn}`}
-        text={`Ta en uforpliktende samtale, så finner vi ut om vi passer for bedriften din i ${navn}.`}
+        title="Prøv oss på et spørsmål. Det er jo inkludert."
+        text={`Én uforpliktende samtale — så vet du hvordan vi jobber, hva det vil koste for din bedrift i ${navn}, og om vi passer sammen.`}
       />
     </>
   );

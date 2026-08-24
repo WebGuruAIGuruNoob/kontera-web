@@ -138,8 +138,9 @@ export default async function FylkePage({
         source={`Kilder: Brønnøysundregistrene (Enhetsregisteret) og SSB. Sist oppdatert ${generatedAt}.`}
       />
 
-      {/* Kommunevelger i to nivåer: topp-kort med tall + kompakt liste */}
-      <section className="section-y bg-mist">
+      {/* Kommunevelger i to nivåer: topp-kort med tall + kompakt liste
+          (cream — pastellrotasjonen, D-språket) */}
+      <section className="section-y bg-cream">
         <div className="mx-auto max-w-6xl px-4">
           <SectionHeading
             eyebrow="Velg område"
@@ -189,7 +190,7 @@ export default async function FylkePage({
       )}
 
       <ServicesBento
-        title={`Regnskapstjenester i hele ${navn} — levert digitalt`}
+        title={`Alt bedriften i ${navn} trenger. Ingenting den ikke trenger.`}
         intro="Samme faste regnskapsfører tar helheten — du velger hvor mye du vil gjøre selv."
         geoSuffix={`i ${navn}`}
       />
@@ -200,7 +201,8 @@ export default async function FylkePage({
         title={`Spørsmål og svar — regnskapsfører i ${navn}`}
       />
       <FinalCta
-        title={`En fast regnskapsfører som kjenner bedriften din — i ${navn}`}
+        title="Prøv oss på et spørsmål. Det er jo inkludert."
+        text={`Én uforpliktende samtale — så vet du hvordan vi jobber, hva det vil koste for din bedrift i ${navn}, og om vi passer sammen.`}
       />
     </>
   );

@@ -3,27 +3,27 @@ import type { BransjeContent } from "@/lib/content-types";
 export const handverkere: BransjeContent = {
   slug: "handverkere",
   navn: "Håndverkere og bygg",
-  tittel: "Regnskap for håndverkere — full oversikt over lønnsomheten per jobb",
+  tittel: "Regnskap for håndverkere. Du ser hva hver jobb ga.",
   metaTitle: "Regnskap for håndverkere og bygg | Kontera Regnskap",
   metaDescription:
     "Regnskapsfører med lang erfaring fra bygg og håndverk: prosjektregnskap, lønn, mva og igangværende arbeid. Ring 960 00 400 for en uforpliktende samtale.",
   heroUndertekst:
-    "Vi har ført regnskap for byggmestere, entreprenører og håndverksbedrifter i mange år. Du får en fast regnskapsfører som kjenner prosjektøkonomi, og som er tilgjengelig på telefon i arbeidstiden.",
+    "Byggmestere, entreprenører og håndverksbedrifter har vært hos oss i mange år. Du får en fast regnskapsfører som kan prosjektøkonomi — og som tar telefonen i arbeidstiden.",
   kortBeskrivelse:
-    "Prosjektregnskap og lønnsomhet per jobb for tømrere, rørleggere, elektrikere, murere og entreprenører.",
+    "Prosjektregnskap og lønnsomhet per jobb — for tømrere, rørleggere, elektrikere, murere og entreprenører.",
   ikon: "hammer",
   omtale: "håndverks- og byggebedrifter",
   virksomhetsord: "bedriften din",
   smerter: [
-    "Du fakturerer mye, men mangler oversikt over hvilke jobber som er lønnsomme",
+    "Du fakturerer mye, men vet ikke hvilke jobber du tjener på",
     "Timelister, overtid og tillegg gjør lønnskjøringen til en hel kveld hver måned",
     "Reglene for innleie og underentreprenører endres ofte, og du er usikker på om dokumentasjonen er i orden",
     "Om vinteren er kontoen stram, og i mai forfaller feriepenger, skatt og mva samtidig",
-    "Du vil ha en regnskapsfører som kjenner hverdagen på en byggeplass",
+    "Du vil ha en regnskapsfører som vet hvordan en byggeplass fungerer",
   ],
   seksjoner: [
     {
-      tittel: "Prosjektregnskap og etterkalkyle: lønnsomhet per jobb",
+      tittel: "Lønnsomheten avgjøres jobb for jobb. Regnskapet må vise det.",
       avsnitt: [
         "I bygg og håndverk avgjøres lønnsomheten jobb for jobb. To prosjekter kan se like ut på tilbudsstadiet og ende helt forskjellig når materialpriser, timebruk og uforutsett arbeid er telt opp. Ser du bare totalen på bunnlinjen, er det vanskelig å vite om det er badene eller rehabiliteringsjobbene som gir inntjeningen. Da er det lett å gjenta priser som ikke dekker kostnadene.",
         "Vi setter opp regnskapet ditt med prosjektdimensjon i Tripletex eller Uni Micro, slik at hver jobb får sine egne inntekter og kostnader: materialer, timer, underentreprenører og maskinleie. Så lager vi etterkalkyler som viser dekningsbidraget per prosjekt, og sammenligner med tilbudet du ga.",
@@ -31,7 +31,7 @@ export const handverkere: BransjeContent = {
       ],
     },
     {
-      tittel: "Igangværende arbeid og garanti ved årsskiftet",
+      tittel: "Jobber som går over nyttår. De krever sin egen vurdering.",
       avsnitt: [
         "Prosjekter som går over nyttår krever en egen vurdering ved årsskiftet. Skattemessig skal fortjenesten på en tilvirkningskontrakt normalt først inntektsføres det året jobben er fullført – fram til da verdsettes arbeidet til det det har kostet å produsere. I regnskapet kan bildet være et annet, avhengig av hvilken metode bedriften bruker. Blir ikke igangværende arbeid verdsatt riktig, betaler du enten skatt for tidlig eller får et resultat som ikke stemmer med virkeligheten.",
         "A-konto-fakturering må også henge sammen med fremdriften. I byggebransjen gjelder egne regler for når salgsdokument skal utstedes, og fakturering, fremdrift og mva-rapportering må dra i samme retning. Vi passer på at forskudd, delfakturaer og sluttoppgjør behandles riktig hele veien.",
@@ -39,7 +39,7 @@ export const handverkere: BransjeContent = {
       ],
     },
     {
-      tittel: "Mva i bygg: bolig, næring og jobber i egen regi",
+      tittel: "Mva i bygg: satsen er lik. Resten er det ikke.",
       avsnitt: [
         "Mva-satsen er den samme – 25 prosent – enten du jobber for private eller for bedrifter. Forskjellen ligger hos kunden: En bedrift får som regel fradrag for mva-en, en privatperson betaler den fullt ut. Det påvirker både hvordan du priser jobbene og hvor viktig ryddige fakturaer er. Privatkunder ser på totalprisen, næringskunder på prisen uten mva.",
         "Arbeid i egen regi krever en egen vurdering. Setter du egne folk til å bygge noe firmaet selv skal selge eller leie ut – for eksempel en bolig for videresalg – er selve salget utenfor mva-loven, og da skal det beregnes uttaksmerverdiavgift av arbeidet dere legger ned. Det samme gjelder når firmaets folk og materialer brukes på din egen bolig eller hytte. Reglene er detaljerte, og feil kan gi etterberegning av merverdiavgift.",
@@ -47,7 +47,7 @@ export const handverkere: BransjeContent = {
       ],
     },
     {
-      tittel: "Folk på plassen: lønn, HMS-kort, innleie og underentreprenører",
+      tittel: "Folk på plassen: lønn, HMS-kort og innleie. Alt skal være i orden.",
       avsnitt: [
         "Lønn i byggebransjen er sammensatt. Varierende timetall, overtid, tillegg, kjøregodtgjørelse mellom oppdrag og verktøygodtgjørelse skal alle behandles riktig i a-meldingen – og deler av godtgjørelsene kan være trekkfrie, mens resten er skattepliktig lønn. I tillegg er lønnen i byggfagene allmenngjort: Det finnes lovbestemte minstesatser du må følge, også for utenlandske arbeidstakere.",
         "Alle som jobber på en bygge- eller anleggsplass skal ha HMS-kort – det gjelder også deg som driver enkeltpersonforetak. Kortet får du ikke bestilt før virksomheten og arbeidsforholdene er riktig registrert i offentlige registre, så en a-melding som er à jour er i praksis en forutsetning for å få folk ut på plassen.",

@@ -3,37 +3,37 @@ import type { TjenesteContent } from "@/lib/content-types";
 export const arsoppgjor: TjenesteContent = {
   slug: "arsoppgjor",
   navn: "Årsoppgjør og skattemelding",
-  tittel: "Årsoppgjør og skattemelding — levert i god tid før fristen",
+  tittel: "Årsoppgjør og skattemelding. Ferdig i god tid før fristen.",
   metaTitle: "Årsoppgjør og skattemelding for AS og ENK | Kontera Regnskap",
   metaDescription:
     "Vi tar hele årsoppgjøret: årsregnskap, noter, skattemelding og aksjonærregisteroppgave – levert riktig og innen fristen. Ring 960 00 400 for et tilbud.",
   heroUndertekst:
-    "Vi tar hele årsoppgjøret for deg: årsregnskap med noter, skattemelding med næringsspesifikasjon, aksjonærregisteroppgave og innsending til Altinn og Brønnøysund. Også hvis du fører regnskapet selv og bare trenger hjelp til avslutningen.",
+    "Vi tar hele årsoppgjøret: årsregnskap med noter, skattemelding med næringsspesifikasjon, aksjonærregisteroppgave og innsending til Altinn og Brønnøysund. Også hvis du fører regnskapet selv og bare trenger hjelp til avslutningen.",
   kortBeskrivelse:
-    "Årsregnskap, skattemelding og aksjonærregisteroppgave – riktig utført og levert innen fristene.",
+    "Årsregnskap, skattemelding og aksjonærregisteroppgave. Riktig utført, levert innen fristene.",
   ikon: "kalender",
   passerFor: [
-    "Du driver AS og vil være trygg på at årsregnskap og skattemelding blir riktig, og at fristene følges opp for deg",
+    "Du driver AS og vil være trygg på at årsregnskap og skattemelding blir riktig — og at fristene følges opp for deg",
     "Du fører regnskapet selv gjennom året, men vil ha en statsautorisert regnskapsfører til selve årsoppgjøret",
     "Du har enkeltpersonforetak eller ansvarlig selskap og synes skattemeldingen med næringsspesifikasjon er blitt mer krevende enn den var",
-    "Du har fått brev fra Skatteetaten om skattemeldingen og vil ha noen som svarer riktig – første gang",
+    "Du har fått brev fra Skatteetaten om skattemeldingen og vil ha noen som svarer riktig — første gang",
     "Du leverte for sent i fjor, fikk gebyr eller purring, og vil ha en fast rutine som sikrer levering i tide",
   ],
   hvaInngar: [
     {
       tittel: "Årsregnskap med noter",
       tekst:
-        "Vi setter opp resultat, balanse og noter etter regnskapsloven, tilpasset størrelsen på selskapet ditt. Små foretak har forenklede krav – vi sørger for at du ikke leverer mer enn du må, men heller ikke mindre.",
+        "Vi setter opp resultat, balanse og noter etter regnskapsloven, tilpasset størrelsen på selskapet ditt. Små foretak har forenklede krav — vi sørger for at du ikke leverer mer enn du må, men heller ikke mindre.",
     },
     {
       tittel: "Skattemelding med næringsspesifikasjon",
       tekst:
-        "Vi utarbeider og leverer skattemeldingen for AS, enkeltpersonforetak og ansvarlige selskap – i riktig standardisert format, via godkjent årsoppgjørsprogram, slik reglene krever.",
+        "Vi utarbeider og leverer skattemeldingen for AS, enkeltpersonforetak og ansvarlige selskap — i riktig standardisert format, via godkjent årsoppgjørsprogram, slik reglene krever.",
     },
     {
       tittel: "Aksjonærregisteroppgave",
       tekst:
-        "Vi rapporterer aksjonærer, utbytte og endringer i aksjekapitalen innen fristen 31. januar – så aksjonærene får riktige tall ferdig utfylt i sine egne skattemeldinger.",
+        "Vi rapporterer aksjonærer, utbytte og endringer i aksjekapitalen innen fristen 31. januar — så aksjonærene får riktige tall ferdig utfylt i sine egne skattemeldinger.",
     },
     {
       tittel: "Styrets vedtak og generalforsamling",
@@ -43,7 +43,7 @@ export const arsoppgjor: TjenesteContent = {
     {
       tittel: "Innsending til Altinn og Brønnøysund",
       tekst:
-        "Vi sender alt dit det skal: skattemeldingen til Skatteetaten og årsregnskapet til Regnskapsregisteret – og følger opp til innsendingene er registrert som godkjent.",
+        "Vi sender alt dit det skal: skattemeldingen til Skatteetaten og årsregnskapet til Regnskapsregisteret — og følger opp til innsendingene er registrert som godkjent.",
     },
     {
       tittel: "Bistand ved endring og klage",
@@ -53,45 +53,45 @@ export const arsoppgjor: TjenesteContent = {
   ],
   seksjoner: [
     {
-      tittel: "Fristene i årsoppgjøret – dette er datoene som gjelder",
+      tittel: "Fristene i årsoppgjøret — datoene som gjelder",
       avsnitt: [
-        "Skattemeldingen for aksjeselskap og næringsdrivende skal leveres innen 31. mai året etter inntektsåret. Som regnskapsførere kan vi søke om utsatt frist for kundene våre når det trengs, men planen vår er alltid å bli ferdig i god tid før, slik at leveransen er klar før forfall.",
-        "Årsregnskapet skal fastsettes av generalforsamlingen innen seks måneder etter regnskapsårets slutt – altså innen 30. juni for selskap som følger kalenderåret. Deretter skal det sendes til Regnskapsregisteret i Brønnøysund, og det må være mottatt der innen 31. juli for å unngå forsinkelsesgebyr.",
-        "Kommer årsregnskapet inn for sent, løper gebyret ukentlig i opptil 26 uker og kan samlet bli titusener av kroner – og i verste fall kan styremedlemmene bli personlig ansvarlige for beløpet. I tillegg kommer aksjonærregisteroppgaven, som alle AS må levere innen 31. januar. Er du kunde hos oss, holder vi oversikt over disse datoene. Det er en del av oppdraget vårt.",
+        "Skattemeldingen for aksjeselskap og næringsdrivende skal leveres innen 31. mai året etter inntektsåret. Som regnskapsførere kan vi søke om utsatt frist for kundene våre når det trengs, men planen vår er å bli ferdig i god tid før, slik at leveransen er klar før forfall.",
+        "Årsregnskapet skal fastsettes av generalforsamlingen innen seks måneder etter regnskapsårets slutt — altså innen 30. juni for selskap som følger kalenderåret. Deretter skal det sendes til Regnskapsregisteret i Brønnøysund, og det må være mottatt der innen 31. juli for å unngå forsinkelsesgebyr.",
+        "Kommer årsregnskapet inn for sent, løper gebyret ukentlig i opptil 26 uker og kan samlet bli titusener av kroner — i verste fall kan styremedlemmene bli personlig ansvarlige for beløpet. I tillegg kommer aksjonærregisteroppgaven, som alle AS må levere innen 31. januar. Er du kunde hos oss, holder vi oversikt over disse datoene. Det er en del av oppdraget vårt.",
       ],
     },
     {
-      tittel: "Skattemeldingen for AS må leveres fra et godkjent årsoppgjørsprogram",
+      tittel: "Skattemeldingen for AS krever et godkjent årsoppgjørsprogram",
       avsnitt: [
         "Fra og med inntektsåret 2023 må alle aksjeselskap levere skattemeldingen i et standardisert format via et årsoppgjørs- eller regnskapsprogram. De gamle skjemaene i Altinn, som mange daglige ledere fylte ut selv år etter år, finnes ikke lenger. Uten et godkjent program får du ikke levert.",
         "For deg som har gjort dette selv, betyr det to ting: Du må skaffe og betale for et årsoppgjørsprogram, og du må fortsatt kjenne reglene. Næringsspesifikasjonen henger sammen på tvers, og feil i avskrivninger, midlertidige forskjeller eller utsatt skatt følger deg videre inn i neste år. Programmet kontrollerer ikke om de faglige vurderingene bak tallene er riktige.",
-        "Vi gjør årsoppgjøret i profesjonelle årsoppgjørsverktøy, med statsautoriserte regnskapsførere som kontrollerer tallene før noe sendes. Enkeltpersonforetak kan fortsatt levere rett fra Skatteetatens egen løsning – men også der ser vi ofte at en time med kvalitetssikring både reduserer skatterisikoen og sparer deg for tid.",
+        "Vi gjør årsoppgjøret i profesjonelle årsoppgjørsverktøy, med statsautoriserte regnskapsførere som kontrollerer tallene før noe sendes. Enkeltpersonforetak kan fortsatt levere rett fra Skatteetatens egen løsning — men også der ser vi ofte at en time med kvalitetssikring både reduserer skatterisikoen og sparer deg for tid.",
       ],
     },
     {
-      tittel: "Årsoppgjør som enkeltoppdrag for deg som fører selv",
+      tittel: "Årsoppgjør som enkeltoppdrag — for deg som fører selv",
       avsnitt: [
         "Mange driver godt med å føre det løpende regnskapet selv, men vil ha en fagperson til avslutningen. Det er en fornuftig arbeidsdeling, og en tjeneste vi leverer til mange. Vi jobber mest i Tripletex og Uni Micro, men kjenner de fleste systemer, så vi tar som regel utgangspunkt rett i ditt eget regnskap.",
-        "Slik fungerer det: Vi går gjennom regnskapet ditt, avstemmer balansen, rydder der det trengs og gjør avslutningsposteringene – avskrivninger, skattekostnad, disponering av resultatet. Så utarbeider vi årsregnskap, skattemelding og resten av dokumentene, og sender alt inn. Finner vi feil i føringen din, får du konkret beskjed, så neste år blir enklere.",
+        "Slik fungerer det: Vi går gjennom regnskapet ditt, avstemmer balansen, rydder der det trengs og gjør avslutningsposteringene — avskrivninger, skattekostnad, disponering av resultatet. Så utarbeider vi årsregnskap, skattemelding og resten av dokumentene, og sender alt inn. Finner vi feil i føringen din, får du konkret beskjed, så neste år blir enklere.",
         "Du binder deg ikke til noe mer enn selve oppdraget. Noen kommer til oss for ett årsoppgjør og fortsetter å føre selv i mange år. Andre ser verdien av å sette bort mer over tid, og utvider oppdraget. Begge deler er velkomment.",
       ],
     },
     {
       tittel: "Hva et årsoppgjør koster",
       avsnitt: [
-        "Prisen avhenger av selskapsform, hvor ryddig regnskapet er når vi overtar det, og hvor komplisert selskapet er – forhold som utsatt skatt, aksjonærlån eller flere eiere trekker opp. Et årsoppgjør for et lite AS med ordnet regnskap er en overkommelig engangsjobb; et opprydningsprosjekt er noe annet, og det sier vi tydelig fra om på forhånd.",
-        "Vi ligger i midtsjiktet på pris. Vi prioriterer erfaring og faglig kvalitet framfor lavest mulig timepris. Fører vi regnskapet ditt løpende, er årsoppgjøret en naturlig del av avtalen. Se prissiden vår for mer om hvordan vi priser, eller ring 960 00 400, så gir vi deg et konkret estimat etter en kort gjennomgang.",
+        "Prisen avhenger av selskapsform, hvor ryddig regnskapet er når vi overtar det, og hvor komplisert selskapet er — forhold som utsatt skatt, aksjonærlån eller flere eiere trekker opp. Et årsoppgjør for et lite AS med ordnet regnskap er en overkommelig engangsjobb; et opprydningsprosjekt er noe annet, og det sier vi tydelig fra om på forhånd.",
+        "Vi ligger i midtsjiktet på pris og prioriterer erfaring og faglig kvalitet framfor lavest mulig timepris. Fører vi regnskapet ditt løpende, er årsoppgjøret en naturlig del av avtalen. Se prissiden vår for mer om hvordan vi priser, eller ring 960 00 400, så gir vi deg et konkret estimat etter en kort gjennomgang.",
       ],
     },
   ],
   faq: [
     {
       q: "Når er fristen for å levere skattemeldingen for AS?",
-      a: "31. mai året etter inntektsåret – samme frist gjelder for enkeltpersonforetak med næringsspesifikasjon. Som regnskapsførere kan vi søke om utsatt frist for kundene våre ved behov, men vi planlegger alltid for å levere i god tid før.",
+      a: "31. mai året etter inntektsåret — samme frist gjelder for enkeltpersonforetak med næringsspesifikasjon. Som regnskapsførere kan vi søke om utsatt frist for kundene våre ved behov, men vi planlegger for å levere i god tid før.",
     },
     {
       q: "Hva skjer hvis årsregnskapet leveres for sent?",
-      a: "Er ikke årsregnskapet mottatt hos Regnskapsregisteret innen 31. juli, begynner det å løpe forsinkelsesgebyr ukentlig – i opptil 26 uker. Det kan samlet bli titusener av kroner, og styremedlemmene kan bli personlig ansvarlige hvis selskapet ikke betaler.",
+      a: "Er ikke årsregnskapet mottatt hos Regnskapsregisteret innen 31. juli, begynner det å løpe forsinkelsesgebyr ukentlig — i opptil 26 uker. Det kan samlet bli titusener av kroner, og styremedlemmene kan bli personlig ansvarlige hvis selskapet ikke betaler.",
     },
     {
       q: "Kan jeg levere skattemeldingen for AS-et mitt selv?",
@@ -103,11 +103,11 @@ export const arsoppgjor: TjenesteContent = {
     },
     {
       q: "Må jeg levere aksjonærregisteroppgave når ingenting har skjedd i selskapet?",
-      a: "Ja. Alle norske aksjeselskap må levere aksjonærregisteroppgaven innen 31. januar, også i år uten utbytte eller endringer. Leverer du ikke, risikerer selskapet tvangsmulkt – og aksjonærene får feil grunnlag i sine egne skattemeldinger.",
+      a: "Ja. Alle norske aksjeselskap må levere aksjonærregisteroppgaven innen 31. januar, også i år uten utbytte eller endringer. Leverer du ikke, risikerer selskapet tvangsmulkt — og aksjonærene får feil grunnlag i sine egne skattemeldinger.",
     },
     {
       q: "Trenger AS-et mitt revisor?",
-      a: "De fleste små AS kan velge bort revisjon så lenge de ligger under tersklene for omsetning, balansesum og antall årsverk. Vi vurderer gjerne om ditt selskap kan fravelge revisjon – og der revisjonsplikten slår inn, samarbeider vi tett med revisor gjennom hele årsoppgjøret.",
+      a: "De fleste små AS kan velge bort revisjon så lenge de ligger under tersklene for omsetning, balansesum og antall årsverk. Vi vurderer gjerne om ditt selskap kan fravelge revisjon — og der revisjonsplikten slår inn, samarbeider vi tett med revisor gjennom hele årsoppgjøret.",
     },
   ],
   relaterte: ["regnskapsforing", "radgivning"],

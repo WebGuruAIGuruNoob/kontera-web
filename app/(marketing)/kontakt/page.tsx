@@ -36,61 +36,75 @@ export default function KontaktPage() {
   return (
     <>
       <Breadcrumbs items={[{ name: "Kontakt", href: "/kontakt" }]} />
-      <section className="mx-auto max-w-6xl px-4 py-12 lg:py-16">
-        <div className="max-w-2xl">
+
+      {/* ===== Kompakt hero på grønt bånd ===== */}
+      <section className="bg-mist">
+        <div className="section-y-sm mx-auto max-w-6xl px-4">
           <p className="section-eyebrow">Kontakt</p>
-          <h1 className="mt-2 font-display text-4xl font-extrabold text-ink [text-wrap:balance]">
-            Snakk med en regnskapsfører hos oss
+          <h1 className="mt-3 max-w-3xl font-display text-[clamp(2.1rem,1.3rem+2.4vw,3.4rem)] font-semibold leading-[1.08] tracking-[-0.015em] text-navy [text-wrap:balance]">
+            Ett nummer. Én e-post. Ekte folk i begge ender.
           </h1>
-          <p className="mt-4 text-lg leading-relaxed text-slate">
-            Den beste måten å finne ut om vi passer for bedriften din, er å
-            snakke sammen. Ring oss direkte – eller send noen linjer om hva du
-            trenger hjelp til, så tar vi kontakt innen én arbeidsdag.
+          <p className="mt-5 max-w-[36rem] text-lg leading-relaxed text-slate">
+            Ring hvis du vil ha svar med en gang — hverdager 08–16. Eller bruk
+            skjemaet, så tar vi kontakt innen én arbeidsdag.
+          </p>
+          <p className="mt-4 text-sm font-medium text-slate">
+            Uforpliktende samtale · Ingen bindingstid · Autorisert regnskapsforetak
           </p>
         </div>
+      </section>
 
-        <div className="mt-10 grid gap-10 lg:grid-cols-2">
-          <div className="space-y-6">
-            <a
-              href={site.phoneHref}
-              data-cta="kontakt-ring"
-              className="flex items-center gap-4 rounded-lg bg-blue p-6 text-white shadow-lift transition-transform hover:-translate-y-0.5"
-            >
-              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/15">
-                <PhoneIcon className="h-7 w-7" />
-              </span>
-              <span>
-                <span className="block font-display text-2xl font-extrabold">
-                  {site.phoneDisplay}
-                </span>
-                <span className="text-sm text-white/85">
-                  Hverdager 08–16 · Uforpliktende samtale
-                </span>
-              </span>
-            </a>
+      {/* ===== To veier inn: ring til venstre, skjema til høyre ===== */}
+      <section className="section-y mx-auto max-w-6xl px-4">
+        <div className="grid gap-10 lg:grid-cols-2">
+          <div className="space-y-5">
+            <div className="rounded-3xl bg-surface p-8 shadow-[0_4px_12px_rgba(28,79,45,0.06)]">
+              <h2 className="font-display text-xl font-semibold text-navy">
+                Den raskeste veien
+              </h2>
+              <p className="mt-2 text-sm leading-relaxed text-slate">
+                En kort samtale er som regel nok til å avklare behovet og gi
+                deg et estimat med tydelige forutsetninger.
+              </p>
+              <a
+                href={site.phoneHref}
+                data-cta="kontakt-ring"
+                className="pille mt-5 w-full sm:w-auto"
+              >
+                <PhoneIcon className="h-5 w-5" />
+                Ring {site.phoneDisplay}
+              </a>
+              <p className="mt-3 text-sm text-slate">Hverdager 08–16</p>
+            </div>
 
-            <div className="rounded-lg border border-line bg-white p-6">
-              <h2 className="font-display text-lg font-bold text-navy">E-post</h2>
-              <a href={site.emailHref} className="mt-1 block font-semibold text-blue hover:underline">
+            <div className="rounded-3xl bg-cream p-7 shadow-[0_4px_12px_rgba(28,79,45,0.06)]">
+              <h2 className="font-display text-lg font-semibold text-navy">E-post</h2>
+              <a
+                href={site.emailHref}
+                className="mt-1 inline-block font-semibold text-navy underline-offset-4 hover:underline"
+              >
                 {site.email}
               </a>
             </div>
 
             {site.offices.map((office) => (
-              <div key={office.id} className="rounded-lg border border-line bg-white p-6">
-                <h2 className="font-display text-lg font-bold text-navy">
+              <div
+                key={office.id}
+                className="rounded-3xl bg-mist p-7 shadow-[0_4px_12px_rgba(28,79,45,0.06)]"
+              >
+                <h2 className="font-display text-lg font-semibold text-navy">
                   Kontor {office.label}
                 </h2>
-                <p className="mt-1 text-slate">
+                <p className="mt-1 text-sm text-slate">
                   {office.street}, {office.postalCode} {office.city}
                 </p>
                 <a
                   href={office.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-2 inline-block text-sm font-bold text-blue hover:underline"
+                  className="mt-3 inline-block text-sm font-semibold text-navy underline-offset-4 hover:underline"
                 >
-                  Vis i Google Maps →
+                  Vis i Google Maps <span aria-hidden="true">→</span>
                 </a>
               </div>
             ))}
@@ -102,14 +116,15 @@ export default function KontaktPage() {
           </div>
 
           <div>
-            <h2 className="mb-4 font-display text-lg font-bold text-navy">
-              Send oss noen ord om bedriften din
+            <h2 className="mb-4 font-display text-xl font-semibold text-navy">
+              Send oss noen linjer om bedriften din
             </h2>
             <ContactForm enabled={formEnabled} />
           </div>
         </div>
       </section>
-      <Faq items={kontaktFaq} title="Spørsmål og svar før du tar kontakt" />
+
+      <Faq items={kontaktFaq} title="Det folk lurer på før de tar kontakt" />
     </>
   );
 }

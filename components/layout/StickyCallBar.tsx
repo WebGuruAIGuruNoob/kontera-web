@@ -59,7 +59,7 @@ export function StickyCallBar({ leadEnabled }: { leadEnabled: boolean }) {
           <a
             href={formHref}
             data-cta="sticky-tilbud"
-            className="flex flex-1 items-center justify-center bg-blue px-4 py-3.5 font-sans text-sm font-bold text-white"
+            className="flex flex-1 items-center justify-center bg-gul px-4 py-3.5 font-sans text-sm font-bold text-ink"
           >
             Få tilbud
           </a>
@@ -69,7 +69,7 @@ export function StickyCallBar({ leadEnabled }: { leadEnabled: boolean }) {
           <a
             href={site.phoneHref}
             data-cta="sticky-ring"
-            className="flex flex-1 items-center justify-center gap-2 bg-blue px-4 py-3.5 font-sans text-sm font-bold text-white"
+            className="flex flex-1 items-center justify-center gap-2 bg-gul px-4 py-3.5 font-sans text-sm font-bold text-ink"
           >
             <PhoneIcon className="h-4 w-4" />
             Ring {site.phoneDisplay}

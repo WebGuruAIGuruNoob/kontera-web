@@ -37,9 +37,6 @@ console.log("Design-lint — modus 1: kilderegler");
 for (const dir of ["app", "components"]) {
   for (const file of tsxFiles(join(root, dir))) {
     if (file.endsWith("globals.css")) continue; // tokenhjemmet (R7)
-    // app/forslag er eksplisitt prototype-sandkasse (Henriks «helt ny side»-
-    // runde 2026-08-24) — vinneren normaliseres mot reglene når den promoteres.
-    if (/[\\/]app[\\/]forslag[\\/]/.test(file)) continue;
     const src = readFileSync(file, "utf8");
     for (const regel of KILDE_REGLER) {
       if (regel.re.test(src)) {
@@ -76,9 +73,14 @@ for (const [navn, fil] of SIDER) {
   const mist = (html.match(/<section[^>]*class="[^"]*bg-mist[^"]*"/g) ?? []).length;
   if (mist > 3) feil(`R3: ${navn} har ${mist} mist-bånd (maks 3)`);
 
-  // R6: fotobudsjett per side. Forsiden har utvidet budsjett (Henriks 2030-ordre
-  // 2026-08-24: «mer fargerik og flere bilder» — VisualBento); øvrige maler 4.
-  const fotoBudsjett = navn === "forside" ? 7 : 4;
+  // R3b («Inkludert»-regimet 2026-08-24): pastellbånd totalt (mist+cream+varm)
+  // maks 5 per side — rotasjonen skal veksle mot papir, aldri tapetsere siden.
+  const bånd = (html.match(/<section[^>]*class="[^"]*bg-(mist|cream|varm)[^"]*"/g) ?? []).length;
+  if (bånd > 5) feil(`R3b: ${navn} har ${bånd} pastellbånd totalt (maks 5)`);
+
+  // R6: fotobudsjett per side («Inkludert»-regimet: rolig fotobruk — 4 for alle,
+  // 2030-unntaket for forsiden er avviklet sammen med VisualBento).
+  const fotoBudsjett = 4;
   const fotoAntall = (html.match(/images%2Fpexels|images\/pexels/g) ?? []).length;
   // next/image kan referere samme kilde i srcset — tell unike filnavn
   const unikeFoto = new Set(

@@ -18,18 +18,18 @@ export function Faq({
 }) {
   if (!items.length) return null;
   return (
-    <section className="section-y-sm mx-auto max-w-6xl px-4">
+    <section className="section-y-sm bg-varm">
       <JsonLd data={faqSchema(items)} />
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-3xl px-4">
         <SectionHeading eyebrow={eyebrow} title={title} />
-        <div className="mt-8 divide-y divide-navy/10 rounded-2xl border border-navy/10 bg-surface">
+        <div className="mt-8 divide-y divide-navy/10">
           {items.map((item) => (
-            <details key={item.q} className="group px-5 py-4 sm:px-6">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-sans text-base font-bold text-navy [&::-webkit-details-marker]:hidden">
+            <details key={item.q} className="group py-4">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-lg font-semibold text-navy [&::-webkit-details-marker]:hidden">
                 {item.q}
                 <span
                   aria-hidden="true"
-                  className="text-xl font-normal text-azure transition-transform group-open:rotate-45"
+                  className="text-2xl font-normal text-navy/50 transition-transform group-open:rotate-45"
                 >
                   +
                 </span>
