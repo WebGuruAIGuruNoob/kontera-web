@@ -73,9 +73,16 @@ for (const [navn, fil] of SIDER) {
   const mist = (html.match(/<section[^>]*class="[^"]*bg-mist[^"]*"/g) ?? []).length;
   if (mist > 3) feil(`R3: ${navn} har ${mist} mist-bånd (maks 3)`);
 
-  // R6: maks 3 foto-figurer per side
-  const figurer = (html.match(/<figure[^>]*>(?:(?!<\/figure>)[\s\S])*?images\/pexels/g) ?? []).length;
-  if (figurer > 3) feil(`R6: ${navn} har ${figurer} foto-figurer (maks 3)`);
+  // R6: fotobudsjett per side. Forsiden har utvidet budsjett (Henriks 2030-ordre
+  // 2026-08-24: «mer fargerik og flere bilder» — VisualBento); øvrige maler 4.
+  const fotoBudsjett = navn === "forside" ? 7 : 4;
+  const fotoAntall = (html.match(/images%2Fpexels|images\/pexels/g) ?? []).length;
+  // next/image kan referere samme kilde i srcset — tell unike filnavn
+  const unikeFoto = new Set(
+    (html.match(/pexels(?:%2F|\/)([a-z0-9-]+\.jpg)/g) ?? []).map((m) => m.split(/%2F|\//).pop())
+  ).size;
+  if (unikeFoto > fotoBudsjett)
+    feil(`R6: ${navn} har ${unikeFoto} unike foto (maks ${fotoBudsjett})`);
 
   // R9: CTA-stigen finnes (leadcard + minst én av pris/final)
   if (!html.includes("data-lead-card")) feil(`R9: ${navn} mangler lead-kort`);

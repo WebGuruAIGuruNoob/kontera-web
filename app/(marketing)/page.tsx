@@ -3,6 +3,7 @@ import Link from "next/link";
 import { leadEnabled } from "@/lib/lead";
 import { HeroSplit } from "@/components/sections/HeroSplit";
 import { LeadCard } from "@/components/LeadCard";
+import { VisualBento } from "@/components/sections/VisualBento";
 import { ProblemSolution } from "@/components/sections/ProblemSolution";
 import { ServicesBento } from "@/components/sections/ServicesBento";
 import { IndustryCards } from "@/components/sections/IndustryCards";
@@ -64,11 +65,12 @@ export default function HomePage() {
   return (
     <>
       <HeroSplit
+        variant="aurora"
         eyebrow="Autorisert regnskapsforetak — to statsautoriserte regnskapsførere"
         title={
           <>
             Regnskap, lønn og årsoppgjør{" "}
-            <span className="hl-serif-italic">med én fast regnskapsfører.</span>
+            <span className="hl-gradient">med én fast regnskapsfører.</span>
           </>
         }
         subtitle="Du får en regnskapsfører som kjenner bedriften din, holder oversikt over fristene og svarer når du tar kontakt. Korte spørsmål og småavklaringer er inkludert i honoraret."
@@ -85,6 +87,7 @@ export default function HomePage() {
           />
         }
       />
+      <VisualBento />
       <ProblemSolution />
       <ServicesBento
         title="Fra bilag til årsoppgjør — samlet hos én fast regnskapsfører"

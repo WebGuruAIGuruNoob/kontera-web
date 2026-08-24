@@ -13,6 +13,7 @@ export function HeroSplit({
   chips,
   aside,
   compact = false,
+  variant = "standard",
 }: {
   eyebrow?: string;
   title: React.ReactNode;
@@ -20,13 +21,21 @@ export function HeroSplit({
   chips?: string[];
   aside?: React.ReactNode;
   compact?: boolean;
+  /** «aurora» (kun forsiden): rikere brand-gradient-bakteppe med ambient drift */
+  variant?: "standard" | "aurora";
 }) {
   return (
-    <section className="relative isolate overflow-hidden bg-paper">
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-[radial-gradient(55rem_28rem_at_88%_-12%,rgb(7_160_228/0.08),transparent_70%)]"
-      />
+    <section
+      className={`relative isolate overflow-hidden bg-paper ${
+        variant === "aurora" ? "aurora" : ""
+      }`}
+    >
+      {variant === "standard" && (
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 -z-10 bg-[radial-gradient(55rem_28rem_at_88%_-12%,rgb(7_160_228/0.08),transparent_70%)]"
+        />
+      )}
       <div
         className={`mx-auto grid max-w-6xl items-start gap-10 px-4 lg:grid-cols-12 lg:gap-14 ${
           compact ? "py-12 lg:py-16" : "py-16 lg:py-24"
