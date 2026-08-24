@@ -37,6 +37,9 @@ console.log("Design-lint — modus 1: kilderegler");
 for (const dir of ["app", "components"]) {
   for (const file of tsxFiles(join(root, dir))) {
     if (file.endsWith("globals.css")) continue; // tokenhjemmet (R7)
+    // app/forslag er eksplisitt prototype-sandkasse (Henriks «helt ny side»-
+    // runde 2026-08-24) — vinneren normaliseres mot reglene når den promoteres.
+    if (/[\\/]app[\\/]forslag[\\/]/.test(file)) continue;
     const src = readFileSync(file, "utf8");
     for (const regel of KILDE_REGLER) {
       if (regel.re.test(src)) {
