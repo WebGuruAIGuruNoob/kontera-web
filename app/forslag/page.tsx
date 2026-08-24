@@ -31,6 +31,12 @@ const forslag = [
     ide: "Nettsiden føles som økonomiskjermen kundene får: fast mørk venstre-rail med løftet, frister og tall — innholdet scroller som rolige rapportmoduler til høyre. Helt annet skjelett enn seksjonstabelen.",
     kjennetegn: "Fast rail + modulstrøm · frister som live-panel · dashbord-ro",
   },
+  {
+    href: "/forslag/inkludert",
+    navn: "D — Inkludert",
+    ide: "Stilen fra Randi, Fiken, Testen og Drivly: skoggrønn palett med grønntonede nøytraler, elgul glød-pille som signatur-CTA, pastellbånd per seksjon, Fraunces-serif og deadpan tosetningsoverskrifter — alt nytt: seksjoner, tekst og farger.",
+    kjennetegn: "Skoggrønn + elgul · pastellbånd · glød-pille · «Når vi sier inkludert…»",
+  },
 ];
 
 export default function ForslagPage() {
