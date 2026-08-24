@@ -10,8 +10,8 @@ import { Arrow } from "@/components/icons";
  */
 export function IndustryCards({
   eyebrow = "Bransjer",
-  title = "Spisskompetanse der det teller mest",
-  intro = "Vi kan regelverket i dybden der det gir deg mest igjen — og har bred kompetanse som passer de fleste andre bransjer.",
+  title = "Bransjene vi kan i dybden",
+  intro = "Vi kjenner regelverket i dybden i bransjene under, og har bred kompetanse som dekker de fleste andre.",
 }: {
   eyebrow?: string;
   title?: string;
@@ -50,8 +50,8 @@ export function IndustryCards({
               </h3>
               <p className="mt-2 max-w-[46ch] flex-1 leading-relaxed text-slate">
                 {feature.kortBeskrivelse} Avansemetoden brukt riktig er
-                forskjellen på god og dårlig margin per bil — og det er faget
-                vårt.
+                forskjellen på god og svak margin per bil, og den krever presis
+                dokumentasjon på hver enkelt bil.
               </p>
               <span className="mt-5 text-sm font-bold text-blue group-hover:underline">
                 Les mer <Arrow />
@@ -78,12 +78,12 @@ export function IndustryCards({
         </div>
 
         <p className="mt-8 text-sm text-slate">
-          Ikke i listen? Vi har et bredt spekter av kompetanse som passer de
+          Driver du i en annen bransje? Vi fører regnskap for virksomheter i de
           fleste bransjer —{" "}
           <Link href="/kontakt" className="font-bold text-blue hover:underline">
-            ta en prat med oss
+            ta kontakt med oss
           </Link>
-          , så finner vi ut om vi er en god match.
+          , så vurderer vi behovet ditt sammen.
         </p>
       </div>
     </section>

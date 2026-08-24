@@ -8,7 +8,7 @@ const nav = [
   { href: "/tjenester", label: "Tjenester" },
   { href: "/bransjer", label: "Bransjer" },
   { href: "/priser", label: "Priser" },
-  { href: "/regnskapsforer", label: "Der du er" },
+  { href: "/regnskapsforer", label: "Områder" },
   { href: "/blogg", label: "Fagstoff" },
   { href: "/om-oss", label: "Om oss" },
 ];

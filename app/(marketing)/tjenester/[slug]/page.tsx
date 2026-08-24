@@ -87,14 +87,14 @@ export default async function TjenestePage({
         subtitle={t.heroUndertekst}
         chips={[
           "Statsautoriserte regnskapsførere",
-          "Fast kontaktperson + backup",
-          enabled ? "Svar innen én arbeidsdag" : "Korte spørsmål: 0 kr",
+          "Fast kontaktperson og stedfortreder",
+          enabled ? "Svar innen én arbeidsdag" : "Korte spørsmål inkludert",
         ]}
         aside={
           <LeadCard
             enabled={enabled}
             heading={`Få pristilbud på ${t.navn.toLowerCase()}`}
-            subheading="En kort prat om behovet ditt — så får du et ærlig, konkret tilbud."
+            subheading="En kort samtale om behovet ditt — så får du et konkret tilbud med tydelige forutsetninger."
           />
         }
       />
@@ -103,7 +103,7 @@ export default async function TjenestePage({
         <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-7">
             <h2 className="font-display text-h2 font-bold text-ink">
-              Passer for deg som …
+              Dette passer for deg
             </h2>
             <ul data-reveal-group className="mt-6">
               {t.passerFor.map((punkt) => (

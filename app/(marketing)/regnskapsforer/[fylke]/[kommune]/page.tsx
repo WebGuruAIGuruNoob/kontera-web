@@ -95,17 +95,17 @@ export default async function KommunePage({
         compact
         eyebrow={`${fylke.visningsnavn} · ${navn}`}
         title={innhold.h1}
-        subtitle={`Heldigital regnskapsføring — like nær deg i ${navn} som et lokalt kontor. Én fast regnskapsfører tar helheten, en fast backup kjenner deg også, og alle frister er vårt ansvar.`}
+        subtitle={`Heldigital regnskapsføring for bedrifter i ${navn}. Én fast regnskapsfører tar helheten, en fast stedfortreder kjenner bedriften like godt, og vi holder oversikt over fristene dine.`}
         chips={[
           "Statsautoriserte regnskapsførere",
-          "Fast kontaktperson + backup",
-          enabled ? "Svar innen én arbeidsdag" : "Ingen faktura for korte spørsmål",
+          "Fast kontaktperson og stedfortreder",
+          enabled ? "Svar innen én arbeidsdag" : "Korte spørsmål inkludert",
         ]}
         aside={
           <LeadCard
             enabled={enabled}
             heading={`Få pristilbud for din bedrift i ${navn}`}
-            subheading="En kort prat om behovet ditt — så får du et ærlig, konkret tilbud."
+            subheading="En kort samtale om behovet ditt — så får du et konkret tilbud med tydelige forutsetninger."
           />
         }
       />
@@ -116,7 +116,7 @@ export default async function KommunePage({
           <div className="lg:col-span-7">
             <SectionHeading
               eyebrow={`Næringslivet i ${navn}`}
-              title={`Vi kjenner tallene til næringslivet i ${navn}`}
+              title={`Slik ser næringslivet i ${navn} ut i tallene`}
             />
             <div data-unique>
               {innhold.intro.map((avsnitt, i) => (
@@ -151,7 +151,7 @@ export default async function KommunePage({
 
       {/* 4. Tjenestebento — bransjesortert med lokaliserte setninger */}
       <ServicesBento
-        title={`Regnskapstjenester i ${navn} — alt fra én fast fører`}
+        title={`Regnskapstjenester i ${navn} — alt fra én fast regnskapsfører`}
         intro={`Alt fra løpende bokføring til årsoppgjør — levert digitalt til ${navn}, med én fast regnskapsfører som tar helheten.`}
         order={innhold.tjenesteRekkefolge}
         localSentences={innhold.tjenesteSetninger}
@@ -174,7 +174,7 @@ export default async function KommunePage({
       {/* 7–8. Prosess + sammenligning (kanonisk løftehjem på geo) */}
       <NumberedJourney
         leadEnabled={enabled}
-        title={`Slik kommer du i gang fra ${navn} — det meste gjør vi`}
+        title={`Slik kommer du i gang fra ${navn} — vi tar det meste av jobben`}
       />
       <ComparisonTable />
 
@@ -218,7 +218,7 @@ export default async function KommunePage({
                     </span>
                     {naboStats && (
                       <span className="shrink-0 text-xs tabular-nums text-slate">
-                        {tall(naboStats.total)} virks.
+                        {tall(naboStats.total)} virksomheter
                       </span>
                     )}
                   </Link>
@@ -235,8 +235,8 @@ export default async function KommunePage({
       />
 
       <FinalCta
-        title={`Klar for en regnskapsfører som kjenner deg — i ${navn}?`}
-        text={`Ta en uforpliktende prat, så finner vi ut om vi er en god match for bedriften din i ${navn}.`}
+        title={`En fast regnskapsfører som kjenner bedriften din — i ${navn}`}
+        text={`Ta en uforpliktende samtale, så finner vi ut om vi passer for bedriften din i ${navn}.`}
       />
     </>
   );

@@ -3,18 +3,18 @@ import { SectionHeading } from "@/components/SectionHeading";
 
 /**
  * «Kontera vs. mange byråer» (DESIGNPLAN §3 — konverterer byttere).
- * Ærlig hedging: «mange», «ofte», «varierer» — aldri navngitte konkurrenter.
+ * Nøytral hedging: «mange», «varierer» — aldri navngitte konkurrenter.
  */
 const rows: { tema: string; kontera: string; andre: string }[] = [
   {
     tema: "Korte spørsmål og småavklaringer",
-    kontera: "Alltid inkludert — ring så mye du vil",
-    andre: "Faktureres ofte per henvendelse",
+    kontera: "Inkludert i honoraret",
+    andre: "Varierer — mange fakturerer per henvendelse",
   },
   {
     tema: "Kontaktperson",
-    kontera: "Én fast som gjør hele regnskapet ditt + fast backup",
-    andre: "Varierer — ofte den som er ledig",
+    kontera: "Én fast regnskapsfører for hele regnskapet, og fast stedfortreder",
+    andre: "Varierer — henvendelsen går til den som er tilgjengelig",
   },
   {
     tema: "Bransjekunnskap",
@@ -28,12 +28,12 @@ const rows: { tema: string; kontera: string; andre: string }[] = [
   },
   {
     tema: "Pris",
-    kontera: "Middels — avtales tydelig på forhånd",
-    andre: "Fra billig til dyr — overraskelser forekommer",
+    kontera: "I mellomsjiktet — avtales før oppstart",
+    andre: "Varierer med byrå og prismodell",
   },
 ];
 
-export function ComparisonTable({ title = "Sjekk oss mot byrået du har i dag" }: { title?: string }) {
+export function ComparisonTable({ title = "Sammenlign med byrået du har i dag" }: { title?: string }) {
   return (
     <section className="section-y bg-mist">
       <div className="mx-auto max-w-6xl px-4">

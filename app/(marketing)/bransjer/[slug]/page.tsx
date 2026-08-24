@@ -67,7 +67,7 @@ export default async function BransjePage({
     <>
       <JsonLd
         data={serviceSchema({
-          name: `Regnskap for ${b.navn.toLowerCase()}`,
+          name: `Regnskap for ${b.omtale}`,
           description: b.metaDescription,
           url: `${site.url}/bransjer/${b.slug}`,
         })}
@@ -80,50 +80,51 @@ export default async function BransjePage({
       />
       <HeroSplit
         compact
-        eyebrow={`Regnskap for ${b.navn.toLowerCase()}`}
+        eyebrow={`Regnskap for ${b.omtale}`}
         title={b.tittel}
         subtitle={b.heroUndertekst}
         chips={[
           "Statsautoriserte regnskapsførere",
-          "Fast kontaktperson + backup",
-          enabled ? "Svar innen én arbeidsdag" : "Korte spørsmål: 0 kr",
+          "Fast kontaktperson og stedfortreder",
+          enabled ? "Svar innen én arbeidsdag" : "Korte spørsmål inkludert",
         ]}
         aside={
           <LeadCard
             enabled={enabled}
-            heading={`Få pristilbud for din ${b.navn.toLowerCase().replace(/e$/, "")}bedrift`}
-            subheading="En kort prat om driften din — så får du et ærlig, konkret tilbud."
+            heading={`Få pristilbud for ${b.virksomhetsord}`}
+            subheading="En kort samtale om driften — så får du et konkret tilbud med tydelige forutsetninger."
           />
         }
       />
 
-      {/* Bransjesmerter — redaksjonelle serif-sitater + rammet, tintet foto */}
+      {/* Bransjens problemstillinger — beskrivelser i du-form, aldri fingerte sitater (ekthetsregel §9.1) */}
       <section className="section-y mx-auto max-w-6xl px-4">
         <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-7">
             <h2 className="font-display text-h2 font-bold text-ink [text-wrap:balance]">
-              Kjenner du deg igjen?
+              Typiske problemstillinger i bransjen
             </h2>
             <ul data-reveal-group className="mt-6">
               {b.smerter.map((smerte) => (
                 <li
                   key={smerte}
-                  className="border-t border-navy/10 py-4 font-display text-lg italic leading-snug text-navy"
+                  className="border-t border-navy/10 py-4 font-display text-lg leading-snug text-navy"
                 >
-                  «{smerte.replace(/^«|»$/g, "")}»
+                  {smerte}
                 </li>
               ))}
             </ul>
             <p className="mt-5 max-w-2xl leading-relaxed text-slate">
-              Dette er hverdagen vi hjelper {b.navn.toLowerCase()} med — og
-              grunnen til at bransjekunnskap er forskjellen på et regnskap som
-              bare er «ført», og et regnskap som er ført <em>riktig</em>.
+              Dette er problemstillingene vi arbeider med for {b.omtale} til
+              daglig. Regelverket og rutinene er ulike fra bransje til bransje,
+              og kjennskapen til dem avgjør hva regnskapet gir deg utover selve
+              bokføringen.
             </p>
           </div>
           {bransjeFoto[b.slug] && (
             <FramedImage
               src={bransjeFoto[b.slug]}
-              alt={`Regnskap for ${b.navn.toLowerCase()} — illustrasjon fra bransjen`}
+              alt={`Regnskap for ${b.omtale} — illustrasjon fra bransjen`}
               className="lg:col-span-5"
             />
           )}
@@ -138,7 +139,7 @@ export default async function BransjePage({
 
       <section className="section-y mx-auto max-w-6xl px-4">
         <h2 className="font-display text-h2 font-bold text-ink">
-          Slik hjelper vi {b.navn.toLowerCase()}
+          Slik arbeider vi for {b.omtale}
         </h2>
         <div data-reveal-group className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-12">
           {b.slikHjelperVi.map((item, i) => (
@@ -159,7 +160,7 @@ export default async function BransjePage({
         {tjenesteLenker.length > 0 && (
           <div className="mt-10">
             <h3 className="font-sans text-lg font-bold text-ink">
-              Mest relevante tjenester for {b.navn.toLowerCase()}
+              Mest relevante tjenester for {b.omtale}
             </h3>
             <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {tjenesteLenker.map((t) => (
@@ -182,8 +183,8 @@ export default async function BransjePage({
       </section>
 
       <NumberedJourney leadEnabled={enabled} />
-      <Faq items={b.faq} title={`Spørsmål og svar — regnskap for ${b.navn.toLowerCase()}`} />
-      <FinalCta title={`Klar for en regnskapsfører som kan ${b.navn.toLowerCase()}?`} />
+      <Faq items={b.faq} title={`Spørsmål og svar — regnskap for ${b.omtale}`} />
+      <FinalCta title={`En fast regnskapsfører som kjenner bransjen din`} />
     </>
   );
 }

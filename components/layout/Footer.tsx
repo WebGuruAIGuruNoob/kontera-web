@@ -18,9 +18,9 @@ export function Footer() {
               KONTERA<span className="text-azure"> REGNSKAP</span>
             </p>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-white/70">
-              Et lite regnskapsbyrå med store fordeler: fast regnskapsfører som
-              kjenner deg, backup som stiller opp, og ingen faktura for korte
-              spørsmål.
+              Autorisert regnskapsforetak under tilsyn av Finanstilsynet. Du får
+              en fast regnskapsfører, en fast stedfortreder som også kjenner
+              bedriften, og korte spørsmål er inkludert.
             </p>
             <p className="mt-4 text-sm font-semibold text-white/90">
               <a href={site.phoneHref} className="hover:text-azure">
@@ -95,7 +95,7 @@ export function Footer() {
 
           <div>
             <p className="section-eyebrow-dark">
-              Regnskapsfører der du er
+              Regnskapsfører etter fylke
             </p>
             <ul className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2 text-sm">
               {fylker.map((f) => (

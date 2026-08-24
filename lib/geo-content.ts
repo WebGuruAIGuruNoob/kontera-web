@@ -129,46 +129,46 @@ export function buildKommuneInnhold(
   const åpning: Record<typeof klasse, string[]> = {
     storby: [
       `${navn} er en av Norges største kommuner, med ${tall(stats.pop)} innbyggere og et næringsliv på ${tall(stats.total)} registrerte virksomheter — fra enkeltpersonforetak til konsern.`,
-      `Med ${tall(stats.total)} registrerte virksomheter og ${tall(stats.pop)} innbyggere er ${navn} et av landets tyngste næringsområder, med stor bredde i bransjer og selskapsformer.`,
+      `Med ${tall(stats.total)} registrerte virksomheter og ${tall(stats.pop)} innbyggere er ${navn} et av landets største næringsområder, med stor bredde i bransjer og selskapsformer.`,
     ],
     by: [
       `${navn} har ${tall(stats.pop)} innbyggere og et aktivt næringsliv: ${tall(stats.total)} virksomheter er registrert i kommunen.`,
-      `Med ${tall(stats.total)} registrerte virksomheter fordelt på ${tall(stats.pop)} innbyggere har ${navn} et næringsliv med både bredde og lokal egenart.`,
+      `Med ${tall(stats.total)} registrerte virksomheter fordelt på ${tall(stats.pop)} innbyggere har ${navn} et næringsliv med bredde i både bransjer og selskapsformer.`,
     ],
     mellomstor: [
-      `${navn} har ${tall(stats.pop)} innbyggere og ${tall(stats.total)} registrerte virksomheter — et næringsliv der de fleste kjenner de fleste, og hvor lokal kunnskap teller.`,
+      `${navn} har ${tall(stats.pop)} innbyggere og ${tall(stats.total)} registrerte virksomheter, fordelt på alt fra enkeltpersonforetak til aksjeselskaper med ansatte.`,
       `I ${navn} bor det ${tall(stats.pop)} mennesker, og ${tall(stats.total)} virksomheter er registrert i kommunen — typisk små og mellomstore bedrifter med korte beslutningsveier.`,
     ],
     mindre: [
-      `${navn} er en mindre kommune med ${tall(stats.pop)} innbyggere — men næringslivet er høyst levende, med ${tall(stats.total)} registrerte virksomheter.`,
-      `Med ${tall(stats.pop)} innbyggere og ${tall(stats.total)} registrerte virksomheter er ${navn} et lokalsamfunn der bedriftene betyr mye — og hvor god økonomistyring betyr enda mer.`,
+      `${navn} er en mindre kommune med ${tall(stats.pop)} innbyggere og ${tall(stats.total)} registrerte virksomheter, hvorav ${tall(stats.nyreg)} er registrert de siste tolv månedene.`,
+      `Med ${tall(stats.pop)} innbyggere og ${tall(stats.total)} registrerte virksomheter er ${navn} et lokalsamfunn der små og mellomstore bedrifter står for mye av sysselsettingen.`,
     ],
     liten: [
-      `${navn} er blant landets minste kommuner med sine ${tall(stats.pop)} innbyggere — men også her drives det næring: ${tall(stats.total)} virksomheter er registrert i kommunen.`,
-      `Selv med bare ${tall(stats.pop)} innbyggere har ${navn} ${tall(stats.total)} registrerte virksomheter — og små lokalsamfunn fortjener like god regnskapsføring som store.`,
+      `${navn} er blant landets minste kommuner med sine ${tall(stats.pop)} innbyggere, og ${tall(stats.total)} virksomheter er registrert i kommunen. Bokførings- og rapporteringspliktene er de samme uansett kommunestørrelse.`,
+      `Med ${tall(stats.pop)} innbyggere har ${navn} ${tall(stats.total)} registrerte virksomheter, og de skal levere de samme oppgavene til Skatteetaten og Brønnøysundregistrene som virksomheter i større kommuner.`,
     ],
   };
 
   const formTekst =
     enkRatioLokal >= enkRatioNasjonal
       ? pick(seed + "f", [
-          `Enkeltpersonforetakene dominerer: ${tall(stats.enk)} ENK mot ${tall(stats.as)} aksjeselskaper. Det preger hva bedriftene i ${navn} faktisk trenger — ofte ryddig bokføring, skattemelding med næringsspesifikasjon og noen å ringe når spørsmålene dukker opp.`,
+          `Enkeltpersonforetakene dominerer: ${tall(stats.enk)} ENK mot ${tall(stats.as)} aksjeselskaper. Det preger hva bedriftene i ${navn} trenger — ofte ryddig bokføring, skattemelding med næringsspesifikasjon og en regnskapsfører som er lett å få tak i når spørsmålene dukker opp.`,
           `Med ${tall(stats.enk)} enkeltpersonforetak og ${tall(stats.as)} aksjeselskaper er ENK den vanligste driftsformen i ${navn} — og behovet er ofte praktisk: orden i bokføringen, riktig skattemelding og lav terskel for å spørre om råd.`,
         ])
       : pick(seed + "f", [
-          `Aksjeselskapene er i flertall: ${tall(stats.as)} AS mot ${tall(stats.enk)} enkeltpersonforetak. Det betyr flere formelle krav — årsregnskap, aksjonærregisteroppgave og frister som ikke tilgir glemsomhet.`,
+          `Aksjeselskapene er i flertall: ${tall(stats.as)} AS mot ${tall(stats.enk)} enkeltpersonforetak. Det betyr flere formelle krav — årsregnskap til Regnskapsregisteret, aksjonærregisteroppgave og frister som må holdes gjennom hele året.`,
           `Næringslivet i ${navn} er AS-tungt, med ${tall(stats.as)} aksjeselskaper mot ${tall(stats.enk)} enkeltpersonforetak — selskaper med rapporteringsplikter som krever en regnskapsfører som ligger i forkant av fristene.`,
         ]);
 
   const kontera = nærområde(fylke.slug)
     ? kommune.slug === "baerum"
-      ? `Kontera holder til her: Kontoret vårt på Jar ligger i Bærum, og mange av samarbeidspartnerne våre driver nettopp i denne kommunen. Du er velkommen innom Bjerkelundsveien 5 — eller vi tar det digitalt, som du vil.`
+      ? `Kontera holder til her: Kontoret vårt på Jar ligger i Bærum, og mange av samarbeidspartnerne våre driver nettopp i denne kommunen. Du er velkommen innom Bjerkelundsveien 5, eller vi tar møtene digitalt. Bilag leverer du i appen, og du ringer regnskapsføreren din direkte når du trenger en avklaring — du får en fast regnskapsfører og en fast stedfortreder som kjenner bedriften like godt.`
       : kommune.slug === "gjerdrum"
-        ? `Kontera holder til her: Kontoret vårt på Ask ligger midt i Gjerdrum, i Askheim 1F. Vi er en del av det lokale næringslivet selv — og du er alltid velkommen innom for en kaffe og en regnskapsprat.`
-        : `Fra kontorene våre på Jar i Bærum og Ask i Gjerdrum er det kort vei til ${navn} — og enda kortere digitalt. Du velger selv: fysiske møter når det trengs, digital hverdag når det er mest effektivt. Uansett får du en fast regnskapsfører som kjenner bedriften din, og en fast backup som gjør det samme.`
+        ? `Kontera holder til her: Kontoret vårt på Ask ligger midt i Gjerdrum, i Askheim 1F. Vi er en del av det lokale næringslivet selv, og du er velkommen innom kontoret når det passer deg. Mange av bedriftene vi fører regnskap for holder til i kommunen eller i nabokommunene, og vi kombinerer møter på kontoret med heldigital oppfølging i det daglige — med en fast regnskapsfører og en fast stedfortreder på hvert oppdrag.`
+        : `Fra kontorene våre på Jar i Bærum og Ask i Gjerdrum er det kort vei til ${navn} — og enda kortere digitalt. Du velger selv: fysiske møter når det trengs, digital hverdag når det er mest effektivt. Uansett får du en fast regnskapsfører som kjenner bedriften din, og en fast stedfortreder som kjenner den like godt.`
     : pick(seed + "k", [
-        `Kontera jobber digitalt med samarbeidspartnere over hele landet, også i ${navn}. Bilagene leverer du i appen, møtene tar vi på video, og du ringer regnskapsføreren din direkte — en fast person som kjenner bedriften din, med en fast backup i ryggen. Avstand er ikke lenger et argument for å velge et byrå som ikke passer deg.`,
-        `Stadig flere bedrifter i ${navn} velger regnskapsfører etter kompetanse og oppfølging — ikke etter gateadresse. Kontera jobber heldigitalt med kunder i hele Norge: bilag i appen, møter på video og en fast regnskapsfører du ringer direkte, med fast backup ved ferie og sykdom.`,
+        `Kontera jobber digitalt med bedrifter over hele landet, også i ${navn}. Bilagene leverer du i appen, møtene tar vi på video, og du ringer regnskapsføreren din direkte — en fast person som kjenner bedriften din, med en fast stedfortreder som kjenner den like godt. Da står du fritt til å velge regnskapsfører ut fra kompetanse og oppfølging.`,
+        `Stadig flere bedrifter i ${navn} velger regnskapsfører ut fra kompetanse og oppfølging framfor gateadresse. Kontera jobber heldigitalt med kunder i hele Norge: bilag i appen, møter på video og en fast regnskapsfører du ringer direkte, med en fast stedfortreder som trer inn ved ferie og sykdom.`,
       ]);
 
   const intro = [
@@ -195,15 +195,15 @@ export function buildKommuneInnhold(
       unique: true,
       a:
         kommune.slug === "baerum"
-          ? "Ja! Kontoret vårt på Jar ligger i Bærum kommune (Bjerkelundsveien 5, 1358 Jar). Du er velkommen innom — eller vi tar møtene digitalt."
+          ? "Ja. Kontoret vårt på Jar ligger i Bærum kommune (Bjerkelundsveien 5, 1358 Jar). Du er velkommen innom, eller vi tar møtene digitalt."
           : kommune.slug === "gjerdrum"
-            ? "Ja! Kontoret vårt på Ask ligger i Gjerdrum kommune (Askheim 1F, 2022 Gjerdrum). Stikk gjerne innom for en uforpliktende prat."
-            : `Vi har kontorer på Jar i Bærum og Ask i Gjerdrum, og jobber digitalt med bedrifter i ${navn} og resten av Norge. Bilag leveres i appen, møter tas på video — og du ringer regnskapsføreren din direkte, akkurat som om vi satt i nabobygget.`,
+            ? "Ja. Kontoret vårt på Ask ligger i Gjerdrum kommune (Askheim 1F, 2022 Gjerdrum). Ta gjerne kontakt på forhånd, så avtaler vi et tidspunkt."
+            : `Vi har kontorer på Jar i Bærum og Ask i Gjerdrum, og jobber digitalt med bedrifter i ${navn} og resten av Norge. Bilag leveres i appen, møter tas på video, og du ringer regnskapsføreren din direkte.`,
     },
     {
       q: `Hva koster regnskapsfører i ${navn}?`,
       unique: true,
-      a: `Prisen avhenger av bilagsmengde, antall ansatte og hvor mye du gjør selv — ikke av hvor i landet du holder til. Vi ligger på et middels prisnivå med høy kvalitet, og korte spørsmål koster aldri noe ekstra. Ring oss, så får du et konkret estimat for din bedrift i ${navn}.`,
+      a: `Prisen avhenger av bilagsmengde, antall ansatte og hvor mye du gjør selv — ikke av hvor i landet du holder til. Vi ligger i midtsjiktet på pris: vi konkurrerer ikke på laveste timepris, men på at du får en erfaren, fast regnskapsfører i et autorisert regnskapsforetak med statsautoriserte regnskapsførere. Korte spørsmål og småavklaringer er inkludert i honoraret. Ring oss, så får du et konkret estimat for din bedrift i ${navn}.`,
     },
     {
       q: `Hvilke tjenester leverer dere til bedrifter i ${navn}?`,
@@ -211,7 +211,7 @@ export function buildKommuneInnhold(
     },
     {
       q: `Hvordan bytter jeg regnskapsfører i ${navn}?`,
-      a: `Enklere enn du tror: Du sier opp hos dagens byrå, så håndterer vi resten — saldobalanse, historikk, tilganger og systemer. Beste tidspunkt er ved årsskiftet eller etter en mva-termin, men vi ordner bytte når som helst på året.`,
+      a: `Selve overgangen krever lite av deg: du sier opp avtalen hos dagens byrå, så håndterer vi resten — saldobalanse, historikk, tilganger og systemoppsett. Beste tidspunkt er ved årsskiftet eller etter en mva-termin, men et bytte lar seg gjennomføre når som helst på året.`,
     },
     {
       q: `Hvor mange bedrifter finnes det i ${navn}?`,
@@ -223,20 +223,20 @@ export function buildKommuneInnhold(
           {
             q: `Hvilke bransjer dominerer næringslivet i ${navn}?`,
             unique: true,
-            a: `Målt i antall registrerte virksomheter er de største næringene i ${navn} ${topp3[0].label} (${tall(topp3[0].antall)}), ${topp3[1].label} (${tall(topp3[1].antall)}) og ${topp3[2].label} (${tall(topp3[2].antall)}). Vi har erfaring fra alle tre — og fra de fleste andre bransjer som drives i kommunen. (Kilde: Enhetsregisteret.)`,
+            a: `Målt i antall registrerte virksomheter er de største næringene i ${navn} ${topp3[0].label} (${tall(topp3[0].antall)}), ${topp3[1].label} (${tall(topp3[1].antall)}) og ${topp3[2].label} (${tall(topp3[2].antall)}). Vi fører regnskap for bedrifter i alle tre næringene, og tilpasser kontoplan og rapportering til driften i den enkelte bedrift. (Kilde: Enhetsregisteret.)`,
           },
         ]
       : []),
     {
       q: "Passer dere for små bedrifter og enkeltpersonforetak?",
-      a: `Absolutt — de fleste samarbeidspartnerne våre er små og mellomstore bedrifter. Du betaler for det du faktisk trenger: noen vil bare ha årsoppgjøret, andre vil slippe alt. Vi setter opp arbeidsdelingen som passer deg.`,
+      a: `Ja — de fleste kundene våre er små og mellomstore bedrifter. Du betaler for det omfanget du trenger: noen vil bare ha årsoppgjøret, andre vil at vi tar hele regnskapet. Vi setter opp arbeidsdelingen som passer bedriften din.`,
     },
   ];
 
   if (blokkIds.has("bil")) {
     faq.push({
       q: `Kan dere avansemoms og bruktbilregnskap for forhandlere i ${navn}?`,
-      a: "Ja — bruktbilbransjen er Konteras dypeste spisskompetanse. Vi håndterer avansemetoden med alle spesifikasjonskrav, innbytte, lagerbiler og demobiler, og sørger for at regnskapet tåler bokettersyn. Se bransjesiden vår for bilforhandlere.",
+      a: "Ja. Bilbransjen er et av fagområdene vi kan best. Vi håndterer avansemetoden med alle spesifikasjonskrav, innbytte, lagerbiler og demobiler, og dokumenterer hver enkelt bil slik regelverket krever ved et bokettersyn. Se bransjesiden vår for bilforhandlere.",
     });
   }
   if (blokkIds.has("bygg")) {
@@ -260,12 +260,12 @@ export function buildKommuneInnhold(
   if (blokkIds.has("eiendom")) {
     faq.push({
       q: `Hjelper dere eiendomsselskaper i ${navn} med frivillig mva-registrering?`,
-      a: "Ja — frivillig registrering ved utleie til avgiftspliktige leietakere, justeringsregler og skillet mellom vedlikehold og påkostning er kjernekompetanse hos oss. Se bransjesiden vår for eiendom.",
+      a: "Ja. Frivillig registrering i Merverdiavgiftsregisteret ved utleie til avgiftspliktige leietakere, justeringsreglene og skillet mellom vedlikehold og påkostning er faste problemstillinger vi jobber med. Se bransjesiden vår for eiendom.",
     });
   }
   faq.push({
     q: "Jeg fører regnskapet selv — kan dere ta bare årsoppgjøret?",
-    a: "Ja. Mange fører selv gjennom året og lar oss kvalitetssikre og levere årsoppgjør, skattemelding og aksjonærregisteroppgave. Det er en rimelig forsikring mot dyre feil.",
+    a: "Ja. Mange fører selv gjennom året og lar oss kvalitetssikre og levere årsoppgjør, skattemelding og aksjonærregisteroppgave. Det gir en ekstra kontroll før innlevering, samtidig som du beholder den løpende føringen selv.",
   });
   faq.push({
     q: "Hvilke regnskapssystemer jobber dere i?",
@@ -278,22 +278,27 @@ export function buildKommuneInnhold(
 
   /* --- H1: alltid «Regnskapsfører i {navn}» + varierende løfte (§7b.2) --- */
   const h1Varianter = [
-    `Regnskapsfører i ${navn} — fast kontaktperson, uten taksameter`,
-    `Regnskapsfører i ${navn} uten faktura for korte spørsmål`,
-    `Regnskapsfører i ${navn} — fristene er vårt ansvar`,
-    `Regnskapsfører i ${navn} — én fast fører, alltid backup`,
-    `Regnskapsfører i ${navn} du kan ringe uten å nøle`,
-    `Regnskapsfører i ${navn} — statsautorisert kvalitet, heldigital hverdag`,
-    `Regnskapsfører i ${navn} som tar alle fristene for deg`,
-    `Regnskapsfører i ${navn} — like nær som et lokalkontor`,
-    `Regnskapsfører i ${navn}: korte spørsmål koster aldri ekstra`,
+    `Regnskapsfører i ${navn} — én fast kontaktperson, korte spørsmål inkludert`,
+    `Regnskapsfører i ${navn} — vi holder oversikt over fristene dine`,
+    `Regnskapsfører i ${navn} fra et autorisert regnskapsforetak`,
+    `Regnskapsfører i ${navn} — én fast regnskapsfører og en fast stedfortreder`,
+    `Regnskapsfører i ${navn} du kan ringe direkte`,
+    `Regnskapsfører i ${navn} — heldigital hverdag, fysiske møter ved behov`,
+    `Regnskapsfører i ${navn} som tar mva, lønn og årsoppgjør`,
+    `Regnskapsfører i ${navn} — samme regnskapsfører hver gang du ringer`,
+    `Regnskapsfører i ${navn}: løpende avklaringer inngår i avtalen`,
   ];
-  if (blokkIds.has("bil")) h1Varianter.push(`Regnskapsfører i ${navn} som kan bilbransjen`);
-  if (blokkIds.has("bygg")) h1Varianter.push(`Regnskapsfører i ${navn} som kan byggebransjen`);
-  if (blokkIds.has("fiskeri")) h1Varianter.push(`Regnskapsfører i ${navn} som kan sjømatnæringen`);
+  if (blokkIds.has("bil")) h1Varianter.push(`Regnskapsfører i ${navn} med erfaring fra bilbransjen`);
+  if (blokkIds.has("bygg")) h1Varianter.push(`Regnskapsfører i ${navn} med erfaring fra byggebransjen`);
+  if (blokkIds.has("fiskeri")) h1Varianter.push(`Regnskapsfører i ${navn} med erfaring fra sjømatnæringen`);
   const h1 = pick(seed + "h1", h1Varianter);
 
-  const metaDescription = `Regnskap, lønn og årsoppgjør for bedrifter i ${navn} — ${tall(stats.total)} virksomheter, flest innen ${topp3[0]?.label ?? "tjenester"}. Fast regnskapsfører uten taksameter. Ring 960 00 400.`;
+  const metaDescription = pick(seed + "md", [
+    `Regnskap, lønn og årsoppgjør for bedrifter i ${navn} — ${tall(stats.total)} virksomheter i kommunen. Fast regnskapsfører. Ring 960 00 400.`,
+    `Regnskapsfører for bedrifter i ${navn}: ${tall(stats.as)} aksjeselskaper og ${tall(stats.enk)} enkeltpersonforetak. Korte spørsmål inkludert. Ring 960 00 400.`,
+    `Regnskap, lønn og mva for bedrifter i ${navn} — flest innen ${topp3[0]?.label ?? "tjenesteyting"}. Fast kontaktperson. Ring 960 00 400.`,
+    `Regnskapsfører i ${navn} — ${tall(stats.nyreg)} nye virksomheter siste år. Fast kontaktperson, korte spørsmål inkludert. Ring 960 00 400.`,
+  ]);
 
   /* --- Lokaliserte tjenestesetninger (data-parameterisert, sideunik) --- */
   const asTung = enkRatioLokal < enkRatioNasjonal;
@@ -304,16 +309,16 @@ export function buildKommuneInnhold(
       `Bedriftene i ${navn} spenner over ${tall(stats.total)} virksomheter — vi fører regnskap for alle selskapsformer.`,
     ]),
     lonn: asTung
-      ? `Med ${tall(stats.as)} aksjeselskaper i ${navn} er trygg lønn og a-melding hverdagskost — vi tar det komplett.`
-      : `Også små arbeidsgivere i ${navn} skal levere a-melding hver måned — vi tar lønnen fra A til Å.`,
-    arsoppgjor: `${tall(stats.as)} aksjeselskaper i ${navn} skal levere årsregnskap og skattemelding — vi tar hele pakken, i tide.`,
+      ? `Med ${tall(stats.as)} aksjeselskaper i ${navn} er lønn og a-melding en fast del av driften — vi kjører begge deler for deg.`
+      : `Også små arbeidsgivere i ${navn} skal levere a-melding hver måned — vi kjører lønn, a-melding og innberetning.`,
+    arsoppgjor: `${tall(stats.as)} aksjeselskaper i ${navn} skal levere årsregnskap og skattemelding — vi tar hele leveransen, klar i god tid før fristen.`,
     mva: blokkIds.has("reiseliv")
-      ? `Reiseliv og servering i ${navn} lever med delte mva-satser — et regelverk vi kan i dybden.`
+      ? `Reiseliv og servering i ${navn} har delte mva-satser — et regelverk vi kjenner godt.`
       : `Terminer, satser og fradrag for bedrifter i ${navn} — mva-meldingen levert til hver eneste frist.`,
     radgivning: nyregHøy
-      ? `${tall(stats.nyreg)} nye virksomheter i ${navn} på tolv måneder — gode råd tidlig er de billigste du får.`
-      : `Etablerte bedrifter i ${navn} bruker oss som sparringspartner på tall, drift og veivalg.`,
-    "starte-selskap": `${tall(stats.nyreg)} nye virksomheter ble registrert i ${navn} siste år — skal din bli neste, hjelper vi deg i gang riktig.`,
+      ? `${tall(stats.nyreg)} nye virksomheter i ${navn} på tolv måneder — rådgivning tidlig i løpet sparer opprydding senere.`
+      : `Etablerte bedrifter i ${navn} bruker oss som rådgiver på tall, drift og veivalg.`,
+    "starte-selskap": `${tall(stats.nyreg)} nye virksomheter ble registrert i ${navn} siste år — vi hjelper deg gjennom stiftelse, registreringer og regnskapsoppsett.`,
   };
 
   /* --- Bransjebetinget tjenesterekkefølge (regnskapsforing er alltid featurecellen) --- */
@@ -379,10 +384,10 @@ export function buildFylkeInnhold(fylke: Fylke): FylkeInnhold {
 
   const intro = [
     `${navn} har ${tall(agg.pop)} innbyggere fordelt på ${fylke.kommuner.length === 1 ? "én kommune" : `${fylke.kommuner.length} kommuner`}, og et næringsliv på ${tall(agg.total)} registrerte virksomheter. De største næringene er ${topp3.slice(0, -1).map((n) => `${n.label} (${tall(n.antall)})`).join(", ")} og ${topp3[topp3.length - 1].label} (${tall(topp3[topp3.length - 1].antall)}).`,
-    `${tall(agg.as)} aksjeselskaper og ${tall(agg.enk)} enkeltpersonforetak driver i fylket, og bare de siste tolv månedene er ${tall(agg.nyreg)} nye virksomheter registrert. Bak hvert av disse tallene står noen som heller vil drive butikk enn å ligge våken over en mva-frist — og det er der vi kommer inn.`,
+    `${tall(agg.as)} aksjeselskaper og ${tall(agg.enk)} enkeltpersonforetak driver i fylket, og bare de siste tolv månedene er ${tall(agg.nyreg)} nye virksomheter registrert. Bak hvert av disse tallene står en virksomhet med bokførings- og rapporteringsplikt, og frister som må holdes gjennom året. Det er den jobben vi tar.`,
     nærområde(fylke.slug)
-      ? `Kontera holder til i regionen, med kontorer på Jar i Bærum og Ask i Gjerdrum. Vi møter deg gjerne fysisk — eller digitalt, som mange av samarbeidspartnerne våre foretrekker i hverdagen.`
-      : `Kontera jobber digitalt med bedrifter i hele ${navn}: bilag i appen, møter på video, og en fast regnskapsfører du ringer direkte — med fast backup ved ferie og sykdom. Velg kommunen din nedenfor for lokale tall og detaljer.`,
+      ? `Kontera holder til i regionen, med kontorer på Jar i Bærum og Ask i Gjerdrum. Vi møter deg gjerne fysisk, eller digitalt, som mange av kundene våre foretrekker i hverdagen.`
+      : `Kontera jobber digitalt med bedrifter i hele ${navn}: bilag i appen, møter på video, og en fast regnskapsfører du ringer direkte — med en fast stedfortreder som trer inn ved ferie og sykdom. Velg kommunen din nedenfor for lokale tall og detaljer.`,
   ];
 
   const statCards = [
@@ -408,7 +413,7 @@ export function buildFylkeInnhold(fylke: Fylke): FylkeInnhold {
     },
     {
       q: `Hva koster regnskapsfører i ${navn}?`,
-      a: "Prisen settes av bilagsmengde, ansatte og arbeidsdeling — ikke av geografi. Vi ligger på et middels prisnivå med høy kvalitet, og gir deg gjerne et konkret estimat på en kort telefon.",
+      a: "Prisen settes av bilagsmengde, ansatte og arbeidsdeling — ikke av geografi. Vi ligger i midtsjiktet på pris, i et autorisert regnskapsforetak med statsautoriserte regnskapsførere. Ring oss, så får du et konkret estimat for bedriften din.",
     },
     {
       q: `Hvor mange bedrifter finnes det i ${navn}?`,
@@ -416,7 +421,7 @@ export function buildFylkeInnhold(fylke: Fylke): FylkeInnhold {
     },
     {
       q: "Kan dere hjelpe meg å bytte fra dagens regnskapsfører?",
-      a: "Ja, vi ordner hele overgangen: saldobalanse, historikk og tilganger. Du sier opp hos dagens byrå — vi tar resten.",
+      a: "Ja. Vi håndterer overgangen fra dagens byrå: saldobalanse, historikk, tilganger og systemoppsett. Du sier opp avtalen, så tar vi den praktiske jobben.",
     },
   ];
 

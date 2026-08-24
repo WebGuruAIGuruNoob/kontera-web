@@ -5,16 +5,16 @@ import { CheckIcon, PhoneIcon, Arrow } from "@/components/icons";
 
 /**
  * Prisseksjon (DESIGNPLAN §3): Randi-modellen NÅR priser er godkjent (§14.7 —
- * fastpris-ankre per segment). Inntil da: ærlig prismodell + garantier + CTA.
+ * fastpris-ankre per segment). Inntil da: tydelig prismodell + garantier + CTA.
  * ALDRI oppdiktede kronebeløp.
  */
 const inkludert = [
   "Fast regnskapsfører som kjenner bedriften din",
-  "Fast backup som også kjenner deg",
-  "Korte spørsmål — alltid inkludert",
-  "Alle offentlige frister overvåket",
-  "Rapporter forklart på vanlig norsk",
-  "Ingen skjulte gebyrer",
+  "Fast stedfortreder som også kjenner bedriften",
+  "Korte spørsmål og småavklaringer inkludert",
+  "Oversikt over alle offentlige frister",
+  "Rapporter gjennomgått og forklart",
+  "Alle tillegg avtales før de påløper",
 ];
 
 export function PricingSection({
@@ -33,11 +33,11 @@ export function PricingSection({
             eyebrow="Priser"
             title={
               <>
-                Middels pris. Høy kvalitet.{" "}
-                <span className="text-azure">Null taksameter.</span>
+                Middels pris, statsautorisert kompetanse.{" "}
+                <span className="text-azure">Forutsigbar faktura.</span>
               </>
             }
-            intro={`Vi er ikke billigst — det er et bevisst valg. Du betaler for en erfaren regnskapsfører som kjenner deg, ikke et anonymt tastesenter. Prisen settes av bilagsmengde, ansatte og hvor mye du vil gjøre selv${stedsnavn ? ` — ikke av at du holder til i ${stedsnavn}` : ""}, og avtales tydelig før vi starter.`}
+            intro={`Vi ligger i midtsjiktet på pris. Vi konkurrerer ikke på laveste timepris, men på at du får en erfaren, fast regnskapsfører i et autorisert regnskapsforetak med statsautoriserte regnskapsførere. Prisen settes av bilagsmengde, ansatte og hvor mye du vil gjøre selv${stedsnavn ? ` — ikke av at du holder til i ${stedsnavn}` : ""}, og avtales tydelig før vi starter.`}
           />
           <ul className="mt-6 grid gap-2.5 text-sm font-semibold text-white/90 sm:grid-cols-2">
             {inkludert.map((punkt) => (
@@ -53,8 +53,8 @@ export function PricingSection({
             Få prisen for {stedsnavn ? `din bedrift i ${stedsnavn}` : "din bedrift"}
           </p>
           <p className="text-sm leading-relaxed text-white/75">
-            En kort prat om bilagsmengde og behov — så får du et ærlig, konkret
-            tilbud. Som regel samme dag.
+            En kort samtale om bilagsmengde og behov, så får du et konkret
+            tilbud med tydelige forutsetninger. Som regel samme dag.
           </p>
           {leadEnabled ? (
             <a
@@ -62,7 +62,7 @@ export function PricingSection({
               data-cta="pris-tilbud"
               className="mt-2 rounded-lg bg-white px-6 py-3.5 text-center font-sans font-bold text-navy transition-colors hover:bg-mist"
             >
-              Få et uforpliktende tilbud <Arrow />
+              Be om et tilbud <Arrow />
             </a>
           ) : (
             <a

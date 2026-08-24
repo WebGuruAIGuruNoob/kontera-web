@@ -16,6 +16,8 @@ og `next.config.ts` + `app/robots.ts` holder *.vercel.app ute av Googles indeks 
 
 1. **Ekthetsregelen:** Aldri dikt opp kundesitater, cases, anmeldelser, ratings eller priser
    i kroner. Sitat-seksjoner er utelatt til Henrik leverer ekte, samtykkede sitater.
+   Gjelder også *fingerte* replikker: smertepunkter skrives som beskrivelser i du-form,
+   aldri i anførselstegn eller kursiv som kan leses som ekte kundesitat.
 2. **Lead-sikkerhet:** Skjemaet viser aldri suksess uten fungerende e-postlevering.
    `ContactForm` får `enabled={!!process.env.RESEND_API_KEY}` — uten nøkkel rendres
    ring-oss-fallback. Når `RESEND_API_KEY` legges inn i Vercel: send TESTINNSENDING
@@ -23,6 +25,13 @@ og `next.config.ts` + `app/robots.ts` holder *.vercel.app ute av Googles indeks 
 3. **Aldri LocalBusiness-schema** for kommuner uten kontor. Geo-sider bruker `Service`
    + `areaServed` (se `lib/schema.ts`).
 4. **NAP-data hardkodes aldri** — alt hentes fra `data/site.ts`.
+5. **Tonen er vedtatt i [TONEPLAN.md](TONEPLAN.md)** — «saklig fagperson». Les den FØR du
+   skriver eller endrer copy. De 20 kanoniske omskrivingene er vedtak, ikke forslag.
+   Kortversjon: ingen gimmick eller slang, ingen retoriske spørsmål som overskrift, ingen
+   omtale av konkurrenter, ingen forsterkere («faktisk», «ærlig», «solid»), ingen absolutte
+   løfter («aldri igjen», «vi ordner alt», «sømløs»), «stedfortreder» (ikke «backup»),
+   «regnskapsfører» skrevet helt ut (aldri «fører»), og «autorisert regnskapsforetak» der
+   autorisasjonen omtales — `regnskapsselskap` er terminologi fra opphevet lov.
 
 ## Vanlige oppgaver
 
@@ -45,6 +54,9 @@ og `next.config.ts` + `app/robots.ts` holder *.vercel.app ute av Googles indeks 
   Pexels-varme brukes i stedet). `scripts/fetch-pexels.mjs` er kun for rå-søk.
 - **Kvalitetsport:** `npm run qa:geo` etter build — feiler hvis en kommuneside har
   <1500 ord eller mangler statkort/FAQ/kildehenvisning.
+- **Bransjesider:** bruk ALLTID `b.omtale` (flertall, løpende tekst: «eiendomsselskaper») og
+  `b.virksomhetsord` («eiendomsselskapet ditt») i maler. Bøy aldri `b.navn` med
+  strengmanipulasjon — det ga tidligere «din eiendombedrift» på fem av seks sider.
 
 ## Struktur (kort)
 

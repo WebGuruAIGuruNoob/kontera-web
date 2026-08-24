@@ -42,7 +42,7 @@ export async function generateMetadata({
     title: {
       absolute: `Regnskapsfører i ${fylke.visningsnavn} | Kontera Regnskap`,
     },
-    description: `Regnskap, lønn og årsoppgjør for bedrifter i ${fylke.visningsnavn} — ${tall(innhold.aggregert.total)} virksomheter i ${fylke.kommuner.length} kommuner. Fast regnskapsfører uten taksameter. Ring 960 00 400.`,
+    description: `Regnskap, lønn og årsoppgjør i ${fylke.visningsnavn} — ${tall(innhold.aggregert.total)} virksomheter i ${fylke.kommuner.length} kommuner. Fast kontaktperson, korte spørsmål inkludert. Ring 960 00 400.`,
     alternates: { canonical: `/regnskapsforer/${fylke.slug}` },
   };
 }
@@ -84,18 +84,18 @@ export default async function FylkePage({
       <HeroSplit
         compact
         eyebrow={`Regnskapsfører i ${navn}`}
-        title={`Regnskapsfører i ${navn} — uten taksameter`}
-        subtitle={`Fast regnskapsfører som kjenner bedriften din, alle frister overholdt og ingen faktura for korte spørsmål — digitalt i hele ${navn}.`}
+        title={`Regnskapsfører i ${navn} — korte spørsmål er inkludert`}
+        subtitle={`En fast regnskapsfører som kjenner bedriften din, statsautorisert kvalitetssikring av oppdraget og oversikt over fristene dine — digitalt i hele ${navn}.`}
         chips={[
           `${tall(innhold.aggregert.total)} virksomheter i fylket`,
           "Statsautoriserte regnskapsførere",
-          "Fast kontaktperson + backup",
+          "Fast kontaktperson og stedfortreder",
         ]}
         aside={
           <LeadCard
             enabled={enabled}
             heading={`Få pristilbud for din bedrift i ${navn}`}
-            subheading="En kort prat om behovet ditt — så får du et ærlig, konkret tilbud."
+            subheading="En kort samtale om behovet ditt — så får du et konkret tilbud med tydelige forutsetninger."
           />
         }
       />
@@ -144,7 +144,7 @@ export default async function FylkePage({
           <SectionHeading
             eyebrow="Velg område"
             title="Velg kommunen din — lokale tall og svar"
-            intro="Hver kommuneside gir deg lokale næringstall, bransjeinnsikten som er mest relevant der — og svar på det bedrifter i kommunen lurer på."
+            intro="Hver kommuneside gir deg lokale næringstall, den bransjeinnsikten som er mest relevant der, og svar på spørsmålene bedrifter i kommunen stiller oftest."
           />
           <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {innhold.toppKommuner.map(({ kommune, total }) => (
@@ -200,7 +200,7 @@ export default async function FylkePage({
         title={`Spørsmål og svar — regnskapsfører i ${navn}`}
       />
       <FinalCta
-        title={`Klar for en regnskapsfører som kjenner deg — i ${navn}?`}
+        title={`En fast regnskapsfører som kjenner bedriften din — i ${navn}`}
       />
     </>
   );

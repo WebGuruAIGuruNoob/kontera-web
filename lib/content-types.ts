@@ -45,7 +45,15 @@ export type BransjeContent = {
   heroUndertekst: string;
   kortBeskrivelse: string;
   ikon: IkonNavn;
-  /** Bransjens regnskapssmerter — 3–5 punkter, med kundens egne ord */
+  /**
+   * Bransjegruppen omtalt i løpende tekst, liten forbokstav og flertall
+   * («bilforhandlere», «borettslag og sameier»). Malen bøyer ALDRI `navn`
+   * selv — det ga ugrammatiske overskrifter som «din eiendombedrift».
+   */
+  omtale: string;
+  /** Virksomheten i entall med eiendomsord: «bedriften din», «borettslaget ditt» */
+  virksomhetsord: string;
+  /** Bransjens typiske regnskapsutfordringer — 3–5 punkter i du-form, uten sitatform */
   smerter: string[];
   /** Bransjespesifikke regler/fallgruver — kjernen av sidens fagverdi */
   seksjoner: { tittel: string; avsnitt: string[] }[];

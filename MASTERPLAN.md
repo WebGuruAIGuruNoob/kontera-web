@@ -88,7 +88,10 @@ Råfiler av alle dagens sider er arkivert i repoet: [`data/legacy/`](data/legacy
 4. **Statsautoriserte regnskapsførere** — regulert kvalitet, verifiserbart i Finanstilsynets virksomhetsregister
 5. **Spisskompetanse der det teller** — bruktbil/bilbransje, håndverkere, eiendom, netthandel — og bred kompetanse for de fleste bransjer
 
-**Tone of voice:** Norsk bokmål, du-form, jordnær og muntlig (Fiken/Randi-skolen), presis i fakta og titler (regulert bransje). Korte setninger. Ingen «helhetlige løsninger innen økonomiforvaltning»-språk. Bransjenevnelser skal favne bredt: bruktbil m.fl. nevnes som spisskompetanse, men alle sider gjør det tydelig at Kontera passer de fleste bransjer.
+**Tone of voice — «saklig fagperson»** (revidert 2026-08-24 etter Henriks beslutning; erstatter den tidligere «jordnær og muntlig»-linja): Norsk bokmål, du-form og varme beholdes, men registeret er en erfaren rådgiver — ikke en selger. Rolig autoritet, presis i fakta og titler (regulert bransje). Ingen «helhetlige løsninger innen økonomiforvaltning»-språk, men heller ingen gimmick, slang, retoriske overskrifter, fingerte sitater eller sidespark mot andre byråer. Bransjenevnelser skal favne bredt: bruktbil m.fl. nevnes som spisskompetanse, men alle sider gjør det tydelig at Kontera passer de fleste bransjer.
+
+**Fullt tone-charter: [TONEPLAN.md](TONEPLAN.md)** — GJØR/IKKE GJØR og 20 kanoniske omskrivinger.
+Det er kanonisk for all copy og skal leses før tekst skrives eller endres.
 
 **Terminologi-regel (SEO + korrekthet):** «Statsautorisert regnskapsfører» er korrekt lovtittel (regnskapsførerloven 2023). Søkevolumet ligger fortsatt på «autorisert regnskapsfører» — bruk «autorisert» i titles/H1 der det er naturlig, «statsautorisert» i fagcopy og strukturert data.
 

@@ -50,19 +50,19 @@ export const site = {
   promises: [
     {
       title: "Fast regnskapsfører",
-      text: "Du får én fast kontaktperson som gjør hele regnskapet ditt — og som faktisk kjenner bedriften din.",
+      text: "Du får én fast kontaktperson som fører hele regnskapet ditt, og som kjenner bedriften og historikken i tallene.",
     },
     {
       title: "Alltid to som kjenner deg",
-      text: "En fast backup blir også kjent med bedriften din, så du aldri står uten hjelp ved sykdom eller ferie.",
+      text: "En fast stedfortreder kjenner også bedriften din, slik at du ikke står uten hjelp ved ferie eller sykdom.",
     },
     {
-      title: "Ingen faktura for korte spørsmål",
-      text: "Ring oss når du lurer på noe. Korte spørsmål og små avklaringer koster ingenting ekstra.",
+      title: "Korte spørsmål er inkludert",
+      text: "Korte spørsmål og småavklaringer er inkludert i honoraret. Du kan ta kontakt om en kort avklaring uten at det utløser en faktura.",
     },
     {
       title: "Statsautoriserte regnskapsførere",
-      text: "Autorisert regnskapsselskap under Finanstilsynet — du kan slå oss opp i virksomhetsregisteret.",
+      text: "Autorisert regnskapsforetak under tilsyn av Finanstilsynet. Autorisasjonen kan verifiseres i Finanstilsynets virksomhetsregister.",
     },
   ],
 } as const;

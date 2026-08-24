@@ -30,11 +30,11 @@ export function LeadCard({
         className="rounded-2xl border border-navy/10 bg-surface p-6 sm:p-7"
       >
         <p className="font-display text-xl font-bold text-navy">
-          Ring oss — en uforpliktende prat
+          Ring oss for en uforpliktende samtale
         </p>
         <p className="mt-2 text-sm leading-relaxed text-slate">
           {subheading ??
-            "Vi finner ut om vi er en god match for bedriften din. Korte spørsmål koster aldri noe."}
+            "Vi går gjennom behovet ditt og finner ut om vi passer for bedriften din. Korte spørsmål og småavklaringer er inkludert."}
         </p>
         <a
           href={site.phoneHref}
@@ -45,7 +45,7 @@ export function LeadCard({
           {site.phoneDisplay}
         </a>
         <p className="mt-3 text-center text-xs text-slate">
-          Hverdager 08–16 · Uforpliktende
+          Hverdager 08–16
         </p>
         <div className="mt-4 border-t border-navy/10 pt-4 text-center text-sm">
           <span className="text-slate">Eller skriv til oss: </span>
@@ -68,10 +68,9 @@ export function LeadCard({
         role="status"
         className="rounded-2xl border border-teal/60 bg-surface p-7 text-center"
       >
-        <p className="font-display text-xl font-bold text-navy">Takk!</p>
+        <p className="font-display text-xl font-bold text-navy">Takk for henvendelsen</p>
         <p className="mt-2 text-sm leading-relaxed text-slate">
-          Vi kontakter deg innen én arbeidsdag — som regel raskere. Haster det?
-          Ring{" "}
+          Vi tar kontakt innen én arbeidsdag. Trenger du svar raskere, ring{" "}
           <a href={site.phoneHref} className="font-bold text-blue">
             {site.phoneDisplay}
           </a>
@@ -152,10 +151,10 @@ export function LeadCard({
           {status === "sending" ? "Sender …" : "Få et uforpliktende tilbud"}
         </button>
         <p className="text-center text-xs text-slate">
-          Uforpliktende · Svar innen én arbeidsdag · Ingen bindingstid
+          Svar innen én arbeidsdag · Ingen bindingstid
         </p>
         <p className="border-t border-navy/10 pt-3 text-center text-sm text-slate">
-          …eller ring oss:{" "}
+          Eller ring oss:{" "}
           <a href={site.phoneHref} data-cta="leadcard-tel" className="font-bold text-blue hover:underline">
             {site.phoneDisplay}
           </a>

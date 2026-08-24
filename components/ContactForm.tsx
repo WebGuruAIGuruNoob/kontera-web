@@ -18,11 +18,11 @@ export function ContactForm({ enabled }: { enabled: boolean }) {
     return (
       <div className="rounded-2xl border border-navy/10 bg-surface p-6 text-center">
         <p className="font-display text-lg font-bold text-navy">
-          Ring oss — det er raskeste vei til svar
+          Ring oss — det er den raskeste veien til svar
         </p>
         <p className="mx-auto mt-2 max-w-md text-sm text-slate">
-          Kontaktskjemaet er midlertidig utilgjengelig. Ta en uforpliktende prat
-          på telefon, eller send oss en e-post.
+          Kontaktskjemaet er midlertidig utilgjengelig. Ring oss for en
+          uforpliktende samtale, eller send oss en e-post.
         </p>
         <div className="mt-5 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
@@ -50,10 +50,10 @@ export function ContactForm({ enabled }: { enabled: boolean }) {
         className="rounded-2xl border border-teal/60 bg-mist p-8 text-center"
         role="status"
       >
-        <p className="font-display text-xl font-bold text-navy">Takk for henvendelsen!</p>
+        <p className="font-display text-xl font-bold text-navy">Takk for henvendelsen</p>
         <p className="mx-auto mt-2 max-w-md text-slate">
-          Vi tar kontakt innen én arbeidsdag — som regel raskere. Haster det?
-          Ring oss på{" "}
+          Vi tar kontakt innen én arbeidsdag. Trenger du svar raskere, ring oss
+          på{" "}
           <a href={site.phoneHref} className="font-bold text-blue">
             {site.phoneDisplay}
           </a>
@@ -108,7 +108,7 @@ export function ContactForm({ enabled }: { enabled: boolean }) {
         </div>
         <div>
           <label htmlFor={`${uid}-melding`} className="mb-1.5 block text-sm font-bold text-ink">
-            Hva ser du etter?{" "}
+            Kort om behovet ditt{" "}
             <span className="font-normal text-slate">(valgfritt)</span>
           </label>
           <textarea id={`${uid}-melding`} name="melding" rows={3} className={inputClass} />
@@ -138,8 +138,8 @@ export function ContactForm({ enabled }: { enabled: boolean }) {
           {status === "sending" ? "Sender …" : "Få et uforpliktende tilbud"}
         </button>
         <p className="text-xs text-slate">
-          Uforpliktende. Vi bruker opplysningene kun til å svare deg, og deler dem
-          aldri med andre.{" "}
+          Vi bruker opplysningene kun til å svare deg, og deler dem ikke med
+          andre.{" "}
           <a href="/personvern" className="underline hover:text-blue">
             Les personvernerklæringen
           </a>

@@ -3,7 +3,7 @@ import type { TjenesteContent } from "@/lib/content-types";
 export const arsoppgjor: TjenesteContent = {
   slug: "arsoppgjor",
   navn: "Årsoppgjør og skattemelding",
-  tittel: "Årsoppgjør uten skippertak — levert i god tid",
+  tittel: "Årsoppgjør og skattemelding — levert i god tid før fristen",
   metaTitle: "Årsoppgjør og skattemelding for AS og ENK | Kontera Regnskap",
   metaDescription:
     "Vi tar hele årsoppgjøret: årsregnskap, noter, skattemelding og aksjonærregisteroppgave – levert riktig og innen fristen. Ring 960 00 400 for et tilbud.",
@@ -13,11 +13,11 @@ export const arsoppgjor: TjenesteContent = {
     "Årsregnskap, skattemelding og aksjonærregisteroppgave – riktig utført og levert innen fristene.",
   ikon: "kalender",
   passerFor: [
-    "Du driver AS og vil være trygg på at årsregnskap og skattemelding blir riktig – uten å måtte huske en eneste frist",
+    "Du driver AS og vil være trygg på at årsregnskap og skattemelding blir riktig, og at fristene følges opp for deg",
     "Du fører regnskapet selv gjennom året, men vil ha en statsautorisert regnskapsfører til selve årsoppgjøret",
     "Du har enkeltpersonforetak eller ansvarlig selskap og synes skattemeldingen med næringsspesifikasjon er blitt mer krevende enn den var",
     "Du har fått brev fra Skatteetaten om skattemeldingen og vil ha noen som svarer riktig – første gang",
-    "Du leverte for sent i fjor, fikk gebyr eller purring, og vil aldri havne der igjen",
+    "Du leverte for sent i fjor, fikk gebyr eller purring, og vil ha en fast rutine som sikrer levering i tide",
   ],
   hvaInngar: [
     {
@@ -38,49 +38,49 @@ export const arsoppgjor: TjenesteContent = {
     {
       tittel: "Styrets vedtak og generalforsamling",
       tekst:
-        "Vi lager forslag til styrets behandling av årsregnskapet og protokoll fra ordinær generalforsamling, klart til signering. Du slipper å lete etter maler og lure på hva som må stå der.",
+        "Vi lager forslag til styrets behandling av årsregnskapet og protokoll fra ordinær generalforsamling, klart til signering. Du slipper å lete etter maler og vurdere hva som må stå der.",
     },
     {
       tittel: "Innsending til Altinn og Brønnøysund",
       tekst:
-        "Vi sender alt dit det skal: skattemeldingen til Skatteetaten og årsregnskapet til Regnskapsregisteret – og følger med til alt faktisk er godkjent, ikke bare sendt.",
+        "Vi sender alt dit det skal: skattemeldingen til Skatteetaten og årsregnskapet til Regnskapsregisteret – og følger opp til innsendingene er registrert som godkjent.",
     },
     {
       tittel: "Bistand ved endring og klage",
       tekst:
-        "Får du spørsmål fra Skatteetaten i etterkant, eller oppdager vi feil i tidligere år? Vi svarer på henvendelser, endrer skattemeldingen og klager på vedtak på dine vegne.",
+        "Kommer det spørsmål fra Skatteetaten i etterkant, eller avdekkes feil i tidligere år, følger vi opp saken. Vi svarer på henvendelser, endrer skattemeldingen og klager på vedtak på dine vegne.",
     },
   ],
   seksjoner: [
     {
       tittel: "Fristene i årsoppgjøret – dette er datoene som gjelder",
       avsnitt: [
-        "Skattemeldingen for aksjeselskap og næringsdrivende skal leveres innen 31. mai året etter inntektsåret. Som regnskapsførere kan vi søke om utsatt frist for kundene våre når det trengs – men planen vår er alltid å bli ferdig i god tid før, så du slipper å tenke på det i det hele tatt.",
+        "Skattemeldingen for aksjeselskap og næringsdrivende skal leveres innen 31. mai året etter inntektsåret. Som regnskapsførere kan vi søke om utsatt frist for kundene våre når det trengs, men planen vår er alltid å bli ferdig i god tid før, slik at leveransen er klar før forfall.",
         "Årsregnskapet skal fastsettes av generalforsamlingen innen seks måneder etter regnskapsårets slutt – altså innen 30. juni for selskap som følger kalenderåret. Deretter skal det sendes til Regnskapsregisteret i Brønnøysund, og det må være mottatt der innen 31. juli for å unngå forsinkelsesgebyr.",
-        "Kommer årsregnskapet inn for sent, løper gebyret ukentlig i opptil 26 uker og kan samlet bli titusener av kroner – og i verste fall kan styremedlemmene bli personlig ansvarlige for beløpet. I tillegg kommer aksjonærregisteroppgaven, som alle AS må levere innen 31. januar. Er du kunde hos oss, trenger du ikke huske noen av disse datoene. Det er bokstavelig talt jobben vår.",
+        "Kommer årsregnskapet inn for sent, løper gebyret ukentlig i opptil 26 uker og kan samlet bli titusener av kroner – og i verste fall kan styremedlemmene bli personlig ansvarlige for beløpet. I tillegg kommer aksjonærregisteroppgaven, som alle AS må levere innen 31. januar. Er du kunde hos oss, holder vi oversikt over disse datoene. Det er en del av oppdraget vårt.",
       ],
     },
     {
-      tittel: "Skattemeldingen for AS kan ikke lenger fylles ut for hånd",
+      tittel: "Skattemeldingen for AS må leveres fra et godkjent årsoppgjørsprogram",
       avsnitt: [
-        "Fra og med inntektsåret 2023 må alle aksjeselskap levere skattemeldingen i et standardisert format via et årsoppgjørs- eller regnskapsprogram. De gamle skjemaene i Altinn, som mange daglige ledere fylte ut selv år etter år, finnes rett og slett ikke lenger. Uten et godkjent program får du ikke levert.",
-        "For deg som har gjort dette selv, betyr det to ting: Du må skaffe og betale for et årsoppgjørsprogram – og du må fortsatt vite hva du gjør. Næringsspesifikasjonen henger sammen på tvers, og feil i avskrivninger, midlertidige forskjeller eller utsatt skatt følger deg videre inn i neste år. Programmet fyller ikke ut noe riktig av seg selv.",
-        "Vi gjør årsoppgjøret i profesjonelle årsoppgjørsverktøy, med statsautoriserte regnskapsførere som kontrollerer tallene før noe sendes. Enkeltpersonforetak kan fortsatt levere rett fra Skatteetatens egen løsning – men også der ser vi ofte at en time med kvalitetssikring sparer både skatt og hodebry.",
+        "Fra og med inntektsåret 2023 må alle aksjeselskap levere skattemeldingen i et standardisert format via et årsoppgjørs- eller regnskapsprogram. De gamle skjemaene i Altinn, som mange daglige ledere fylte ut selv år etter år, finnes ikke lenger. Uten et godkjent program får du ikke levert.",
+        "For deg som har gjort dette selv, betyr det to ting: Du må skaffe og betale for et årsoppgjørsprogram, og du må fortsatt kjenne reglene. Næringsspesifikasjonen henger sammen på tvers, og feil i avskrivninger, midlertidige forskjeller eller utsatt skatt følger deg videre inn i neste år. Programmet kontrollerer ikke om de faglige vurderingene bak tallene er riktige.",
+        "Vi gjør årsoppgjøret i profesjonelle årsoppgjørsverktøy, med statsautoriserte regnskapsførere som kontrollerer tallene før noe sendes. Enkeltpersonforetak kan fortsatt levere rett fra Skatteetatens egen løsning – men også der ser vi ofte at en time med kvalitetssikring både reduserer skatterisikoen og sparer deg for tid.",
       ],
     },
     {
-      tittel: "Fører du regnskapet selv? Vi tar gjerne bare årsoppgjøret",
+      tittel: "Årsoppgjør som enkeltoppdrag for deg som fører selv",
       avsnitt: [
-        "Mange driver godt med å føre det løpende regnskapet selv, men vil ha en fagperson til avslutningen. Det synes vi er en fornuftig arbeidsdeling – og en tjeneste vi leverer til mange. Vi jobber mest i Tripletex og Uni Micro, men kjenner de fleste systemer, så vi tar som regel utgangspunkt rett i ditt eget regnskap.",
+        "Mange driver godt med å føre det løpende regnskapet selv, men vil ha en fagperson til avslutningen. Det er en fornuftig arbeidsdeling, og en tjeneste vi leverer til mange. Vi jobber mest i Tripletex og Uni Micro, men kjenner de fleste systemer, så vi tar som regel utgangspunkt rett i ditt eget regnskap.",
         "Slik fungerer det: Vi går gjennom regnskapet ditt, avstemmer balansen, rydder der det trengs og gjør avslutningsposteringene – avskrivninger, skattekostnad, disponering av resultatet. Så utarbeider vi årsregnskap, skattemelding og resten av dokumentene, og sender alt inn. Finner vi feil i føringen din, får du konkret beskjed, så neste år blir enklere.",
-        "Du binder deg ikke til noe mer enn selve oppdraget. Noen kommer til oss for ett årsoppgjør og fortsetter å føre selv i mange år – helt fint. Andre oppdager at det er deilig å slippe, og gir oss mer etter hvert. Begge deler er velkomment.",
+        "Du binder deg ikke til noe mer enn selve oppdraget. Noen kommer til oss for ett årsoppgjør og fortsetter å føre selv i mange år. Andre ser verdien av å sette bort mer over tid, og utvider oppdraget. Begge deler er velkomment.",
       ],
     },
     {
-      tittel: "Hva koster et årsoppgjør?",
+      tittel: "Hva et årsoppgjør koster",
       avsnitt: [
-        "Prisen avhenger av selskapsform, hvor ryddig regnskapet er når vi overtar det, og hvor komplisert selskapet er – ting som utsatt skatt, aksjonærlån eller flere eiere trekker opp. Et årsoppgjør for et lite AS med ordnet regnskap er en overkommelig engangsjobb; et opprydningsprosjekt er noe annet, og det sier vi tydelig fra om på forhånd.",
-        "Vi ligger på et middels prisnivå med høy faglig kvalitet – det er et bevisst valg. Fører vi regnskapet ditt løpende, er årsoppgjøret en naturlig del av avtalen. Se prissiden vår for mer om hvordan vi priser, eller ring 960 00 400, så gir vi deg et konkret estimat etter en kort prat.",
+        "Prisen avhenger av selskapsform, hvor ryddig regnskapet er når vi overtar det, og hvor komplisert selskapet er – forhold som utsatt skatt, aksjonærlån eller flere eiere trekker opp. Et årsoppgjør for et lite AS med ordnet regnskap er en overkommelig engangsjobb; et opprydningsprosjekt er noe annet, og det sier vi tydelig fra om på forhånd.",
+        "Vi ligger i midtsjiktet på pris. Vi prioriterer erfaring og faglig kvalitet framfor lavest mulig timepris. Fører vi regnskapet ditt løpende, er årsoppgjøret en naturlig del av avtalen. Se prissiden vår for mer om hvordan vi priser, eller ring 960 00 400, så gir vi deg et konkret estimat etter en kort gjennomgang.",
       ],
     },
   ],

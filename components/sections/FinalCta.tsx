@@ -9,8 +9,8 @@ import { leadEnabled } from "@/lib/lead";
  * Ankermål (#kontakt) for alle inline-CTA-er på siden.
  */
 export function FinalCta({
-  title = "Klar for en regnskapsfører som faktisk kjenner deg?",
-  text = "Ta en uforpliktende prat, så finner vi ut om vi er en god match. Eller send oss noen linjer om hva du ser etter.",
+  title = "Få en fast regnskapsfører som kjenner bedriften din",
+  text = "Ta en uforpliktende samtale, så finner vi ut om vi passer for bedriften din. Du kan også sende oss noen linjer om hva du ser etter.",
 }: {
   title?: string;
   text?: string;
@@ -31,7 +31,7 @@ export function FinalCta({
             {site.phoneDisplay}
           </a>
           <p className="mt-3 text-sm text-white/70">
-            Hverdager 08–16. Korte spørsmål koster aldri noe.
+            Hverdager 08–16. Korte spørsmål og småavklaringer er inkludert.
           </p>
 
           <ul className="mt-8 space-y-2 text-sm text-white/80">

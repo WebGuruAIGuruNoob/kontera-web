@@ -98,11 +98,12 @@ export default async function BlogPostPage({
 
         <aside className="mx-auto mt-12 max-w-3xl rounded-lg border border-azure/40 bg-mist p-6">
           <p className="font-display text-lg font-bold text-navy">
-            Vil du slippe å tenke på dette selv?
+            Snakk med en regnskapsfører om din situasjon
           </p>
           <p className="mt-2 text-sm leading-relaxed text-slate">
-            Ta en uforpliktende prat med en av oss — vi svarer på det du lurer
-            på, helt uten taksameter.
+            Ta kontakt med en av oss for en kort gjennomgang. Vi svarer på det
+            du lurer på, og korte spørsmål og småavklaringer er inkludert i
+            honoraret.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
             <a

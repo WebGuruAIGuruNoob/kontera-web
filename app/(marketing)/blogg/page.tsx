@@ -5,9 +5,9 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FinalCta } from "@/components/sections/FinalCta";
 
 export const metadata: Metadata = {
-  title: "Fagstoff og guider – regnskap forklart på vanlig norsk",
+  title: "Fagstoff og guider – regnskap, frister og skatt",
   description:
-    "Guider om pris på regnskapsfører, mva-frister, årsoppgjør, å starte AS og mer – skrevet av regnskapsførere, forklart på vanlig norsk.",
+    "Guider om pris på regnskapsfører, mva-frister, årsoppgjør og oppstart av AS. Skrevet av regnskapsførerne hos Kontera.",
   alternates: { canonical: "/blogg" },
 };
 
@@ -20,11 +20,11 @@ export default function BloggPage() {
         <div className="max-w-2xl">
           <p className="section-eyebrow">Fagstoff</p>
           <h1 className="mt-2 font-display text-4xl font-extrabold text-ink [text-wrap:balance]">
-            Regnskap forklart på vanlig norsk
+            Fagstoff om regnskap, frister og skatt
           </h1>
           <p className="mt-4 text-lg leading-relaxed text-slate">
-            Guider og svar på det bedrifter faktisk lurer på — priser, frister,
-            regler og valg. Skrevet av oss som jobber med dette hver dag.
+            Guider og svar på spørsmålene bedrifter stiller oftest — om priser,
+            frister, regler og valg. Skrevet av regnskapsførerne hos Kontera.
           </p>
         </div>
 

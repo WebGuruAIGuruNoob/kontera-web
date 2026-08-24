@@ -4,24 +4,24 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { HeroSplit } from "@/components/sections/HeroSplit";
 
 export const metadata: Metadata = {
-  title: "Jobb i Kontera – bli en av oss",
+  title: "Jobb i Kontera – send en åpen søknad",
   description:
-    "Vil du jobbe i et lite regnskapsbyrå der du får egne kunder, faglig ansvar og kolleger som stiller opp? Send en åpen søknad til post@kontera.no.",
+    "Vil du jobbe i et lite regnskapsbyrå der du får egne kunder, faglig ansvar og erfarne kolleger rundt deg? Send en åpen søknad til post@kontera.no.",
   alternates: { canonical: "/jobb" },
 };
 
 const goder = [
   {
-    tittel: "Egne samarbeidspartnere",
-    tekst: "Hos oss får du dine egne kunder og hele regnskapet deres — ikke en kø av anonyme oppgaver fra et fordelingssystem.",
+    tittel: "Egne kundeforhold",
+    tekst: "Hos oss får du dine egne kunder og ansvaret for hele regnskapet deres. Du følger de samme virksomhetene over tid og kjenner tallene bak.",
   },
   {
     tittel: "Faglig bredde",
     tekst: "Bil, bygg, eiendom, netthandel, tjenester: Du jobber på tvers av bransjer og hele faget, fra bilag til årsoppgjør og rådgivning.",
   },
   {
-    tittel: "Kolleger som stiller opp",
-    tekst: "Backup-modellen vår gjelder internt også. Ingen står alene med en frist, og spørsmål er alltid velkomne.",
+    tittel: "Erfarne kolleger tett på",
+    tekst: "Stedfortrederordningen vår gjelder internt også. Ingen står alene med en frist, og terskelen for å spørre en kollega er lav.",
   },
   {
     tittel: "Moderne verktøy",
@@ -39,22 +39,23 @@ export default function JobbPage() {
         title={
           <>
             Bli regnskapsføreren kundene{" "}
-            <span className="hl-serif-italic">faktisk kjenner</span>
+            <span className="hl-serif-italic">kjenner ved navn</span>
           </>
         }
-        subtitle="Vi er seks i dag — og ser alltid etter dyktige folk som deler troen på at regnskap er et samarbeidsfag. Send en åpen søknad til post@kontera.no."
+        subtitle="Vi er seks i dag, og ser alltid etter dyktige regnskapsførere som liker å jobbe tett med kundene sine. Send en åpen søknad til post@kontera.no."
       />
 
       <section className="section-y mx-auto max-w-6xl px-4">
         <div className="max-w-2xl">
           <h2 className="font-display text-3xl font-extrabold text-ink [text-wrap:balance]">
-            Hvorfor jobbe hos oss?
+            Slik er det å jobbe i Kontera
           </h2>
           <p className="mt-4 leading-relaxed text-slate">
-            I store byråer blir du fort en brikke i en produksjonslinje. Hos
-            Kontera eier du kundeforholdene dine, ser hele bildet og får
-            ansvar fra dag én — med erfarne kolleger og statsautoriserte
-            regnskapsførere rundt deg.
+            Hos Kontera har du ansvaret for egne kundeforhold, ser hele bildet
+            og får faglig ansvar fra dag én — med erfarne kolleger og
+            statsautoriserte regnskapsførere rundt deg. Du følger de samme
+            virksomhetene over tid, fra løpende bokføring til årsoppgjør og
+            rådgivning.
           </p>
         </div>
         <div className="mt-10 grid gap-5 sm:grid-cols-2">
@@ -71,12 +72,13 @@ export default function JobbPage() {
             Ingen utlyste stillinger akkurat nå — men vi vil gjerne høre fra deg
           </h2>
           <p className="mx-auto mt-3 max-w-xl leading-relaxed text-slate">
-            Er du regnskapsfører (eller på god vei til å bli det) og kjenner
-            deg igjen i måten vi jobber på? Send en åpen søknad med CV til{" "}
+            Er du regnskapsfører, eller på god vei til å bli det, og kjenner
+            deg igjen i måten vi jobber på, vil vi gjerne se søknaden din. Send
+            en åpen søknad med CV til{" "}
             <a href="mailto:post@kontera.no" className="font-bold text-blue hover:underline">
               {site.email}
             </a>{" "}
-            — vi leser alt, og svarer alle.
+            — vi leser alle søknader, og svarer alle.
           </p>
         </div>
       </section>

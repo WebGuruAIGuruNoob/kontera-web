@@ -3,40 +3,40 @@ import { SectionHeading } from "@/components/SectionHeading";
 
 const pairs = [
   {
-    problem: "Jeg tør ikke ringe regnskapsføreren min — det koster 400 kr bare å spørre om noe.",
+    problem: "Du lar være å ringe regnskapsføreren om en kort avklaring, fordi hver henvendelse blir fakturert.",
     solution:
-      "Hos oss er korte spørsmål og små avklaringer alltid inkludert. Ring når du lurer på noe — det er sånn et samarbeid skal fungere.",
+      "Korte spørsmål og småavklaringer er inkludert i honoraret. Du kan ta kontakt om en kort avklaring uten at det utløser en faktura.",
   },
   {
-    problem: "Jeg får en ny saksbehandler hver gang, og må forklare bedriften min på nytt.",
+    problem: "Du får en ny saksbehandler hver gang og må forklare bedriften på nytt.",
     solution:
-      "Du får én fast regnskapsfører som gjør hele regnskapet ditt og kjenner bedriften din i detalj — pluss en fast backup som også kjenner deg.",
+      "Du snakker med den samme regnskapsføreren hver gang — én som kjenner bedriften og historikken i tallene. En fast stedfortreder kjenner også bedriften din, slik at du ikke står uten hjelp ved ferie eller sykdom.",
   },
   {
-    problem: "Tallene mine er alltid tre måneder gamle når jeg endelig får dem.",
+    problem: "Tallene er tre måneder gamle når du endelig får dem.",
     solution:
-      "Vi fører løpende og holder tallene oppdaterte, så du kan ta beslutninger på ferske tall — ikke historie.",
+      "Vi fører løpende gjennom året og avstemmer underveis, slik at du kan ta beslutninger på oppdaterte tall.",
   },
   {
-    problem: "Jeg er redd for å ryke på en frist fra Skatteetaten.",
+    problem: "Du er usikker på om alle frister overfor Skatteetaten blir holdt.",
     solution:
-      "Vi eier fristene dine: mva, a-melding, skattemelding, årsregnskap. Du skal aldri måtte tenke på en offentlig frist igjen.",
+      "Vi holder oversikt over fristene dine — mva, a-melding, skattemelding og årsregnskap — og sørger for at leveransene er klare i god tid før forfall. Du får beskjed når noe krever din signatur eller godkjenning.",
   },
 ];
 
-/** Redaksjonell problem→løsning (DESIGNPLAN §3): serif-sitater, hairline-rader. */
+/** Redaksjonell problem→løsning (DESIGNPLAN §3): serif-innledning, hairline-rader. */
 export function ProblemSolution() {
   return (
     <section className="section-y mx-auto max-w-6xl px-4">
       <SectionHeading
-        eyebrow="Kjenner du deg igjen?"
-        title="Tør du ringe regnskapsføreren din?"
+        eyebrow="Vanlige utfordringer"
+        title="Det vi oftest hører fra bedrifter som vil bytte"
       />
       <div data-reveal-group className="mt-10 grid gap-x-12 gap-y-0 lg:grid-cols-2">
         {pairs.map((pair) => (
           <div key={pair.problem} className="border-t border-navy/10 py-7">
-            <p className="font-display text-lg italic leading-snug text-navy [text-wrap:balance]">
-              «{pair.problem}»
+            <p className="font-display text-lg leading-snug text-navy [text-wrap:balance]">
+              {pair.problem}
             </p>
             <div className="mt-3.5 flex gap-3">
               <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal/20 text-navy">

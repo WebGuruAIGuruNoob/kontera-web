@@ -7,9 +7,9 @@ import { FramedImage } from "@/components/FramedImage";
 import { bilde } from "@/lib/bilder";
 
 export const metadata: Metadata = {
-  title: "Om oss – et lite byrå med store fordeler",
+  title: "Om oss – regnskapsbyrå på Jar i Bærum og Ask i Gjerdrum",
   description:
-    "Kontera Regnskap AS er 6 ansatte med kontorer på Jar i Bærum og Ask i Gjerdrum. Statsautoriserte regnskapsførere, personlig oppfølging og kunder i hele Norge.",
+    "Kontera Regnskap AS er 6 ansatte med kontorer på Jar i Bærum og Ask i Gjerdrum. Statsautoriserte regnskapsførere, fast kontaktperson og kunder i hele Norge.",
   alternates: { canonical: "/om-oss" },
 };
 
@@ -22,12 +22,12 @@ export default function OmOssPage() {
         eyebrow="Om oss"
         title={
           <>
-            Store nok til å kunne alt.{" "}
-            <span className="hl-serif-italic">Små nok til å kjenne deg.</span>
+            Bred kompetanse i et lite byrå.{" "}
+            <span className="hl-serif-italic">Fast regnskapsfører som kjenner deg.</span>
           </>
         }
-        chips={["Statsautoriserte regnskapsførere", "Fast kontaktperson + backup", "Korte spørsmål: 0 kr"]}
-        subtitle="Kontera Regnskap er seks mennesker som mener regnskap handler om samarbeid — ikke om et kundenummer i et køsystem."
+        chips={["Statsautoriserte regnskapsførere", "Fast kontaktperson og stedfortreder", "Korte spørsmål inkludert"]}
+        subtitle="Kontera Regnskap er et fagmiljø på seks personer som jobber tett med hver enkelt bedrift. Du har alltid én fast kontaktperson som kjenner tallene dine."
       />
 
       <section className="section-y mx-auto max-w-6xl px-4">
@@ -38,17 +38,19 @@ export default function OmOssPage() {
             </h2>
             <p className="mt-4 leading-relaxed text-slate">
               Kontera Regnskap AS ble etablert i {site.founded} og holder til på
-              Jar i Bærum og på Ask i Gjerdrum. Gjennom årene har vi bygget opp
-              solid kompetanse innen regnskap og økonomisk rådgivning — med
+              Jar i Bærum og på Ask i Gjerdrum. Gjennom årene har vi bygget
+              kompetanse innen regnskap og økonomisk rådgivning — med
               spisskompetanse på bilbransjen, bygg og eiendom, og etter hvert
               netthandel og en lang rekke tjenestebransjer.
             </p>
             <p className="mt-4 leading-relaxed text-slate">
-              Vi har bevisst valgt å forbli et lite byrå. Ikke fordi vi ikke
-              kunne vokst, men fordi modellen vår krever det: Hver
-              samarbeidspartner skal ha en fast regnskapsfører som faktisk
-              kjenner virksomheten — og en fast backup som gjør det samme. Det
-              fungerer når vi er seks. Det forsvinner når man blir seks hundre.
+              Vi har bevisst valgt å forbli et lite byrå, fordi arbeidsmodellen
+              vår forutsetter det: Hver samarbeidspartner skal ha en fast
+              regnskapsfører som kjenner virksomheten, og en fast stedfortreder
+              som kjenner den like godt. Da vet du hvem du snakker med, og du
+              slipper å forklare bedriften på nytt ved ferie eller sykdom. Det
+              er den modellen vi har bygget byrået rundt, og den forutsetter at
+              vi holder oss små.
             </p>
           </div>
 
@@ -67,15 +69,14 @@ export default function OmOssPage() {
 
           <div>
             <h2 className="font-display text-2xl font-extrabold text-ink">
-              Samarbeid, ikke leverandørforhold
+              Derfor kaller vi kundene samarbeidspartnere
             </h2>
             <p className="mt-4 leading-relaxed text-slate">
-              Vi kaller ikke kundene våre kunder — vi kaller dem
-              samarbeidspartnere, og det er ikke et markedsføringstriks. Et
-              regnskap som skal skape verdi krever at vi forstår driften din,
-              bransjen din og planene dine. Derfor tilpasser vi oss hver enkelt
-              bedrift, og derfor koster det aldri noe å ringe oss med et kort
-              spørsmål. Terskelen for å ta kontakt skal være null.
+              Vi kaller dem vi jobber for samarbeidspartnere. Et regnskap som
+              skal gi verdi, forutsetter at vi forstår driften, bransjen og
+              planene dine. Derfor tilpasser vi oss hver enkelt bedrift, og
+              derfor er korte spørsmål og småavklaringer inkludert i honoraret.
+              Terskelen for å ta kontakt skal være lav.
             </p>
           </div>
 
@@ -84,7 +85,7 @@ export default function OmOssPage() {
               Autorisert og regulert
             </h2>
             <p className="mt-4 leading-relaxed text-slate">
-              Kontera Regnskap AS er et autorisert regnskapsselskap under
+              Kontera Regnskap AS er et autorisert regnskapsforetak under
               tilsyn av Finanstilsynet, og to av oss er statsautoriserte
               regnskapsførere. Det betyr dokumenterte krav til kompetanse,
               rutiner og god regnskapsføringsskikk — og at du kan slå oss opp i
@@ -116,8 +117,8 @@ export default function OmOssPage() {
               ))}
             </div>
             <p className="mt-4 text-sm leading-relaxed text-slate">
-              …og digitalt i hele Norge. En stor andel av samarbeidspartnerne
-              våre møter vi på video og telefon — like personlig, bare uten
+              Vi fører regnskap for bedrifter i hele landet. Mange av dem møter
+              vi på video og telefon, og oppfølgingen er den samme — uten
               reisevei.
             </p>
           </div>

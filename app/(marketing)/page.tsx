@@ -19,26 +19,26 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: { absolute: "Regnskapsfører med fast kontaktperson | Kontera Regnskap AS" },
   description:
-    "Regnskap, lønn og årsoppgjør fra et lite byrå med statsautoriserte regnskapsførere. Fast regnskapsfører som kjenner deg – og ingen faktura for korte spørsmål. Ring 960 00 400.",
+    "Fast regnskapsfører som kjenner bedriften din. Regnskap, lønn og årsoppgjør fra et autorisert regnskapsforetak. Korte spørsmål inkludert. Ring 960 00 400.",
   alternates: { canonical: "/" },
 };
 
 const homeFaq = [
   {
     q: "Hva koster det å ha Kontera som regnskapsfører?",
-    a: "Prisen avhenger av bilagsmengde, antall ansatte og hvor mye du vil gjøre selv. Vi ligger på et middels prisnivå med høy kvalitet – og korte spørsmål underveis koster aldri noe ekstra. Ring oss, så gir vi deg et konkret estimat.",
+    a: "Prisen avhenger av bilagsmengde, antall ansatte og hvor mye du vil gjøre selv. Vi ligger i midtsjiktet på pris: vi konkurrerer ikke på laveste timepris, men på at du får en erfaren, fast regnskapsfører i et autorisert regnskapsforetak med statsautoriserte regnskapsførere. Korte spørsmål og småavklaringer underveis er inkludert i honoraret. Ring oss, så gir vi deg et konkret estimat.",
   },
   {
     q: "Hvor holder dere til – og kan dere ta kunder i hele Norge?",
-    a: "Vi har kontorer på Jar i Bærum og på Ask i Gjerdrum, og jobber digitalt med samarbeidspartnere i hele Norge. Bilag leveres digitalt, møter tas på video eller fysisk – som det passer deg.",
+    a: "Vi har kontorer på Jar i Bærum og på Ask i Gjerdrum, og fører regnskap digitalt for kunder over hele landet. Bilag leveres digitalt, og møter tas på video eller på kontoret – som det passer deg.",
   },
   {
-    q: "Hva betyr «fast regnskapsfører med backup» i praksis?",
-    a: "Du får én fast person som gjør hele regnskapet ditt og er kontaktpersonen din. I tillegg blir en kollega kjent med bedriften din, slik at du aldri står uten hjelp ved ferie eller sykdom.",
+    q: "Hva betyr «fast regnskapsfører med fast stedfortreder» i praksis?",
+    a: "Du får én fast regnskapsfører som gjør hele regnskapet ditt og er kontaktpersonen din. I tillegg kjenner en fast stedfortreder bedriften din, slik at du ikke står uten hjelp ved ferie eller sykdom.",
   },
   {
     q: "Er dere autorisert?",
-    a: "Ja. Kontera Regnskap AS er et autorisert regnskapsselskap, og to av oss er statsautoriserte regnskapsførere. Du kan verifisere autorisasjonen i Finanstilsynets virksomhetsregister.",
+    a: "Ja. Kontera Regnskap AS er et autorisert regnskapsforetak, og to av oss er statsautoriserte regnskapsførere. Du kan verifisere autorisasjonen i Finanstilsynets virksomhetsregister.",
   },
   {
     q: "Hvilke bransjer kan dere?",
@@ -46,15 +46,15 @@ const homeFaq = [
   },
   {
     q: "Hvordan bytter jeg fra dagens regnskapsfører til dere?",
-    a: "Du sier opp hos dagens byrå – vi tar resten: saldobalanse, historikk, tilganger og systemer. De fleste opplever byttet som overraskende enkelt. Beste tidspunkt er ved årsskiftet eller etter en mva-termin, men det går fint når som helst.",
+    a: "Du sier opp avtalen hos dagens byrå, og vi håndterer overgangen: saldobalanse, historikk, tilganger og systemer. I praksis krever byttet lite av deg – en oppsigelse og tilgang til systemene dine. Beste tidspunkt er ved årsskiftet eller etter en mva-termin, men det går fint når som helst.",
   },
   {
     q: "Hvilke regnskapssystemer bruker dere?",
-    a: "Mest Tripletex og Uni Micro, men vi har god kjennskap til de fleste regnskapsprogram og ERP-systemer. Bruker du et system du trives med, kan vi som regel fortsette i det.",
+    a: "Mest Tripletex og Uni Micro, men vi har god kjennskap til de fleste regnskapsprogram og ERP-systemer. Bruker du allerede et system som fungerer for bedriften, kan vi som regel fortsette i det.",
   },
   {
     q: "Må jeg binde meg for lang tid?",
-    a: "Nei. Vi tror på samarbeid som varer fordi det fungerer – ikke fordi kontrakten tvinger deg. Vilkårene avtaler vi tydelig før vi starter, uten overraskelser.",
+    a: "Nei, vi opererer uten bindingstid. Vilkårene avtaler vi tydelig før oppstart, slik at du vet hva som gjelder og hva som inngår i honoraret.",
   },
 ];
 
@@ -64,31 +64,31 @@ export default function HomePage() {
   return (
     <>
       <HeroSplit
-        eyebrow="Autorisert regnskapsbyrå — to statsautoriserte regnskapsførere"
+        eyebrow="Autorisert regnskapsforetak — to statsautoriserte regnskapsførere"
         title={
           <>
-            Regnskapet i orden.{" "}
-            <span className="hl-serif-italic">Spørsmål koster aldri ekstra.</span>
+            Regnskap, lønn og årsoppgjør{" "}
+            <span className="hl-serif-italic">med én fast regnskapsfører.</span>
           </>
         }
-        subtitle="Du får en fast regnskapsfører som kjenner bedriften din, tar alle fristene og svarer når du ringer – uten å fakturere for korte spørsmål."
+        subtitle="Du får en regnskapsfører som kjenner bedriften din, holder oversikt over fristene og svarer når du tar kontakt. Korte spørsmål og småavklaringer er inkludert i honoraret."
         chips={[
-          `${site.employees} ansatte — du kjenner alle`,
+          `${site.employees} ansatte — et lite team du blir kjent med`,
           `${site.statsautoriserte} statsautoriserte`,
-          "Korte spørsmål: 0 kr",
+          "Korte spørsmål inkludert",
         ]}
         aside={
           <LeadCard
             enabled={enabled}
             heading="Få pristilbud for din bedrift"
-            subheading="En kort prat om behovet ditt — så får du et ærlig, konkret tilbud."
+            subheading="En kort prat om behovet ditt — så får du et konkret tilbud med tydelige forutsetninger."
           />
         }
       />
       <ProblemSolution />
       <ServicesBento
-        title="Fra bilag til årsoppgjør — samlet hos én fast fører"
-        intro="Vi leverer alt en liten og mellomstor bedrift trenger: løpende regnskap, lønn, mva, årsoppgjør, rådgivning og hjelp til å starte selskap."
+        title="Fra bilag til årsoppgjør — samlet hos én fast regnskapsfører"
+        intro="Vi leverer tjenestene en liten eller mellomstor bedrift trenger: løpende regnskap, lønn, merverdiavgift, årsoppgjør, rådgivning og hjelp til å starte selskap."
       />
       <IndustryCards title="Spisskompetanse på bil, bygg, eiendom og netthandel" />
       <NumberedJourney leadEnabled={enabled} />
@@ -101,8 +101,8 @@ export default function HomePage() {
           <div className="lg:col-span-5">
             <SectionHeading
               eyebrow="Menneskene bak"
-              title="Seks personer. Null sentralbord."
-              intro={`Kontera er ${site.employees} ansatte, hvorav ${site.statsautoriserte} statsautoriserte regnskapsførere, fordelt på kontorene våre på Jar i Bærum og Ask i Gjerdrum. Hos oss får du ikke et køsystem – du får folk som vet hvem du er når du ringer.`}
+              title={`${site.employees} personer — én av dem er din faste regnskapsfører`}
+              intro={`Kontera er ${site.employees} ansatte, hvorav ${site.statsautoriserte} statsautoriserte regnskapsførere, fordelt på kontorene våre på Jar i Bærum og Ask i Gjerdrum. Du snakker med den samme regnskapsføreren hver gang — én som kjenner bedriften og historikken i tallene. En fast stedfortreder kjenner bedriften din også, slik at du ikke står uten hjelp ved ferie eller sykdom.`}
             />
             <Link
               href="/om-oss"
@@ -122,10 +122,10 @@ export default function HomePage() {
             )}
             <ul data-reveal-group className="grid gap-x-8 gap-y-0 sm:grid-cols-2">
             {[
-              ["Siden " + site.founded, "Solid erfaring fra bil, bygg, eiendom og en lang rekke andre bransjer."],
-              ["To kontorer", "Jar i Bærum og Ask i Gjerdrum – og digitale kunder i hele landet."],
-              ["Kort vei til svar", "Du ringer direkte til personen som fører regnskapet ditt."],
-              ["Regulert kvalitet", "Autorisert regnskapsselskap under tilsyn av Finanstilsynet."],
+              ["Siden " + site.founded, "Erfaring fra bil, bygg, eiendom, netthandel og en rekke andre bransjer."],
+              ["To kontorer", "Jar i Bærum og Ask i Gjerdrum, og digitale kunder over hele landet."],
+              ["Kort vei til svar", "Du ringer direkte til regnskapsføreren som har bedriften din."],
+              ["Under offentlig tilsyn", "Autorisert regnskapsforetak under tilsyn av Finanstilsynet."],
             ].map(([title, text]) => (
               <li key={title} className="border-t border-navy/10 py-5">
                 <p className="font-display text-lg font-bold text-navy">{title}</p>

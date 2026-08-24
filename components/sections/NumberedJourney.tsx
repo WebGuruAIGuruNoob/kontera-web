@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/SectionHeading";
  * Gjør «ikke kontor her» om til produktet og adresserer byttebarrieren.
  */
 export function NumberedJourney({
-  title = "Slik kommer du i gang — det meste gjør vi",
+  title = "Slik kommer du i gang — vi gjør det meste av jobben",
   leadEnabled,
 }: {
   title?: string;
@@ -16,22 +16,22 @@ export function NumberedJourney({
     {
       title: leadEnabled ? "Send skjemaet — eller ring" : "Ring oss — eller send e-post",
       text: leadEnabled
-        ? `Fortell oss kort hva du ser etter, eller ta praten direkte på ${site.phoneDisplay}. Ingen forpliktelser, ingen selgere.`
-        : `Ta en uforpliktende prat på ${site.phoneDisplay}, eller skriv til ${site.email}. Ingen forpliktelser, ingen selgere.`,
+        ? `Fortell oss kort hva du ser etter, eller ring oss direkte på ${site.phoneDisplay}. Du snakker med en regnskapsfører, og samtalen forplikter deg ikke.`
+        : `Ring ${site.phoneDisplay}, eller skriv til ${site.email}. Du snakker med en regnskapsfører, og samtalen forplikter deg ikke.`,
     },
     {
-      title: "Vi finner ut om vi er en god match",
-      text: "En ærlig prat om behovet ditt, bransjen din og hvordan du liker å jobbe. Passer vi ikke, sier vi det — og peker deg gjerne videre.",
+      title: "Vi vurderer sammen om vi passer for deg",
+      text: "En åpen samtale om behovet ditt, bransjen din og hvordan du liker å jobbe. Passer vi ikke, sier vi fra og henviser deg gjerne videre.",
     },
     {
-      title: "Vi ordner alt — også byttet",
-      text: "Systemer, tilganger og hele overføringen fra dagens regnskapsfører. Du merker knapt overgangen før tallene er oppdaterte.",
+      title: "Vi håndterer overgangen fra dagens byrå",
+      text: "Systemer, tilganger og hele overføringen fra dagens regnskapsfører. Overgangen krever lite av deg, og du får beskjed når noe trenger din signatur.",
     },
   ];
 
   return (
     <section className="section-y mx-auto max-w-6xl px-4">
-      <SectionHeading eyebrow="Enkelt å starte — enkelt å bytte" title={title} />
+      <SectionHeading eyebrow="Oppstart og bytte" title={title} />
       <ol data-reveal-group className="mt-10 grid gap-x-8 gap-y-10 md:grid-cols-3">
         {steps.map((step, i) => (
           <li key={step.title} className="relative border-t-2 border-navy/10 pt-6">

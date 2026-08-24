@@ -61,7 +61,7 @@ export function StickyCallBar({ leadEnabled }: { leadEnabled: boolean }) {
             data-cta="sticky-tilbud"
             className="flex flex-1 items-center justify-center bg-blue px-4 py-3.5 font-sans text-sm font-bold text-white"
           >
-            Få et uforpliktende tilbud
+            Få tilbud
           </a>
         </>
       ) : (

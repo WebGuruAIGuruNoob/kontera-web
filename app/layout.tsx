@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s | Kontera Regnskap AS",
   },
   description:
-    "Lite regnskapsbyrå med statsautoriserte regnskapsførere. Fast regnskapsfører som kjenner deg, backup som stiller opp, og ingen faktura for korte spørsmål. Ring 960 00 400.",
+    "Regnskapsbyrå med statsautoriserte regnskapsførere. Du får en fast regnskapsfører og en fast stedfortreder, og korte spørsmål er inkludert. Ring 960 00 400.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",

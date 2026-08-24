@@ -29,17 +29,17 @@ export default function GeoHubPage() {
             Regnskapsfører der <span className="hl-serif-italic">du</span> driver bedrift
           </>
         }
-        subtitle="Vi jobber digitalt med samarbeidspartnere i hele Norge – med kontorer på Jar i Bærum og Ask i Gjerdrum. Velg fylket ditt for lokale tall, bransjeinnsikt og svar."
+        subtitle="Vi leverer regnskap, lønn og årsoppgjør digitalt i hele Norge – med kontorer på Jar i Bærum og Ask i Gjerdrum. Velg fylket ditt for lokale tall, bransjeinnsikt og svar."
         chips={[
           "Statsautoriserte regnskapsførere",
-          "Fast kontaktperson + backup",
-          "Korte spørsmål: 0 kr",
+          "Fast kontaktperson og stedfortreder",
+          "Korte spørsmål inkludert",
         ]}
         aside={
           <LeadCard
             enabled={enabled}
             heading="Få pristilbud for din bedrift"
-            subheading="Uansett hvor i Norge du driver — en kort prat, så får du et ærlig tilbud."
+            subheading="Uansett hvor i landet bedriften din holder til: en kort samtale, så får du et konkret tilbud."
           />
         }
       />
@@ -53,7 +53,7 @@ export default function GeoHubPage() {
           <p className="mt-4 leading-relaxed text-slate">
             Hver side gir deg ferske tall om næringslivet i området (fra
             Brønnøysundregistrene og SSB), bransjeinnsikten som er mest relevant
-            lokalt — og svar på det bedrifter der faktisk lurer på.
+            lokalt, og svar på spørsmålene bedrifter i området stiller oftest.
           </p>
         </div>
         <div data-reveal-group className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
