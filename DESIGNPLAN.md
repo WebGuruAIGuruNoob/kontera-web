@@ -1,5 +1,13 @@
 # DESIGNPLAN 2026 — Kontera.no
 
+> **⚠️ HISTORISK GRUNNLAG — designsystem 3.0 «Inkludert» gjelder nå (2026-08-24).**
+> Henrik valgte Forslag D («Inkludert» — stil-DNA fra Randi/Fiken/Testen/Drivly) og
+> beordret utrulling på hele siten: skoggrønn `#1C4F2D` + elgul `#FFD505` glød-pille,
+> pastellbånd (mist/cream/varm), Fraunces + Hanken Grotesk, deadpan-tosetningstone.
+> Se «Designsystem 3.0» i [CLAUDE.md](CLAUDE.md) for gjeldende regler. Denne planens
+> fargekapitler (navy/asur-regimet) og typografivalg (Source Serif/Schibsted) er
+> UTDATERT; struktur-, CRO- og geo-prinsippene (§3–§5) gjelder fortsatt.
+
 > Plan for å løfte designet fra «2014» til 2026, og gjøre alle 372 geo-landingssider
 > (/regnskapsforer/[fylke]/[kommune]) til fullverdige, selgende landingssider på nivå
 > med forsiden — som både rangerer og konverterer.
