@@ -1,10 +1,32 @@
 "use client";
 
+import Image from "next/image";
 import { useId, useState } from "react";
 import { site } from "@/data/site";
 import { PhoneIcon } from "@/components/icons";
 
 type Status = "idle" | "sending" | "sent" | "error";
+
+/** Valgfri fototopp i kortet (hero-CRO): rammes av kortet, navy-tintes. */
+function KortBilde({ image }: { image?: { src: string; alt: string } }) {
+  if (!image) return null;
+  return (
+    <div className="relative -mx-6 -mt-6 mb-5 h-36 overflow-hidden sm:-mx-7 sm:-mt-7">
+      <Image
+        src={image.src}
+        alt={image.alt}
+        fill
+        priority
+        sizes="(min-width: 1024px) 26rem, 100vw"
+        className="object-cover"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-gradient-to-t from-navy/35 to-navy/5 mix-blend-multiply"
+      />
+    </div>
+  );
+}
 
 /**
  * Hero-leadkortet (DESIGNPLAN §3): 3 felt, ett tilbud, beroligelse under knappen.
@@ -15,10 +37,13 @@ export function LeadCard({
   enabled,
   heading,
   subheading,
+  image,
 }: {
   enabled: boolean;
   heading: string;
   subheading?: string;
+  /** Fototopp i kortet (brukes i forside-heroen) */
+  image?: { src: string; alt: string };
 }) {
   const uid = useId();
   const [status, setStatus] = useState<Status>("idle");
@@ -27,8 +52,9 @@ export function LeadCard({
     return (
       <div
         data-lead-card
-        className="rounded-2xl border border-navy/10 bg-surface p-6 sm:p-7"
+        className="overflow-hidden rounded-2xl border border-navy/10 bg-surface p-6 sm:p-7"
       >
+        <KortBilde image={image} />
         <p className="font-display text-xl font-bold text-navy">
           Ring oss for en uforpliktende samtale
         </p>
@@ -104,8 +130,9 @@ export function LeadCard({
     <form
       data-lead-card
       onSubmit={onSubmit}
-      className="rounded-2xl border border-navy/10 bg-surface p-6 sm:p-7"
+      className="overflow-hidden rounded-2xl border border-navy/10 bg-surface p-6 sm:p-7"
     >
+      <KortBilde image={image} />
       <p className="font-display text-xl font-bold text-navy">{heading}</p>
       {subheading && (
         <p className="mt-1.5 text-sm leading-relaxed text-slate">{subheading}</p>

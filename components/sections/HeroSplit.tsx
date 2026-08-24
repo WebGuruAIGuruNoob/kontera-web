@@ -14,6 +14,7 @@ export function HeroSplit({
   aside,
   compact = false,
   variant = "standard",
+  showCtas = false,
 }: {
   eyebrow?: string;
   title: React.ReactNode;
@@ -23,6 +24,8 @@ export function HeroSplit({
   compact?: boolean;
   /** «aurora» (kun forsiden): rikere brand-gradient-bakteppe med ambient drift */
   variant?: "standard" | "aurora";
+  /** Tydelig CTA-rad i heroen også når lead-kortet finnes (forside-CRO) */
+  showCtas?: boolean;
 }) {
   return (
     <section
@@ -56,7 +59,7 @@ export function HeroSplit({
             {subtitle}
           </p>
 
-          {!aside && (
+          {(!aside || showCtas) && (
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
                 href={site.phoneHref}
@@ -67,7 +70,7 @@ export function HeroSplit({
                 Ring {site.phoneDisplay}
               </a>
               <a
-                href="/kontakt"
+                href={aside ? "#lead" : "/kontakt"}
                 data-cta="hero-kontakt"
                 className="inline-flex items-center justify-center rounded-lg border border-navy/25 px-6 py-3.5 font-sans text-base font-bold text-navy transition-colors hover:border-navy/50"
               >
@@ -89,7 +92,11 @@ export function HeroSplit({
 
         </div>
 
-        {aside && <div className="lg:col-span-5 lg:mt-4">{aside}</div>}
+        {aside && (
+          <div id="lead" className="scroll-mt-24 lg:col-span-5 lg:mt-4">
+            {aside}
+          </div>
+        )}
       </div>
     </section>
   );

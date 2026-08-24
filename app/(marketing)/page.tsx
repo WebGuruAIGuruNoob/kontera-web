@@ -66,6 +66,7 @@ export default function HomePage() {
     <>
       <HeroSplit
         variant="aurora"
+        showCtas
         eyebrow="Autorisert regnskapsforetak — to statsautoriserte regnskapsførere"
         title={
           <>
@@ -84,6 +85,9 @@ export default function HomePage() {
             enabled={enabled}
             heading="Få pristilbud for din bedrift"
             subheading="En kort prat om behovet ditt — så får du et konkret tilbud med tydelige forutsetninger."
+            image={
+              bilde("team:samarbeid-2") ?? undefined
+            }
           />
         }
       />
