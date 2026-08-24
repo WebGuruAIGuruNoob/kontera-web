@@ -58,6 +58,10 @@ body {
 .section-eyebrow-dark {
   @apply font-sans text-[0.72rem] font-bold uppercase tracking-[0.14em] text-azure;
 }
+/* Mikroetikett uten fast farge — fargen settes av bruksstedet */
+.microlabel {
+  @apply font-sans text-[0.72rem] font-bold uppercase tracking-[0.14em];
+}
 
 /* R2 (RYDDEPLAN): luftskala i tre trinn — eneste lovlige seksjons-padding */
 .section-y-sm {
