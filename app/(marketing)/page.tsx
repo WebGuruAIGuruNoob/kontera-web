@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
-import { PhoneIcon, CheckIcon, Arrow } from "@/components/icons";
+import { TrustRad } from "@/components/sections/TrustRad";
+import { PhoneIcon, Arrow } from "@/components/icons";
 import { bilde } from "@/lib/bilder";
 import { site } from "@/data/site";
 
@@ -23,13 +24,6 @@ export const metadata: Metadata = {
     "Regnskap, lønn og årsoppgjør fra et lite byrå med statsautoriserte regnskapsførere. Fast regnskapsfører som kjenner deg – korte spørsmål er inkludert i honoraret. Ring 960 00 400.",
   alternates: { canonical: "/" },
 };
-
-const trustRad = [
-  { t: "Én fast regnskapsfører", u: "samme person hver gang" },
-  { t: "Fast stedfortreder", u: "kjenner også bedriften din" },
-  { t: "Spørsmål inkludert", u: "en del av honoraret" },
-  { t: "Fristene er vårt ansvar", u: "mva, a-melding, årsoppgjør" },
-];
 
 const roKort = [
   {
@@ -152,22 +146,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== Trust-ikonrad rett under hero ===== */}
-      <section aria-label="Det viktigste først" className="border-b border-line bg-surface">
-        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-4 py-8 lg:grid-cols-4">
-          {trustRad.map((t) => (
-            <div key={t.t} className="flex items-start gap-3">
-              <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-mist text-navy">
-                <CheckIcon className="h-4 w-4" />
-              </span>
-              <div>
-                <p className="font-semibold leading-snug text-navy">{t.t}</p>
-                <p className="text-sm text-slate/80">{t.u}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* ===== Trust-ikonrad rett under hero (delt komponent) ===== */}
+      <TrustRad />
 
       {/* ===== Ro-trioen: tre store tintede kort ===== */}
       <section className="section-y-lg mx-auto max-w-6xl px-4">

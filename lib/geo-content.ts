@@ -276,21 +276,22 @@ export function buildKommuneInnhold(
     a: "Ja — komplett lønnskjøring med lønnsslipper, a-melding hver måned, feriepenger, sykepengerefusjon og innberetning ved årsslutt. Samme faste regnskapsfører tar både regnskapet og lønnen, så alt henger sammen.",
   });
 
-  /* --- H1: alltid «Regnskapsfører i {navn}» + varierende løfte (§7b.2) --- */
+  /* --- H1: alltid «Regnskapsfører i {navn}» + SELGENDE hale (Henriks
+         CRO-ordre 2026-08-25: H1 skal selge Kontera, ikke beskrive siden) --- */
   const h1Varianter = [
-    `Regnskapsfører i ${navn} — én fast kontaktperson, korte spørsmål inkludert`,
-    `Regnskapsfører i ${navn} — vi holder oversikt over fristene dine`,
-    `Regnskapsfører i ${navn} fra et autorisert regnskapsforetak`,
-    `Regnskapsfører i ${navn} — én fast regnskapsfører og en fast stedfortreder`,
-    `Regnskapsfører i ${navn} du kan ringe direkte`,
-    `Regnskapsfører i ${navn} — heldigital hverdag, fysiske møter ved behov`,
-    `Regnskapsfører i ${navn} som tar mva, lønn og årsoppgjør`,
-    `Regnskapsfører i ${navn} — samme regnskapsfører hver gang du ringer`,
-    `Regnskapsfører i ${navn}: løpende avklaringer inngår i avtalen`,
+    `Regnskapsfører i ${navn} — hvorfor velge Kontera?`,
+    `Regnskapsfører i ${navn} — én fast person, spørsmål inkludert`,
+    `Regnskapsfører i ${navn} som svarer når du ringer`,
+    `Regnskapsfører i ${navn} — statsautorisert kvalitet, midtsjiktet på pris`,
+    `Regnskapsfører i ${navn} — fristene blir vårt ansvar`,
+    `Regnskapsfører i ${navn} — bytt uten styr, vi tar overgangen`,
+    `Regnskapsfører i ${navn} med fast stedfortreder på hvert oppdrag`,
+    `Regnskapsfører i ${navn} — samme person hver gang du ringer`,
+    `Regnskapsfører i ${navn}: korte spørsmål er inkludert i honoraret`,
   ];
-  if (blokkIds.has("bil")) h1Varianter.push(`Regnskapsfører i ${navn} med erfaring fra bilbransjen`);
-  if (blokkIds.has("bygg")) h1Varianter.push(`Regnskapsfører i ${navn} med erfaring fra byggebransjen`);
-  if (blokkIds.has("fiskeri")) h1Varianter.push(`Regnskapsfører i ${navn} med erfaring fra sjømatnæringen`);
+  if (blokkIds.has("bil")) h1Varianter.push(`Regnskapsfører i ${navn} — vi kan bilbransjen`);
+  if (blokkIds.has("bygg")) h1Varianter.push(`Regnskapsfører i ${navn} — vi kan byggebransjen`);
+  if (blokkIds.has("fiskeri")) h1Varianter.push(`Regnskapsfører i ${navn} — vi kan sjømatnæringen`);
   const h1 = pick(seed + "h1", h1Varianter);
 
   const metaDescription = pick(seed + "md", [

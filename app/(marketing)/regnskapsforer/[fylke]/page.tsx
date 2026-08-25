@@ -14,6 +14,7 @@ import { StatBand } from "@/components/sections/StatBand";
 import { ServicesBento } from "@/components/sections/ServicesBento";
 import { PricingSection } from "@/components/sections/PricingSection";
 import { NumberedJourney } from "@/components/sections/NumberedJourney";
+import { TrustRad } from "@/components/sections/TrustRad";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
@@ -47,6 +48,11 @@ export async function generateMetadata({
   };
 }
 
+/**
+ * FYLKESSIDE — CRO-rekkefølge (Henriks ordre 2026-08-25): selg Kontera FØRST
+ * (USP-hero, trustrad, tjenester, pris, fag, prosess, FAQ) — næringstall og
+ * kommunevelger flyttet NEDERST som dokumentasjon og intern lenking.
+ */
 export default async function FylkePage({
   params,
 }: {
@@ -81,15 +87,16 @@ export default async function FylkePage({
         ]}
       />
 
+      {/* 1. Hero: selgende H1 + tre Kontera-USP-er (aldri stedsdata i chips) */}
       <HeroSplit
         compact
         eyebrow={`Regnskapsfører i ${navn}`}
-        title={`Regnskapsfører i ${navn} — korte spørsmål er inkludert`}
-        subtitle={`En fast regnskapsfører som kjenner bedriften din, statsautorisert kvalitetssikring av oppdraget og oversikt over fristene dine — digitalt i hele ${navn}.`}
+        title={`Regnskapsfører i ${navn} — hvorfor velge Kontera?`}
+        subtitle={`Én fast regnskapsfører som kjenner bedriften din, en fast stedfortreder som kan tre inn, og korte spørsmål inkludert i honoraret — levert digitalt i hele ${navn}.`}
         chips={[
-          `${tall(innhold.aggregert.total)} virksomheter i fylket`,
           "Statsautoriserte regnskapsførere",
-          "Fast kontaktperson og stedfortreder",
+          "Fast regnskapsfører og stedfortreder",
+          "Korte spørsmål inkludert i honoraret",
         ]}
         aside={
           <LeadCard
@@ -100,12 +107,47 @@ export default async function FylkePage({
         }
       />
 
+      {/* 2. Hvorfor velge Kontera — USP-raden fra forsiden */}
+      <TrustRad />
+
+      {/* 3. Tjenestene (selger bredden) */}
+      <ServicesBento
+        title={`Alt bedriften i ${navn} trenger. Ingenting den ikke trenger.`}
+        intro="Samme faste regnskapsfører tar helheten — du velger hvor mye du vil gjøre selv."
+        geoSuffix={`i ${navn}`}
+      />
+
+      {/* 4. Pris-ærligheten (høyest intent) */}
+      <PricingSection leadEnabled={enabled} stedsnavn={navn} />
+
+      {/* 5. Fagblokker for fylkets største næringer */}
+      {innhold.blokker.length > 0 && (
+        <section className="section-y bg-cream">
+          <div className="mx-auto max-w-6xl px-4">
+            <EditorialSections
+              blokker={innhold.blokker}
+              bilder={(blokk, i) => (i < 2 && blokk.id ? fagblokkBilde(blokk.id) : null)}
+            />
+          </div>
+        </section>
+      )}
+
+      {/* 6. Slik kommer du i gang */}
+      <NumberedJourney leadEnabled={enabled} />
+
+      {/* 7. FAQ */}
+      <Faq
+        items={innhold.faq}
+        title={`Spørsmål og svar — regnskapsfører i ${navn}`}
+      />
+
+      {/* 8. NEDERST: næringslivet i tall (dokumentasjon, ikke salgsargument) */}
       <section className="section-y mx-auto max-w-6xl px-4">
         <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-7">
             <SectionHeading
               eyebrow={`Næringslivet i ${navn}`}
-              title="Et fylke i tall — og hva det betyr for regnskapet ditt"
+              title={`Vi kjenner næringslivet i ${navn}. Her er tallene.`}
             />
             <div data-unique>
               {innhold.intro.map((avsnitt, i) => (
@@ -138,13 +180,12 @@ export default async function FylkePage({
         source={`Kilder: Brønnøysundregistrene (Enhetsregisteret) og SSB. Sist oppdatert ${generatedAt}.`}
       />
 
-      {/* Kommunevelger i to nivåer: topp-kort med tall + kompakt liste
-          (cream — pastellrotasjonen, D-språket) */}
-      <section className="section-y bg-cream">
+      {/* 9. NEDERST: kommunevelger i to nivåer (intern lenking) */}
+      <section className="section-y">
         <div className="mx-auto max-w-6xl px-4">
           <SectionHeading
             eyebrow="Velg område"
-            title="Velg kommunen din — lokale tall og svar"
+            title={`Finn kommunen din — vi dekker hele ${navn}`}
             intro="Hver kommuneside gir deg lokale næringstall, den bransjeinnsikten som er mest relevant der, og svar på spørsmålene bedrifter i kommunen stiller oftest."
           />
           <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -180,26 +221,6 @@ export default async function FylkePage({
         </div>
       </section>
 
-      {innhold.blokker.length > 0 && (
-        <section className="section-y mx-auto max-w-6xl px-4">
-          <EditorialSections
-            blokker={innhold.blokker}
-            bilder={(blokk, i) => (i < 2 && blokk.id ? fagblokkBilde(blokk.id) : null)}
-          />
-        </section>
-      )}
-
-      <ServicesBento
-        title={`Alt bedriften i ${navn} trenger. Ingenting den ikke trenger.`}
-        intro="Samme faste regnskapsfører tar helheten — du velger hvor mye du vil gjøre selv."
-        geoSuffix={`i ${navn}`}
-      />
-      <PricingSection leadEnabled={enabled} stedsnavn={navn} />
-      <NumberedJourney leadEnabled={enabled} />
-      <Faq
-        items={innhold.faq}
-        title={`Spørsmål og svar — regnskapsfører i ${navn}`}
-      />
       <FinalCta
         title="Prøv oss på et spørsmål. Det er jo inkludert."
         text={`Én uforpliktende samtale — så vet du hvordan vi jobber, hva det vil koste for din bedrift i ${navn}, og om vi passer sammen.`}

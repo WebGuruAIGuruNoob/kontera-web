@@ -17,6 +17,7 @@ import { NaeringsProfil } from "@/components/sections/NaeringsProfil";
 import { PricingSection } from "@/components/sections/PricingSection";
 import { NumberedJourney } from "@/components/sections/NumberedJourney";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
+import { TrustRad } from "@/components/sections/TrustRad";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
@@ -54,6 +55,11 @@ export async function generateMetadata({
   };
 }
 
+/**
+ * KOMMUNESIDE — CRO-rekkefølge (Henriks ordre 2026-08-25): selg Kontera FØRST
+ * (USP-hero, trustrad, tjenester, pris, fag, prosess, sammenligning, FAQ) —
+ * næringstall, statistikk og nabolenking flyttet NEDERST som dokumentasjon.
+ */
 export default async function KommunePage({
   params,
 }: {
@@ -90,16 +96,16 @@ export default async function KommunePage({
         ]}
       />
 
-      {/* 1. Split-hero med lead-kort (DESIGNPLAN §4.1) */}
+      {/* 1. Hero: selgende H1 + tre Kontera-USP-er (aldri stedsdata i chips) */}
       <HeroSplit
         compact
         eyebrow={`${fylke.visningsnavn} · ${navn}`}
         title={innhold.h1}
-        subtitle={`Heldigital regnskapsføring for bedrifter i ${navn}. Én fast regnskapsfører tar helheten, en fast stedfortreder kjenner bedriften like godt, og vi holder oversikt over fristene dine.`}
+        subtitle={`Én fast regnskapsfører tar helheten, en fast stedfortreder kjenner bedriften like godt — og korte spørsmål er inkludert i honoraret. Levert digitalt til bedrifter i ${navn}.`}
         chips={[
           "Statsautoriserte regnskapsførere",
-          "Fast kontaktperson og stedfortreder",
-          enabled ? "Svar innen én arbeidsdag" : "Korte spørsmål inkludert",
+          "Fast regnskapsfører og stedfortreder",
+          enabled ? "Svar innen én arbeidsdag" : "Korte spørsmål inkludert i honoraret",
         ]}
         aside={
           <LeadCard
@@ -110,13 +116,51 @@ export default async function KommunePage({
         }
       />
 
-      {/* 2. Unik lokal innsikt (SEO-payload) + næringsprofil i høyrekolonnen (R5) */}
+      {/* 2. Hvorfor velge Kontera — USP-raden fra forsiden */}
+      <TrustRad />
+
+      {/* 3. Tjenestebento — bransjesortert med lokaliserte setninger */}
+      <ServicesBento
+        title={`Alt bedriften i ${navn} trenger. Ingenting den ikke trenger.`}
+        intro={`Fra løpende bokføring til årsoppgjør — levert digitalt til ${navn}, med én fast regnskapsfører som tar helheten.`}
+        order={innhold.tjenesteRekkefolge}
+        localSentences={innhold.tjenesteSetninger}
+        geoSuffix={`i ${navn}`}
+      />
+
+      {/* 4. Pris (høyest intent) */}
+      <PricingSection leadEnabled={enabled} stedsnavn={navn} />
+
+      {/* 5. Betingede fagblokker — redaksjonell 4/8 med datavalgte fagbilder */}
+      <section className="section-y bg-cream">
+        <div className="mx-auto max-w-6xl px-4">
+          <EditorialSections
+            blokker={innhold.blokker}
+            bilder={(blokk, i) => (i < 2 && blokk.id ? fagblokkBilde(blokk.id) : null)}
+          />
+        </div>
+      </section>
+
+      {/* 6–7. Prosess + sammenligning (konverterer byttere) */}
+      <NumberedJourney
+        leadEnabled={enabled}
+        title={`Slik kommer du i gang fra ${navn} — vi tar det meste av jobben`}
+      />
+      <ComparisonTable />
+
+      {/* 8. FAQ */}
+      <Faq
+        items={innhold.faq}
+        title={`Spørsmål og svar — regnskapsfører i ${navn}`}
+      />
+
+      {/* 9. NEDERST: unik lokal innsikt (SEO-payload) + næringsprofil (R5) */}
       <section className="section-y mx-auto max-w-6xl px-4">
         <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-7">
             <SectionHeading
               eyebrow={`Næringslivet i ${navn}`}
-              title={`Slik ser næringslivet i ${navn} ut i tallene`}
+              title={`Vi kjenner næringslivet i ${navn}. Her er tallene.`}
             />
             <div data-unique>
               {innhold.intro.map((avsnitt, i) => (
@@ -136,7 +180,7 @@ export default async function KommunePage({
         </div>
       </section>
 
-      {/* 4. Kommunens tall som mørkt stat-bånd */}
+      {/* 10. Kommunens tall som mørkt stat-panel (ferske Brreg/SSB-tall) */}
       <StatBand
         items={[
           { label: "Registrerte virksomheter", value: tall(innhold.stats.total), numeric: innhold.stats.total },
@@ -149,37 +193,7 @@ export default async function KommunePage({
         source={`Kilder: Brønnøysundregistrene (Enhetsregisteret) og SSB. Sist oppdatert ${generatedAt}.`}
       />
 
-      {/* 4. Tjenestebento — bransjesortert med lokaliserte setninger */}
-      <ServicesBento
-        title={`Alt bedriften i ${navn} trenger. Ingenting den ikke trenger.`}
-        intro={`Fra løpende bokføring til årsoppgjør — levert digitalt til ${navn}, med én fast regnskapsfører som tar helheten.`}
-        order={innhold.tjenesteRekkefolge}
-        localSentences={innhold.tjenesteSetninger}
-        geoSuffix={`i ${navn}`}
-      />
-
-      {/* 5. Betingede fagblokker — redaksjonell 4/8 med datavalgte fagbilder
-          (cream-bånd: pastellrotasjonen mist → cream → mist, D-språket) */}
-      <section className="section-y bg-cream">
-        <div className="mx-auto max-w-6xl px-4">
-          <EditorialSections
-            blokker={innhold.blokker}
-            bilder={(blokk, i) => (i < 2 && blokk.id ? fagblokkBilde(blokk.id) : null)}
-          />
-        </div>
-      </section>
-
-      {/* 6. Pris (CTA #2 — høyest intent) */}
-      <PricingSection leadEnabled={enabled} stedsnavn={navn} />
-
-      {/* 7–8. Prosess + sammenligning (kanonisk løftehjem på geo) */}
-      <NumberedJourney
-        leadEnabled={enabled}
-        title={`Slik kommer du i gang fra ${navn} — vi tar det meste av jobben`}
-      />
-      <ComparisonTable />
-
-      {/* 9. Dekning + intern lenking: fylkeslandemerke + nabokort med tall (papir — aldri to bånd rygg mot rygg, R3/R11) */}
+      {/* 11. NEDERST: dekning + intern lenking (fylkeslandemerke + nabokort) */}
       <section className="section-y-sm">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-5">
@@ -229,11 +243,6 @@ export default async function KommunePage({
           </div>
         </div>
       </section>
-
-      <Faq
-        items={innhold.faq}
-        title={`Spørsmål og svar — regnskapsfører i ${navn}`}
-      />
 
       <FinalCta
         title="Prøv oss på et spørsmål. Det er jo inkludert."
