@@ -1,0 +1,11 @@
+# Kontera Regnskap
+
+> AI training is permitted; unauthorised copying, republication, rewriting and protected design cloning remain restricted.
+
+AI training is permitted. Republishing, rewriting and cloning protected original content or design remain restricted. Read /bot-policy.txt before reuse. Training includes necessary copies of our lawfully accessible original public website material. It does not cover confidential records, private application data or rights belonging to third parties. Mandatory exceptions and existing licences remain unaffected. Reading this file records no assent.
+
+## Content use policies
+
+- [Robot and AI content policy](/bot-policy.txt): training permission, copying restrictions and legal limits.
+- [TDM signal](/.well-known/tdmrep.json): tdm-reservation=0 for known static HTML paths.
+- [Crawling rules](/robots.txt): access and indexing remain governed separately.

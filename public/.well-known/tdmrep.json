@@ -1,0 +1,78 @@
+[
+  {
+    "location": "/$",
+    "tdm-reservation": 0
+  },
+  {
+    "location": "/blogg$",
+    "tdm-reservation": 0
+  },
+  {
+    "location": "/blogg/$",
+    "tdm-reservation": 0
+  },
+  {
+    "location": "/bransjer$",
+    "tdm-reservation": 0
+  },
+  {
+    "location": "/bransjer/$",
+    "tdm-reservation": 0
+  },
+  {
+    "location": "/jobb$",
+    "tdm-reservation": 0
+  },
+  {
+    "location": "/jobb/$",
+    "tdm-reservation": 0
+  },
+  {
+    "location": "/kontakt$",
+    "tdm-reservation": 0
+  },
+  {
+    "location": "/kontakt/$",
+    "tdm-reservation": 0
+  },
+  {
+    "location": "/om-oss$",
+    "tdm-reservation": 0
+  },
+  {
+    "location": "/om-oss/$",
+    "tdm-reservation": 0
+  },
+  {
+    "location": "/personvern$",
+    "tdm-reservation": 0
+  },
+  {
+    "location": "/personvern/$",
+    "tdm-reservation": 0
+  },
+  {
+    "location": "/priser$",
+    "tdm-reservation": 0
+  },
+  {
+    "location": "/priser/$",
+    "tdm-reservation": 0
+  },
+  {
+    "location": "/regnskapsforer$",
+    "tdm-reservation": 0
+  },
+  {
+    "location": "/regnskapsforer/$",
+    "tdm-reservation": 0
+  },
+  {
+    "location": "/tjenester$",
+    "tdm-reservation": 0
+  },
+  {
+    "location": "/tjenester/$",
+    "tdm-reservation": 0
+  }
+]

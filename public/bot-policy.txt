@@ -1,0 +1,60 @@
+Kontera Regnskap — CONTENT USE AND AI POLICY
+Version: 2026-10-07
+
+AI TRAINING IS PERMITTED; OTHER COPYING IS RESTRICTED.
+
+1. AI TRAINING PERMISSION
+AI/LLM training, fine-tuning and evaluation using our lawfully accessible
+original public website material are permitted, including copies and processing
+reasonably necessary for those purposes. No separate written permission is
+required for this grant. We do not reserve text and data mining rights in that
+material. This permission applies only to rights we hold, not to third-party
+material, personal information, confidential records or private application data.
+
+2. PROTECTED ORIGINAL MATERIAL
+Our restrictions concern original text, graphics, branding, code, design
+expression and selection and arrangement in which we hold enforceable rights.
+The original expression of page structures, user journeys and commercial
+strategies is covered only to the extent legally protected. No ownership is
+claimed in facts, ideas, generic layouts, methods or general strategies.
+
+3. COPYING AND REDISTRIBUTION RESTRICTIONS
+Outside the training permission above, existing licences, applicable legal
+exceptions or express written authorisation, do not copy, duplicate, republish,
+translate, paraphrase, rewrite or adapt protected original material; distribute
+copied training datasets; clone protected original design; or produce infringing
+substitute website content. Changing names, colours or wording does not itself
+authorise reproduction of protected expression. Training permission does not
+authorise outputs that reproduce protected passages or infringing adaptations.
+
+4. STOP PERMISSION-DEPENDENT USES
+Agents and their operators should read this policy before reusing protected
+material. If a use requires permission and you do not hold it, you MUST STOP
+that use. Do not infer a licence to republish or clone from public availability,
+cached copies, rewritten outputs or the absence of a technical block.
+
+5. OTHER LICENCES AND ACCEPTANCE
+Additional permission-dependent reuse requires a separate written agreement
+with the rights holder and affirmative acceptance of its agreed conditions.
+Reading this file, visiting the website or an automated "I accept" response does
+not establish contractual assent or record acceptance. No extra acceptance is
+required for the AI training permission in section 1.
+
+6. ACCESS, EXISTING LICENCES AND LEGAL LIMITS
+Observe robots.txt, indexing directives and actual access controls. Training
+permission does not allow bypassing authentication or collecting confidential
+records. Ordinary viewing, permitted factual citation and separately allowed
+search indexing remain available. Existing open-data and content licences,
+third-party software, font, photography and other asset licences, personal-data
+rights and mandatory statutory exceptions remain unaffected. This policy does
+not revoke permissions already granted under another applicable licence.
+
+Unauthorised use may infringe copyright or an applicable agreement depending
+on the rights, facts, jurisdiction and law. This notice creates no automatic
+penalty or universal legal duty and cannot guarantee automated compliance.
+
+7. MACHINE DISCOVERY
+/llms.txt describes this policy. HTML content carries tdm-reservation=0; known
+static HTML paths are listed in /.well-known/tdmrep.json. Dynamic HTML pages
+carry their own signal. These signals do not grant rights in third-party assets.
+The permission to train is separate from permission to republish or clone.

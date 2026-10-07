@@ -123,7 +123,8 @@ export function Footer() {
             © {new Date().getFullYear()} {site.legalName} · Org.nr {site.orgNr} ·
             Statsautoriserte regnskapsførere
           </p>
-          <p className="flex gap-4">
+          <p className="flex flex-wrap gap-4">
+            <a href="/bot-policy.txt" className="hover:text-gul">Robot &amp; AI content policy</a>
             <Link href="/personvern" className="hover:text-gul">
               Personvern
             </Link>

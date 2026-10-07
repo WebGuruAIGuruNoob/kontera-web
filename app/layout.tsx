@@ -45,7 +45,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="nb" className={`${serifDisplay.variable} ${grotesk.variable}`}>
-      <body>
+      <head><meta name="tdm-reservation" content="0" /><link rel="license" type="text/plain" href="/bot-policy.txt" /></head><body>
         <a
           href="#innhold"
           className="sr-only-focusable fixed left-4 top-4 z-[100] rounded bg-blue px-4 py-2 font-semibold text-white"
