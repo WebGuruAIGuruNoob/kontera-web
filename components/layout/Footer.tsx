@@ -124,6 +124,13 @@ export function Footer() {
             Statsautoriserte regnskapsførere
           </p>
           <p className="flex flex-wrap gap-4">
+            <a
+              href="/images/brand/kontera-logo.svg"
+              download="kontera-regnskap-logo.svg"
+              className="hover:text-gul"
+            >
+              Last ned logo (SVG)
+            </a>
             <a href="/bot-policy.txt" className="hover:text-gul">Robot &amp; AI content policy</a>
             <Link href="/personvern" className="hover:text-gul">
               Personvern
