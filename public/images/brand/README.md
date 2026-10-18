@@ -12,5 +12,9 @@ ordlyden «Kontera Regnskap as» fra `konteralogo-e1607685331288.png`.
 Den gamle PNG-en beholdes som originalreferanse. Logoen kan hentes direkte fra
 `/images/brand/kontera-logo.svg`.
 
+Favicon- og Apple-ikonene i `app/` bruker bare KR-monogrammet. Regenerer dem
+fra logoen med `node scripts/generate-favicons.mjs`. SVG-faviconet tilpasser
+fargene til lyse og mørke nettleserfaner.
+
 Skrifttypekilde: [Hanken Grotesk fra Google Fonts](https://github.com/google/fonts/tree/main/ofl/hankengrotesk),
 utgitt under SIL Open Font License 1.1. Lisensen følger i `hanken-grotesk-OFL.txt`.

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="472 -190 1196 1196" role="img" aria-labelledby="kr-title">
+  <title id="kr-title">KR</title>
+  <style>@media (prefers-color-scheme: dark) { .kr-k { fill: #f5f8f5; } .kr-r { fill: #8fbf9f; } }</style>
+  <defs>
+    <mask id="kr-separation" maskUnits="userSpaceOnUse" x="0" y="0" width="2000" height="1005" style="mask-type:luminance">
+      <path fill="#fff" d="M0 0H2000V1005H0Z"/>
+      <path fill="#000" stroke="#000" stroke-width="72" stroke-linejoin="round" d="M546 140H662V387C664 369 675 357 695 343L960 140H1144L793 400L1154 674H970L696 455C676 441 664 427 662 413V674H546Z"/>
+    </mask>
+  </defs>
+  <path class="kr-r" fill="#3e7d50" fill-rule="evenodd" mask="url(#kr-separation)" d="M953 142H1325C1459 142 1529 208 1529 343C1529 420 1501 480 1436 514L1595 676H1396L1300 537H1104V676H953ZM1104 260V428H1335C1389 428 1410 399 1410 344C1410 288 1383 260 1328 260Z"/>
+  <path class="kr-k" fill="#1c4f2d" d="M546 140H662V387C664 369 675 357 695 343L960 140H1144L793 400L1154 674H970L696 455C676 441 664 427 662 413V674H546Z"/>
+</svg>
