@@ -20,12 +20,12 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4">
         <Link href="/" className="flex shrink-0 items-center" aria-label="Kontera Regnskap – til forsiden">
           <Image
-            src="/images/brand/konteralogo-e1607685331288.png"
+            src="/images/brand/kontera-logo.svg"
             alt="Kontera Regnskap AS"
-            width={150}
-            height={75}
+            width={2000}
+            height={1005}
             priority
-            className="h-9 w-auto lg:h-10"
+            className="h-12 w-auto lg:h-14"
           />
         </Link>
 
