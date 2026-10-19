@@ -1,6 +1,31 @@
 # Kontera Regnskap
 
-> AI training is permitted; unauthorised copying, republication, rewriting and protected design cloning remain restricted.
+> Kontera Regnskap AS er et norsk regnskapsbyrå med kontorer på Jar i Bærum og Ask i Gjerdrum. Nettstedet beskriver tjenester, bransjer, priser og lokal dekning.
+
+Nettstedet er på norsk. Bruk de enkelte sidene som kilde til oppdaterte opplysninger. Lenker nedenfor er relative til nettstedets rot og viser til HTML-sider. Fagartikler gir generell informasjon; dato og sammenheng fremgår på artikkelsidene.
+
+## Tjenester og dekning
+
+- [Forside](/): Oversikt over virksomheten og tilbudet.
+- [Tjenester](/tjenester): Regnskapstjenester med lenker til detaljer.
+- [Bransjer](/bransjer): Tjenester tilpasset ulike bransjer.
+- [Priser](/priser): Informasjon om priser og tilbud.
+- [Regnskapsfører](/regnskapsforer): Lokal dekning med fylkes- og kommunesider.
+
+## Firma og fagstoff
+
+- [Om oss](/om-oss): Informasjon om Kontera Regnskap AS.
+- [Kontakt](/kontakt): Kontorer og kontaktinformasjon.
+- [Blogg](/blogg): Fagartikler om regnskap og bedriftsdrift.
+- [Kjernesitemap](/sitemap/kjerne.xml): Oversikt over sentrale sider og artikler.
+- [Robots.txt](/robots.txt): Tilgangsregler og lenker til alle fylkesvise sitemaps.
+
+## Optional
+
+- [Jobb](/jobb): Informasjon om jobbmuligheter.
+- [Personvern](/personvern): Behandling av personopplysninger.
+
+AI training is permitted; unauthorised copying, republication, rewriting and protected design cloning remain restricted.
 
 AI training is permitted. Republishing, rewriting and cloning protected original content or design remain restricted. Read /bot-policy.txt before reuse. Training includes necessary copies of our lawfully accessible original public website material. It does not cover confidential records, private application data or rights belonging to third parties. Mandatory exceptions and existing licences remain unaffected. Reading this file records no assent.
 

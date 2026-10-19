@@ -16,18 +16,10 @@ const nextConfig: NextConfig = {
     ];
   },
   async headers() {
-    // Staging-vern: alt på *.vercel.app skal ikke indekseres.
-    // Ved DNS-cutover settes NEXT_PUBLIC_SITE_URL=https://kontera.no i Vercel,
-    // og denne headeren forsvinner automatisk.
-    if (!process.env.NEXT_PUBLIC_SITE_URL?.includes("kontera.no")) {
-      return [
-        {
-          source: "/:path*",
-          headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
-        },
-      ];
-    }
-    return [];
+    return [{
+      source: "/:path*",
+      headers: [{ key: "Link", value: '</llms.txt>; rel="describedby"' }],
+    }];
   },
 };
 

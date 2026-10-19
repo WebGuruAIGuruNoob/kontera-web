@@ -26,6 +26,7 @@ const grotesk = Hanken_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
+  robots: { index: true, follow: true },
   title: {
     default: "Kontera Regnskap AS | Regnskapsfører med fast kontaktperson",
     template: "%s | Kontera Regnskap AS",
